@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "vue.volar",
+    "arcanis.vscode-zipfs",
+    "orta.vscode-twoslash-queries",
+    "antfu.iconify",
+    "vivaxy.vscode-conventional-commits",
+    "ms-azuretools.vscode-docker",
+    "gitlab.gitlab-workflow",
+    "mrmlnc.vscode-json5",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "yoavbls.pretty-ts-errors",
+    "biomejs.biome",
+		"rust-lang.rust-analyzer",
+		"vadimcn.vscode-lldb",
+		"fill-labs.dependi",
+		"tamasfe.even-better-toml",
+		"aaron-bond.better-comments"
+  ]
+}

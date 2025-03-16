@@ -1,0 +1,416 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+	"organizeImports": { "enabled": false },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"complexity": {
+				"noBannedTypes": "error",
+				"noExtraBooleanCast": "error",
+				"noMultipleSpacesInRegularExpressionLiterals": "error",
+				"noUselessCatch": "error",
+				"noUselessConstructor": "off",
+				"noUselessLoneBlockStatements": "error",
+				"noUselessRename": "error",
+				"noUselessTernary": "error",
+				"noUselessThisAlias": "error",
+				"noUselessTypeConstraint": "error",
+				"noVoid": "error",
+				"noWith": "error",
+				"useLiteralKeys": "error",
+				"useRegexLiterals": "error"
+			},
+			"correctness": {
+				"noConstAssign": "error",
+				"noConstantCondition": "error",
+				"noEmptyCharacterClassInRegex": "error",
+				"noEmptyPattern": "error",
+				"noGlobalObjectCalls": "error",
+				"noInvalidConstructorSuper": "error",
+				"noInvalidUseBeforeDeclaration": "error",
+				"noNewSymbol": "error",
+				"noPrecisionLoss": "error",
+				"noSelfAssign": "error",
+				"noSwitchDeclarations": "error",
+				"noUndeclaredVariables": "error",
+				"noUnreachable": "error",
+				"noUnreachableSuper": "error",
+				"noUnsafeFinally": "error",
+				"noUnusedVariables": "off",
+				"useArrayLiterals": "off",
+				"useIsNan": "error"
+			},
+			"security": { "noGlobalEval": "error" },
+			"style": {
+				"noCommaOperator": "error",
+				"noInferrableTypes": "error",
+				"noNonNullAssertion": "warn",
+				"noUselessElse": "off",
+				"noVar": "error",
+				"useAsConstAssertion": "error",
+				"useBlockStatements": "off",
+				"useConst": "error",
+				"useImportType": "error",
+				"useSingleVarDeclarator": "warn"
+			},
+			"suspicious": {
+				"noAssignInExpressions": "error",
+				"noAsyncPromiseExecutor": "error",
+				"noCatchAssign": "error",
+				"noClassAssign": "error",
+				"noCompareNegZero": "error",
+				"noConfusingLabels": "off",
+				"noConsoleLog": "warn",
+				"noControlCharactersInRegex": "error",
+				"noDebugger": "warn",
+				"noDoubleEquals": "error",
+				"noDuplicateCase": "error",
+				"noDuplicateClassMembers": "error",
+				"noDuplicateObjectKeys": "error",
+				"noDuplicateParameters": "error",
+				"noEmptyBlockStatements": "error",
+				"noEmptyInterface": "error",
+				"noExplicitAny": "warn",
+				"noExtraNonNullAssertion": "error",
+				"noFallthroughSwitchClause": "error",
+				"noFunctionAssign": "error",
+				"noGlobalAssign": "error",
+				"noImportAssign": "error",
+				"noMisleadingCharacterClass": "error",
+				"noMisleadingInstantiator": "error",
+				"noPrototypeBuiltins": "off",
+				"noRedeclare": "error",
+				"noSelfCompare": "error",
+				"noShadowRestrictedNames": "error",
+				"noUnsafeNegation": "error",
+				"useAwait": "off",
+				"useDefaultSwitchClauseLast": "error",
+				"useNamespaceKeyword": "error",
+				"useValidTypeof": "error"
+			}
+		},
+		"ignore": [
+			"**/*.json5",
+			"**/*.min.*",
+			"**/dist",
+			"**/LICENSE*",
+			"**/output",
+			"**/coverage",
+			"**/public",
+			"**/temp",
+			"**/packages-lock.json",
+			"**/pnpm-lock.yaml",
+			"**/yarn.lock",
+			"**/__snapshots__"
+		]
+	},
+	"javascript": {
+		"globals": [
+			"jest",
+			"withDefaults",
+			"$computed",
+			"$shallowRef",
+			"defineExpose",
+			"$toRef",
+			"h",
+			"$customRef",
+			"navigator",
+			"window",
+			"defineEmits",
+			"$ref",
+			"defineProps",
+			"document"
+		]
+	},
+	"overrides": [
+		{
+			"include": ["**/__tests__/*.{j,t}s?(x)", "**/*.spec.{j,t}s?(x)"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{
+			"include": ["*.vue"],
+			"linter": { "rules": { "correctness": { "noUnusedVariables": "off" } } }
+		},
+		{
+			"include": ["**/__tests__/*.{j,t}s?(x)", "**/*.spec.{j,t}s?(x)"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{ "include": ["*.vue"], "linter": { "rules": {} } },
+		{ "include": ["*.json", "*.json5"], "linter": { "rules": {} } },
+		{ "include": ["*.yaml", "*.yml"], "linter": { "rules": {} } },
+		{ "include": ["package.json"], "linter": { "rules": {} } },
+		{ "include": ["*.d.ts"], "linter": { "rules": {} } },
+		{ "include": ["*.js"] },
+		{
+			"include": ["scripts/**/*.*", "cli.*"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{
+			"include": ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
+			"linter": { "rules": {} }
+		},
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					},
+					"suspicious": { "noConsoleLog": "off" }
+				}
+			}
+		},
+		{ "include": ["*.js"], "linter": { "rules": {} } },
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noInvalidUseBeforeDeclaration": "off",
+						"noUnusedVariables": "off"
+					},
+					"suspicious": { "noRedeclare": "off" }
+				}
+			}
+		},
+		{ "include": ["*.json", "*.json5"], "linter": { "rules": {} } },
+		{ "include": ["*.yaml", "*.yml"], "linter": { "rules": {} } },
+		{ "include": ["package.json"], "linter": { "rules": {} } },
+		{ "include": ["*.d.ts"], "linter": { "rules": {} } },
+		{ "include": ["*.js"] },
+		{
+			"include": ["scripts/**/*.*", "cli.*"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{
+			"include": ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
+			"linter": { "rules": {} }
+		},
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					},
+					"suspicious": { "noConsoleLog": "off" }
+				}
+			}
+		},
+		{ "include": ["*.js"], "linter": { "rules": {} } },
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noInvalidUseBeforeDeclaration": "off",
+						"noUnusedVariables": "off"
+					},
+					"suspicious": { "noRedeclare": "off" }
+				}
+			}
+		},
+		{
+			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noConstAssign": "off",
+						"noGlobalObjectCalls": "off",
+						"noInvalidConstructorSuper": "off",
+						"noNewSymbol": "off",
+						"noSetterReturn": "off",
+						"noUndeclaredVariables": "off",
+						"noUnreachable": "off",
+						"noUnreachableSuper": "off"
+					},
+					"style": {
+						"noArguments": "error",
+						"noVar": "error",
+						"useConst": "error"
+					},
+					"suspicious": {
+						"noDuplicateClassMembers": "off",
+						"noDuplicateObjectKeys": "off",
+						"noDuplicateParameters": "off",
+						"noFunctionAssign": "off",
+						"noImportAssign": "off",
+						"noRedeclare": "off",
+						"noUnsafeNegation": "off",
+						"useGetterReturn": "off",
+						"useValidTypeof": "off"
+					}
+				}
+			}
+		},
+		{ "include": ["*.json", "*.json5"], "linter": { "rules": {} } },
+		{ "include": ["*.yaml", "*.yml"], "linter": { "rules": {} } },
+		{ "include": ["package.json"], "linter": { "rules": {} } },
+		{ "include": ["*.d.ts"], "linter": { "rules": {} } },
+		{ "include": ["*.js"], "linter": { "rules": {} } },
+		{
+			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"linter": { "rules": { "complexity": { "noVoid": "error" } } }
+		},
+		{
+			"include": ["script/**/*.*", "scripts/**/*.*", "cli.*"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{
+			"include": ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
+			"linter": { "rules": {} }
+		},
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noInvalidUseBeforeDeclaration": "off",
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					},
+					"style": { "useImportType": "off" },
+					"suspicious": { "noConsoleLog": "off", "noRedeclare": "off" }
+				}
+			}
+		},
+		{ "include": ["*.json", "*.json5"], "linter": { "rules": {} } },
+		{ "include": ["*.yaml", "*.yml"], "linter": { "rules": {} } },
+		{ "include": ["package.json"], "linter": { "rules": {} } },
+		{ "include": ["*.d.ts"], "linter": { "rules": {} } },
+		{ "include": ["*.js"], "linter": { "rules": {} } },
+		{
+			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"linter": { "rules": { "complexity": { "noVoid": "error" } } }
+		},
+		{
+			"include": ["script/**/*.*", "scripts/**/*.*", "cli.*"],
+			"linter": { "rules": { "suspicious": { "noConsoleLog": "off" } } }
+		},
+		{
+			"include": ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
+			"linter": { "rules": {} }
+		},
+		{
+			"include": ["**/*.md/*.*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noInvalidUseBeforeDeclaration": "off",
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					},
+					"style": { "useImportType": "off" },
+					"suspicious": { "noConsoleLog": "off", "noRedeclare": "off" }
+				}
+			}
+		},
+		{ "include": ["*.md"] },
+		{
+			"include": ["**/*.md/**"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noConstAssign": "off",
+						"noGlobalObjectCalls": "off",
+						"noInvalidConstructorSuper": "off",
+						"noNewSymbol": "off",
+						"noSetterReturn": "off",
+						"noUndeclaredVariables": "off",
+						"noUnreachable": "off",
+						"noUnreachableSuper": "off"
+					},
+					"style": {
+						"noArguments": "error",
+						"noVar": "error",
+						"useConst": "error"
+					},
+					"suspicious": {
+						"noDuplicateClassMembers": "off",
+						"noDuplicateObjectKeys": "off",
+						"noDuplicateParameters": "off",
+						"noFunctionAssign": "off",
+						"noImportAssign": "off",
+						"noRedeclare": "off",
+						"noUnsafeNegation": "off",
+						"useGetterReturn": "off",
+						"useValidTypeof": "off"
+					}
+				}
+			}
+		},
+		{ "include": ["*.md"] },
+		{
+			"include": ["**/*.md/**"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredVariables": "off",
+						"noUnusedVariables": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noConstAssign": "off",
+						"noGlobalObjectCalls": "off",
+						"noInvalidConstructorSuper": "off",
+						"noNewSymbol": "off",
+						"noSetterReturn": "off",
+						"noUndeclaredVariables": "off",
+						"noUnreachable": "off",
+						"noUnreachableSuper": "off"
+					},
+					"style": {
+						"noArguments": "error",
+						"noVar": "error",
+						"useConst": "error"
+					},
+					"suspicious": {
+						"noDuplicateClassMembers": "off",
+						"noDuplicateObjectKeys": "off",
+						"noDuplicateParameters": "off",
+						"noFunctionAssign": "off",
+						"noImportAssign": "off",
+						"noRedeclare": "off",
+						"noUnsafeNegation": "off",
+						"useGetterReturn": "off",
+						"useValidTypeof": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["packages/backend/src/server/api/mastodon/**/*.ts"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noParameterAssign": "off"
+					},
+					"complexity": {
+						"noStaticOnlyClass": "off",
+						"noThisInStatic": "off"
+					}
+				}
+			}
+		}
+	]
+}

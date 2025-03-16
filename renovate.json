@@ -1,0 +1,31 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended"],
+	"labels": ["Dependency"],
+	"rangeStrategy": "bump",
+	"branchConcurrentLimit": 0,
+	"prHourlyLimit": 20,
+	"prConcurrentLimit": 20,
+	"enabledManagers": ["npm", "cargo"],
+	"baseBranches": ["develop"],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"enabledManagers": ["npm"],
+		"recreateWhen": "always",
+		"rebaseWhen": "behind-base-branch",
+		"branchTopic": "lock-file-maintenance",
+		"commitMessageAction": "Lock file maintenance"
+	},
+	"packageRules": [
+		{"matchUpdateTypes": ["patch", "lockFileMaintenance"], "automerge": true},
+		{"groupName": "rust-url", "matchManagers": ["cargo"], "matchPackageNames": ["idna", "url"]},
+		{"groupName": "bull-board", "matchManagers": ["npm"], "matchPackagePrefixes": ["@bull-board/"]},
+		{"groupName": "biome", "matchManagers": ["npm"], "matchPackagePrefixes": ["@biomejs/"]},
+		{"matchManagers": ["npm"], "matchPackageNames": ["@misskey-dev/browser-image-resizer"], "automerge": false},
+		{"matchManagers": ["npm"], "matchPackageNames": ["@syuilo/aiscript"], "automerge": false},
+		{"matchManagers": ["npm"], "matchPackageNames": ["mfm-js"], "automerge": false},
+		{"matchManagers": ["npm"], "matchPackageNames": ["rndstr"], "automerge": false},
+		{"matchManagers": ["npm"], "matchPackageNames": ["summaly"], "automerge": false},
+		{"matchManagers": ["npm"], "matchPackageNames": ["xev"], "automerge": false}
+	]
+}

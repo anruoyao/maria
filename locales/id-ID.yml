@@ -1,0 +1,2306 @@
+_lang_: "Bahasa Indonesia"
+headlineFirefish: "Platform media sosial sumber terbuka dan terdesentralisasi yang
+  merdeka sepenuhnya! 🚀"
+introFirefish: "Selamat datang! Firefish adalah media sosial sumber terbuka dan terdesentralisasi
+  yang selamanya bebas! 🚀"
+monthAndDay: "{day} {month}"
+search: "Penelusuran"
+notifications: "Pemberitahuan"
+username: "Nama Pengguna"
+password: "Kata sandi"
+forgotPassword: "Lupa Kata Sandi"
+fetchingAsApObject: "Mengambil data dari Fediverse"
+ok: "OK"
+gotIt: "Mengerti!"
+cancel: "Batalkan"
+enterUsername: "Masukkan nama pengguna"
+renotedBy: "Diposting ulang oleh {user}"
+noNotes: "Tidak ada postingan"
+noNotifications: "Tidak ada pemberitahuan"
+instance: "Server"
+settings: "Pengaturan"
+basicSettings: "Pengaturan umum"
+otherSettings: "Pengaturan lainnya"
+openInWindow: "Buka di jendela"
+profile: "Profil"
+timeline: "Linimasa"
+noAccountDescription: "Pengguna ini belum menulis bio."
+login: "Masuk"
+loggingIn: "Sedang masuk"
+logout: "Keluar"
+signup: "Daftar"
+uploading: "Mengunggah..."
+save: "Simpan"
+users: "Pengguna"
+addUser: "Tambah pengguna"
+favorite: "Favorit"
+favorites: "Favorit"
+unfavorite: "Hapus favorit"
+favorited: "Ditambahkan ke markah."
+alreadyFavorited: "Telah ditambahkan ke markah."
+cantFavorite: "Tidak dapat menambahkan ke markah."
+pin: "Sematkan ke profil"
+unpin: "Lepas sematan dari profil"
+copyContent: "Salin konten"
+copyLink: "Salin tautan"
+delete: "Hapus"
+deleteAndEdit: "Hapus dan sunting"
+deleteAndEditConfirm: "Kamu yakin ingin menghapus postingan lalu menyuntingnya? Kamu
+  akan kehilangan semua reaksi, postingan ulang, dan balasan."
+addToList: "Tambahkan ke daftar"
+sendMessage: "Kirim pesan"
+copyUsername: "Salin nama pengguna"
+searchUser: "Cari pengguna"
+reply: "Balas"
+loadMore: "Selebihnya"
+showMore: "Selebihnya"
+showLess: "Tutup"
+youGotNewFollower: "Mengikuti kamu"
+receiveFollowRequest: "Ingin mengikuti kamu"
+followRequestAccepted: "Permintaan mengikuti telah disetujui"
+mention: "Sebut"
+mentions: "Sebutan"
+directNotes: "Pesan langsung"
+importAndExport: "Impor & Ekspor"
+import: "Impor"
+export: "Ekspor"
+files: "Berkas"
+download: "Unduh"
+driveFileDeleteConfirm: "Kamu yakin ingin menghapus berkas \"{name}\"? Ini akan menghapus
+  semua postingan yang berisi lampiran tersebut."
+unfollowConfirm: "Berhenti mengikuti {name}?"
+exportRequested: "Kamu telah meminta ekspor. Ini akan memakan waktu sesaat. Setelah
+  ekspor selesai, berkas yang dihasilkan akan ditambahkan ke Drive."
+importRequested: "Kamu telah meminta impor. Ini akan memakan waktu sesaat."
+lists: "Daftar"
+noLists: "Kamu tidak memiliki daftar apapun"
+note: "Posting"
+notes: "Postingan"
+following: "Ikuti"
+followers: "Pengikut"
+followsYou: "Mengikuti kamu"
+createList: "Buat daftar"
+manageLists: "Sunting daftar"
+error: "Galat"
+somethingHappened: "Terjadi kesalahan"
+retry: "Coba lagi"
+pageLoadError: "Gagal memuat halaman."
+pageLoadErrorDescription: "Umumnya disebabkan jaringan atau tembolok perambah. Cobalah
+  bersihkan tembolok peramban lalu tunggu sesaat sebelum mencoba kembali."
+serverIsDead: "Tidak ada respon dari peladen. Mohon tunggu dan coba beberapa saat
+  lagi."
+youShouldUpgradeClient: "Untuk melihat halaman ini, mohon muat ulang untuk memutakhirkan
+  klienmu."
+enterListName: "Masukkan nama daftar"
+privacy: "Privasi"
+makeFollowManuallyApprove: "Permintaan mengikuti membutuhkan persetujuan"
+defaultNoteVisibility: "Visibilitas bawaan"
+follow: "Ikuti"
+followRequest: "Permintaan Mengikuti"
+followRequests: "Permintaan mengikuti"
+unfollow: "Berhenti mengikuti"
+followRequestPending: "Permintaan mengikuti yang menunggu"
+enterEmoji: "Masukkan emoji"
+renote: "Posting ulang"
+unrenote: "Batalkan posting ulang"
+renoted: "Diposting ulang."
+cantRenote: "Postingan ini tidak dapat diposting ulang."
+cantReRenote: "Postingan ulang tidak dapat diposting ulang."
+quote: "Kutip"
+pinnedNote: "Postingan tersemat"
+pinned: "Sematkan ke profil"
+you: "Kamu"
+clickToShow: "Klik untuk melihat"
+sensitive: "Konten sensitif"
+add: "Tambahkan"
+reaction: "Reaksi"
+reactionSetting: "Reaksi untuk dimunculkan di bilah reaksi"
+reactionSettingDescription2: "Geser untuk memindah urutan, klik untuk menghapus, tekan
+  \"+\" untuk menambahkan."
+rememberNoteVisibility: "Ingat pengaturan visibilitas postingan"
+attachCancel: "Hapus lampiran"
+markAsSensitive: "Tandai sebagai konten sensitif"
+unmarkAsSensitive: "Hapus tanda konten sensitif"
+enterFileName: "Masukkan nama berkas"
+mute: "Bisukan"
+unmute: "Hapus bisukan"
+block: "Blokir"
+unblock: "Buka blokir"
+suspend: "Bekukan"
+unsuspend: "Buka pembekuan"
+blockConfirm: "Apakah kamu yakin ingin memblokir akun ini?"
+unblockConfirm: "Apakah kamu yakin ingin membuka blokir akun ini?"
+suspendConfirm: "Apakah kamu yakin ingin membekukan akun ini?"
+unsuspendConfirm: "Apakah kamu yakin ingin membuka pembekuan akun ini?"
+selectList: "Pilih daftar"
+selectAntenna: "Pilih Antena"
+selectWidget: "Pilih gawit"
+editWidgets: "Sunting gawit"
+editWidgetsExit: "Selesai"
+customEmojis: "Emoji kustom"
+emoji: "Emoji"
+emojis: "Emoji"
+emojiName: "Nama emoji"
+emojiUrl: "URL Emoji"
+addEmoji: "Tambahkan emoji"
+settingGuide: "Pengaturan rekomendasi"
+cacheRemoteFiles: "Tembolokkan berkas remote"
+cacheRemoteFilesDescription: "Ketika pengaturan ini dinonaktifkan, berkas luar akan
+  dimuat langsung dari server luar. Menonaktifkan ini akan mengurangi penggunaan penyimpanan,
+  tapi dapat menyebabkan meningkatkan lalu lintas, mengingat keluku tidak akan dihasilkan."
+flagAsBot: "Tandai akun ini sebagai akun otomatis"
+flagAsBotDescription: "Jika akun ini dikendalikan oleh program, aktifkan opsi ini.
+  Jika diaktifkan, ini akan berfungsi sebagai tanda bagi pengembang lain untuk mencegah
+  interaksi berantai dengan akun otomatis lain dan menyesuaikan sistem internal Firefish
+  untuk memperlakukan akun ini sebagai akun otomatis."
+flagAsCat: "Atur akun ini sebagai kucing"
+flagAsCatDescription: "Kamu akan mendapatkan telinga kucing dan berbicara seperti
+  seekor kucing!"
+flagShowTimelineReplies: "Tampilkan balasan di linimasa"
+flagShowTimelineRepliesDescription: "Menampilkan balasan pengguna pada postingan pengguna
+  lain di linimasa jika diaktifkan."
+autoAcceptFollowed: "Setujui otomatis permintaan mengikuti dari pengguna yang kamu
+  ikuti"
+addAccount: "Tambahkan akun"
+loginFailed: "Gagal untuk masuk"
+showOnRemote: "Buka halaman asli"
+general: "Umum"
+wallpaper: "Kertas dinding"
+setWallpaper: "Atur wallpaper"
+removeWallpaper: "Hapus wallpaper"
+searchWith: "Cari: {q}"
+youHaveNoLists: "Kamu tidak memiliki daftar apapun"
+followConfirm: "Apakah kamu yakin ingin mengikuti {name}?"
+proxyAccount: "Akun Proksi"
+proxyAccountDescription: "Akun proksi merupakan sebuah akun yang bertindak sebagai
+  pengikut luar untuk pengguna dalam kondisi tertentu. Sebagai contoh, ketika pengguna
+  menambahkan pengguna luar ke dalam daftar, aktivitas dari pengguna luar tidak akan
+  dikirim ke server apabila tidak ada pengguna lokal yang mengikuti pengguna tersebut,
+  dengan begitu akun proksilah yang akan mengikutinya."
+host: "Host"
+selectUser: "Pilih pengguna"
+recipient: "Penerima"
+annotation: "Keterangan konten"
+federation: "Federasi"
+instances: "Server"
+registeredAt: "Terdaftar"
+latestRequestSentAt: "Permintaan terakhir dikirim pada"
+latestRequestReceivedAt: "Permintaan terakhir diterima pada"
+latestStatus: "Status terakhir"
+storageUsage: "Penggunaan penyimpanan"
+charts: "Grafik"
+perHour: "per Jam"
+perDay: "per Hari"
+stopActivityDelivery: "Berhenti mengirim aktivitas"
+blockThisInstance: "Blokir server ini"
+operations: "Tindakan"
+software: "Perangkat lunak"
+version: "Versi"
+metadata: "Metadata"
+monitor: "Pantau"
+jobQueue: "Antrian kerja"
+cpuAndMemory: "CPU dan Memori"
+network: "Jaringan"
+disk: "Diska"
+instanceInfo: "Informasi Server"
+statistics: "Statistik"
+clearQueue: "Bersihkan antrian"
+clearQueueConfirmTitle: "Apakah kamu yakin ingin membersihkan antrian?"
+clearQueueConfirmText: "Seluruh sisa postingan yang tidak tersampaikan di dalam antrian
+  tidak akan difederasi. Biasanya operasi ini TIDAK dibutuhkan."
+clearCachedFiles: "Hapus tembolok"
+clearCachedFilesConfirm: "Apakah kamu yakin ingin menghapus seluruh tembolok berkas
+  remote?"
+blockedInstances: "Server yang Diblokir"
+blockedInstancesDescription: "Daftar nama host dari server yang diperlukan untuk diblokir.
+  Server yang didaftarkan tidak akan dapat berkomunikasi dengan server ini."
+muteAndBlock: "Bisukan / Blokir"
+mutedUsers: "Pengguna yang dibisukan"
+blockedUsers: "Pengguna yang diblokir"
+noUsers: "Tidak ada pengguna"
+editProfile: "Sunting profil"
+noteDeleteConfirm: "Kamu yakin ingin menghapus postingan ini?"
+pinLimitExceeded: "Kamu tidak dapat menyematkan postingan lagi"
+intro: "Instalasi Firefish telah selesai! Mohon untuk membuat pengguna admin."
+done: "Selesai"
+processing: "Memproses"
+preview: "Pratinjau"
+default: "Bawaan"
+noCustomEmojis: "Tidak ada emoji kustom"
+noJobs: "Tidak ada kerja"
+federating: "memfederasi"
+blocked: "Diblokir"
+suspended: "Diberhentikan"
+all: "Semua"
+subscribing: "Berlangganan"
+publishing: "Sedang menyiarkan langsung"
+notResponding: "Tidak ada respon"
+instanceFollowing: "Mengikuti di server"
+instanceFollowers: "Pengikut server"
+instanceUsers: "Pengguna di server ini"
+changePassword: "Ubah kata sandi"
+security: "Keamanan"
+retypedNotMatch: "Masukan tidak cocok."
+currentPassword: "Kata sandi saat ini"
+newPassword: "Kata sandi baru"
+newPasswordRetype: "Ulangi kata sandi baru"
+attachFile: "Lampirkan berkas"
+more: "Lagi!"
+featured: "Sorotan"
+usernameOrUserId: "Nama pengguna atau User ID"
+noSuchUser: "Pengguna tidak ditemukan"
+lookup: "Mencari"
+announcements: "Pengumuman"
+imageUrl: "URL Gambar"
+remove: "Hapus"
+removed: "Telah dihapus"
+removeAreYouSure: "Apakah kamu yakin ingin menghapus \"{x}\"?"
+deleteAreYouSure: "Apakah kamu yakin ingin menghapus \"{x}\"?"
+resetAreYouSure: "Yakin mau atur ulang?"
+saved: "Telah disimpan"
+messaging: "Pesan"
+upload: "Unggah"
+keepOriginalUploading: "Simpan gambar asli"
+keepOriginalUploadingDescription: "Simpan gambar yang diunggah sebagaimana gambar
+  aslinya. Bila dimatikan, versi tampilan web akan dihasilkan pada saat diunggah."
+fromDrive: "Dari Drive"
+fromUrl: "Dari URL"
+uploadFromUrl: "Unggah dari URL"
+uploadFromUrlDescription: "URL berkas yang ingin kamu unggah"
+uploadFromUrlRequested: "Pengunggahan telah diminta"
+uploadFromUrlMayTakeTime: "Membutuhkan beberapa waktu hingga pengunggahan selesai."
+explore: "Jelajahi"
+messageRead: "Telah dibaca"
+noMoreHistory: "Tidak ada sejarah lagi"
+startMessaging: "Mulai mengirim pesan"
+nUsersRead: "Dibaca oleh {n}"
+agreeTo: "Saya setuju kepada {0}"
+tos: "Syarat dan ketentuan"
+start: "Mulai"
+home: "Beranda"
+remoteUserCaution: "Informasi dari pengguna luar tidak lengkap."
+activity: "Aktivitas"
+images: "Gambar"
+birthday: "Tanggal lahir"
+yearsOld: "{age} tahun"
+registeredDate: "Bergabung pada"
+location: "Lokasi"
+theme: "Tema"
+themeForLightMode: "Tema untuk Mode Terang"
+themeForDarkMode: "Tema untuk Mode Gelap"
+light: "Terang"
+dark: "Gelap"
+lightThemes: "Tema Terang"
+darkThemes: "Tema gelap"
+syncDeviceDarkMode: "Sinkronkan mode gelap dengan pengaturan perangkat"
+drive: "Drive"
+fileName: "Nama berkas"
+selectFile: "Pilih berkas"
+selectFiles: "Pilih berkas"
+selectFolder: "Pilih folder"
+selectFolders: "Pilih folder"
+renameFile: "Ubah nama berkas"
+folderName: "Nama folder"
+createFolder: "Buat folder"
+renameFolder: "Ubah nama folder"
+deleteFolder: "Hapus folder"
+addFile: "Tambahkan berkas"
+emptyDrive: "Drive kosong"
+emptyFolder: "Folder kosong"
+unableToDelete: "Tidak dapat menghapus"
+inputNewFileName: "Masukkan nama berkas yang baru"
+inputNewDescription: "Masukkan deskripsi baru"
+inputNewFolderName: "Masukkan nama folder yang baru"
+circularReferenceFolder: "Folder tujuan adalah subfolder dari folder yang ingin kamu
+  pindahkan."
+hasChildFilesOrFolders: "Karena folder ini tidak kosong, maka tidak dapat dihapus."
+copyUrl: "Salin tautan"
+rename: "Ubah nama"
+avatar: "Avatar"
+banner: "Banner"
+nsfw: "Konten sensitif"
+whenServerDisconnected: "Ketika kehilangan koneksi dengan peladen"
+disconnectedFromServer: "Terputus koneksi dari peladen"
+reload: "Muat ulang"
+doNothing: "Abaikan"
+reloadConfirm: "Apakah kamu ingin memuat ulang linimasa?"
+watch: "Tonton"
+unwatch: "Batal tonton"
+accept: "Terima"
+reject: "Tolak"
+normal: "Normal"
+instanceName: "Nama server"
+instanceDescription: "Deskripsi server"
+maintainerName: "Pengelola"
+maintainerEmail: "Surel pengelola"
+tosUrl: "URL Syarat dan Ketentuan"
+thisYear: "Tahun ini"
+thisMonth: "Bulan ini"
+today: "Hari ini"
+dayX: "{day}"
+monthX: "{month}"
+yearX: "{year}"
+pages: "Halaman"
+enableLocalTimeline: "Nyalakan linimasa lokal"
+enableGlobalTimeline: "Nyalakan linimasa global"
+disablingTimelinesInfo: "Admin dan Moderator akan selalu memiliki akses ke semua linimasa
+  meskipun linimasa tersebut tidak diaktifkan."
+registration: "Pendaftaran"
+enableRegistration: "Nyalakan pendaftaran pengguna baru"
+invite: "Undang"
+driveCapacityPerLocalAccount: "Kapasitas drive per pengguna lokal"
+driveCapacityPerRemoteAccount: "Kapasitas drive per pengguna remote"
+inMb: "dalam Megabytes"
+iconUrl: "URL Gambar ikon"
+bannerUrl: "URL Banner"
+backgroundImageUrl: "URL Gambar latar"
+basicInfo: "Informasi Umum"
+pinnedUsers: "Pengguna yang disematkan"
+pinnedUsersDescription: "Tuliskan satu nama pengguna dalam satu baris. Pengguna yang
+  dituliskan disini akan disematkan dalam bilah \"Jelajahi\"."
+pinnedPages: "Halaman yang disematkan"
+pinnedPagesDescription: "Masukkan jalur dari halaman yang kamu ingin sematkan ke halaman
+  utama dari server ini, dipisah dengan membuat baris baru."
+pinnedClipId: "ID dari klip yang disematkan"
+pinnedNotes: "Postingan tersemat"
+hcaptcha: "hCaptcha"
+enableHcaptcha: "Nyalakan hCaptcha"
+hcaptchaSiteKey: "Site Key"
+hcaptchaSecretKey: "Secret Key"
+recaptcha: "reCAPTCHA"
+enableRecaptcha: "Nyalakan reCAPTCHA"
+recaptchaSiteKey: "Kunci situs"
+recaptchaSecretKey: "Secret Key"
+avoidMultiCaptchaConfirm: "Menggunakan banyak Captcha dapat menyebabkan gangguan.
+  Apakah kamu ingin untuk menonaktifkan Captcha yang lain? Kamu dapat membiarkan fitur
+  ini tetap aktif dengan menekan tombol batal."
+antennas: "Antena"
+manageAntennas: "Pengelola Antena"
+name: "Nama"
+antennaSource: "Sumber Antenna"
+antennaKeywords: "Kata kunci yang diterima"
+antennaExcludeKeywords: "Kata kunci yang dikecualikan"
+antennaKeywordsDescription: "Pisahkan dengan spasi untuk kondisi AND. Pisahkan dengan
+  baris baru untuk kondisi OR."
+notifyAntenna: "Beri tahu tentang postingan baru"
+withFileAntenna: "Hanya postingan dengan berkas"
+enableServiceworker: "Aktifkan ServiceWorker"
+antennaUsersDescription: "Tuliskan satu nama pengguna per baris"
+caseSensitive: "Peka huruf besar dan huruf kecil"
+withReplies: "Termasuk balasan"
+connectedTo: "Akun yang mengikuti telah terhubung"
+notesAndReplies: "Postingan dan balasan"
+withFiles: "Media"
+silence: "Bungkam"
+silenceConfirm: "Apakah kamu yakin ingin membungkam pengguna ini?"
+unsilence: "Hapus bungkam"
+unsilenceConfirm: "Apakah kamu ingin untuk batal membungkam pengguna ini?"
+popularUsers: "Pengguna populer"
+recentlyUpdatedUsers: "Pengguna dengan aktivitas terkini"
+recentlyRegisteredUsers: "Pengguna baru saja bergabung"
+recentlyDiscoveredUsers: "Pengguna baru saja dilihat"
+exploreUsersCount: "Terdapat {count} pengguna"
+exploreFediverse: "Jelajahi Fediverse"
+popularTags: "Tag populer"
+userList: "Daftar"
+about: "Informasi"
+aboutFirefish: "Tentang Firefish"
+administrator: "Admin"
+token: "Token"
+twoStepAuthentication: "Otentikasi dua faktor"
+moderator: "Moderator"
+nUsersMentioned: "{n} pengguna disebut"
+securityKey: "Kunci keamanan"
+securityKeyName: "Nama kunci"
+registerSecurityKey: "Daftarkan kunci keamanan"
+lastUsed: "Terakhir digunakan"
+unregister: "Batalkan pendaftaran"
+passwordLessLogin: "Masuk tanpa kata sandi"
+resetPassword: "Atur ulang kata sandi"
+newPasswordIs: "Kata sandi baru adalah \"{password}\""
+reduceUiAnimation: "Kurangi animasi antarmuka"
+share: "Bagikan"
+notFound: "Tidak dapat ditemukan"
+notFoundDescription: "Tidak ada halaman sesuai dengan URL yang ditentukan."
+uploadFolder: "Lokasi unggah folder bawaan"
+cacheClear: "Bersihkan tembolok"
+markAsReadAllNotifications: "Tandai semua pemberitahuan sudah dibaca"
+markAsReadAllUnreadNotes: "Tandai semua postingan sudah dibaca"
+markAsReadAllTalkMessages: "Tandai semua pesan sudah dibaca"
+help: "Bantuan"
+inputMessageHere: "Ketik pesan disini"
+close: "Tutup"
+group: "Grup"
+groups: "Grup"
+createGroup: "Buat grup"
+ownedGroups: "Grup yang dimiliki"
+joinedGroups: "Grup yang diikuti"
+invites: "Undang"
+groupName: "Nama grup"
+members: "Anggota"
+transfer: "Transfer"
+messagingWithUser: "Obrolan dengan pengguna lain"
+messagingWithGroup: "Obrolan di dalam grup"
+title: "Judul"
+text: "Teks"
+enable: "Aktifkan"
+next: "Selanjutnya"
+retype: "Masukkan ulang"
+noteOf: "Diposting oleh {user}"
+inviteToGroup: "Undang ke grup"
+quoteAttached: "Dikutip"
+quoteQuestion: "Apakah kamu ingin menambahkan kutipan?"
+noMessagesYet: "Tidak ada pesan"
+newMessageExists: "Kamu mendapatkan pesan baru"
+onlyOneFileCanBeAttached: "Kamu hanya dapat melampirkan satu berkas ke dalam pesan"
+signinRequired: "Silahkan login"
+invitations: "Undang"
+invitationCode: "Kode undangan"
+checking: "Memeriksa..."
+available: "Tersedia"
+unavailable: "Tidak tersedia"
+usernameInvalidFormat: "Hanya dapat menerima karakter a-z, A-Z dan angka 0-9."
+tooShort: "Terlalu pendek"
+tooLong: "Terlalu panjang"
+weakPassword: "Kata sandi lemah"
+normalPassword: "Kata sandi sedang"
+veryStrongPassword: "Kata sandi kuat"
+passwordMatched: "Kata sandi sama"
+passwordNotMatched: "Kata sandi tidak sama"
+signinWith: "Masuk dengan {x}"
+signinFailed: "Tidak dapat masuk. Nama pengguna atau kata sandi yang kamu masukkan
+  salah."
+tapSecurityKey: "Ketuk kunci keamanan kamu"
+or: "atau"
+language: "Bahasa"
+uiLanguage: "Bahasa antarmuka pengguna"
+groupInvited: "Telah diundang ke grup"
+aboutX: "Tentang {x}"
+useOsNativeEmojis: "Gunakan Emoji bawaan sistem operasi"
+disableDrawer: "Jangan gunakan menu bergaya laci"
+youHaveNoGroups: "Kamu tidak memiliki grup"
+joinOrCreateGroup: "Bergabunglah dengan grup atau kamu dapat membuat grupmu sendiri."
+noHistory: "Tidak ada riwayat"
+signinHistory: "Riwayat masuk"
+disableAnimatedMfm: "Nonaktifkan MFM dengan animasi"
+doing: "Sedang berkerja..."
+category: "Kategori"
+tags: "Tag"
+docSource: "Sumber dari dokumen ini"
+createAccount: "Buat akun"
+existingAccount: "Akun yang ada"
+regenerate: "Buat ulang"
+fontSize: "Ukuran huruf"
+noFollowRequests: "Kamu tidak memiliki permintaan mengikuti yang menunggu"
+openImageInNewTab: "Buka gambar di tab baru"
+dashboard: "Dasbor"
+local: "Lokal"
+remote: "Luar"
+total: "Jumlah"
+weekOverWeekChanges: "Mingguan"
+dayOverDayChanges: "Harian"
+appearance: "Tampilan"
+clientSettings: "Pengaturan Klien"
+accountSettings: "Pengaturan Akun"
+promotion: "Promosi"
+promote: "Promosikan"
+numberOfDays: "Jumlah hari"
+hideThisNote: "Sembunyikan postingan ini"
+showFeaturedNotesInTimeline: "Tampilkan postingan yang diunggulkan di linimasa"
+objectStorage: "Penyimpanan Objek"
+useObjectStorage: "Gunakan object storage"
+objectStorageBaseUrl: "URL Dasar"
+objectStorageBaseUrlDesc: "URL dipakai sebagai referensi. Tentukan URL CDN atau Proksimu
+  jika kamu menggunakan salah satunya.\nUntuk S3 gunakan 'https://<bucket>.s3.amazonaws.com'
+  dan GCS atau layanan serupa gunakan 'https://storage.googleapis.com/<bucket>', dll."
+objectStorageBucket: "Ember"
+objectStorageBucketDesc: "Mohon tentukan nama bucket yang digunakan pada layanan yang
+  telah dikonfigurasi."
+objectStoragePrefix: "Prefix"
+objectStoragePrefixDesc: "Berkas tidak akan disimpan dalam direktori dari prefix ini."
+objectStorageEndpoint: "Titik akhir"
+objectStorageEndpointDesc: "Kosongkan bagian ini jika kamu menggunakan AWS S3, jika
+  tidak tentukan endpoint sebagai '<host>' atau '<host>:<port>' sesuai dengan panduan
+  dari layanan yang akan kamu gunakan."
+objectStorageRegion: "Region"
+objectStorageRegionDesc: "Tentukan region seperti 'xx-east-1'. Jika layanan kamu tidak
+  memiliki perbedaan mengenai region, kosongkan saja atau isi dengan 'us-east-1'."
+objectStorageUseSSL: "Gunakan SSL"
+objectStorageUseSSLDesc: "Matikan ini jika kamu tidak akan menggunakan HTTPS untuk
+  koneksi API"
+objectStorageUseProxy: "Hubungkan melalui Proxy"
+objectStorageUseProxyDesc: "Matikan ini jika kamu tidak akan menggunakan Proxy untuk
+  koneksi ObjectStorage"
+objectStorageSetPublicRead: "Setel \"public-read\" disaat mengunggah"
+serverLogs: "Log Peladen"
+deleteAll: "Hapus semua"
+showFixedPostForm: "Tampilkan formulir posting di atas linimasa"
+newNoteRecived: "Ada postingan baru"
+sounds: "Bunyi"
+listen: "Dengarkan"
+none: "Tidak ada"
+showInPage: "Tampilkan di halaman"
+popout: "Sembulan"
+volume: "Volume"
+masterVolume: "Master volume"
+details: "Selengkapnya"
+chooseEmoji: "Pilih emoji"
+unableToProcess: "Tindakan tersebut tidak dapat diselesaikan"
+recentUsed: "Baru saja digunakan"
+install: "Pasang"
+uninstall: "Copot pemasangan"
+installedApps: "Aplikasi yang diijinkan"
+nothing: "Tidak ada sama sekali disini"
+installedDate: "Diijinkan"
+lastUsedDate: "Terakhir digunakan"
+state: "Kondisi"
+sort: "Urutkan"
+ascendingOrder: "Urutkan naik"
+descendingOrder: "Urutkan menurun"
+scratchpad: "Scratchpad"
+scratchpadDescription: "Scratchpad menyediakan lingkungan eksperimen untuk AiScript.
+  Kamu bisa menulis, mengeksekusi, serta mengecek hasil yang berinteraksi dengan Firefish."
+output: "Keluaran"
+script: "Script"
+disablePagesScript: "Nonaktifkan script pada halaman"
+updateRemoteUser: "Perbaharui informasi pengguna luar"
+deleteAllFiles: "Hapus semua berkas"
+deleteAllFilesConfirm: "Apakah kamu yakin ingin menghapus semua berkas?"
+removeAllFollowing: "Tahan semua mengikuti"
+removeAllFollowingDescription: "Batal mengikuti semua akun dari {host}. Mohon jalankan
+  ini ketika server sudah tidak ada lagi."
+userSuspended: "Pengguna ini telah dibekukan."
+userSilenced: "Pengguna ini telah dibungkam."
+yourAccountSuspendedTitle: "Akun ini dibekukan"
+yourAccountSuspendedDescription: "Akun ini dibekukan karena melanggar ketentuan penggunaan
+  layanan peladen atau semacamnya. Hubungi admin apabila ingin tahu alasan lebih lanjut.
+  Mohon untuk tidak membuat akun baru."
+menu: "Menu"
+divider: "Pembagi"
+addItem: "Tambahkan item"
+relays: "Relay"
+addRelay: "Tambahkan relay"
+inboxUrl: "URL Kotak masuk"
+addedRelays: "Relay yang ditambahkan"
+serviceworkerInfo: "Harus diaktifkan untuk pemberitahuan push."
+deletedNote: "Postingan yang dihapus"
+invisibleNote: "Postingan tidak terlihat"
+enableInfiniteScroll: "Aktifkan gulir tak terbatas"
+visibility: "Visibilitas"
+poll: "Angket"
+useCw: "Sembunyikan konten"
+enablePlayer: "Buka pemutar video"
+disablePlayer: "Tutup pemutar video"
+expandTweet: "Perluas utas"
+themeEditor: "Penyunting tema"
+description: "Deskripsi"
+describeFile: "Tambahkan deskripsi"
+enterFileDescription: "Masukkan deskripsi"
+author: "Pembuat"
+leaveConfirm: "Ada perubahan yang belum disimpan. Apakah kamu ingin membuangnya?"
+manage: "Manajemen"
+plugins: "Plugin"
+deck: "Dek"
+undeck: "Keluar dari dek"
+useBlurEffectForModal: "Gunakan efek buram untuk modal"
+useFullReactionPicker: "Gunakan pemilih reaksi ukuran penuh"
+width: "Lebar"
+height: "Tinggi"
+large: "Besar"
+medium: "Sedang"
+small: "Kecil"
+generateAccessToken: "Buat access token"
+permission: "Izin"
+enableAll: "Aktifkan semua"
+disableAll: "Nonaktifkan semua"
+tokenRequested: "Berikan ijin akses ke akun"
+pluginTokenRequestedDescription: "Plugin ini dapat menggunakan setelan ijin disini."
+notificationType: "Jenis pemberitahuan"
+edit: "Sunting"
+emailServer: "Peladen surel"
+enableEmail: "Nyalakan distribusi surel"
+emailConfigInfo: "Digunakan untuk mengonfirmasi surel kamu disaat mendaftar dan lupa
+  kata sandi"
+email: "Surel"
+emailAddress: "Alamat surel"
+smtpConfig: "Konfigurasi peladen SMTP"
+smtpHost: "Host"
+smtpPort: "Port"
+smtpUser: "Nama Pengguna"
+smtpPass: "Kata sandi"
+emptyToDisableSmtpAuth: "Kosongkan nama pengguna dan kata sandi untuk menonaktifkan
+  verifikasi SMTP"
+smtpSecure: "Gunakan SSL/TLS implisit untuk koneksi SMTP"
+smtpSecureInfo: "Matikan ini ketika menggunakan STARTTLS"
+testEmail: "Tes pengiriman surel"
+wordMute: "Bisukan kata dan bahasa"
+regexpError: "Kesalahan ekspresi reguler"
+regexpErrorDescription: "Galat terjadi pada baris {line} ekspresi reguler dari {tab}
+  kata yang dibisukan:"
+instanceMute: "Server Dibisukan"
+userSaysSomething: "{name} mengatakan sesuatu"
+makeActive: "Aktifkan"
+display: "Tampilkan"
+copy: "Salin"
+metrics: "Metrik"
+overview: "Ikhtisar"
+logs: "Log"
+delayed: "Terlambat"
+database: "Basis data"
+channel: "Kanal"
+create: "Buat"
+notificationSetting: "Pengaturan Pemberitahuan"
+notificationSettingDesc: "Pilih tipe pemberitahuan untuk ditampilkan."
+useGlobalSetting: "Gunakan setelan global"
+useGlobalSettingDesc: "Jika dinyalakan, setelan pemberitahuan akun kamu akan digunakan.
+  Jika dimatikan, konfigurasi secara individu dapat dibuat."
+other: "Lainnya"
+regenerateLoginToken: "Perbarui token masuk"
+regenerateLoginTokenDescription: "Perbarui token yang digunakan secara internal saat
+  masuk ke akun. Normalnya aksi ini tidak diperlukan. Jika diperbarui, semua perangkat
+  akan dikeluarkan dari akun."
+setMultipleBySeparatingWithSpace: "Kamu dapat menyetel banyak dengan memisahkannya
+  menggunakan spasi."
+fileIdOrUrl: "File-ID atau URL"
+behavior: "Perilaku"
+sample: "Contoh"
+abuseReports: "Laporkan"
+reportAbuse: "Laporkan"
+reportAbuseOf: "Laporkan {name}"
+fillAbuseReportDescription: "Mohon isi rincian laporan. Jika laporan ini mengenai
+  postingan yang spesifik, mohon lampirkan serta URL postingan tersebut."
+abuseReported: "Laporan kamu telah dikirimkan. Terima kasih."
+reporter: "Pelapor"
+reporteeOrigin: "Yang dilaporkan"
+reporterOrigin: "Pelapor"
+forwardReport: "Teruskan laporan ke server luar"
+forwardReportIsAnonymous: "Untuk melindungi privasi akun kamu, akun anonim dari sistem
+  akan digunakan sebagai pelapor pada server luar."
+send: "Kirim"
+abuseMarkAsResolved: "Tandai laporan sebagai selesai"
+openInNewTab: "Buka di tab baru"
+openInSideView: "Buka di tampilan samping"
+defaultNavigationBehaviour: "Navigasi bawaan"
+editTheseSettingsMayBreakAccount: "Menyunting pengaturan ini memiliki kemungkinan
+  untuk merusak akun kamu."
+instanceTicker: "Informasi server postingan"
+waitingFor: "Menunggu untuk {x}"
+random: "Acak"
+system: "Sistem"
+switchUi: "Tata letak"
+desktop: "Desktop"
+clip: "Klip"
+createNew: "Buat baru"
+optional: "Opsional"
+createNewClip: "Buat klip baru"
+unclip: "Batalkan klip"
+confirmToUnclipAlreadyClippedNote: "Postingan ini sudah disertakan di klip \"{name}\"\
+  . Yakin ingin menghapus postingan dari klip ini?"
+public: "Publik"
+i18nInfo: "Firefish diterjemahkan ke dalam banyak bahasa oleh sukarelawan. Kamu dapat
+  ikut membantu di {link}."
+manageAccessTokens: "Kelola access token"
+accountInfo: "Informasi akun"
+notesCount: "Jumlah postingan"
+repliesCount: "Jumlah balasan terkirim"
+renotesCount: "Jumlah postingan ulang terkirim"
+repliedCount: "Jumlah balasan diterima"
+renotedCount: "Jumlah postingan ulang diterima"
+followingCount: "Jumlah akun yang diikuti"
+followersCount: "Jumlah pengikut"
+sentReactionsCount: "Jumlah reaksi yang terkirim"
+receivedReactionsCount: "Jumlah reaksi yang diterima"
+pollVotesCount: "Jumlah suara yang terkirim"
+pollVotedCount: "Jumlah suara yang diterima dalam angket"
+yes: "Iya"
+no: "Tidak"
+driveFilesCount: "Jumlah berkas drive"
+driveUsage: "Penggunaan ruang penyimpanan drive"
+noCrawle: "Tolak pengindeksan crawler"
+noCrawleDescription: "Minta mesin pencari eksternal untuk tidak mengindeks kontenmu."
+lockedAccountInfo: "Kecuali kamu mengatur visibilitas postingan milikmu ke \"Hanya
+  pengikut\", postingan milikmu akan dapat dilihat oleh siapa saja, bahkan jika kamu
+  memerlukan pengikut untuk disetujui secara manual."
+alwaysMarkSensitive: "Tandai sebagai media sensitif secara bawaan"
+loadRawImages: "Tampilkan lampiran gambar secara penuh daripada thumbnail"
+disableShowingAnimatedImages: "Jangan mainkan gambar bergerak"
+verificationEmailSent: "Surel verifikasi telah dikirimkan. Mohon akses tautan yang
+  telah disertakan untuk menyelesaikan verifikasi."
+notSet: "Tidak disetel"
+emailVerified: "Surel telah diverifikasi"
+noteFavoritesCount: "Jumlah postingan yang dimarkah"
+pageLikesCount: "Jumlah suka yang diterima Halaman"
+pageLikedCount: "Jumlah Halaman yang disukai"
+contact: "Kontak"
+useSystemFont: "Gunakan font bawaan sistem operasi"
+clips: "Klip"
+experimentalFeatures: "Fitur eksperimental"
+developer: "Pengembang"
+makeExplorable: "Buat akun tampil di \"Jelajahi\""
+makeExplorableDescription: "Jika kamu menonaktifkan ini, akun kamu tidak akan muncul
+  di bagian \"Jelajahi\"."
+showGapBetweenNotesInTimeline: "Tampilkan jarak diantara postingan pada linimasa"
+duplicate: "Duplikat"
+left: "Kiri"
+center: "Tengah"
+wide: "Lebar"
+narrow: "Sempit"
+reloadToApplySetting: "Pengaturan ini akan diterapkan saat memuat halaman kembali.
+  Apakah kamu ingin memuat halaman kembali sekarang?"
+needReloadToApply: "Pengaturan ini hanya akan diterapkan setelah memuat ulang halaman."
+showTitlebar: "Tampilkan bilah judul"
+clearCache: "Hapus tembolok"
+onlineUsersCount: "{n} orang sedang daring"
+nUsers: "{n} Pengguna"
+nNotes: "{n} Postingan"
+sendErrorReports: "Kirim laporan kesalahan"
+sendErrorReportsDescription: "Ketika diaktifkan, informasi kesalahan rinci akan dibagikan
+  dengan Firefish ketika masalah terjadi, hal ini untuk membantu kualitas Firefish.\n
+  Ini akan memuat informasi antara lain versi sistem operasi yang kamu gunakan, peramban
+  yang dipakai, riwayat aktivitas kamu di Firefish, dll."
+myTheme: "Tema saya"
+backgroundColor: "Latar Belakang"
+accentColor: "Aksen"
+textColor: "Teks"
+saveAs: "Simpan sebagai…"
+advanced: "Tingkat lanjut"
+value: "Nilai"
+createdAt: "Dibuat pada"
+updatedAt: "Diperbarui pada"
+saveConfirm: "Simpan perubahan?"
+deleteConfirm: "Yakin hapus?"
+invalidValue: "Nilai tidak valid."
+registry: "Registri"
+closeAccount: "Tutup akun"
+currentVersion: "Versi saat ini"
+latestVersion: "Versi terkini"
+youAreRunningUpToDateClient: "Kamu menggunakan versi terkini dari klienmu."
+newVersionOfClientAvailable: "Versi terbaru dari klien kamu telah tersedia."
+usageAmount: "Penggunaan"
+capacity: "Kapasitas"
+inUse: "Digunakan"
+editCode: "Sunting kode"
+apply: "Terapkan"
+receiveAnnouncementFromInstance: "Terima pemberitahuan dari server ini"
+emailNotification: "Pemberitahuan surel"
+publish: "Terbitkan"
+inChannelSearch: "Cari di kanal"
+useReactionPickerForContextMenu: "Buka pemilih reaksi dengan klik-kanan"
+typingUsers: "{users} sedang mengetik"
+jumpToSpecifiedDate: "Loncat ke tanggal spesifik"
+showingPastTimeline: "Sedang menampilkan linimasa lama"
+clear: "Bersihkan"
+markAllAsRead: "Tandai semua sudah dibaca"
+goBack: "Kembali"
+unlikeConfirm: "Yakin ingin hapus sukamu?"
+fullView: "Tampilan penuh"
+quitFullView: "Keluar tampilan penuh"
+addDescription: "Tambahkan deskripsi"
+userPagePinTip: "Kamu dapat menampilkan postingan di sini dengan memilih \"Sematkan
+  ke profil\" dari menu pada sebuah postingan."
+notSpecifiedMentionWarning: "Postingan ini mengandung sebutan dari pengguna yang tidak
+  disertakan sebagai penerima"
+info: "Informasi"
+userInfo: "Informasi pengguna"
+unknown: "Tidak diketahui"
+onlineStatus: "Status daring"
+hideOnlineStatus: "Sembunyikan status daring"
+hideOnlineStatusDescription: "Menyembunyikan status daring kamu umengurangi kenyamanan
+  untuk beberapa fungsi seperti contohnya pencarian."
+online: "Daring"
+active: "Aktif"
+offline: "Luring"
+notRecommended: "Tidak disarankan"
+botProtection: "Perlindungan Bot"
+instanceBlocking: "Pengelolaan Federasi"
+selectAccount: "Pilih akun"
+switchAccount: "Ganti akun"
+enabled: "Aktif"
+disabled: "Nonaktif"
+quickAction: "Aksi cepat"
+user: "Pengguna"
+administration: "Manajemen"
+accounts: "Akun"
+switch: "Beralih"
+noMaintainerInformationWarning: "Informasi pengelola belum disetel."
+noBotProtectionWarning: "Proteksi bot belum disetel."
+configure: "Setel"
+postToGallery: "Posting ke galeri"
+gallery: "Galeri"
+recentPosts: "Postingan terbaru"
+popularPosts: "Postingan populer"
+shareWithNote: "Bagikan dengan postingan"
+ads: "Spanduk komunitas"
+expiration: "Batas akhir"
+memo: "Memo"
+priority: "Prioritas"
+high: "Tinggi"
+middle: "Sedang"
+low: "Rendah"
+emailNotConfiguredWarning: "Alamat surel tidak disetel."
+ratio: "Rasio"
+previewNoteText: "Tampilkan pratinjau"
+customCss: "CSS khusus"
+customCssWarn: "Pengaturan ini seharusnya digunakan jika kamu tahu cara kerjanya.
+  Memasukkan nilai yang tidak tepat dapat menyebabkan klien tidak berfungsi semestinya."
+global: "Global"
+squareAvatars: "Tampilkan avatar sebagai persegi untuk akun non-kucing"
+sent: "Kirim"
+received: "Diterima"
+searchResult: "Hasil Penelusuran"
+hashtags: "Tagar"
+troubleshooting: "Penyelesaian Masalah"
+useBlurEffect: "Gunakan efek blur pada antarmuka"
+learnMore: "Pelajari lebih lanjut"
+misskeyUpdated: "Firefish telah dimutakhirkan!"
+whatIsNew: "Lihat perubahan pemutakhiran"
+translate: "Terjemahkan"
+translatedFrom: "Terjemahkan dari {x}"
+accountDeletionInProgress: "Penghapusan akun sedang dalam proses"
+usernameInfo: "Nama yang mengidentifikasikan akun kamu dari yang lain pada peladen
+  ini. Kamu dapat menggunakan alfabet (a~z, A~Z), digit (0~9) atau garis bawah (_).
+  Username tidak dapat diubah setelahnya."
+aiChanMode: "Mode Ai"
+keepCw: "Biarkan Peringatan Konten"
+pubSub: "Akun Pub/Sub"
+lastCommunication: "Komunikasi terakhir"
+resolved: "Selesai"
+unresolved: "Belum selesai"
+breakFollow: "Batalkan mengikuti"
+itsOn: "Aktif"
+itsOff: "Nonaktif"
+emailRequiredForSignup: "Membutuhkan alamat surel untuk mendaftar"
+unread: "Belum dibaca"
+filter: "Saring"
+controlPanel: "Panel kendali"
+manageAccounts: "Kelola Akun"
+makeReactionsPublic: "Tampilkan riwayat reaksi ke publik"
+makeReactionsPublicDescription: "Pengaturan ini akan membuat daftar dari semua reaksi
+  masa lalu kamu ditampilkan secara publik."
+classic: "Tengah"
+muteThread: "Bisukan thread"
+unmuteThread: "Suarakan thread"
+ffVisibility: "Visibilitas Mengikuti/Pengikut"
+ffVisibilityDescription: "Mengatur siapa yang dapat melihat pengikutmu dan yang kamu
+  ikuti."
+continueThread: "Lihat lanjutan utas"
+deleteAccountConfirm: "Akun ini akan dihapus secara permanen. Lanjutkan?"
+incorrectPassword: "Kata sandi salah."
+voteConfirm: "Konfirmasi suara kamu untuk ({choice})？"
+hide: "Sembunyikan"
+leaveGroup: "Keluar grup"
+leaveGroupConfirm: "Apakah kamu yakin untuk keluar dari \"{name}\"?"
+useDrawerReactionPickerForMobile: "Tampilkan bilah reaksi sebagai laci di ponsel"
+welcomeBackWithName: "Selamat datang kembali, {name}"
+clickToFinishEmailVerification: "Mohon klik [{ok}] untuk menyelesaikan verifikasi
+  email."
+overridedDeviceKind: "Tipe perangkat"
+smartphone: "Ponsel"
+tablet: "Tablet"
+auto: "Otomatis"
+themeColor: "Warna Jam Server"
+size: "Ukuran"
+numberOfColumn: "Jumlah per kolom"
+instanceDefaultLightTheme: "Tema terang bawaan ranah server"
+instanceDefaultDarkTheme: "Tema gelap bawaan ranah server"
+instanceDefaultThemeDescription: "Masukkan kode tema di format obyek."
+mutePeriod: "Batas waktu bisu"
+indefinitely: "Selamanya"
+tenMinutes: "10 Menit"
+oneHour: "1 Jam"
+oneDay: "1 Hari"
+oneWeek: "1 Bulan"
+reflectMayTakeTime: "Mungkin perlu beberapa saat untuk dicerminkan."
+failedToFetchAccountInformation: "Gagal untuk mendapatkan informasi akun"
+rateLimitExceeded: "Batas sudah terlampaui"
+cropImage: "potong gambar"
+cropImageAsk: "Ingin memotong gambar?"
+file: "Berkas"
+reverse: "Balik"
+colored: "Diwarnai"
+label: "Label"
+localOnly: "Hanya lokal"
+account: "Akun"
+_emailUnavailable:
+  used: "Alamat surel ini telah digunakan"
+  format: "Format alamat surel ini tidak valid"
+  disposable: "Alamat surel temporer tidak dapat digunakan"
+  mx: "Peladen alamat surel ini tidak valid"
+  smtp: "Peladen alamat surel ini tidak merespon"
+_ffVisibility:
+  public: "Terbitkan"
+  followers: "Tampil untuk pengikut saja"
+  private: "Tersembunyi"
+_signup:
+  almostThere: "Hampir selesai"
+  emailAddressInfo: "Mohon masukkan alamat surel kamu."
+  emailSent: "Konfirmasi surel telah dikirimkan ke alamat surel kamu ({email}). Mohon
+    klik tautan yang tercantum di dalamnya untuk menyelesaikan pembuatan akun."
+_accountDelete:
+  accountDelete: "Hapus akun"
+  mayTakeTime: "Karena penghapusan akun merupakan proses yang berat dan intensif,
+    kemungkinan dapat membutuhkan waktu untuk menyelesaikan tergantung daripada berapa
+    banyak konten yang kamu buat dan berapa banyak berkas yang telah kamu unggah."
+  sendEmail: "Setelah penghapusan akun selesai, pemberitahuan akan dikirimkan ke alamat
+    surel yang terdaftarkan pada akun ini."
+  requestAccountDelete: "Minta penghapusan akun"
+  started: "Penghapusan telah dimulai."
+  inProgress: "Penghapusan sedang dalam proses"
+_ad:
+  back: "Kembali"
+  reduceFrequencyOfThisAd: "Tampilkan banner ini lebih sedikit"
+  adsBy: Banner komunitas oleh {by}
+_forgotPassword:
+  enterEmail: "Masukkan alamat surel yang kamu gunakan pada saat mendaftar. Sebuah
+    tautan untuk mengatur ulang kata sandi kamu akan dikirimkan ke alamat surel tersebut."
+  ifNoEmail: "Apabila kamu tidak menggunakan surel pada saat pendaftaran, mohon hubungi
+    admin server segera."
+  contactAdmin: "Server ini tidak mendukung menggunakan alamat surel, mohon kontak
+    admin untuk mengatur ulang password kamu."
+_gallery:
+  my: "Postingan saya"
+  liked: "Postingan yang disukai"
+  like: "Suka"
+  unlike: "Hapus suka"
+_email:
+  _follow:
+    title: "Mengikuti kamu"
+  _receiveFollowRequest:
+    title: "Kamu menerima permintaan mengikuti"
+_plugin:
+  install: "Memasang plugin"
+  installWarn: "Mohon jangan memasang plugin yang tidak dapat dipercayai."
+  manage: "Manajemen plugin"
+_registry:
+  scope: "Lingkup"
+  key: "Kunci"
+  keys: "Kunci"
+  domain: "Domain"
+  createKey: "Buat kunci"
+_aboutFirefish:
+  about: "Firefish adalah perangkat lunak sumber terbuka yang sedang dikembangkan
+    oleh syuilo sejak 2014."
+  contributors: "Kontributor utama"
+  allContributors: "Seluruh kontributor"
+  source: "Sumber kode"
+  translation: "Terjemahkan Firefish"
+  donate: "Donasi ke Firefish"
+  donateTitle: Suka Firefish?
+  pleaseDonateToFirefish: Silakan pertimbangkan berdonasi ke Firefish untuk mendukung
+    pengembangannya.
+  pleaseDonateToHost: Silakan pertimbangkan juga berdonasi ke server rumah kamu, {host},
+    untuk membantu dengan biaya operasi.
+  donateHost: Berdonasi ke {host}
+  misskeyContributors: Kontributor Misskey
+_nsfw:
+  respect: "Sembunyikan media NSFW"
+  ignore: "Jangan sembunyikan media NSFW"
+  force: "Sembunyikan semua media"
+_mfm:
+  cheatSheet: "Contekan MFM"
+  intro: "MFM adalah Firefish-exclusive Markup Language yang dapat digunakan di banyak
+    tempat. Berikut kamu bisa melihat daftar dari syntax MFM yang ada."
+  dummy: "Firefish membentangkan dunia Fediverse"
+  mention: "Sebut"
+  mentionDescription: "Kamu dapat menentukan pengguna tertentu dengan menggunakan
+    simbol-At dan nama engguna mereka."
+  hashtag: "Tagar"
+  hashtagDescription: "Kamu dapat menentukan tagar dengan menggunakan angka dan teks."
+  url: "URL"
+  urlDescription: "URL dapat ditampilkan."
+  link: "Tautan"
+  linkDescription: "Bagian tertentu dari teks dapat ditampilka sebagai URL."
+  bold: "Tebal"
+  boldDescription: "Sorot tulisan dengan membuatnya tebal."
+  small: "Kecil"
+  smallDescription: "Tampilkan konten kecil dan tipis."
+  center: "Tengah"
+  centerDescription: "Tampilkan konten di tengah."
+  inlineCode: "Kode (Dalam baris)"
+  inlineCodeDescription: "Menampilkan sorotan sintaks dalam baris untuk kode(program-)."
+  blockCode: "Kode (Blok)"
+  blockCodeDescription: "Menampilkan sorotan sintaks untuk kode(program-) multi baris
+    dalam sebuah blok."
+  inlineMath: "Matematika (Dalam baris)"
+  inlineMathDescription: "Menampilkan formula matematika (KaTeX) dalam baris"
+  blockMath: "Matematika (Blok)"
+  blockMathDescription: "Tampilkan formula matematika (KaTeX) dalam blok"
+  quote: "Kutip"
+  quoteDescription: "Menampilkan konten sebagai kutipan."
+  emoji: "Emoji kustom"
+  emojiDescription: "Emoji kustom dapat ditampilkan dengan mengurung nama emoji kustom
+    menggunakan tanda titik dua."
+  search: "Penelusuran"
+  searchDescription: "Menampilkan kotak pencarian dengan teks yang sudah dimasukkan."
+  flip: "Balik"
+  flipDescription: "Balikkan konten secara horizontal atau vertikal."
+  jelly: "Animasi (Jelly)"
+  jellyDescription: "Beri konten dengan animasi seperti jeli."
+  tada: "Animasi (Tada)"
+  tadaDescription: "Menerapkan animasi seperti \"Kejutan!\"."
+  jump: "Animasi (Loncat)"
+  jumpDescription: "Menerapkan animasi melompat."
+  bounce: "Animasi (Melambung)"
+  bounceDescription: "Menerapkan animasi melambung."
+  shake: "Animasi (Goyang)"
+  shakeDescription: "Menerapkan animasi bergoyang."
+  twitch: "Animasi (Cubit)"
+  twitchDescription: "Terapkan animasi cubit yang kuat."
+  spin: "Animasi (Putar)"
+  spinDescription: "Terapkan animasi putar."
+  x2: "Besar"
+  x2Description: "Tampilkan konten menjadi besar."
+  x3: "Lebih besar"
+  x3Description: "Tampilkan konten menjadi lebih besar."
+  x4: "Sangat besar"
+  x4Description: "Tampilka konten menjadi sangat besar."
+  blur: "Buram"
+  blurDescription: "Konten dapat diburamkan dengan efek ini. Konten dapat ditampilkan
+    dengan jelas dengan melayangkan kursor tetikus di atasnya."
+  font: "Font"
+  fontDescription: "Setel font yang ditampilkan untuk konten."
+  rainbow: "Pelangi"
+  rainbowDescription: "Membuat konten muncul dalam warna pelangi."
+  sparkle: "Kelap-kelip"
+  sparkleDescription: "Memberikan konten efek partikel kelap-kelip."
+  rotate: "Putar"
+  rotateDescription: "Putar konten sesuai sudut yang ditentukan."
+  play: Mainkan MFM
+  stop: Hentikan MFM
+  warn: MFM dapat berisi animasi yang sangat cepat
+  advanced: MFM tingkat lanjut
+  foreground: Warna latar depan
+  foregroundDescription: Ubah warna depan teks.
+  backgroundDescription: Ubah warna latar belakang teks.
+  plainDescription: Menonaktifkan efek dari semua MFM dalam efek MFM ini.
+  crop: Pangkas
+  alwaysPlay: Selalu mainkan MFM beranimasi secara otomatis
+  advancedDescription: Jika dinonaktifkan, hanya memperbolehkan markup dasar kecuali
+    jika MFM beranimasi dimainkan
+  positionDescription: Gerakkan konten dengan jumlah yang ditentukan.
+  scale: Skala
+  cropDescription: Pangkas konten.
+  background: Warna latar belakang
+  plain: Biasa
+  position: Posisi
+  scaleDescription: Ubah skala konten dengan jumlah yang ditentukan.
+  fade: Memudar
+  fadeDescription: Memudar konten.
+_instanceTicker:
+  none: "Jangan tampilkan"
+  remote: "Tampilkan untuk pengguna luar"
+  always: "Selalu tampilkan"
+_serverDisconnectedBehavior:
+  reload: "Muat ulang otomatis"
+  dialog: "Tampilkan dialog peringatan"
+  quiet: "Tampilkan peringatan tidak mengganggu"
+  nothing: Jangan lakukan apa pun
+_channel:
+  create: "Buat saluran"
+  edit: "Sunting saluran"
+  setBanner: "Setel banner"
+  removeBanner: "Hapus banner"
+  featured: "Tren"
+  owned: "Dimiliki"
+  following: "Mengikuti"
+  usersCount: "{n} Partisipan"
+  notesCount: "{n} Postingan"
+  nameOnly: Nama saja
+  nameAndDescription: Nama dan deskripsi
+_menuDisplay:
+  sideFull: "Horisontal"
+  sideIcon: "Horisontal (Ikon)"
+  top: "Atas"
+  hide: "Sembunyikan"
+_wordMute:
+  muteWords: "Kata yang dibisukan"
+  muteWordsDescription: "Pisahkan dengan spasi untuk kondisi AND. Pisahkan dengan
+    baris baru untuk kondisi OR."
+  muteWordsDescription2: "Kurung kata kunci dengan garis miring untuk menggunakan
+    regular expressions."
+  softDescription: "Sembunyikan postingan yang memenuhi aturan kondisi dari lini masa."
+  hardDescription: "Cegah postingan memenuhi aturan kondisi dari ditambahkan ke lini
+    masa. Dengan tambahan, postingan berikut tidak akan ditambahkan ke lini masa meskipun
+    jika kondisi tersebut diubah."
+  soft: "Lembut"
+  hard: "Keras"
+  mutedNotes: "Postingan yang dibisukan"
+  muteLangsDescription2: Gunakan kode bahasa misalnya en, fr, ja, zh.
+  lang: Bahasa
+  langDescription: Sembunyikan postingan yang cocok dengan bahasa yang ditetapkan
+    dari timeline.
+  muteLangs: Bahasa yang dibisukan
+  muteLangsDescription: Pisahkan dengan spasi atau jeda baris untuk kondisi ATAU.
+  mutePatterns: Pola yang dibisukan
+_instanceMute:
+  instanceMuteDescription: "Pengaturan ini akan membisukan postingan/pembagian apa
+    saja dari server yang terdaftar, termasuk pengguna yang membalas pengguna lain
+    dalam server yang dibisukan."
+  instanceMuteDescription2: "Pisah dengan baris baru"
+  title: "Sembunyikan note dari server terdaftar."
+  heading: "Daftar server yang akan dibisukan"
+_theme:
+  explore: "Jelajahi tema"
+  install: "Pasang tema"
+  manage: "Manajer tema"
+  code: "Kode tema"
+  description: "Deskripsi"
+  installed: "{name} telah dipasang"
+  installedThemes: "Tema yang dipasang"
+  builtinThemes: "Tema bawaan"
+  alreadyInstalled: "Tema telah dipasang"
+  invalid: "Format tema tidak valid"
+  make: "Buat tema"
+  base: "Dasar"
+  addConstant: "Tambah konstanta"
+  constant: "Konstanta"
+  defaultValue: "Nilai bawaan"
+  color: "Warna"
+  refProp: "Referensikan properti"
+  refConst: "Referensikan konstanta"
+  key: "Kunci"
+  func: "Fungsi"
+  funcKind: "Tipe fungsi"
+  argument: "Argumen"
+  basedProp: "Mereferensikan properti"
+  alpha: "Opasitas"
+  darken: "Mengelamkan"
+  lighten: "Menerangkan"
+  inputConstantName: "Masukkan nama untuk konstanta"
+  importInfo: "Jika kamu memasukkan kode tema disini, kamu dapat mengimpornya ke penyunting
+    tema"
+  deleteConstantConfirm: "apakah kamu ingin menghapus konstanta {const}?"
+  keys:
+    accent: "Aksen"
+    bg: "Latar belakang"
+    fg: "Teks"
+    focus: "Fokus"
+    indicator: "Indikator"
+    panel: "Panel"
+    shadow: "Bayangan"
+    header: "Tajuk"
+    navBg: "Latar belakang bilah samping"
+    navFg: "Teks bilah samping"
+    navHoverFg: "Teks bilah samping (Mengambang)"
+    navActive: "Teks bilah samping (Aktif)"
+    navIndicator: "Indikator bilah samping"
+    link: "Tautan"
+    hashtag: "Tagar"
+    mention: "Sebut"
+    mentionMe: "Sebutan (saya)"
+    renote: "Bagikan"
+    modalBg: "Latar belakang modal"
+    divider: "Pembagi"
+    scrollbarHandle: "Pegangan bilah gulir"
+    scrollbarHandleHover: "Pegangan bilah gulir (Mengambang)"
+    dateLabelFg: "Teks label tanggal"
+    infoBg: "Latar belakang informasi"
+    infoFg: "Teks informasi"
+    infoWarnBg: "Latar belakang peringatan"
+    infoWarnFg: "Teks peringatan"
+    cwBg: "Latar belakang tombol Sembunyikan Konten"
+    cwFg: "Teks tombol Sembunyikan Konten"
+    cwHoverBg: "Latar belakang tombol Sembunyikan Konten (Mengambang)"
+    toastBg: "Latar belakang pemberitahuan"
+    toastFg: "Teks pemberitahuan"
+    buttonBg: "Latar belakang tombol"
+    buttonHoverBg: "Latar belakang tombol (Mengambang)"
+    inputBorder: "Batas bidang masukan"
+    listItemHoverBg: "Latar belakang daftar item (Mengambang)"
+    driveFolderBg: "Latar belakang folder drive"
+    wallpaperOverlay: "Lapisan wallpaper"
+    badge: "Lencana"
+    messageBg: "Latar belakang obrolan"
+    accentDarken: "Aksen (Gelap)"
+    accentLighten: "Aksen (Terang)"
+    fgHighlighted: "Teks yang disorot"
+_sfx:
+  note: "Postingan baru"
+  noteMy: "Postingan sendiri"
+  notification: "Pemberitahuan"
+  chat: "Pesan"
+  chatBg: "Obrolan (Latar Belakang)"
+  antenna: "Penerimaan Antenna"
+  channel: "Pemberitahuan saluran"
+_ago:
+  future: "masa depan"
+  justNow: "baru saja"
+  secondsAgo: "{n} detik lalu"
+  minutesAgo: "{n} menit lalu"
+  hoursAgo: "{n} jam lalu"
+  daysAgo: "{n} hari lalu"
+  weeksAgo: "{n} minggu lalu"
+  monthsAgo: "{n} bulan lalu"
+  yearsAgo: "{n} tahun lalu"
+_time:
+  second: "detik"
+  minute: "menit"
+  hour: "jam"
+  day: "hari"
+_tutorial:
+  title: "Cara menggunakan Firefish"
+  step1_1: "Selamat datang!"
+  step1_2: "Ayo siapkan. Lekas mulai tanpa basa-basi!"
+  step1_3: "Linimasa kamu kosong, karena kamu belum mencatat catatan apapun atau mengikuti
+    siapapun."
+  step2_1: "Pertama, isi profilmu lebih dahulu."
+  step2_2: "Menyediakan beberapa informasi tentang siapa kamu akan membuatnya lebih
+    mudah bagi orang lain untuk menentukan jika mereka ingin postinganmu atau mengikutimu."
+  step3_1: "Sekarang saatnya mengikuti beberapa orang!"
+  step3_2: "Lini masa beranda dan sosial berdasarkan siapa yang kamu ikuti, jadi coba
+    ikuti beberapa akun untuk memulai.\nKlik lingkaran plus pada pojok kanan atas
+    pada profil untuk mengikuti mereka."
+  step3_3: "Isilah di dalam modal dan tekan tombol pada atas kanan untuk memcatat
+    catatan kamu."
+  step3_4: "Bingung tidak berpikiran untuk mengatakan sesuatu? Coba saja \"baru aja
+    ikutan bikin akun misskey punyaku\"!"
+  step4_1: "Mari kita lihat kamu di sana."
+  step4_2: "Untuk postingan pertama kamu, beberapa orang biasanya membuat postingan
+    {introduction} atau \"Halo dunia!\" yang sederhana."
+  step5_1: "Linimasa, linimasa di mana-mana!"
+  step5_2: "Servermu memiliki {timelines} lini masa berbeda yang diaktifkan."
+  step5_3: "Lini masa Beranda {icon} adalah tempat kamu bisa melihat postingan dari
+    akun yang kamu ikuti."
+  step5_4: "Linimasa Lokal {icon} adalah tempat kamu dapat melihat postingan dari
+    siapa pun di server ini."
+  step6_1: "Jadi, tempat apa ini?"
+  step6_2: "Ya, kamu tidak saja bergabung ke Firefish. Kamu telah bergabung ke sebuah
+    portal ke Fediverse, sebuah jaringan ribuan server yang saling berhubungan."
+  step6_3: "Setiap server bekerja dalam berbagai cara, dan tidak semua server menjalankan
+    Firefish. Ini salah satunya! Mungkin sedikit sulit, tetapi lama-lama kamu akan
+    mengerti."
+  step7_1: "Yay, Selamat! Kamu sudah menyelesaikan tutorial dasar Firefish."
+  step7_2: "Jika kamu ingin mempelajari lebih lanjut tentang Firefish, cobalah berkunjung
+    ke bagian {help}."
+  step7_3: "Semoga berhasil dan bersenang-senanglah! 🚀"
+  step5_6: Linimasa Rekomendasi {icon} adalah tempat kamu dapat melihat postingan
+    dari server yang direkomendasikan admin.
+  step6_4: Sekarang pergilah, bereksplorasi, dan senang-senang!
+  step5_5: Lini masa Sosial {icon} adalah kombinasi antara lini masa Beranda dan Lokal.
+  step5_7: Linimasa Global {icon} adalah tempat kamu dapat melihat postingan orang-orang
+    dari server yang terkoneksi.
+_2fa:
+  alreadyRegistered: "Kamu telah mendaftarkan perangkat otentikasi dua faktor."
+  registerTOTP: "Daftarkan perangkat baru"
+  registerSecurityKey: "Daftarkan kunci keamanan baru"
+  step1: "Pertama, pasang aplikasi otentikasi (seperti {a} atau {b}) di perangkat
+    kamu."
+  step2: "Lalu, pindai kode QR yang ada di layar."
+  step2Url: "Di aplikasi desktop, masukkan URL berikut:"
+  step3: "Masukkan token yang telah disediakan oleh aplikasimu untuk menyelesaikan
+    pemasangan."
+  step4: "Mulai sekarang, upaya pemasukan akun apa pun akan meminta token masuk dari
+    aplikasi autentikasi kamu."
+  securityKeyInfo: "Kamu dapat memasang otentikasi WebAuthN untuk mengamankan proses
+    login lebih lanjut dengan tidak hanya perangkat keras kunci keamanan yang mendukung
+    FIDO2, namun juga sidik jari atau otentikasi PIN pada perangkatmu."
+  token: Token 2FA
+  chromePasskeyNotSupported: Kunci pas Chrome saat ini tidak didukung.
+  securityKeyName: Masukkan nama kunci
+  removeKey: Hapus kunci keamanan
+  step2Click: Mengklik kode QR ini akan mengizinkanmu mendaftarkan 2FA untuk kunci
+    keamanan atau apl ontentikasi ponsel.
+  step3Title: Masukkan kode otentikasi
+  securityKeyNotSupported: Perambanmu tidak mendukung kunci keamanan.
+  tapSecurityKey: Silakan ikuti perambanmu untuk mendaftarkan kunci keamanan atau
+    kunci pas
+  removeKeyConfirm: Yakin menghapus kunci {name}?
+_permissions:
+  "read:account": "Lihat informasi akun"
+  "write:account": "Sunting informasi akun"
+  "read:blocks": "Lihat daftar orang yang diblokir"
+  "write:blocks": "Sunting daftar orang yang diblokir"
+  "read:drive": "Akses berkas dan folder drive"
+  "write:drive": "Sunting atau hapus berkas dan folder drive"
+  "read:favorites": "Lihat daftar favorit"
+  "write:favorites": "Sunting daftar favorit"
+  "read:following": "Lihat informasi mengikuti"
+  "write:following": "Ikuti atau Stop Ikuti akun lain"
+  "read:messaging": "Lihat obrolan"
+  "write:messaging": "Buat atau hapus obrolan"
+  "read:mutes": "Lihat daftar orang yang dibisukan"
+  "write:mutes": "Sunting daftar orang yang dibisukan"
+  "write:notes": "Buat atau hapus postingan"
+  "read:notifications": "Lihat pemberitahuan"
+  "write:notifications": "Sunting pemberitahuan"
+  "read:reactions": "Lihat reaksi"
+  "write:reactions": "Sunting reaksi"
+  "write:votes": "Beri suara"
+  "read:pages": "Lihat halaman"
+  "write:pages": "Sunting atau hapus halaman"
+  "read:page-likes": "Lihat suka pada halaman"
+  "write:page-likes": "Sunting suka pada Halaman"
+  "read:user-groups": "Lihat grup pengguna"
+  "write:user-groups": "Sunting atau hapus grup pengguna"
+  "read:channels": "Lihat saluran"
+  "write:channels": "Sunting saluran"
+  "read:gallery": "Lihat galeri"
+  "write:gallery": "Sunting galeri"
+  "read:gallery-likes": "Lihat daftar postingan galeri yang disukai"
+  "write:gallery-likes": "Sunting daftar postingan galeri yang disukai"
+_auth:
+  shareAccess: "Apakah kamu ingin mengijinkan \"{name}\" untuk mengakses akun ini?"
+  shareAccessAsk: "Apakah kamu ingin mengijinkan aplikasi ini untuk mengakses akun
+    kamu?"
+  permissionAsk: "Aplikasi ini membutuhkan izin berikut:"
+  pleaseGoBack: "Mohon kembali ke aplikasi kamu"
+  callback: "Mengembalikan kamu ke aplikasi"
+  denied: "Akses ditolak"
+  copyAsk: 'Harap tempel kode otorisasi berikut ke aplikasi:'
+  allPermissions: Akses akun penuh
+_antennaSources:
+  all: "Semua postingan"
+  homeTimeline: "Postingan dari pengguna yang diikuti"
+  users: "Postingan dari pengguna tertentu"
+  userList: "Postingan dari daftar tertentu"
+  userGroup: "Postingan dari pengguna dalam grup yang ditentukan"
+  instances: Postingan dari semua pengguna di server
+_weekday:
+  sunday: "Minggu"
+  monday: "Senin"
+  tuesday: "Selasa"
+  wednesday: "Rabu"
+  thursday: "Kamis"
+  friday: "Jumat"
+  saturday: "Sabtu"
+_widgets:
+  memo: "Catatan Tempel"
+  notifications: "Pemberitahuan"
+  timeline: "Linimasa"
+  calendar: "Kalender"
+  trends: "Tren"
+  clock: "Jam"
+  rss: "Pembaca RSS"
+  activity: "Aktivitas"
+  photos: "Foto"
+  digitalClock: "Jam Digital"
+  federation: "Federasi"
+  postForm: "Formulir Posting"
+  slideshow: "Slideshow"
+  button: "Tombol"
+  onlineUsers: "Pengguna Daring"
+  jobQueue: "Antrian kerja"
+  serverMetric: "Metrik Server"
+  aiscript: "Konsol AiScript"
+  aichan: "Ai"
+  rssTicker: Telegraf RSS
+  userList: Daftar Pengguna
+  instanceCloud: Server Awan
+  unixClock: Jam UNIX
+  _userList:
+    chooseList: Pilih daftar
+  serverInfo: Info Server
+_cw:
+  hide: "Sembunyikan"
+  show: "Lihat konten"
+  chars: "{count} karakter"
+  files: "{count} berkas"
+_poll:
+  noOnlyOneChoice: "Dibutuhkan sedikitnya dua pilihan"
+  choiceN: "Pilihan {n}"
+  noMore: "Kamu tidak dapat menambahkan pilihan lagi"
+  canMultipleVote: "Bolehkan memilih banyak"
+  expiration: "Batas akhir"
+  infinite: "Selamanya"
+  at: "Berakhir pada..."
+  after: "Berakhir setelah..."
+  deadlineDate: "Tanggal batas akhir"
+  deadlineTime: "jam"
+  duration: "Durasi"
+  votesCount: "{n} suara"
+  totalVotes: "Total {n} suara"
+  vote: "Beri suara"
+  showResult: "Lihat hasil"
+  voted: "Telah memilih"
+  closed: "Telah berakhir"
+  remainingDays: "Berakhir dalam {d} hari {h} jam"
+  remainingHours: "Berakhir dalam {h} jam {m} menit"
+  remainingMinutes: "Berakhir dalam {m} menit {s} detik"
+  remainingSeconds: "Berakhir dalam {s} detik"
+_visibility:
+  public: "Publik"
+  publicDescription: "Postinganmu akan terlihat di semua linimasa publik"
+  home: "Tidak terdaftar"
+  homeDescription: "Posting ke lini masa beranda saja"
+  followers: "Pengikut"
+  followersDescription: "Tampilkan ke pengikut dan pengguna yang disebut saja"
+  specified: "Langsung"
+  specifiedDescription: "Catat ke pengguna yang ditentukan saja"
+  localOnly: "Hanya lokal"
+  localOnlyDescription: "Hanya dapat dilihat di instansi lokal"
+_postForm:
+  replyPlaceholder: "Balas ke postingan ini..."
+  quotePlaceholder: "Kutip postingan ini..."
+  channelPlaceholder: "Posting ke kanal..."
+  _placeholders:
+    a: "Sedang apa kamu saat ini?"
+    b: "Apa yang terjadi di sekitarmu?"
+    c: "Apa yang sedang kamu pikirkan?"
+    d: "Yang ingin kamu sampaikan?"
+    e: "Tuliskan yang kamu ingin sampaikan..."
+    f: "Menunggu kamu untuk menulis...."
+_profile:
+  name: "Nama"
+  username: "Nama Pengguna"
+  description: "Bio"
+  youCanIncludeHashtags: "Kamu juga dapat menambahkan tagar ke dalam bio."
+  metadata: "Informasi tambahan"
+  metadataEdit: "Sunting informasi tambahan"
+  metadataDescription: "Kamu dapat menampilkan hingga 4 bagian informasi tambahan
+    ke dalam profilmu. Kamu bisa menambahkan tag {a} atau tag {l} dengan {rel} untuk
+    memverifikasi tautan di profil kamu!"
+  metadataLabel: "Label"
+  metadataContent: "Isi"
+  changeAvatar: "Ubah avatar"
+  changeBanner: "Ubah header"
+  locationDescription: Jika kamu memasukkan kota lebih dahulu, ia akan menampilkan
+    waktu lokalmu ke pengguna lain.
+_exportOrImport:
+  allNotes: "Semua postingan"
+  followingList: "Ikuti"
+  muteList: "Bisukan"
+  blockingList: "Blokir"
+  userLists: "Daftar"
+  excludeMutingUsers: "Kecualikan pengguna yang dibisukan"
+  excludeInactiveUsers: "Kecualikan pengguna tidak aktif"
+_charts:
+  federation: "Federasi"
+  apRequest: "Permintaan"
+  usersIncDec: "Perbedaan dalam # pengguna"
+  usersTotal: "Jumlah # pengguna"
+  activeUsers: "Pengguna aktif"
+  notesIncDec: "Perbedaan pada jumlah postingan"
+  localNotesIncDec: "Perbedaan di jumlah postingan lokal"
+  remoteNotesIncDec: "Perbedaan di jumlah postingan luar"
+  notesTotal: "Total jumlah postingan"
+  filesIncDec: "Perbedaan # dalam berkas"
+  filesTotal: "Jumlah # berkas"
+  storageUsageIncDec: "Perbedaan dalam penggunaan penyimpanan"
+  storageUsageTotal: "Jumlah penggunaan penyimpanan"
+_instanceCharts:
+  requests: "Permintaan"
+  users: "Perbedaan dalam # pengguna"
+  usersTotal: "Jumlah # pengguna kumulatif"
+  notes: "Perbedaan di jumlah postingan"
+  notesTotal: "Jumlah kumulatif postingan"
+  ff: "Perbedaan jumlah pengguna yang diikuti / pengikut "
+  ffTotal: "Jumlah # pengikut kumulatif"
+  cacheSize: "Perbedaan dalam ukuran tembolok"
+  cacheSizeTotal: "Total ukuran tembolok kumulatif"
+  files: "Perbedaan dalam # berkas"
+  filesTotal: "Jumlah # berkas kumulatif"
+_timelines:
+  home: "Beranda"
+  local: "Lokal"
+  social: "Sosial"
+  global: "Global"
+  recommended: Rekomendasi
+_pages:
+  newPage: "Buat halaman baru"
+  editPage: "Sunting halaman"
+  readPage: "Lihat sumber kode aktif"
+  created: "Halaman berhasil dibuat"
+  updated: "Halaman berhasil disunting"
+  deleted: "Halaman telah dihapus"
+  pageSetting: "Pengaturan Halaman"
+  nameAlreadyExists: "URL Halaman yang ditentukan sudah ada"
+  invalidNameTitle: "URL Halaman yang ditentukan tidak valid"
+  invalidNameText: "Cek apabila Halaman tidak kosong"
+  editThisPage: "Sunting Halaman ini"
+  viewSource: "Lihat sumber"
+  viewPage: "Lihat Halaman"
+  like: "Suka"
+  unlike: "Hapus suka"
+  my: "Halaman saya"
+  liked: "Halaman yang disukai"
+  featured: "Populer"
+  inspector: "Inspektor"
+  contents: "Konten"
+  content: "Blokir Halaman"
+  variables: "Variabel"
+  title: "Judul"
+  url: "URL Halaman"
+  summary: "Ringkasan Halaman"
+  alignCenter: "Tengah"
+  hideTitleWhenPinned: "Sembunyikan judul halaman saat disematkan ke profil"
+  font: "Font"
+  fontSerif: "Serif"
+  fontSansSerif: "Sans-serif"
+  eyeCatchingImageSet: "Setel gambar yang menarik"
+  eyeCatchingImageRemove: "Hapus gambar yang menarik"
+  chooseBlock: "Tambahkan blokir"
+  selectType: "Pilih jenis"
+  enterVariableName: "Mohon masukkan nama untuk variabel kamu"
+  variableNameIsAlreadyUsed: "Nama ini sudah digunakan oleh variabel lain"
+  contentBlocks: "Konten"
+  inputBlocks: "Masukan"
+  specialBlocks: "Khusus"
+  blocks:
+    text: "Teks"
+    textarea: "Area teks"
+    section: "Bagian"
+    image: "Gambar"
+    button: "Tombol"
+    if: "Jika"
+    _if:
+      variable: "Variabel"
+    post: "Formulir posting"
+    _post:
+      text: "Isi"
+      attachCanvasImage: "Posting dengan kanvas sebagai gambar"
+      canvasId: "ID Kanvas"
+    textInput: "Masukan teks"
+    _textInput:
+      name: "Nama variabel"
+      text: "Judul"
+      default: "Nilai bawaan"
+    textareaInput: "Masukan teks multibaris"
+    _textareaInput:
+      name: "Nama variabel"
+      text: "Judul"
+      default: "Nilai bawaan"
+    numberInput: "Masukan angka"
+    _numberInput:
+      name: "Nama variabel"
+      text: "Judul"
+      default: "Nilai bawaan"
+    canvas: "Kanvas"
+    _canvas:
+      id: "ID Kanvas"
+      width: "Lebar"
+      height: "Tinggi"
+    note: "Postingan tertanam"
+    _note:
+      id: "ID Postingan"
+      idDescription: "Kamu dapat menempelkan URL postingan di sini."
+      detailed: "Tampilan rincian"
+    switch: "Beralih"
+    _switch:
+      name: "Nama variabel"
+      text: "Judul"
+      default: "Nilai bawaan"
+    counter: "Penghitung"
+    _counter:
+      name: "Nama variabel"
+      text: "Judul"
+      inc: "Meningkat dengan"
+    _button:
+      text: "Judul"
+      colored: "Diwarnai"
+      action: "Operasi akan dimulai ketika tombol ditekan"
+      _action:
+        dialog: "Tampilkan dialog"
+        _dialog:
+          content: "Isi"
+        resetRandom: "Atur ulang benih acak"
+        pushEvent: "Kirim event"
+        _pushEvent:
+          event: "Nama event"
+          message: "Pesan yang tampil ketika diaktifkan"
+          variable: "Variable untuk kirim"
+          no-variable: "Tidak ada"
+        callAiScript: "Panggil AiScript"
+        _callAiScript:
+          functionName: "Nama fungsi"
+    radioButton: "Pilihan"
+    _radioButton:
+      name: "Nama variabel"
+      title: "Judul"
+      values: "Daftar pilihan (dipisahkan dengan garis baru)"
+      default: "Nilai bawaan"
+  script:
+    categories:
+      flow: "Arus kendali"
+      logical: "Operasi logis"
+      operation: "Menghitung"
+      comparison: "Membandingkan"
+      random: "Acak"
+      value: "Nilai"
+      fn: "Fungsi"
+      text: "Operasi teks"
+      convert: "Mengubah"
+      list: "Daftar"
+    blocks:
+      text: "Teks"
+      multiLineText: "Teks (multibaris)"
+      textList: "Daftar teks"
+      _textList:
+        info: "Pisahkan setiap entri dengan baris baru"
+      strLen: "Panjang teks"
+      _strLen:
+        arg1: "Teks"
+      strPick: "Ekstrak karakter"
+      _strPick:
+        arg1: "Teks"
+        arg2: "Lokasi karakter"
+      strReplace: "Penggantian teks"
+      _strReplace:
+        arg1: "Teks"
+        arg2: "Teks yang akan diganti"
+        arg3: "Diganti dengan"
+      strReverse: "Balikkan teks"
+      _strReverse:
+        arg1: "Teks"
+      join: "Rangkaian teks"
+      _join:
+        arg1: "Daftar"
+        arg2: "Pemisah"
+      add: "Tambah"
+      _add:
+        arg1: "A"
+        arg2: "B"
+      subtract: "Kurangi"
+      _subtract:
+        arg1: "A"
+        arg2: "B"
+      multiply: "Kali"
+      _multiply:
+        arg1: "A"
+        arg2: "B"
+      divide: "Bagi"
+      _divide:
+        arg1: "A"
+        arg2: "B"
+      mod: "Sisa"
+      _mod:
+        arg1: "A"
+        arg2: "B"
+      round: "Bulat desimal"
+      _round:
+        arg1: "Angka"
+      eq: "A dan B adalah sama"
+      _eq:
+        arg1: "A"
+        arg2: "B"
+      notEq: "A dan B adalah berbeda"
+      _notEq:
+        arg1: "A"
+        arg2: "B"
+      and: "A DAN B"
+      _and:
+        arg1: "A"
+        arg2: "B"
+      or: "A ATAU B"
+      _or:
+        arg1: "A"
+        arg2: "B"
+      lt: "< A ikurang dari B"
+      _lt:
+        arg1: "A"
+        arg2: "B"
+      gt: "> A lebih dari B"
+      _gt:
+        arg1: "A"
+        arg2: "B"
+      ltEq: "<= A kurang dari sama dengan B"
+      _ltEq:
+        arg1: "A"
+        arg2: "B"
+      gtEq: ">= A lebih dari sama dengan B"
+      _gtEq:
+        arg1: "A"
+        arg2: "B"
+      if: "Cabang"
+      _if:
+        arg1: "Jika"
+        arg2: "Jika benar"
+        arg3: "Jika salah"
+      not: "BUKAN"
+      _not:
+        arg1: "NOT"
+      random: "Acak"
+      _random:
+        arg1: "Probabilitas"
+      rannum: "Angka acak"
+      _rannum:
+        arg1: "Nilai minimum"
+        arg2: "Nilai maksimum"
+      randomPick: "Pilih secara acak dari daftar"
+      _randomPick:
+        arg1: "Daftar"
+      dailyRandom: "Acak (bertahan sehari)"
+      _dailyRandom:
+        arg1: "Probabilitas"
+      dailyRannum: "Angka acak (bertahan sehari)"
+      _dailyRannum:
+        arg1: "Nilai minimum"
+        arg2: "Nilai maksimum"
+      dailyRandomPick: "Pilih secara acak dari daftar (bertahan sehari)"
+      _dailyRandomPick:
+        arg1: "Daftar"
+      seedRandom: "Acak (dengan seed)"
+      _seedRandom:
+        arg1: "Seed"
+        arg2: "Probabilitas"
+      seedRannum: "Angka acak (dengan seed)"
+      _seedRannum:
+        arg1: "Seed"
+        arg2: "Nilai minimum"
+        arg3: "Nilai maksimum"
+      seedRandomPick: "Pilih secara acak dari daftar (dengan seed)"
+      _seedRandomPick:
+        arg1: "Seed"
+        arg2: "Daftar"
+      DRPWPM: "Pilih secara acak dari daftar berbobot (bertahan sehari)"
+      _DRPWPM:
+        arg1: "Daftar teks"
+      pick: "Pilih dari daftar"
+      _pick:
+        arg1: "Daftar"
+        arg2: "Posisi"
+      listLen: "Dapatkan panjangnya dari daftar"
+      _listLen:
+        arg1: "Daftar"
+      number: "Angka"
+      stringToNumber: "Teks ke angka"
+      _stringToNumber:
+        arg1: "Teks"
+      numberToString: "Angka ke teks"
+      _numberToString:
+        arg1: "Angka"
+      splitStrByLine: "Pisahkan teks dengan baris baru"
+      _splitStrByLine:
+        arg1: "Teks"
+      ref: "Variabel"
+      aiScriptVar: "Variabel AiScript"
+      fn: "Fungsi"
+      _fn:
+        slots: "Slot"
+        slots-info: "Pisahkan setiap slot dengan baris baru"
+        arg1: "Keluaran"
+      for: "Ulangi"
+      _for:
+        arg1: "Jumlah angka untuk diulangi"
+        arg2: "Aksi"
+    typeError: "Slot {slot} menerima tipe \"{expect}\", sayangnya nilai yang disediakan
+      adalah \"{actual}\"!"
+    thereIsEmptySlot: "Slot {slot} kosong!"
+    types:
+      string: "Teks"
+      number: "Angka"
+      boolean: "Markah"
+      array: "Daftar"
+      stringArray: "Daftar teks"
+    emptySlot: "Slot kosong"
+    enviromentVariables: "Variabel Lingkungan"
+    pageVariables: "Elemen halaman"
+    argVariables: "Masukan slot"
+_relayStatus:
+  requesting: "Menunggu"
+  accepted: "Disetujui"
+  rejected: "Ditolak"
+_notification:
+  fileUploaded: "Berkas telah berhasil diunggah"
+  youGotMention: "{name} meyebut kamu"
+  youGotReply: "{name} membalas kamu"
+  youGotQuote: "{name} mengutip kamu"
+  youRenoted: "Posting ulang dari {name}"
+  youGotPoll: "{name} memilih di angket kamu"
+  youGotMessagingMessageFromUser: "{name} mengirimi kamu pesan"
+  youGotMessagingMessageFromGroup: "Sebuah pesan telah dikirim ke grup {name}"
+  youWereFollowed: "Mengikuti kamu"
+  youReceivedFollowRequest: "Kamu menerima permintaan mengikuti"
+  yourFollowRequestAccepted: "Permintaan mengikuti kamu telah diterima"
+  youWereInvitedToGroup: "Telah diundang ke grup"
+  pollEnded: "Hasil Kuesioner telah keluar"
+  emptyPushNotificationMessage: "Pembaruan notifikasi dorong"
+  _types:
+    all: "Semua"
+    follow: "Ikuti"
+    mention: "Sebut"
+    reply: "Balasan"
+    renote: "Postingan ulang"
+    quote: "Kutip"
+    reaction: "Reaksi"
+    pollVote: "Memilih di angket"
+    pollEnded: "Jajak pendapat berakhir"
+    receiveFollowRequest: "Permintaan mengikuti diterima"
+    followRequestAccepted: "Permintaan mengikuti disetujui"
+    groupInvited: "Diundang ke grup"
+    app: "Pemberitahuan dari aplikasi"
+  _actions:
+    followBack: "Ikuti Kembali"
+    reply: "Balas"
+    renote: "Posting ulang"
+  reacted: mereaksi postinganmu
+  renoted: memposting ulang postinganmu
+  voted: memilih di angketmu
+  andCountUsers: dan {count} lebih banyak pengguna {acted}
+_deck:
+  alwaysShowMainColumn: "Selalu tampilkan kolom utama"
+  columnAlign: "Luruskan kolom"
+  addColumn: "Tambahkan kolom"
+  swapLeft: "Pindah ke kiri"
+  swapRight: "Pindah ke kanan"
+  swapUp: "Pindah ke atas"
+  swapDown: "Pindah ke bawah"
+  stackLeft: "Tumpukkan di kolom kiri"
+  popRight: "Keluarkan di kanan"
+  profile: "Ruang Kerja"
+  _columns:
+    main: "Utama"
+    widgets: "Widget"
+    notifications: "Pemberitahuan"
+    tl: "Linimasa"
+    antenna: "Antena"
+    list: "Daftar"
+    mentions: "Sebutan"
+    direct: "Pesan langsung"
+    channel: Kanal
+  renameProfile: Ganti nama Ruang Kerja
+  nameAlreadyExists: Nama ruang kerja sudah ada.
+  newProfile: Ruang Kerja Baru
+  introduction: Buat antarmuka sempurna bagimu dengan mengatur kolom sesuka hati!
+  introduction2: Klik pada + di bagian kanan layar untuk menambah kolom baru yang
+    kamu inginkan.
+  deleteProfile: Hapus ruang kerja
+  configureColumn: Pengaturan kolom
+  widgetsIntroduction: Silakan pilih "Sunting gawit" pada menu kolom dan tambahkan
+    gawit.
+instanceSecurity: Keamanan Server
+removeReaction: Hapus reaksimu
+accountMoved: 'Pengguna pindah ke akun baru:'
+silencedInstances: Server yang Dibisukan
+silencedInstancesDescription: Daftar nama host server yang ingin kamu bisukan. Akun
+  pada server yang didaftar dianggap sebagai "Dibisukan", dan hanya dapat membuat
+  permintaan mengikuti, dan tidak dapat menyebut akun lokal jika tidak diikuti. Ini
+  tidak akan mepengaruhi server yang diblokir.
+noInstances: Tidak ada server
+expandOnNoteClick: Buka postingan dengan klik
+defaultValueIs: 'Bawaan: {value}'
+enableRecommendedTimeline: Aktifkan linimasa rekomendasi
+searchPlaceholder: Telusuri Firefish
+addInstance: Tambah server
+older: lebih lama
+listsDesc: Daftar mengizinkanmu membuat linimasa berisi pengguna spesifik. Itu dapat
+  diakses dari halaman linimasa.
+enableEmojiReactions: Aktifkan reaksi emoji
+showEmojisInReactionNotifications: Tampilkan emoji dalam notifikasi reaksi
+renoteMute: Bisukan postingan ulang dalam lini masa
+renoteUnmute: Bunyikan postingan ulang dalam lini masa
+antennasDesc: "Antena menampilkan postingan baru yang cocok dengan kriteriamu!\n Itu
+  dapat diakses dari halaman linimasa."
+antennaInstancesDescription: Daftarkan satu host server per baris
+expandOnNoteClickDesc: Jika nonaktif, kamu masih dapat membuka postingan dengan klik-kanan
+  menu atau mengklik tanggal waktu.
+channelFederationWarn: Kanal belum terfederasi dengan server lain
+clipsDesc: Klip seperti markah yang dikategorikan dan bisa dibagikan. Kamu dapat membuat
+  klip dari menu pada sebuah postingan.
+recommended: Direkomendasikan
+silenceThisInstance: Bisukan server ini
+hiddenTags: Tagar Tersembunyi
+preferencesBackups: Preferensi cadangan
+editNote: Sunting postingan
+deleted: Dihapus
+edited: Disunting pada {date} {time}
+selectInstance: Pilih server
+hiddenTagsDescription: 'Daftar tagar (tanpa #) dari tagar yang ingin kamu sembunyikan
+  dari tren dan eksplorasi. Tagar tersembunyi tetap dapat ditemukan dari tempat lainnya.'
+silenced: Dibisukan
+selectChannel: Pilih kanal
+accessibility: Aksesibilitas
+manageGroups: Kelola grup
+moderation: Moderasi
+userSaysSomethingReason: '{name} mengatakan {reason}'
+secureMode: Mode Aman (Pengambilan Terotorisasi)
+secureModeInfo: Saat meminta dari server lain, jangan kirim kembali tanpa bukti.
+privateModeInfo: Saat aktif, hanya server yang masuk daftar yang diizinkan yang dapat
+  terfederasi dengan servermu. Semua postingan akan disembunyikan dari publik.
+allowedInstances: Daftar Server Diizinkan
+newer: lebih baru
+userSaysSomethingReasonReply: '{name} membalas postingan berisi {reason}'
+userSaysSomethingReasonRenote: '{name} memposting ulang postingan berisi {reason}'
+userSaysSomethingReasonQuote: '{name} mengutip postingan berisi {reason}'
+noThankYou: Tidak terima kasih
+jumpToPrevious: Lompat ke sebelumnya
+flagSpeakAsCatDescription: Postinganmu akan nyampak dalam mode kucing
+cw: Peringatan konten
+flagSpeakAsCat: Bicara sebagai kucing
+allowedInstancesDescription: Server host akan masuk daftar yang diizinkan untuk federasi,
+  mereka dipisahkan dengan baris baru (hanya diterapkan pada mode pribadi).
+xl: XL
+privateMode: Mode Pribadi
+seperateRenoteQuote: Tombol posting ulang dan kutip terpisah
+failedToUpload: Gagal unggah
+beta: Beta
+move: Pindahkan
+navbar: Bilah navigasi
+thereIsUnresolvedAbuseReportWarning: Ada laporal yang belum diselesaikan.
+statusbar: Bilah status
+isSystemAccount: Akun ini dibuat dan dioperasikan secara otomatis oleh sistem. Mohon
+  jangan memoderasi, menyunting, menghapus, atau mengutak-atik dengan akun ini, atau
+  itu akan merusak servermu.
+lastActiveDate: Terakhir dipakai pada
+deleteAccount: Hapus akun
+numberOfPageCache: Jumlah halaman yang disinggah
+fast: Cepat
+cannotUploadBecauseInappropriate: Berkas ini tidak dapat diunggah karena sebagiannya
+  terdeteksi berpotensi Tidak Aman.
+shuffle: Acak
+enableAutoSensitive: Otomatis menandai Tidak Aman
+enableAutoSensitiveDescription: Mengizinkan deteksi otomatis dan menandai media Tidak
+  Aman dengan Pembelajaran Mesin. Bahkan saat opsi ini nonaktif, ia bisa diaktifkan
+  pada ranah server.
+activeEmailValidationDescription: Mengaktifkan validasi alamat surel yang lebih ketat,
+  yang termasuk memeriksa alamat sekali pakai dan memastikan apakah memang bisa berkomunikasi
+  dengan mereka. Saat tidak dicentang, format surel lah yang hanya akan divalidasi.
+alt: ALT
+requireAdminForView: Kamu harus masuk dengan akun administrator untuk melihat ini.
+recentNHours: '{n} jam terakhir'
+typeToConfirm: Harap masukkan {x} untuk konfirmasi
+document: Dokumentasi
+sensitiveMediaDetection: Deteksi media Tidak Aman
+breakFollowConfirm: Yakin ingin menghapus pengikut?
+cannotUploadBecauseNoFreeSpace: Gagal unggah karena kapasitas Drive kurang.
+unsubscribePushNotification: Nonaktifkan pemberitahuan dorong
+image: Gambar
+video: Video
+pleaseSelect: Pilih opsi
+audio: Audio
+numberOfPageCacheDescription: Naikkan angka ini akan meningkatkan kenyamanan pengguna
+  tapi menyebabkan beban server dan penggunaan memori lebih besar.
+pushNotification: Pemberitahuan dorong
+subscribePushNotification: Aktifkan pemberitahuan dorong
+cannotUploadBecauseExceedsFileSizeLimit: Berkas ini tidak dapat diunggah karena melebihi
+  batas ukuran maksimum yang diizinkan.
+recentNDays: '{n} hari terakhir'
+noEmailServerWarning: Server surel tidak dikonfigurasi.
+check: Cek
+driveCapOverrideLabel: Ubah kapasitas drive untuk pengguna ini
+driveCapOverrideCaption: Reset kapasitas ke bawaan dengan memasukkan nilai 0 atau
+  lebih rendah.
+logoutConfirm: Yakin keluar?
+refreshInterval: 'Perbarui interval '
+type: Tipe
+speed: Kecepatan
+slow: Pelan
+remoteOnly: Jarak jauh saja
+moveFrom: Dari akun lama pindahkan ke akun ini
+sendPushNotificationReadMessage: Hapus pemberitahuan dorong saat pemberitahuan atau
+  pesan relevan sudah dibaca
+moveAccountDescription: Proses ini permanen. Pastikan kamu sudah mengatur alias dari
+  akun ini ke akun barumu sebelum pindah. Silakan masukkan tag akun dengan format
+  seperti @orang@server.com
+sendModMail: Kirim Pemberitahuan Moderasi
+signupsDisabled: Pendaftaran ke server ini nonaktifkam. Jika kamu memiliki kode undangan
+  server ini, harap masukkan di bawah ini.
+enableCustomKaTeXMacro: Aktifkan makro KaTeX khusus
+isBot: Akun ini akun otomatis
+customMOTD: MOTD khusus (pesan layar percik)
+recommendedInstancesDescription: Server yang direkomendasikan dipisahkan dengan garis
+  baru untuk tampil di linimasa rekomendasi.
+preventAiLearningDescription: Minta model bahasa AI pihak ketiga untuk tidak mempelajari
+  konten yang kamu unggah, seperti postingan dan gambar.
+pushNotificationAlreadySubscribed: Pemberitahuan dorong sudah aktif
+pushNotificationNotSupported: Peramban atau servermu tidak mendukung pemberitahuan
+  dorong
+apps: Aplikasi
+showAds: Tampilkan spanduk komunitas
+enterSendsMessage: Tekan Enter pada Pesan untuk mengirim pesan (matikan dengan Ctrl
+  + Enter)
+showAdminUpdates: Indikasi versi Firefish baru tersedia (hanya admin)
+noteId: ID Postingan
+caption: Deskripsi itomatis
+splash: Layar Percik
+migration: Migrasi
+moveTo: Pindahkan akun sekarang ke akun baru
+moveFromLabel: 'Akun tujuan pindah:'
+moveFromDescription: Ini akan mengatur alias akun lamamu jadi kamu dapat pindah dari
+  akun tersebut ke akun sekarang. Lakukan ini SEBELUM memindahkan akun lama. Silakan
+  masukkan tag akun dengan format seperti @orang@server.com
+defaultReaction: Reaksi emoji bawaan untuk postingan keluar dan masuk
+preventAiLearning: Cegah scraping bot AI
+customKaTeXMacro: Makro KaTeX khusus
+sendPushNotificationReadMessageCaption: Pemberitahuan yang berisi teks "{emptyPushNotificationMessage}"
+  akan ditampilkan dengan cepat. Ini mungkin meningkatkan penggunaan baterai perangkatmu,
+  jika berlaku.
+adminCustomCssWarn: Pengaturan ini hanya dapat dipakai jika kamu tahu fungsinya. Memasukkan
+  nilai yang keliru akan membuat klien SIAPA PUN berhenti berfungsi secara normal.
+  Mohon pastikan CSS-mu bekerja secara benar dengan mengujinya lebih dahulu pada pengaturan
+  penggunamu.
+customMOTDDescription: Pesan khusus untuk MOTD (layar percik) dipisahkan dengan baris
+  baru untuk ditampilkan secara acak ketika pengguna memuat/muat ulang halaman.
+customSplashIcons: Ikon layar percik khusus (url)
+customSplashIconsDescription: URL untuk ikon layar percik khusus dipisahkan dengan
+  garis baru untuk ditampilkan secara acak saat pengguna memuat/muat ulang halaman.
+  Harap pastikan gambar adalah URL statis, lebih utama berukuran 192x192.
+showUpdates: Tampilkan sembulan saat pemutakhiran Firefish
+recommendedInstances: Server yang direkomendasikan
+updateAvailable: Ada pemutakhiran tersedia!
+swipeOnMobile: Izinkan usap antar halaman
+swipeOnDesktop: Izinkan usap ala mobile di desktop
+logoImageUrl: URL gambar logo
+replayTutorial: Ulangi tutorial
+moveToLabel: 'Akun yang ingin kamu pindah:'
+moveAccount: Pindahkan akun!
+migrationConfirm: "Kamu sangat yakin ingin memindahkan akunmu ke {account}? Sekali
+  pindah, kamu tidak dapat membatalkannya, dan kamu tidak akan dapat menggunakan akunmu
+  lagi secara normal. \nDan juga, harap pastikan kamu sudah mengatur akun sekarang
+  sebagai akun yang dipindahkan."
+license: Lisensi
+noGraze: Harap nonaktifkan ekstensi peramban "Graze for Mastodon", karena akan menganggu
+  Firefish.
+silencedWarning: Halaman ini tampil karena pengguna ini datang dari server yang dibisukan
+  adminmu, jadi mereka berpotensi spam.
+isLocked: Akun ini perlu persetujuan ikuti
+_preferencesBackups:
+  list: Cadangan yang dibuat
+  saveNew: Simpan cadangan baru
+  loadFile: Muat dari berkas
+  save: Simpan perubahan
+  nameAlreadyExists: Cadangan bernama "{name}" sudah ada. Silakan masukkan nama yang
+    berbeda.
+  noBackups: Belum ada cadangan. Kamu bisa mencadangan pengaturan klien kamu di server
+    ini menggunakan "Buat cadangan baru".
+  updatedAt: 'Diperbarui pada: {date} {time}'
+  cannotLoad: Gagal memuat
+  cannotSave: Gagal menyimpan
+  invalidFile: Format berkas tidak valid
+  createdAt: 'Dibuat pada: {date} {time}'
+  inputName: Silakan masukkan nama untuk cadangan ini
+  apply: Terapkan ke perangkat ini
+  saveConfirm: Simpan cadangan sebagai {name}?
+  deleteConfirm: Hapus cadangan {name}?
+  renameConfirm: Ubah nama cadangan ini dari "{old}" ke "{new}"?
+  applyConfirm: Kamu yakin ingin menerapkan cadangan "{name}" di perangkat ini? Pengaturan
+    yang sudah ada akan ditimpa.
+enableServerMachineStats: Aktifkan statistik perangkat keras server
+enableIdenticonGeneration: Aktifkan pembuatan Identicon
+reactionPickerSkinTone: Warna kulit emoji yang disukai
+_sensitiveMediaDetection:
+  description: Mengurangi upaya moderasi server dengan mengenal media NSFW secara
+    otomatis melalui Pembelajaran Mesin. Ini akan sedikit menambah beban pada server.
+  sensitivity: Sensitivitas deteksi
+  sensitivityDescription: Mengurangi sensitivitas akan mengurangi kesalahan mendeteksi
+    (positif palsu).
+  analyzeVideosDescription: Menganalisa video selain gambar. Ini akan sedikit menambah
+    beban pada server.
+  setSensitiveFlagAutomatically: Tandai sebagai NSFW
+  setSensitiveFlagAutomaticallyDescription: Hasil deteksi internal akan disimpan bahkan
+    jika opsi ini dinonaktifkan.
+  analyzeVideos: Aktifkan analisa video
+_filters:
+  fromDomain: Dari domain
+  notesAfter: Postingan setelah
+  followersOnly: Hanya pengikut
+  fromUser: Dari pengguna
+  withFile: Dengan berkas
+  followingOnly: Hanya mengikuti
+  notesBefore: Postingan sebelum
+_messaging:
+  dms: Privat
+  groups: Grup
+verifiedLink: Tautan terverifikasi
+isPatron: Pendukung Firefish
+customKaTeXMacroDescription: 'Siapkan makro untuk menulis ekspresi matematika dengan
+  mudah! Notasi ini sesuai dengan definisi perintah LaTeX dan ditulis sebagai \newcommand{\
+  nama}{konten} atau \newcommand{\nama}[jumlah argumen]{konten}. Sebagai contoh, \newcommand{\add}[2]{#1
+  + #2} akan memperluas \add{3}{foo} menjadi 3 + foo. Tanda kurung kurawal yang mengelilingi
+  nama makro dapat diubah menjadi tanda kurung bulat atau persegi. Hal ini mempengaruhi
+  tanda kurung yang digunakan untuk argumen. Satu (dan hanya satu) makro dapat didefinisikan
+  per baris, dan kamu tidak dapat memutus baris di tengah-tengah definisi. Baris yang
+  tidak valid akan diabaikan. Hanya fungsi substitusi string sederhana yang didukung;
+  sintaks lanjutan, seperti percabangan bersyarat, tidak dapat digunakan di sini.'
+showPopup: Beri tahu pengguna dengan popup
+showWithSparkles: Tampilkan dengan kelap-kelip
+youHaveUnreadAnnouncements: Anda memiliki pengumuman yang belum dibaca
+donationLink: Tautan ke laman donasi
+neverShow: Jangan tampilkan lagi
+remindMeLater: Mungkin nanti
+removeQuote: Hapus kutipan
+removeRecipient: Hapus penerima
+removeMember: Hapus anggota
+isModerator: Moderator
+isAdmin: Administrator
+_experiments:
+  title: Eksperimen
+  enablePostImports: Aktifkan impor postingan
+  postImportsCaption: Izinkan pengguna mengimpor postingan mereka dari akun Firefish
+    sebelumnya, Misskey, Mastodon, Akkoma, dan Pleroma. Ini mungkin menyebabkan perlambatan
+    saat memuat jika antreanmu bottleneck.
+_dialog:
+  charactersExceeded: 'Karakter maksimal terlampaui! Kini: {current}/Batas: {max}'
+  charactersBelow: 'Karakter kurang! Kini: {current}/Batas: {min}'
+_skinTones:
+  light: Terang
+  dark: Gelap
+  mediumDark: Gelap Medium
+  mediumLight: Terang Medium
+  medium: Medium
+  yellow: Kuning
+_feeds:
+  copyFeed: Salin umpan
+  rss: RSS
+  atom: Atom
+  jsonFeed: Umpan JSON
+origin: Asal
+objectStorageS3ForcePathStyle: Gunakan URL titik akhir berbasis lokasi
+objectStorageS3ForcePathStyleDesc: Aktifkan ini untuk membuat URL titik akhir dalam
+  format 's3.amazonaws.com/<bucket>/' di atas '<bucket>.s3.amazonaws.com'.
+deletePasskeys: Hapus passkeys
+inputNotMatch: Masukan tidak cocok
+delete2fa: Nonaktifkan 2FA
+delete2faConfirm: Ini akan menghapus 2FA secara permanen pada akun ini. Lanjutkan?
+deletePasskeysConfirm: Ini akan menghapus semua passkeys dan kunci keamanan pada akun
+  ini secara permanen. Lanjutkan?
+addRe: Tambahkan "re:" pada awal komentar balasan postingan dengan peringatan konten
+confirm: Konfirmasi
+importZip: Impor ZIP
+exportZip: Ekspor ZIP
+detectPostLanguage: Deteksi bahasa secara otomatis dan tampilkan tombol terjemahkan
+  untuk postingan dalam bahasa asing
+indexableDescription: Perbolehkan pencarian di sini untuk menampilkan postingan publikmu
+indexable: Dapat diindeks
+languageForTranslation: Bahasa terjemahan postingan
+openServerInfo: Tampilkan informasi server dengan mengeklik ticker server di sebuah
+  postingan
+vibrate: Putar getaran
+clickToShowPatterns: Klik untuk menampilkan pola modul
+iconSet: Set ikon
+_iconSets:
+  fill: Penuh
+  regular: Reguler
+  bold: Tebal
+  duotone: Duotone
+  light: Tipis
+reactions: Reaksi
+replies: Balasan
+quotes: Kutipan
+renotes: Postingan ulang
+showAttachedNotes: Tampilkan postingan dengan berkas ini
+attachedToNotes: Posting dengan berkas ini
+moreUrls: Halaman tersemat
+moreUrlsDescription: "Masukkan halaman yang ingin kamu sematkan ke menu bantuan di
+  pojok kiri bawah dengan notasi ini:\n\"Nama tampilan\": https://contoh.com/"
+squareCatAvatars: Tampilkan avatar kotak untuk akun kucing
+emojiModPerm: Perizinan pengelolaan emoji kustom
+emojiModPermDescription: "Tambah: Perbolehkan pengguna ini untuk menambahkan emoji
+  kustom baru dan menetapkan tag/kategori/lisensi untuk semua emoji kustom yang telah
+  ditambahkan.\nTambah dan Sunting: Perizinan \"Tambah\" + Perbolehkan pengguna ini
+  untuk menyunting nama/kategori/tag/lisensi emoji kustom yang sudah ada.\n Perbolehkan
+  Semua: Perizinan \"Tambah dan Sunting\" + Perbolehkan pengguna ini untuk menghapus
+  semua emoji kustom yang sudah ada."
+private: Privat
+privateDescription: Buat terlihat pada kamu sendiri
+makePrivate: Buat privat
+makePrivateConfirm: Tindakan ini akan mengirim permintaan penghapusan ke server jarak
+  jauh dan mengubah keterlihatannya ke privat. Lanjutkan?
+_emojiModPerm:
+  unauthorized: Tidak ada
+  add: Tambah
+  mod: Tambah dan Sunting
+  full: Perbolehkan Semua
+suggested: Disarankan
+noLanguage: Tidak ada bahasa
+preventMisclick: Pencegahan pengeklikan tidak sengaja
+hideFollowButtons: Sembunyikan tombol ikuti dalam posisi yang tidak dapat diklik secara
+  tidak sengaja
+forMobile: Ponsel
+replaceChatButtonWithAccountButton: Ganti tombol percakapan dengan tombol ganti akun
+replaceWidgetsButtonWithReloadButton: Ganti tombol widget dengan tombol muat ulang
+searchEngine: Mesin pencarian yang digunakan dalam bilah pencarian MFM
+postSearch: Pencarian postingan di server ini
+showBigPostButton: Tampilkan tombol kirim besar di formulir postingan
+showPreviewByDefault: Tampilkan pratinjau dalam formulir postingan secara bawaan
+useCdn: Dapatkan aset dari CDN
+useCdnDescription: Muat aset statis seperti Twemoji dari CDN JSDelivr daripada server
+  Firefish ini.
+sentFollowRequests: Permintaan mengikuti terkirim
+replyUnmute: Suarakan balasan dalam lini masa
+noSentFollowRequests: Kamu belum mengirim permintaan mengikuti
+enablePullToRefresh: Aktifkan "Tarik ke bawah untuk memuat ulang"
+pullDownToReload: Tarik ke bawah untuk memuat ulang
+enableTimelineStreaming: Perbarui lini masa secara otomatis
+searchWords: Kata-kata untuk dicari / ID atau URL untuk dicari
+searchUsers: Dikirim oleh (opsional)
+searchCwAndAlt: Termasuk peringatan konten dan deskripsi berkas
+searchPostsWithFiles: Hanya postingan dengan berkas
+publishTimelines: Terbitkan lini masa untuk pengunjung
+publishTimelinesDescription: Jika diaktifkan, lini masa Lokal dan Global akan ditampilkan
+  di {url} bahkan ketika keluar dari akun.
+searchWordsDescription: "Masukkan kata kunci di sini untuk mencari postingan. Pisahkan
+  kata dengan spasi untuk pencarian AND (dan), atau 'OR' ('atau', tanpa tanda kutip)
+  di antara kata-kata untuk pencarian OR.\nMisalnya, 'pagi malam' akan menemukan postingan
+  yang mengandung 'pagi' dan 'malam', dan 'pagi OR malam' akan menemukan postingan
+  yang mengandung 'pagi' atau 'malam' (atau keduanya).\nAnda juga dapat memfilter
+  kata tertentu dari hasil pencarian, seperti 'mengantuk -pagi -sarapan'. Selain itu,
+  Anda dapat menggabungkan AND/OR/tidak sertakan ini seperti '(pagi OR malam) mengantuk'
+  -sarapan.\n\n Jika kamu ingin membuka halaman pengguna atau halaman postingan tertentu,
+  masukkan ID atau URL pada kolom ini dan klik tombol 'Cari'. Mengeklik 'Cari' akan
+  mencari postingan yang secara harfiah mengandung ID/URL."
+pullToRefreshThreshold: Jarak penarikan untuk memuat ulang
+releaseToReload: Lepaskan untuk memuat ulang
+reloading: Memuat ulang
+replyMute: Bisukan balasan dalam lini masa
+searchRange: Dikirim dalam (opsional)
+searchUsersDescription: "Untuk mencari postingan oleh pengguna/server tertentu, masukkan
+  ID (@pengguna@contoh.id, atau @pengguna untuk pengguna lokal) atau nama domain (contoh.id)\n
+  \nJika kamu memasukkan 'me' ('aku', tanpa tanda kutip), semua postinganmu (termasuk
+  postingan yang tidak terdaftar, khusus pengikut, langsung, dan rahasia) akan dicari.\n
+  \nJika Anda memasukkan 'local' (tanpa tanda kutip), hasilnya akan disaring untuk
+  menyertakan hanya postingan dari server ini."
+searchRangeDescription: "Jika kamu ingin memfilter periode waktu, masukkan dalam format
+  ini: 20220615-20231031\n\nJika kamu menghilangkan tahun (seperti 0105-0106 atau
+  20231105-0110), maka akan ditafsirkan sebagai tahun saat ini.\n\nKamu juga bisa
+  menghilangkan tanggal awal atau akhir. Sebagai contoh, -0102 akan memfilter hasil
+  pencarian untuk menampilkan hanya postingan yang dibuat sebelum tanggal 2 Januari
+  tahun ini, dan 20231026- akan memfilter hasil pencarian untuk menampilkan hanya
+  postingan yang dibuat setelah tanggal 26 Oktober 2023."
+toPost: Kirim
+toQuote: Kutip
+noAltTextWarning: Beberapa berkas yang dilampirkan tidak memiliki deskripsi. Lupa
+  menulis deskripsinya?
+toEdit: Sunting
+showNoAltTextWarning: Tampilkan peringatan jika kamu mencoba mengirim berkas tanpa
+  deskripsi
+toReply: Balas
+messagingUnencryptedInfo: Percakapan di Firefish tidak terenkripsi secara ujung ke
+  ujung. Jangan bagikan informasi sensitif apa pun melalui Firefish.
+moderationNote: Catatan Moderasi
+driveCapacityOverride: Penimpaan Kapasitas Drive
+ipFirstAcknowledged: Tanggal akuisisi pertama dari alamat IP
+incorrectLanguageWarning: "Sepertinya postinganmu dalam bahasa {detected}, tetapi
+  Anda memilih {current}.\nApakah kamu ingin ubah bahasanya ke bahasa {detected} saja?"
+autocorrectNoteLanguage: Tampilkan peringatan jika bahasa postingan tidak cocok dengan
+  hasil yang dideteksi secara otomatis
+markLocalFilesNsfwByDefault: Tandai semua berkas lokal baru sensitif secara bawaan
+markLocalFilesNsfwByDefaultDescription: Terlepas dari pengaturan ini, pengguna dapat
+  menghapus sendiri tanda NSFW. Berkas yang ada tidak berpengaruh.
+noteEditHistory: Riwayat penyuntingan postingan
+media: Media
+antennaLimit: Jumlah antena maksimum yang dapat dibuat oleh setiap pengguna
+showAddFileDescriptionAtFirstPost: Buka formulir secara otomatis untuk menulis deskripsi
+  ketika mencoba mengirim berkas tanpa deskripsi
+remoteFollow: Ikuti jarak jauh
+foldNotification: Kelompokkan notifikasi yang sama
+getQrCode: Tampilkan kode QR
+cannotEditVisibility: Kamu tidak bisa menyunting keterlihatan
+useThisAccountConfirm: Apakah kamu ingin melanjutkan dengan akun ini?
+inputAccountId: Silakan memasukkan akunmu (misalnya, @firefish@info.firefish.dev)
+copyRemoteFollowUrl: Salin URL ikuti jarak jauh
+slashQuote: Kutipan rantai
+scheduledPostAt: Kiriman akan dikirim {time}
+scheduledPost: Jadwalkan postingan ini
+_later:
+  monthsAgo: dalam {n}bln
+  secondsAgo: dalam {n}d
+  future: masa depan
+  justNow: saat ini
+  daysAgo: dalam {n}hr
+  hoursAgo: dalam {n}j
+  minutesAgo: dalam {n}m
+  weeksAgo: dalam {m}mg
+  yearsAgo: dalam {n}thn
+mergeRenotesInTimeline: Kelompokkan beberapa pembagian postingan yang sama
+cancelScheduledPost: Hapus jadwal
+scheduledDate: Tanggal terjadwal
+mergeThreadInTimeline: Gabungkan beberapa postingan dalam utas yang sama dalam lini
+  masa
+strongPassword: Kata sandi baik
+announcement: Pengumuman
+i18nServerSet: Gunakan {language} untuk klien baru.
+turnOffCatLanguage: Matikan konversi bahasa kucing
+i18nServerInfo: Klien baru akan dalam {language} secara bawaan.
+i18nServerChange: Gunakan {language} saja.
+addAlt4MeTag: 'Tambahkan tagar #Alt4Me secara otomatis pada postinganmu jika berkas
+  yang dilampirkan tidak ada deskripsi'

@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  web:
+    image: docker.io/node:18.20.0-bookworm
+    container_name: firefish_web
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "3030:3030"
+    networks:
+      - firefishnet
+    environment:
+      NODE_ENV: production
+      PGPASSWORD: password
+      URL: http://localhost:3030
+    volumes:
+      - ./firefish:/firefish:rw
+      - ./docker-entrypoint.sh:/docker-entrypoint.sh:ro
+    entrypoint: /docker-entrypoint.sh
+
+  redis:
+    restart: unless-stopped
+    image: docker.io/redis:7.0-alpine
+    container_name: firefish_redis
+    networks:
+      - firefishnet
+    ports:
+      - "26379:6379"
+    volumes:
+      - ./redis:/data
+
+  db:
+    restart: unless-stopped
+    image: docker.io/groonga/pgroonga:3.1.8-alpine-12
+    container_name: firefish_db
+    networks:
+      - firefishnet
+    env_file:
+      - ../config.env
+    ports:
+      - "25432:5432"
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+networks:
+  firefishnet:

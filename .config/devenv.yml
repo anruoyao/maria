@@ -1,0 +1,16 @@
+url: http://localhost:3030
+port: 3030
+
+db:
+  host: firefish_db
+  port: 5432
+
+  db: firefish_db
+  user: firefish
+  pass: password
+
+redis:
+  host: firefish_redis
+  port: 6379
+
+maxLogLevel: 'debug'

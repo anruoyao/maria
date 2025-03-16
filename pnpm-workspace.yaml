@@ -1,0 +1,6 @@
+packages:
+ - 'packages/backend'
+ - 'packages/backend-rs'
+ - 'packages/client'
+ - 'packages/sw'
+ - 'packages/firefish-js'

@@ -1,0 +1,79 @@
+# Visual Studio Code
+/.vscode
+!/.vscode/extensions.json
+!/.vscode/launch.json
+/.history/
+
+# Intelij-IDEA
+/.idea
+packages/backend/.idea/backend.iml
+packages/backend/.idea/modules.xml
+packages/backend/.idea/vcs.xml
+
+# Node.js
+node_modules
+report.*.json
+
+# Cargo
+/.cargo
+/target
+
+# Cypress
+cypress/screenshots
+cypress/videos
+
+# Coverage
+coverage
+
+# config
+/.config/*
+!/.config/example.yml
+!/.config/devenv.yml
+!/.config/docker_example.env
+!/.config/docker_ci.env
+!/.config/helm_values_example.yml
+!/.config/LICENSE
+/docker-compose.yml
+/compose.yml
+/custom/*
+!/custom/LICENSE
+
+# ESLint
+.eslintcache
+
+# misskey
+built
+/db
+/redis
+npm-debug.log
+*.pem
+run.bat
+api-docs.json
+*.log
+*.code-workspace
+.DS_Store
+/files
+ormconfig.json
+packages/backend/assets/instance.css
+packages/backend/assets/sounds/None.mp3
+packages/backend/assets/LICENSE
+
+dev/container/firefish
+dev/container/db
+dev/container/redis
+dev/config.env
+
+# blender backups
+*.blend1
+*.blend2
+*.blend3
+*.blend4
+*.blend5
+
+# old yarn
+.yarn
+yarn*
+
+# Cargo cache for Docker
+/.cargo-cache
+/.cargo-target

@@ -1,0 +1,32 @@
+import { appendQuery } from "./url";
+import * as config from "@/config";
+
+export function popout(path: string, w?: HTMLElement) {
+	let url =
+		path.startsWith("http://") || path.startsWith("https://")
+			? path
+			: config.url + path;
+	url = appendQuery(url, "zen");
+	if (w) {
+		const position = w.getBoundingClientRect();
+		const width = Number.parseInt(getComputedStyle(w, "").width, 10);
+		const height = Number.parseInt(getComputedStyle(w, "").height, 10);
+		const x = window.screenX + position.left;
+		const y = window.screenY + position.top;
+		window.open(
+			url,
+			url,
+			`width=${width}, height=${height}, top=${y}, left=${x}`,
+		);
+	} else {
+		const width = 400;
+		const height = 500;
+		const x = window.top.outerHeight / 2 + window.top.screenY - height / 2;
+		const y = window.top.outerWidth / 2 + window.top.screenX - width / 2;
+		window.open(
+			url,
+			url,
+			`width=${width}, height=${height}, top=${x}, left=${y}`,
+		);
+	}
+}

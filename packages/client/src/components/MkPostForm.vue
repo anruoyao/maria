@@ -1,0 +1,1871 @@
+<template>
+	<section
+		v-size="{ max: [310, 500] }"
+		class="gafaadew"
+		:class="{ modal, _popup: modal }"
+		:aria-label="i18n.ts._pages.blocks.post"
+		@dragover.stop="onDragover"
+		@dragenter="onDragenter"
+		@dragleave="onDragleave"
+		@drop.stop="onDrop"
+	>
+		<header>
+			<div class="left">
+				<button v-if="!fixed" class="cancel _button" @click="cancel">
+					<i :class="icon('ph-x')" :aria-label="i18n.ts.close"></i>
+				</button>
+				<button
+					v-if="$props.editId == null"
+					v-click-anime
+					v-tooltip="i18n.ts.switchAccount"
+					class="account _button"
+					@click="openAccountMenu"
+				>
+					<MkAvatar :user="postAccount ?? me!" class="avatar" />
+				</button>
+			</div>
+			<div class="right">
+				<span
+					v-if="maxTextLength - textLength < 500"
+					class="text-count"
+					:class="{ over: textLength > maxTextLength }"
+					>{{ maxTextLength - textLength }}</span
+				>
+				<span v-if="localOnly" class="local-only"
+					><i :class="icon('ph-users')"></i
+				></span>
+				<button
+					ref="visibilityButton"
+					v-tooltip="editId == null ? i18n.ts.visibility : i18n.ts.cannotEditVisibility"
+					class="_button visibility"
+					:disabled="channel != null || editId != null"
+					@click="setVisibility"
+				>
+					<span v-if="visibility === 'public'"
+						><i :class="icon('ph-planet')"></i
+					></span>
+					<span v-if="visibility === 'home'"
+						><i :class="icon('ph-house')"></i
+					></span>
+					<span v-if="visibility === 'followers'"
+						><i :class="icon('ph-lock')"></i
+					></span>
+					<span v-if="visibility === 'specified'"
+						><i :class="icon('ph-envelope-simple-open')"></i
+					></span>
+					<span v-if="visibility === 'private'"
+						><i :class="icon('ph-eye-slash')"></i
+					></span>
+				</button>
+				<button
+					ref="languageButton"
+					v-tooltip="i18n.ts.language"
+					class="_button language"
+					@click="setLanguage"
+				>
+					<i
+						v-if="language === '' || language == null"
+						class="_button"
+						:class="icon('ph-seal-warning')"
+					></i>
+					<p v-else class="_button" style="font-weight: bold">
+						{{ language.split("-")[0] }}
+					</p>
+				</button>
+				<button
+					v-tooltip="i18n.ts.previewNoteText"
+					class="_button preview"
+					:class="{ active: showPreview }"
+					@click="showPreview = !showPreview"
+				>
+					<i :class="icon('ph-binoculars')"></i>
+				</button>
+				<button
+					v-if="!showBigPostButton"
+					v-tooltip="submitText"
+					class="submit _buttonGradate"
+					:disabled="!canPost"
+					data-cy-open-post-form-submit
+					@click="post"
+				>
+					{{ submitText }}
+					<!-- 1.3333 is the em of .ph-lg -->
+					<MkLoading
+						v-if="posting"
+						class="spinner"
+						:em="true"
+						:colored="false"
+						:size-em="1.3333"
+					/>
+					<i
+						v-else
+						:class="submitIcon"
+					></i>
+				</button>
+			</div>
+		</header>
+		<div class="form" :class="{ fixed }">
+			<XNoteSimple v-if="reply" class="preview" :note="reply" />
+			<XNoteSimple v-if="renote" class="preview" :note="renote" />
+			<div v-if="quoteId" class="with-quote">
+				<i :class="icon('ph-quotes')"></i>
+				{{ i18n.ts.quoteAttached
+				}}<button
+					class="_button"
+					:aria-label="i18n.ts.removeQuote"
+					@click="quoteId = null"
+				>
+					<i :class="icon('ph-x')"></i>
+				</button>
+			</div>
+			<div v-if="visibility === 'specified'" class="to-specified">
+				<span style="margin-inline-end: 8px">{{ i18n.ts.recipient }}</span>
+				<div class="visibleUsers">
+					<span v-for="u in visibleUsers" :key="u.id">
+						<MkAcct :user="u" />
+						<button
+							class="_button"
+							:aria-label="i18n.ts.removeRecipient"
+							@click="removeVisibleUser(u)"
+						>
+							<i :class="icon('ph-x')"></i>
+						</button>
+					</span>
+					<button class="_button" @click="addVisibleUser">
+						<i :class="icon('ph-plus ph-md ph-fw')"></i>
+					</button>
+				</div>
+			</div>
+			<MkInfo
+				v-if="hasNotSpecifiedMentions && visibility === 'specified'"
+				warn
+				class="form-info"
+			>
+				{{ i18n.ts.notSpecifiedMentionWarning }} -
+				<button class="_textButton" @click="addMissingMention()">
+					{{ i18n.ts.add }}
+				</button>
+			</MkInfo>
+			<MkInfo
+				v-if="scheduledAt"
+				class="form-info"
+			>
+				<I18n
+					:src="i18n.ts.scheduledPostAt"
+					tag="span"
+				>
+					<template #time>
+						<MkTime :time="scheduledAt"></MkTime>
+					</template>
+				</I18n>
+			</MkInfo>
+			<input
+				v-show="useCw"
+				ref="cwInputEl"
+				v-model="cw"
+				class="cw"
+				:placeholder="i18n.ts.annotation"
+				:lang="language ?? undefined"
+				@keydown="onKeydown"
+			/>
+			<textarea
+				ref="textareaEl"
+				v-model="text"
+				class="text"
+				:class="{ withCw: useCw }"
+				:disabled="posting"
+				:placeholder="placeholder"
+				:lang="language ?? undefined"
+				data-cy-post-form-text
+				@keydown="onKeydown"
+				@paste="onPaste"
+				@compositionupdate="onCompositionUpdate"
+				@compositionend="onCompositionEnd"
+			/>
+			<input
+				v-show="withHashtags"
+				ref="hashtagsInputEl"
+				v-model="hashtags"
+				class="hashtags"
+				:lang="language ?? undefined"
+				:placeholder="i18n.ts.hashtags"
+				list="hashtags"
+			/>
+			<XPostFormAttaches
+				class="attaches"
+				:files="files"
+				@updated="updateFiles"
+				@detach="detachFile"
+				@changeSensitive="updateFileSensitive"
+				@changeName="updateFileName"
+			/>
+			<XPollEditor
+				v-if="poll"
+				v-model="poll"
+				:lang="language ?? undefined"
+				@destroyed="poll = null"
+			/>
+			<XNotePreview
+				v-if="showPreview"
+				class="preview"
+				:lang="language ?? undefined"
+				:text="text"
+			/>
+			<footer>
+				<div class="row">
+					<div class="left">
+						<button
+							v-tooltip="i18n.ts.attachFile"
+							class="_button"
+							@click="chooseFileFrom"
+						>
+							<i :class="icon('ph-upload')"></i>
+						</button>
+						<button
+							v-tooltip="i18n.ts.poll"
+							class="_button"
+							:class="{ active: poll }"
+							@click="togglePoll"
+						>
+							<i :class="icon('ph-microphone-stage')"></i>
+						</button>
+						<button
+							v-tooltip="i18n.ts.useCw"
+							class="_button"
+							:class="{ active: useCw }"
+							@click="useCw = !useCw"
+						>
+							<i :class="icon('ph-eye-slash')"></i>
+						</button>
+						<!-- <button
+							v-tooltip="i18n.ts.mention"
+							class="_button"
+							@click="insertMention"
+						>
+							<i :class="icon('ph-at')"></i>
+						</button> -->
+						<button
+							v-tooltip="i18n.ts.hashtags"
+							class="_button"
+							:class="{ active: withHashtags }"
+							@click="withHashtags = !withHashtags"
+						>
+							<i :class="icon('ph-hash')"></i>
+						</button>
+						<button
+							v-tooltip="i18n.ts.emoji"
+							class="_button"
+							@click="insertEmoji"
+						>
+							<i :class="icon('ph-smiley')"></i>
+						</button>
+					</div>
+					<div class="right">
+						<button
+							v-tooltip="i18n.ts.more"
+							class="_button"
+							@click="showMoreMenu"
+						>
+							<i :class="icon('ph-dots-three-outline ph-dir')"></i>
+						</button>
+					</div>
+				</div>
+				<div v-if="showBigPostButton">
+					<button
+						v-tooltip="submitText"
+						class="submit bigPostButton"
+						:disabled="!canPost"
+						data-cy-open-post-form-submit
+						@click="post"
+					>
+						{{ submitText
+						}}<i
+							:class="submitIcon"
+						></i>
+					</button>
+				</div>
+			</footer>
+			<datalist id="hashtags">
+				<option
+					v-for="hashtag in recentHashtags"
+					:key="hashtag"
+					:value="hashtag"
+				/>
+			</datalist>
+		</div>
+	</section>
+</template>
+
+<script lang="ts" setup>
+import {
+	type Ref,
+	computed,
+	inject,
+	nextTick,
+	onMounted,
+	ref,
+	watch,
+} from "vue";
+import * as mfm from "mfm-js";
+import autosize from "autosize";
+import insertTextAtCursor from "insert-text-at-cursor";
+import { length } from "stringz";
+import { toASCII } from "punycode/";
+import { acct } from "firefish-js";
+import type { ApiTypes, entities, languages } from "firefish-js";
+import { throttle } from "throttle-debounce";
+import XNoteSimple from "@/components/MkNoteSimple.vue";
+import XNotePreview from "@/components/MkNotePreview.vue";
+import XPostFormAttaches from "@/components/MkPostFormAttaches.vue";
+import XPollEditor from "@/components/MkPollEditor.vue";
+import XCheatSheet from "@/components/MkCheatSheetDialog.vue";
+import XMediaCaption from "@/components/MkMediaCaption.vue";
+import { host, url } from "@/config";
+import { erase, unique } from "@/scripts/array";
+import { extractMentions } from "@/scripts/extract-mentions";
+import { formatTimeString } from "@/scripts/format-time-string";
+import { Autocomplete } from "@/scripts/autocomplete";
+import * as os from "@/os";
+import { useStream } from "@/stream";
+import { selectFiles } from "@/scripts/select-file";
+import { defaultStore, notePostInterruptors, postFormActions } from "@/store";
+import MkInfo from "@/components/MkInfo.vue";
+import { i18n } from "@/i18n";
+import { getInstanceInfo } from "@/instance";
+import { getAccounts, openAccountMenu as openAccountMenu_ } from "@/account";
+import { me } from "@/me";
+import { uploadFile } from "@/scripts/upload";
+import { deepClone } from "@/scripts/clone";
+import preprocess from "@/scripts/preprocess";
+import { vibrate } from "@/scripts/vibrate";
+import { langmap } from "@/scripts/langmap";
+import {
+	detectLanguage,
+	isSameLanguage,
+	isSupportedLang,
+	languageContains,
+	parentLanguage,
+} from "@/scripts/language-utils";
+import type { MenuItem } from "@/types/menu";
+import icon from "@/scripts/icon";
+import MkVisibilityPicker from "@/components/MkVisibilityPicker.vue";
+import type { NoteVisibility } from "@/types/note";
+import type { NoteDraft, PollType } from "@/types/post-form";
+
+const modal = inject("modal");
+
+const props = withDefaults(
+	defineProps<{
+		reply?: entities.Note;
+		renote?: entities.Note;
+		channel?: entities.Channel;
+		mention?: entities.User;
+		specified?: entities.User;
+		initialText?: string;
+		initialVisibility?: NoteVisibility;
+		initialLanguage?: (typeof languages)[number];
+		initialFiles?: entities.DriveFile[];
+		initialLocalOnly?: boolean;
+		initialVisibleUsers?: entities.User[];
+		initialNote?: NoteDraft;
+		instant?: boolean;
+		fixed?: boolean;
+		autofocus?: boolean;
+		showMfmCheatSheet?: boolean;
+		editId?: entities.Note["id"];
+		selectRange?: [
+			start: number,
+			end: number,
+			direction?: "forward" | "backward" | "none",
+		];
+	}>(),
+	{
+		initialVisibleUsers: () => [],
+		autofocus: true,
+		showMfmCheatSheet: true,
+	},
+);
+
+const emit = defineEmits<{
+	(ev: "posted"): void;
+	(ev: "cancel"): void;
+	(ev: "esc"): void;
+}>();
+
+const stream = useStream();
+
+const textareaEl = ref<HTMLTextAreaElement | null>(null);
+const cwInputEl = ref<HTMLInputElement | null>(null);
+const hashtagsInputEl = ref<HTMLInputElement | null>(null);
+const visibilityButton = ref<HTMLElement | null>(null);
+const languageButton = ref<HTMLElement | undefined>();
+
+const showBigPostButton = defaultStore.state.showBigPostButton;
+
+const posting = ref(false);
+const text = ref(props.initialText ?? "");
+const files = ref(props.initialFiles ?? ([] as entities.DriveFile[]));
+const poll = ref<PollType | null>(null);
+const useCw = ref(false);
+const showPreview = ref(defaultStore.state.showPreviewByDefault);
+const cw = ref<string | null>(null);
+const localOnly = ref<boolean>(
+	props.initialLocalOnly ?? defaultStore.state.rememberNoteVisibility
+		? defaultStore.state.localOnly
+		: defaultStore.state.defaultNoteLocalOnly,
+);
+const visibility = ref(
+	props.initialVisibility ??
+		(defaultStore.state.rememberNoteVisibility
+			? defaultStore.state.visibility
+			: defaultStore.state.defaultNoteVisibility),
+);
+
+const visibleUsers = ref<entities.User[]>([]);
+if (props.initialVisibleUsers) {
+	props.initialVisibleUsers.forEach(pushVisibleUser);
+}
+const draghover = ref(false);
+const quoteId = ref<string | null>(null);
+const hasNotSpecifiedMentions = ref(false);
+const recentHashtags = ref(
+	JSON.parse(localStorage.getItem("hashtags") || "[]"),
+);
+const imeText = ref("");
+const scheduledAt = ref<number | null>(null);
+
+const typing = throttle(3000, () => {
+	if (props.channel) {
+		stream.send("typingOnChannel", { channel: props.channel.id });
+	}
+});
+
+const draftKey = computed((): string => {
+	if (props.editId) {
+		return `edit:${props.editId}`;
+	}
+
+	let key = props.channel ? `channel:${props.channel.id}` : "";
+
+	if (props.renote) {
+		key += `renote:${props.renote.id}`;
+	} else if (props.reply) {
+		key += `reply:${props.reply.id}`;
+	} else {
+		key += "note";
+	}
+
+	return key;
+});
+
+const placeholder = computed((): string => {
+	if (props.renote) {
+		return i18n.ts._postForm.quotePlaceholder;
+	} else if (props.reply) {
+		return i18n.ts._postForm.replyPlaceholder;
+	} else if (props.channel) {
+		return i18n.ts._postForm.channelPlaceholder;
+	} else {
+		const xs = [
+			i18n.ts._postForm._placeholders.a,
+			i18n.ts._postForm._placeholders.b,
+			i18n.ts._postForm._placeholders.c,
+			i18n.ts._postForm._placeholders.d,
+			i18n.ts._postForm._placeholders.e,
+			i18n.ts._postForm._placeholders.f,
+		];
+		return xs[Math.floor(Math.random() * xs.length)];
+	}
+});
+
+const submitText = computed((): string => {
+	return props.editId
+		? i18n.ts.toEdit
+		: props.renote
+			? i18n.ts.toQuote
+			: props.reply
+				? i18n.ts.toReply
+				: i18n.ts.toPost;
+});
+const submitIcon = computed(() =>
+	icon(
+		props.editId
+			? "ph-pencil"
+			: scheduledAt.value
+				? "ph-clock"
+				: props.reply
+					? "ph-arrow-u-up-left"
+					: props.renote
+						? "ph-quotes"
+						: "ph-paper-plane-tilt",
+	),
+);
+
+const textLength = computed((): number => {
+	return length((preprocess(text.value) + imeText.value).trim());
+});
+
+const maxTextLength = computed((): number => {
+	return getInstanceInfo().maxNoteTextLength ?? 3000;
+});
+
+const canPost = computed((): boolean => {
+	return (
+		!posting.value &&
+		(textLength.value >= 1 ||
+			files.value.length >= 1 ||
+			!!poll.value ||
+			!!props.renote) &&
+		textLength.value <= maxTextLength.value &&
+		(!poll.value || poll.value.choices.length >= 2)
+	);
+});
+
+const withHashtags = computed(
+	defaultStore.makeGetterSetter("postFormWithHashtags"),
+);
+const hashtags = computed(
+	defaultStore.makeGetterSetter("postFormHashtags"),
+) as Ref<string | null>;
+
+let isFirstPostAttempt = true;
+
+watch(text, () => {
+	checkMissingMention();
+});
+
+watch(
+	visibleUsers,
+	() => {
+		checkMissingMention();
+	},
+	{
+		deep: true,
+	},
+);
+
+if (props.mention) {
+	text.value = props.mention.host
+		? `@${props.mention.username}@${toASCII(props.mention.host)}`
+		: `@${props.mention.username}`;
+	text.value += " ";
+}
+
+if (
+	props.reply &&
+	(props.reply.user.username !== me!.username ||
+		(props.reply.user.host != null && props.reply.user.host !== host))
+) {
+	text.value = `@${props.reply.user.username}${
+		props.reply.user.host != null ? `@${toASCII(props.reply.user.host)}` : ""
+	} `;
+}
+
+if (props.reply && props.reply.text != null) {
+	const ast = mfm.parse(props.reply.text);
+	const otherHost = props.reply.user.host;
+
+	for (const x of extractMentions(ast)) {
+		const mention = x.host
+			? `@${x.username}@${toASCII(x.host)}`
+			: otherHost == null || otherHost === host
+				? `@${x.username}`
+				: `@${x.username}@${toASCII(otherHost)}`;
+
+		// exclude me
+		if (me!.username === x.username && (x.host == null || x.host === host))
+			continue;
+
+		// remove duplicates
+		if (text.value.includes(`${mention} `)) continue;
+
+		text.value += `${mention} `;
+	}
+}
+
+if (props.channel) {
+	visibility.value = "public";
+	localOnly.value = true; // TODO: Delete this once channels get federated
+}
+
+// Inherit the original visibility
+if (
+	props.reply &&
+	["home", "followers", "specified"].includes(props.reply.visibility)
+) {
+	if (props.reply.visibility === "home" && visibility.value === "followers") {
+		visibility.value = "followers";
+	} else if (
+		["home", "followers"].includes(props.reply.visibility) &&
+		visibility.value === "specified"
+	) {
+		visibility.value = "specified";
+	} else {
+		visibility.value = props.reply.visibility;
+	}
+	if (visibility.value === "specified") {
+		if (props.reply.visibleUserIds) {
+			os.api("users/show", {
+				userIds: props.reply.visibleUserIds.filter(
+					(uid) => uid !== me!.id && uid !== props.reply!.userId,
+				),
+			}).then((users) => {
+				users.forEach(pushVisibleUser);
+			});
+		} else {
+			visibility.value = "private";
+		}
+
+		if (props.reply.userId !== me!.id) {
+			os.api("users/show", { userId: props.reply.userId }).then((user) => {
+				pushVisibleUser(user);
+			});
+		}
+	}
+}
+
+if (props.specified) {
+	visibility.value = "specified";
+	pushVisibleUser(props.specified);
+}
+
+const addRe = (s: string) => {
+	if (
+		!defaultStore.state.addRe ||
+		s.trim() === "" ||
+		s.slice(0, 3).toLowerCase() === "re:"
+	)
+		return s;
+	return `re: ${s}`;
+};
+
+// keep cw when reply
+if (defaultStore.state.keepCw && props.reply && props.reply.cw) {
+	useCw.value = true;
+	cw.value =
+		props.reply.user.username === me!.username
+			? props.reply.cw
+			: addRe(props.reply.cw);
+}
+
+function watchForDraft() {
+	watch(text, () => saveDraft());
+	watch(useCw, () => saveDraft());
+	watch(cw, () => saveDraft());
+	watch(poll, () => saveDraft());
+	watch(files, () => saveDraft(), { deep: true });
+	watch(visibility, () => saveDraft());
+	watch(localOnly, () => saveDraft());
+	watch(language, () => saveDraft());
+}
+
+function checkMissingMention() {
+	if (visibility.value === "specified") {
+		const ast = mfm.parse(text.value);
+
+		for (const x of extractMentions(ast)) {
+			if (
+				!visibleUsers.value.some(
+					(u) => u.username === x.username && u.host === x.host,
+				)
+			) {
+				hasNotSpecifiedMentions.value = true;
+				return;
+			}
+		}
+		hasNotSpecifiedMentions.value = false;
+	}
+}
+
+function addMissingMention() {
+	const ast = mfm.parse(text.value);
+
+	for (const x of extractMentions(ast)) {
+		if (
+			!visibleUsers.value.some(
+				(u) => u.username === x.username && u.host === x.host,
+			)
+		) {
+			os.api("users/show", { username: x.username, host: x.host }).then(
+				(user) => {
+					visibleUsers.value.push(user);
+				},
+			);
+		}
+	}
+}
+
+function togglePoll() {
+	if (poll.value) {
+		poll.value = null;
+	} else {
+		poll.value = {
+			choices: ["", ""],
+			multiple: false,
+			expiresAt: null,
+			expiredAfter: null,
+		};
+	}
+}
+
+function focus() {
+	if (textareaEl.value) {
+		textareaEl.value.focus();
+		if (props.selectRange) {
+			textareaEl.value.setSelectionRange(...props.selectRange);
+		} else {
+			textareaEl.value.setSelectionRange(
+				textareaEl.value.value.length,
+				textareaEl.value.value.length,
+			);
+		}
+	}
+}
+
+function chooseFileFrom(ev) {
+	selectFiles(ev.currentTarget ?? ev.target, i18n.ts.attachFile).then(
+		(files_) => {
+			for (const file of files_) {
+				files.value.push(file);
+			}
+		},
+	);
+}
+
+function detachFile(id) {
+	files.value = files.value.filter((x) => x.id !== id);
+}
+
+function updateFiles(_files) {
+	files.value = _files;
+}
+
+function updateFileSensitive(file, sensitive) {
+	files.value[files.value.findIndex((x) => x.id === file.id)].isSensitive =
+		sensitive;
+}
+
+function updateFileName(file, name) {
+	files.value[files.value.findIndex((x) => x.id === file.id)].name = name;
+}
+
+function upload(file: File, name?: string) {
+	uploadFile(file, defaultStore.state.uploadFolder, name).then((res) => {
+		files.value.push(res);
+	});
+}
+
+function setVisibility() {
+	if (props.channel) {
+		// TODO: information dialog
+		return;
+	}
+
+	os.popup(
+		MkVisibilityPicker,
+		{
+			currentVisibility: visibility.value,
+			currentLocalOnly: localOnly.value,
+			src: visibilityButton.value,
+		},
+		{
+			changeVisibility: (v) => {
+				visibility.value = v;
+				if (defaultStore.state.rememberNoteVisibility) {
+					defaultStore.set("visibility", visibility.value);
+				}
+			},
+			changeLocalOnly: (v) => {
+				localOnly.value = v;
+				if (defaultStore.state.rememberNoteVisibility) {
+					defaultStore.set("localOnly", localOnly.value);
+				}
+			},
+		},
+		"closed",
+	);
+}
+
+async function setSchedule() {
+	function getDateStr(type: "date" | "time", value: number) {
+		const tmp = document.createElement("input");
+		tmp.type = type;
+		tmp.valueAsNumber = value - new Date().getTimezoneOffset() * 60000;
+		return tmp.value;
+	}
+
+	const at = scheduledAt.value ?? Date.now();
+
+	const result = await os.form(i18n.ts.scheduledPost, {
+		at_date: {
+			type: "date",
+			label: i18n.ts.scheduledDate,
+			default: getDateStr("date", at),
+		},
+		at_time: {
+			type: "time",
+			label: i18n.ts._poll.deadlineTime,
+			default: getDateStr("time", at),
+		},
+	});
+
+	if (!result.canceled && result.result) {
+		scheduledAt.value = Number(
+			new Date(`${result.result.at_date}T${result.result.at_time}`),
+		);
+	}
+}
+
+function removeScheduledAt() {
+	scheduledAt.value = null;
+}
+
+const language = ref<string | null>(
+	props.initialLanguage ??
+		defaultStore.state.recentlyUsedPostLanguages[0] ??
+		localStorage.getItem("lang")?.split("-")[0],
+);
+
+function filterSubclassLanguages(
+	langCode: string,
+): { langCode: string; nativeName: string }[] {
+	return Object.entries(langmap)
+		.filter(([lc, _]) => languageContains(langCode, lc))
+		.map(([langCode, v]) => {
+			return { langCode, nativeName: v.nativeName };
+		});
+}
+
+function setLanguage() {
+	const actions: Array<MenuItem> = [];
+
+	const detectedLanguage: string = detectLanguage(text.value) ?? "";
+	if (detectedLanguage !== "" && detectedLanguage !== language.value) {
+		actions.push({
+			type: "label",
+			text: i18n.ts.suggested,
+		});
+		for (const v of filterSubclassLanguages(detectedLanguage)) {
+			actions.push({
+				text: v.nativeName,
+				danger: false,
+				active: false,
+				action: () => {
+					language.value = v.langCode;
+				},
+			});
+		}
+		actions.push(null);
+	}
+
+	if (language.value != null && langmap[language.value] != null) {
+		actions.push({
+			text: langmap[language.value].nativeName,
+			danger: false,
+			active: true,
+			action: () => {},
+		});
+	} else if (language.value != null) {
+		// Unrecognized language, add it to the list as an ad-hoc language
+		actions.push({
+			text: language.value,
+			danger: false,
+			active: true,
+			action: () => {},
+		});
+	}
+
+	const langs = Object.keys(langmap);
+
+	// Show recently used language first
+	let recentlyUsedLanguagesExist = false;
+	for (const lang of defaultStore.state.recentlyUsedPostLanguages) {
+		if (lang === language.value) continue;
+		if (!langs.includes(lang)) continue;
+		actions.push({
+			text: langmap[lang].nativeName,
+			danger: false,
+			active: false,
+			action: () => {
+				language.value = lang;
+			},
+		});
+		recentlyUsedLanguagesExist = true;
+	}
+	if (recentlyUsedLanguagesExist) actions.push(null);
+
+	actions.push({
+		text: i18n.ts.noLanguage,
+		danger: false,
+		active: false,
+		action: () => {
+			language.value = null;
+		},
+	});
+
+	for (const lang of langs) {
+		if (lang === language.value) continue;
+		if (defaultStore.state.recentlyUsedPostLanguages.includes(lang)) continue;
+		actions.push({
+			text: langmap[lang].nativeName,
+			danger: false,
+			active: false,
+			action: () => {
+				language.value = lang;
+			},
+		});
+	}
+
+	os.popupMenu(actions, languageButton.value, {});
+}
+
+function pushVisibleUser(user) {
+	if (
+		!visibleUsers.value.some(
+			(u) => u.username === user.username && u.host === user.host,
+		)
+	) {
+		visibleUsers.value.push(user);
+	}
+}
+
+function addVisibleUser() {
+	os.selectUser().then((user) => {
+		pushVisibleUser(user);
+	});
+}
+
+function removeVisibleUser(user) {
+	visibleUsers.value = erase(user, visibleUsers.value);
+}
+
+function clear() {
+	text.value = "";
+	files.value = [];
+	poll.value = null;
+	quoteId.value = null;
+}
+
+// FIXME: ev.which is deprecated
+// https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/which
+function onKeydown(ev: KeyboardEvent) {
+	if (
+		(ev.which === 10 || ev.which === 13) &&
+		(ev.ctrlKey || ev.metaKey) &&
+		canPost.value
+	)
+		post();
+	if (ev.which === 27) emit("esc");
+	typing();
+}
+
+function onCompositionUpdate(ev: CompositionEvent) {
+	imeText.value = ev.data;
+	typing();
+}
+
+function onCompositionEnd(ev: CompositionEvent) {
+	imeText.value = "";
+}
+
+async function onPaste(ev: ClipboardEvent) {
+	if (ev.clipboardData == null) return;
+
+	for (const { item, i } of Array.from(ev.clipboardData.items).map(
+		(item, i) => ({ item, i }),
+	)) {
+		if (item.kind === "file") {
+			const file = item.getAsFile();
+			if (file == null) continue;
+			const lio = file.name.lastIndexOf(".");
+			const ext = lio >= 0 ? file.name.slice(lio) : "";
+			const formatted = `${formatTimeString(
+				new Date(file.lastModified),
+				defaultStore.state.pastedFileName,
+			).replace(/{{number}}/g, `${i + 1}`)}${ext}`;
+			upload(file, formatted);
+		}
+	}
+
+	const paste = ev.clipboardData?.getData("text") ?? "";
+
+	if (!props.renote && !quoteId.value && paste.startsWith(`${url}/notes/`)) {
+		ev.preventDefault();
+
+		os.yesno({
+			type: "info",
+			text: i18n.ts.quoteQuestion,
+		}).then(({ canceled }) => {
+			if (canceled) {
+				insertTextAtCursor(textareaEl.value!, paste);
+				return;
+			}
+
+			quoteId.value = paste
+				.substring(url.length)
+				.match(/^\/notes\/(.+?)\/?$/)![1];
+		});
+	}
+}
+
+function onDragover(ev) {
+	if (!ev.dataTransfer.items[0]) return;
+	const isFile = ev.dataTransfer.items[0].kind === "file";
+	const isDriveFile = ev.dataTransfer.types[0] === _DATA_TRANSFER_DRIVE_FILE_;
+	if (isFile || isDriveFile) {
+		ev.preventDefault();
+		draghover.value = true;
+		switch (ev.dataTransfer.effectAllowed) {
+			case "all":
+			case "uninitialized":
+			case "copy":
+			case "copyLink":
+			case "copyMove":
+				ev.dataTransfer.dropEffect = "copy";
+				break;
+			case "linkMove":
+			case "move":
+				ev.dataTransfer.dropEffect = "move";
+				break;
+			default:
+				ev.dataTransfer.dropEffect = "none";
+				break;
+		}
+	}
+}
+
+function onDragenter(_ev) {
+	draghover.value = true;
+}
+
+function onDragleave(_ev) {
+	draghover.value = false;
+}
+
+function onDrop(ev: DragEvent): void {
+	draghover.value = false;
+	if (ev.dataTransfer == null) return;
+
+	// ファイルだったら
+	if (ev.dataTransfer.files.length > 0) {
+		ev.preventDefault();
+		for (const x of Array.from(ev.dataTransfer.files)) upload(x);
+		return;
+	}
+
+	// #region ドライブのファイル
+	const driveFile = ev.dataTransfer.getData(_DATA_TRANSFER_DRIVE_FILE_);
+	if (driveFile != null && driveFile !== "") {
+		const file = JSON.parse(driveFile);
+		files.value.push(file);
+		ev.preventDefault();
+	}
+	// #endregion
+}
+
+function saveDraft() {
+	const draftData = JSON.parse(localStorage.getItem("drafts") || "{}");
+
+	draftData[draftKey.value] = {
+		updatedAt: new Date(),
+		data: {
+			text: text.value,
+			useCw: useCw.value,
+			cw: cw.value,
+			visibility: visibility.value,
+			localOnly: localOnly.value,
+			lang: language.value,
+			files: files.value,
+			poll: poll.value,
+		},
+	};
+
+	localStorage.setItem("drafts", JSON.stringify(draftData));
+}
+
+function deleteDraft() {
+	const draftData = JSON.parse(localStorage.getItem("drafts") || "{}");
+
+	delete draftData[draftKey.value];
+
+	localStorage.setItem("drafts", JSON.stringify(draftData));
+}
+
+/**
+ * @returns whether the file is described
+ */
+function openFileDescriptionWindow(file: entities.DriveFile) {
+	return new Promise<boolean>((resolve, reject) => {
+		os.popup(
+			XMediaCaption,
+			{
+				title: i18n.ts.describeFile,
+				input: {
+					placeholder: i18n.ts.inputNewDescription,
+					default: file.comment !== null ? file.comment : "",
+				},
+				image: file,
+			},
+			{
+				done: (result) => {
+					if (!result || result.canceled) {
+						resolve(false);
+						return;
+					}
+					const comment = result.result?.length === 0 ? null : result.result;
+					os.api("drive/files/update", {
+						fileId: file.id,
+						comment,
+					})
+						.then(() => {
+							resolve(true);
+							file.comment = comment ?? null;
+						})
+						.catch((err: unknown) => {
+							reject(err);
+						});
+				},
+			},
+			"closed",
+		);
+	});
+}
+
+async function post() {
+	// For text that is too short, the false positive rate may be too high, so we don't show alarm.
+	if (defaultStore.state.autocorrectNoteLanguage && text.value.length > 10) {
+		const detectedLanguage: string = detectLanguage(text.value) ?? "";
+
+		const currentLanguageName: string | undefined | false =
+			language.value && langmap[language.value]?.nativeName;
+		const detectedLanguageName: string | undefined | false =
+			detectedLanguage !== "" && langmap[detectedLanguage]?.nativeName;
+
+		if (
+			currentLanguageName &&
+			detectedLanguageName &&
+			!isSameLanguage(detectedLanguage, language.value) &&
+			isSupportedLang(parentLanguage(language.value))
+		) {
+			// "canceled" means "post with detected language".
+			const { canceled } = await os.confirm({
+				type: "warning",
+				text: i18n.t("incorrectLanguageWarning", {
+					detected: detectedLanguageName,
+					current: currentLanguageName,
+				}),
+				okText: i18n.ts.no,
+				cancelText: i18n.ts.yes,
+				isPlaintext: true,
+			});
+
+			if (canceled) {
+				language.value = detectedLanguage;
+			}
+		}
+	}
+
+	if (
+		defaultStore.state.showAddFileDescriptionAtFirstPost &&
+		files.value.some((f) => f.comment == null || f.comment.length === 0)
+	) {
+		if (isFirstPostAttempt) {
+			for (const file of files.value) {
+				if (file.comment == null || file.comment.length === 0) {
+					const described = await openFileDescriptionWindow(file);
+					if (!described) {
+						return;
+					}
+				}
+			}
+			isFirstPostAttempt = false;
+			return;
+		}
+	}
+
+	if (
+		defaultStore.state.showNoAltTextWarning &&
+		files.value.some((f) => f.comment == null || f.comment.length === 0)
+	) {
+		// "canceled" means "post anyway"
+		const { canceled } = await os.confirm({
+			type: "warning",
+			text: i18n.ts.noAltTextWarning,
+			okText: i18n.ts.describeFile,
+			cancelText: i18n.ts.toPost,
+			isPlaintext: true,
+		});
+
+		if (!canceled) {
+			for (const file of files.value) {
+				if (file.comment == null || file.comment.length === 0) {
+					const described = await openFileDescriptionWindow(file);
+					if (!described) {
+						return;
+					}
+				}
+			}
+			return;
+		}
+	}
+
+	if (
+		defaultStore.state.addAlt4MeTag &&
+		files.value.some((f) => f.comment == null || f.comment.length === 0)
+	) {
+		text.value = `${text.value.trimEnd()}\n#Alt4Me`;
+	}
+
+	const processedText = preprocess(text.value);
+
+	let postData: ApiTypes.NoteSubmitReq = {
+		editId: props.editId ? props.editId : undefined,
+		text: processedText === "" ? undefined : processedText,
+		fileIds: files.value.length > 0 ? files.value.map((f) => f.id) : undefined,
+		replyId: props.reply ? props.reply.id : undefined,
+		renoteId: props.renote
+			? props.renote.id
+			: quoteId.value
+				? quoteId.value
+				: undefined,
+		channelId: props.channel ? props.channel.id : undefined,
+		poll: poll.value,
+		cw: useCw.value ? cw.value || "" : undefined,
+		lang: language.value ? language.value : undefined,
+		localOnly: localOnly.value,
+		visibility: visibility.value === "private" ? "specified" : visibility.value,
+		visibleUserIds:
+			visibility.value === "private"
+				? []
+				: visibility.value === "specified"
+					? visibleUsers.value.map((u) => u.id)
+					: undefined,
+		scheduledAt: scheduledAt.value,
+	};
+
+	if (withHashtags.value && hashtags.value && hashtags.value.trim() !== "") {
+		const hashtags_ = hashtags.value
+			.trim()
+			.split(" ")
+			.map((x) => (x.startsWith("#") ? x : `#${x}`))
+			.join(" ");
+		postData.text = postData.text ? `${postData.text} ${hashtags_}` : hashtags_;
+	}
+
+	// plugin
+	if (notePostInterruptors.length > 0) {
+		for (const interruptor of notePostInterruptors) {
+			postData = await interruptor.handler(deepClone(postData));
+		}
+	}
+
+	let token: string | undefined;
+
+	if (postAccount.value) {
+		const storedAccounts = await getAccounts();
+		token = storedAccounts.find((x) => x.id === postAccount.value!.id)?.token;
+	}
+
+	posting.value = true;
+	os.api(postData.editId ? "notes/edit" : "notes/create", postData, token)
+		.then(() => {
+			clear();
+			nextTick(() => {
+				deleteDraft();
+				emit("posted");
+				if (postData.text && postData.text !== "") {
+					const hashtags_ = (
+						mfm
+							.parse(postData.text)
+							.filter((x) => x.type === "hashtag") as mfm.MfmHashtag[]
+					).map((x) => x.props.hashtag);
+					const history = JSON.parse(
+						localStorage.getItem("hashtags") || "[]",
+					) as string[];
+					localStorage.setItem(
+						"hashtags",
+						JSON.stringify(unique(hashtags_.concat(history))),
+					);
+				}
+				posting.value = false;
+				postAccount.value = null;
+				scheduledAt.value = null;
+				nextTick(() => autosize.update(textareaEl.value!));
+			});
+		})
+		.catch((err: { message: string; id: string }) => {
+			posting.value = false;
+			os.alert({
+				type: "error",
+				text: `${err.message}\n${err.id}`,
+			});
+		});
+	vibrate([10, 20, 10, 20, 10, 20, 60]);
+
+	// update recentlyUsedLanguages
+	if (language.value != null) {
+		const languages = Object.keys(langmap);
+		const maxLength = 6;
+
+		defaultStore.set(
+			"recentlyUsedPostLanguages",
+			[language.value]
+				.concat(
+					defaultStore.state.recentlyUsedPostLanguages.filter((lang) => {
+						return lang !== language.value && languages.includes(lang);
+					}),
+				)
+				.slice(0, maxLength),
+		);
+	}
+}
+
+function cancel() {
+	emit("cancel");
+}
+
+function insertMention() {
+	os.selectUser().then((user) => {
+		insertTextAtCursor(textareaEl.value!, `@${acct.toString(user)} `);
+	});
+}
+
+async function insertEmoji(ev: MouseEvent) {
+	os.openEmojiPicker(
+		(ev.currentTarget ?? ev.target) as HTMLElement,
+		{},
+		textareaEl.value!,
+	);
+}
+
+async function openCheatSheet(_ev: MouseEvent) {
+	os.popup(XCheatSheet, {}, {}, "closed");
+}
+
+function showMoreMenu(ev: MouseEvent) {
+	const pluginMenu: MenuItem[] = postFormActions.map((action) => ({
+		text: action.title,
+		icon: icon("ph-plug"),
+		action: () => {
+			action.handler(
+				{
+					text: text.value,
+				},
+				(key: string, value: string) => {
+					if (key === "text") {
+						text.value = value;
+					}
+				},
+			);
+		},
+	}));
+	const menu: MenuItem[] = [
+		{
+			text: i18n.ts.scheduledPost,
+			icon: icon("ph-clock"),
+			action: setSchedule,
+		},
+		scheduledAt.value != null
+			? {
+					text: i18n.ts.cancelScheduledPost,
+					icon: icon("ph-clock-countdown"),
+					danger: true,
+					action: removeScheduledAt,
+				}
+			: undefined,
+		null, // divider
+		{
+			text: i18n.ts.mention,
+			icon: icon("ph-at"),
+			action: insertMention,
+		},
+		{
+			text: i18n.ts._mfm.cheatSheet,
+			icon: icon("ph-question"),
+			action: openCheatSheet,
+		},
+		...(pluginMenu.length > 0 ? [null, ...pluginMenu] : []),
+	];
+
+	os.popupMenu(menu, (ev.currentTarget ?? ev.target) as HTMLElement);
+}
+
+const postAccount = ref<entities.UserDetailed | null>(null);
+
+function openAccountMenu(ev: MouseEvent) {
+	openAccountMenu_(
+		{
+			withExtraOperation: false,
+			includeCurrentAccount: true,
+			active: postAccount.value != null ? postAccount.value.id : me!.id,
+			onChoose: (account) => {
+				if (account.id === me!.id) {
+					postAccount.value = null;
+				} else {
+					postAccount.value = account;
+				}
+			},
+		},
+		ev,
+	);
+}
+
+onMounted(() => {
+	if (props.autofocus) {
+		focus();
+
+		nextTick(() => {
+			focus();
+		});
+	}
+
+	// TODO: detach when unmount
+	new Autocomplete(textareaEl.value!, text);
+	new Autocomplete(cwInputEl.value!, cw as Ref<string>);
+	new Autocomplete(hashtagsInputEl.value!, hashtags as Ref<string>);
+
+	autosize(textareaEl.value!);
+
+	nextTick(() => {
+		autosize(textareaEl.value!);
+		// 書きかけの投稿を復元
+		if (!props.instant && !props.mention && !props.specified) {
+			const draft = JSON.parse(localStorage.getItem("drafts") || "{}")[
+				draftKey.value
+			];
+			if (draft) {
+				text.value = draft.data.text;
+				useCw.value = draft.data.useCw;
+				cw.value = draft.data.cw;
+				visibility.value = draft.data.visibility;
+				localOnly.value = draft.data.localOnly;
+				language.value = draft.data.lang;
+				files.value = (draft.data.files || []).filter((draftFile) => draftFile);
+				if (draft.data.poll) {
+					poll.value = draft.data.poll;
+				}
+			}
+		}
+
+		// 削除して編集
+		if (props.initialNote) {
+			const init = props.initialNote;
+			text.value = init.text ? init.text : "";
+			files.value = init.files;
+			cw.value = init.cw;
+			useCw.value = init.cw != null;
+			if (init.poll) {
+				poll.value = {
+					choices: init.poll.choices.map((x) => x.text),
+					multiple: init.poll.multiple,
+					expiresAt: init.poll.expiresAt,
+					expiredAfter: init.poll.expiredAfter,
+				};
+			}
+			visibility.value = init.visibility;
+			localOnly.value = init.localOnly ?? false;
+			language.value = init.lang ?? null;
+			quoteId.value = init.renote ? init.renote.id : null;
+		}
+
+		// Inherit language settings when quoting or replying
+		if (props.renote?.lang) {
+			language.value = props.renote.lang;
+		}
+		if (props.reply?.lang) {
+			language.value = props.reply.lang;
+		}
+
+		nextTick(() => watchForDraft());
+		nextTick(() => autosize.update(textareaEl.value!));
+	});
+});
+</script>
+
+<style lang="scss" scoped>
+.gafaadew {
+	position: relative;
+
+	&.modal {
+		inline-size: 100%;
+		max-inline-size: 520px;
+	}
+
+	> header {
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 1000;
+		min-block-size: 66px;
+		justify-content: space-between;
+		> .left {
+			display: flex;
+			flex-grow: 1;
+			justify-content: flex-start;
+
+			> .cancel {
+				padding: 0;
+				font-size: 20px;
+				inline-size: 64px;
+				line-height: 66px;
+			}
+
+			> .account {
+				block-size: 100%;
+				aspect-ratio: 1/1;
+				display: inline-flex;
+				vertical-align: bottom;
+
+				> .avatar {
+					inline-size: 28px;
+					block-size: 28px;
+					margin: auto;
+				}
+			}
+		}
+
+		> .right {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: flex-end;
+			flex-grow: 1;
+
+			> .text-count {
+				opacity: 0.7;
+				line-height: 66px;
+			}
+
+			> .visibility {
+				block-size: 34px;
+				inline-size: 34px;
+				margin-block-start: 0;
+				margin-inline-end: 0;
+				margin-block-end: 0;
+				margin-inline-start: 8px;
+
+				& + .localOnly {
+					margin-inline-start: 0 !important;
+				}
+
+				> span:only-child > i {
+					display: block;
+				}
+			}
+
+			> .local-only {
+				margin-block-start: 0;
+				margin-inline-end: 0;
+				margin-block-end: 0;
+				margin-inline-start: 12px;
+				opacity: 0.7;
+			}
+
+			> .language {
+				block-size: 34px;
+				inline-size: 34px;
+			}
+
+			> .preview {
+				display: inline-block;
+				padding: 0;
+				margin-block-start: 0;
+				margin-inline-end: 8px;
+				margin-block-end: 0;
+				margin-inline-start: 0;
+				font-size: inherit !important;
+				inline-size: 34px;
+				block-size: 34px;
+				border-radius: 6px;
+
+				&:hover {
+					background: var(--X5);
+				}
+
+				&.active {
+					color: var(--accent);
+				}
+			}
+
+			> .submit {
+				display: inline-flex;
+				align-items: center;
+				margin-block-start: 16px;
+				margin-inline-end: 16px;
+				margin-block-end: 16px;
+				margin-inline-start: 0;
+				padding-block: 0;
+				padding-inline: 12px;
+				line-height: 34px;
+				font-weight: bold;
+				vertical-align: bottom;
+				border-radius: 4px;
+				font-size: 0.9em;
+
+				&:disabled {
+					opacity: 0.7;
+				}
+
+				> .spinner,
+				> i {
+					margin-inline-start: 6px;
+				}
+			}
+		}
+	}
+
+	> .form {
+		> .preview {
+			padding: 16px;
+		}
+
+		> .with-quote {
+			display: flex;
+			align-items: center;
+			gap: 0.4em;
+			margin-inline: 24px;
+			margin-block-end: 12px;
+			color: var(--accent);
+
+			> button {
+				display: flex;
+				padding: 0;
+				color: var(--accentAlpha04);
+
+				&:hover {
+					color: var(--accentAlpha06);
+				}
+
+				&:active {
+					color: var(--accentDarken30);
+				}
+			}
+		}
+
+		> .to-specified {
+			padding-block: 6px;
+			padding-inline: 24px;
+			margin-block-end: 8px;
+			overflow: auto;
+			line-height: 2rem;
+
+			> .visibleUsers {
+				display: inline;
+				inset-block-start: -1px;
+				font-size: 14px;
+
+				> button {
+					padding: 2px;
+					border-radius: 8px;
+
+					> i {
+						transform: translateX(2px);
+					}
+				}
+
+				> span {
+					margin: 0.3rem;
+					padding-block-start: 4px;
+					padding-inline-end: 0;
+					padding-block-end: 4px;
+					padding-inline-start: 4px;
+					border-radius: 999px;
+					background: var(--X3);
+
+					> button {
+						padding-block: 4px;
+						padding-inline: 8px;
+					}
+				}
+			}
+		}
+
+		> .form-info {
+			margin-block-start: 0;
+			margin-inline-end: 20px;
+			margin-block-end: 16px;
+			margin-inline-start: 20px;
+		}
+
+		> .cw,
+		> .hashtags,
+		> .text {
+			display: block;
+			box-sizing: border-box;
+			padding-block: 0;
+			padding-inline: 24px;
+			margin: 0;
+			inline-size: 100%;
+			font-size: 1.05em;
+			border: none;
+			border-radius: 0;
+			background: transparent;
+			color: var(--fg);
+			font-family: inherit;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:disabled {
+				opacity: 0.5;
+			}
+		}
+
+		> .cw {
+			z-index: 1;
+			padding-block-end: 8px;
+			border-block-end: solid 0.5px var(--divider);
+		}
+
+		> .hashtags {
+			z-index: 1;
+			padding-block-start: 8px;
+			padding-block-end: 8px;
+			border-block-start: solid 0.5px var(--divider);
+		}
+
+		> .text {
+			max-inline-size: 100%;
+			min-inline-size: 100%;
+			min-block-size: 90px;
+
+			&.withCw {
+				padding-block-start: 8px;
+			}
+		}
+
+		> footer {
+			padding-block-start: 0;
+			padding-inline-end: 16px;
+			padding-block-end: 16px;
+			padding-inline-start: 16px;
+
+			> .row {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				
+				> .left {
+					justify-content: flex-start;
+				}
+
+				.right {
+					justify-content: flex-end;
+				}
+
+				> .left, > .right {
+					display: flex;
+					flex-grow: 1;
+					flex-wrap: wrap;
+
+					button {
+						display: inline-block;
+						padding: 0;
+						margin: 0;
+						font-size: 16px;
+						inline-size: 48px;
+						block-size: 48px;
+						border-radius: 6px;
+
+						&:hover {
+							background: var(--X5);
+						}
+
+						&.active {
+							color: var(--accent);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.max-width_500px, &.widget {
+		> header {
+			> .cancel {
+				inline-size: 50px;
+				line-height: 50px;
+			}
+
+			> .right {
+				> .text-count {
+					line-height: 50px;
+				}
+
+				> .submit {
+					margin: 8px;
+				}
+			}
+		}
+
+		> .form {
+			> .to-specified {
+				padding-block: 6px;
+				padding-inline: 16px;
+			}
+
+			> .cw,
+			> .hashtags,
+			> .text {
+				padding-block: 0;
+				padding-inline: 16px;
+			}
+
+			> .text {
+				min-block-size: 80px;
+			}
+
+			> footer {
+				padding-block-start: 0;
+				padding-inline-end: 8px;
+				padding-block-end: 8px;
+				padding-inline-start: 8px;
+
+				> button {
+					font-size: 14px;
+					inline-size: 44px;
+					block-size: 44px;
+				}
+			}
+		}
+	}
+}
+
+.bigPostButton {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	display: block ruby;
+	padding: 3%;
+	margin-block: 0;
+	margin-inline: auto;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 3em;
+	font-family: inherit;
+	text-decoration: none;
+	inline-size: 100%;
+	border-radius: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	color: var(--fgOnAccent);
+	background: linear-gradient(
+		var(--gradient-to-inline-end),
+		var(--buttonGradateA),
+		var(--buttonGradateB)
+	);
+
+	> .ph-lg {
+		vertical-align: -0.125em;
+		margin-inline-start: 12px;
+	}
+}
+
+.bigPostButton:disabled {
+	opacity: 0.7;
+}
+</style>

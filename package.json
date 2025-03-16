@@ -1,0 +1,54 @@
+{
+	"name": "firefish",
+	"version": "20241205",
+	"repository": {
+		"type": "git",
+		"url": "https://codeberg.org/firefish/firefish.git"
+	},
+	"packageManager": "pnpm@9.9.0",
+	"private": true,
+	"scripts": {
+		"rebuild": "pnpm run clean && pnpm run build",
+		"build": "pnpm --recursive --color run build && pnpm node ./scripts/copy-index.mjs && pnpm run build:assets",
+		"build:assets": "pnpm node ./scripts/copy-assets.mjs",
+		"build:debug": "pnpm run clean && pnpm --recursive --color run build:debug && pnpm node ./scripts/copy-index-dev.mjs && pnpm run build:assets",
+		"start": "pnpm --filter backend run start",
+		"start:container": "pnpm run build:assets && pnpm run migrate && pnpm run start",
+		"start:test": "pnpm --filter backend run start:test",
+		"init": "pnpm run migrate",
+		"migrate": "pnpm --filter backend run migration:run",
+		"revertmigration": "pnpm --filter backend run migration:revert",
+		"watch": "pnpm run dev",
+		"dev": "pnpm node ./scripts/dev.mjs",
+		"dev:staging": "NODE_OPTIONS=--max_old_space_size=3072 NODE_ENV=development pnpm run build && pnpm run start",
+		"lint": "pnpm run lint:ts; pnpm run lint:rs",
+		"lint:ts": "pnpm --filter !firefish-js --recursive run lint ; pnpm run format:ts",
+		"lint:rs": "cargo clippy --fix --allow-dirty --allow-staged && cargo fmt --all --",
+		"debug": "pnpm run build:debug && pnpm run start",
+		"mocha": "pnpm --filter backend run mocha",
+		"test": "pnpm run test:rs && pnpm run test:rs:miri && pnpm run test:ts",
+		"test:ts": "pnpm run mocha",
+		"test:rs": "cargo test --doc && cargo nextest run",
+		"test:rs:miri": "MIRIFLAGS='-Zmiri-disable-isolation' cargo +nightly miri nextest run -j$(nproc --all)",
+		"format": "pnpm run format:ts; pnpm run format:rs",
+		"format:ts": "pnpm -r --parallel run format",
+		"format:rs": "cargo fmt --all --",
+		"clean": "pnpm node ./scripts/clean-built.mjs",
+		"clean-npm": "pnpm node ./scripts/clean-npm.mjs",
+		"clean-cargo": "cargo clean",
+		"clean-all": "pnpm run clean && pnpm run clean-cargo && pnpm run clean-npm"
+	},
+	"dependencies": {
+		"js-yaml": "4.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@biomejs/cli-darwin-arm64": "1.8.3",
+		"@biomejs/cli-darwin-x64": "1.8.3",
+		"@biomejs/cli-linux-arm64": "1.8.3",
+		"@biomejs/cli-linux-x64": "1.8.3",
+		"@types/node": "20.16.2",
+		"execa": "9.3.1",
+		"pnpm": "9.9.0"
+	}
+}

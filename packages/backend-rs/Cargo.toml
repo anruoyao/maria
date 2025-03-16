@@ -1,0 +1,62 @@
+[package]
+name = "backend-rs"
+license = "AGPL-3.0-only"
+version = "0.0.0"
+
+edition = { workspace = true }
+rust-version = { workspace = true }
+
+[features]
+default = []
+napi = ["dep:napi", "dep:napi-derive", "dep:napi-build"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+macros = { workspace = true }
+
+napi = { workspace = true, optional = true, features = ["chrono_date", "napi4", "serde-json", "tokio_rt"] }
+napi-derive = { workspace = true, optional = true }
+
+argon2 = { workspace = true, features = ["std"] }
+basen = { workspace = true }
+bb8 = { workspace = true }
+bcrypt = { workspace = true, features = ["std"] }
+chrono = { workspace = true }
+cuid2 = { workspace = true }
+emojis = { workspace = true }
+error-doc = { workspace = true }
+futures-util = { workspace = true, features = ["io"] }
+identicon-rs = { workspace = true }
+idna = { workspace = true, features = ["std", "compiled_data"] }
+image = { workspace = true, features = ["avif", "bmp", "gif", "ico", "jpeg", "png", "tiff", "webp"] }
+isahc = { workspace = true, features = ["http2", "text-decoding", "json"] }
+nom-exif = { workspace = true }
+once_cell = { workspace = true }
+openssl = { workspace = true, features = ["vendored"] }
+rand = { workspace = true }
+redis = { workspace = true, features = ["streams", "tokio-comp"] }
+regex = { workspace = true }
+rmp-serde = { workspace = true }
+sea-orm = { workspace = true, features = ["macros", "runtime-tokio-rustls", "sqlx-postgres", "with-chrono", "with-json"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+sysinfo = { workspace = true, features = ["system", "disk"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["fs", "io-std", "io-util", "macros", "process", "rt-multi-thread", "signal", "sync", "time"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["ansi"] }
+url = { workspace = true }
+urlencoding = { workspace = true }
+uuid = { workspace = true, features = ["v4", "fast-rng"] }
+web-push = { workspace = true, features = ["isahc-client"] }
+zhconv = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = { workspace = true, features = ["std"] }
+tokio-test = { workspace = true }
+
+[build-dependencies]
+napi-build = { workspace = true, optional = true }

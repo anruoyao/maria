@@ -1,0 +1,2353 @@
+_lang_: "Français"
+headlineFirefish: "Une plateforme libre de réseaux sociaux décentralisés qui est gratuite
+  pour toujours ! 🚀"
+introFirefish: "Bienvenue ! Firefish est une plateforme libre de réseaux sociaux décentralisés
+  qui est gratuite pour toujours ! 🚀"
+monthAndDay: "{day}/{month}"
+search: "Rechercher"
+notifications: "Notifications"
+username: "Nom d'utilisateur·rice"
+password: "Mot de passe"
+forgotPassword: "Mot de passe oublié"
+fetchingAsApObject: "Récupération depuis le fédivers"
+ok: "OK"
+gotIt: "J'ai compris !"
+cancel: "Annuler"
+enterUsername: "Entrer un nom d'utilisateur·rice"
+renotedBy: "Boosté par {user}"
+noNotes: "Aucune publication"
+noNotifications: "Aucune notification"
+instance: "Serveur"
+settings: "Paramètres"
+basicSettings: "Paramètres généraux"
+otherSettings: "Paramètres avancés"
+openInWindow: "Ouvrir dans une nouvelle fenêtre"
+profile: "Profil"
+timeline: "Fil"
+noAccountDescription: "L'utilisateur·rice n'a pas encore renseigné de biographie de
+  présentation sur son profil."
+login: "Se connecter"
+loggingIn: "Connexion en cours"
+logout: "Se déconnecter"
+signup: "S'inscrire"
+uploading: "Envoi en cours..."
+save: "Enregistrer"
+users: "Utilisateur·rice·s"
+addUser: "Ajouter un·e utilisateur·rice"
+favorite: "Ajouter aux favoris"
+favorites: "Favoris"
+unfavorite: "Retirer des favoris"
+favorited: "Ajouté à mes favoris."
+alreadyFavorited: "Déjà ajouté aux favoris."
+cantFavorite: "Impossible d'ajouter aux favoris."
+pin: "Épingler sur le profil"
+unpin: "Désépingler"
+copyContent: "Copier le contenu"
+copyLink: "Copier le lien"
+delete: "Supprimer"
+deleteAndEdit: "Supprimer et réécrire"
+deleteAndEditConfirm: "Êtes-vous sûr·e de vouloir supprimer cette publication et la
+  reformuler ? Vous perdrez toutes les réactions, boosts et réponses liées."
+addToList: "Ajouter à une liste"
+sendMessage: "Envoyer un message"
+copyUsername: "Copier le nom d'utilisateur·rice"
+searchUser: "Chercher un·e utilisateur·rice"
+reply: "Répondre"
+loadMore: "Charger plus"
+showMore: "Afficher plus"
+showLess: "Fermer"
+youGotNewFollower: "s'est abonné à vous"
+receiveFollowRequest: "Demande d'abonnement reçue"
+followRequestAccepted: "La demande d'abonnement a été acceptée"
+mention: "Mentionner"
+mentions: "Mentions"
+directNotes: "Messages directs"
+importAndExport: "Importation et exportation"
+import: "Importer"
+export: "Exporter"
+files: "Fichiers"
+download: "Télécharger"
+driveFileDeleteConfirm: "Êtes-vous sûr·e de vouloir supprimer le fichier « {name} » ?
+  Il sera retiré de toutes les publications qui le contiennent comme pièce-jointe."
+unfollowConfirm: "Désirez-vous vous désabonner de {name} ?"
+exportRequested: "Vous avez demandé une exportation. L'opération pourrait prendre
+  un peu de temps. Une fois terminée, le fichier résultant sera ajouté au Drive."
+importRequested: "Vous avez initié une importation. Cela pourrait prendre un peu de
+  temps."
+lists: "Listes"
+noLists: "Vous n'avez aucune liste"
+note: "Publier"
+notes: "Publications"
+following: "Abonnements"
+followers: "Abonné·e·s"
+followsYou: "S'abonne à vous"
+createList: "Créer une liste"
+manageLists: "Gérer les listes"
+error: "Erreur"
+somethingHappened: "Une erreur est survenue"
+retry: "Réessayer"
+pageLoadError: "Le chargement de la page a échoué."
+pageLoadErrorDescription: "Cela est généralement causé par le cache du navigateur
+  ou par un problème réseau. Veuillez vider votre cache ou attendre un peu et réessayer."
+serverIsDead: "Le serveur ne répond pas. Patientez quelques instants puis essayez
+  à nouveau."
+youShouldUpgradeClient: "Si la page ne s'affiche pas correctement, rechargez-la pour
+  mettre votre client à jour."
+enterListName: "Nom de la liste"
+privacy: "Confidentialité"
+makeFollowManuallyApprove: "Accepter manuellement les demandes d'abonnement"
+defaultNoteVisibility: "Visibilité des publications par défaut"
+follow: "S'abonner"
+followRequest: "Demande d'abonnement"
+followRequests: "Demandes d'abonnement"
+unfollow: "Se désabonner"
+followRequestPending: "Demande d'abonnement en attente de confirmation"
+enterEmoji: "Insérer un émoji"
+renote: "Booster"
+unrenote: "Annuler le boost"
+renoted: "Boosté."
+cantRenote: "Cette publication ne peut pas être boosté."
+cantReRenote: "Impossible de partager ce boost."
+quote: "Citer"
+pinnedNote: "Publication épinglée"
+pinned: "Épingler sur le profil"
+you: "Vous"
+clickToShow: "Cliquer pour afficher"
+sensitive: "Contenu sensible"
+add: "Ajouter"
+reaction: "Réaction"
+reactionSetting: "Réactions à afficher dans le sélecteur de réactions"
+reactionSettingDescription2: "Déplacer pour réorganiser, cliquer pour effacer, utiliser
+  « + » pour ajouter."
+rememberNoteVisibility: "Se souvenir des paramètres de visibilité des publications"
+attachCancel: "Supprimer le fichier attaché"
+markAsSensitive: "Marquer comme sensible (NSFW)"
+unmarkAsSensitive: "Supprimer le marquage comme sensible (NSFW)"
+enterFileName: "Entrer le nom du fichier"
+mute: "Masquer"
+unmute: "Ne plus masquer"
+block: "Bloquer"
+unblock: "Débloquer"
+suspend: "Suspendre"
+unsuspend: "Annuler la suspension"
+blockConfirm: "Êtes-vous sûr·e de vouloir bloquer ce compte ?"
+unblockConfirm: "Êtes-vous sûr·e de vouloir débloquer ce compte ?"
+suspendConfirm: "Êtes-vous sûr·e de vouloir suspendre ce compte ?"
+unsuspendConfirm: "Êtes-vous sûr·e de vouloir annuler la suspension de ce compte ?"
+selectList: "Sélectionner une liste"
+selectAntenna: "Sélectionner une antenne"
+selectWidget: "Sélectionner un widget"
+editWidgets: "Modifier les widgets"
+editWidgetsExit: "Valider les modifications"
+customEmojis: "Émojis personnalisés"
+emoji: "Émoji"
+emojis: "Émoji"
+emojiName: "Nom de l'émoji"
+emojiUrl: "URL de l'émoji"
+addEmoji: "Ajouter un émoji"
+settingGuide: "Configuration proposée"
+cacheRemoteFiles: "Mise en cache des fichiers distants"
+cacheRemoteFilesDescription: "Lorsque cette option est désactivée, les fichiers distants
+  sont chargés directement depuis le serveur distant. La désactiver diminuera certes
+  l'utilisation de l'espace de stockage local mais augmentera le trafic réseau puisque
+  les miniatures ne seront plus générées."
+flagAsBot: "Ce compte est automatisé"
+flagAsBotDescription: "Si ce compte est géré de manière automatisée, choisissez cette
+  option. Si elle est activée, elle agira comme un marqueur pour les autres développeurs
+  afin d'éviter des chaînes d'interaction sans fin avec d'autres comptes automatisés
+  et d'ajuster les systèmes internes de Firefish pour traiter ce compte comme étant
+  automatisé."
+flagAsCat: "Ce compte est un chat"
+flagAsCatDescription: "Vous aurez des oreilles de chat et parlerez comme un chat !"
+flagShowTimelineReplies: "Afficher les réponses dans le fil"
+autoAcceptFollowed: "Accepter automatiquement les demandes d'abonnement venant d'utilisateurs
+  auxquels vous êtes abonné"
+addAccount: "Ajouter un compte"
+loginFailed: "Échec de la connexion"
+showOnRemote: "Ouvrir la page d'origine"
+general: "Général"
+wallpaper: "Fond d'écran"
+setWallpaper: "Définir le fond d'écran"
+removeWallpaper: "Supprimer le fond d'écran"
+searchWith: "Recherche : {q}"
+youHaveNoLists: "Vous n'avez aucune liste"
+followConfirm: "Êtes-vous sûr·e de vouloir vous abonner à {name} ?"
+proxyAccount: "Compte proxy"
+proxyAccountDescription: "Un compte proxy se comporte, dans certaines conditions,
+  comme un·e abonné·e distant·e pour les utilisateur·rice·s d'autres serveurs. Par
+  exemple, quand un·e utilisateur·rice local ajoute un·e utilisateur·rice distant·e
+  à une liste, ses publications ne seront pas visibles sur le serveur si personne
+  n'est abonné à cet·te utilisateur·rice. Le compte proxy va donc s'abonner à cet·te
+  utilisateur·rice pour que ses publications soient acheminées."
+host: "Serveur distant"
+selectUser: "Sélectionner un·e utilisateur·rice"
+recipient: "Destinataire"
+annotation: "Commentaires"
+federation: "Fédération"
+instances: "Serveurs"
+registeredAt: "Premier contact le"
+latestRequestSentAt: "Dernière requête envoyée"
+latestRequestReceivedAt: "Dernière requête reçue"
+latestStatus: "Dernier statut"
+storageUsage: "Stockage utilisé"
+charts: "Graphiques"
+perHour: "par heure"
+perDay: "par jour"
+stopActivityDelivery: "Arrêter l'envoi de l'activité"
+blockThisInstance: "Bloquer ce serveur"
+operations: "Opérations"
+software: "Logiciel"
+version: "Version"
+metadata: "Métadonnées"
+monitor: "Contrôle"
+jobQueue: "File d'attente"
+cpuAndMemory: "Processeur et mémoire"
+network: "Réseau"
+disk: "Disque"
+instanceInfo: "Informations du serveur"
+statistics: "Statistiques"
+clearQueue: "Vider la file d'attente"
+clearQueueConfirmTitle: "Êtes-vous sûr·e de vouloir vider la file d'attente ?"
+clearQueueConfirmText: "Les publications non distribuées ne seront pas délivrées.
+  Normalement, vous n'avez pas besoin d'effectuer cette opération."
+clearCachedFiles: "Vider le cache"
+clearCachedFilesConfirm: "Êtes-vous sûr·e de vouloir vider tout le cache de fichiers
+  distants ?"
+blockedInstances: "Serveurs bloqués"
+blockedInstancesDescription: "Listez les serveurs que vous désirez bloquer, un par
+  ligne. Ces serveurs ne seront plus en capacité d'interagir avec votre serveur."
+muteAndBlock: "Masqués et bloqués"
+mutedUsers: "Utilisateur·rice·s en sourdine"
+blockedUsers: "Utilisateur·rice·s bloqué·e·s"
+noUsers: "Il n'y a pas d'utilisateur·rice·s"
+editProfile: "Modifier votre profil"
+noteDeleteConfirm: "Êtes-vous sûr·e de vouloir supprimer cette publication ?"
+pinLimitExceeded: "Vous ne pouvez pas épingler plus de publications"
+intro: "L'installation de Firefish est terminée ! Veuillez créer un compte administrateur."
+done: "Terminé"
+processing: "Traitement en cours"
+preview: "Aperçu"
+default: "Par défaut"
+noCustomEmojis: "Il n'y a pas d'émoji"
+noJobs: "Il n'y a aucune tâche planifiée"
+federating: "En cours de fédération"
+blocked: "Bloqué·e"
+suspended: "Suspendu·e"
+all: "Tous"
+subscribing: "Abonné"
+publishing: "Publié"
+notResponding: "Ne répond pas"
+instanceFollowing: "Abonnements d'un serveur"
+instanceFollowers: "Abonné·e·s du serveur"
+instanceUsers: "Utilisateur·rice·s de ce serveur"
+changePassword: "Modifier votre mot de passe"
+security: "Sécurité"
+retypedNotMatch: "Les saisies ne correspondent pas."
+currentPassword: "Mot de passe actuel"
+newPassword: "Nouveau mot de passe"
+newPasswordRetype: "Répéter le nouveau mot de passe"
+attachFile: "Joindre un fichier"
+more: "Plus !"
+featured: "Tendances"
+usernameOrUserId: "Nom d'utilisateur·rice ou ID utilisateur"
+noSuchUser: "Utilisateur·rice non trouvé·e"
+lookup: "Recherche"
+announcements: "Annonces"
+imageUrl: "URL de l'image"
+remove: "Supprimer"
+removed: "Supprimé"
+removeAreYouSure: "Êtes-vous sûr·e de vouloir supprimer « {x} » ?"
+deleteAreYouSure: "Êtes-vous sûr·e de vouloir supprimer « {x} » ?"
+resetAreYouSure: "Voulez-vous réinitialiser ?"
+saved: "Enregistré"
+messaging: "Discuter"
+upload: "Téléverser"
+keepOriginalUploading: "Garder l'image d'origine"
+fromDrive: "Depuis le Drive"
+fromUrl: "Depuis une URL"
+uploadFromUrl: "Téléverser via une URL"
+uploadFromUrlDescription: "URL du fichier que vous souhaitez téléverser"
+uploadFromUrlRequested: "Téléversement demandé"
+uploadFromUrlMayTakeTime: "Le téléversement de votre fichier peut prendre un certain
+  temps."
+explore: "Découvrir"
+messageRead: "Lu"
+noMoreHistory: "Il n'y a plus d'historique"
+startMessaging: "Commencer à discuter"
+nUsersRead: "Lu par {n} personnes"
+agreeTo: "J'accepte {0}"
+tos: "Conditions d'utilisation"
+start: "Commencer"
+home: "Principal"
+remoteUserCaution: "Les informations de ce compte risquent d'être incomplètes du fait
+  que l'utilisateur·rice provient d'une instance distante."
+activity: "Activité"
+images: "Images"
+birthday: "Date de naissance"
+yearsOld: "{age} ans"
+registeredDate: "Inscrit le"
+location: "Localisation"
+theme: "Thème"
+themeForLightMode: "Thème à utiliser en Mode Clair"
+themeForDarkMode: "Thème à utiliser en Mode Sombre"
+light: "Clair"
+dark: "Sombre"
+lightThemes: "Thèmes clairs"
+darkThemes: "Thèmes sombres"
+syncDeviceDarkMode: "Utiliser le mode sombre de votre appareil"
+drive: "Drive"
+fileName: "Nom du fichier"
+selectFile: "Choisir le fichier"
+selectFiles: "Choisir les fichiers"
+selectFolder: "Sélectionnez un dossier"
+selectFolders: "Sélectionnez des dossiers"
+renameFile: "Renommer le fichier"
+folderName: "Nom du dossier"
+createFolder: "Créer un dossier"
+renameFolder: "Renommer le dossier"
+deleteFolder: "Supprimer le dossier"
+addFile: "Ajouter un fichier"
+emptyDrive: "Le Drive est vide"
+emptyFolder: "Le dossier est vide"
+unableToDelete: "Suppression impossible"
+inputNewFileName: "Entrez un nouveau nom de fichier"
+inputNewDescription: "Veuillez entrer une nouvelle description au fichier"
+inputNewFolderName: "Entrez un nouveau nom de dossier"
+circularReferenceFolder: "Le dossier de destination est un sous-dossier du dossier
+  que vous souhaitez déplacer."
+hasChildFilesOrFolders: "Impossible de supprimer ce dossier, car il n'est pas vide."
+copyUrl: "Copier l'URL"
+rename: "Renommer"
+avatar: "Avatar"
+banner: "Bannière"
+nsfw: "Contenu sensible (NSFW)"
+whenServerDisconnected: "Lorsque la connexion au serveur est perdue"
+disconnectedFromServer: "Déconnecté·e du serveur"
+reload: "Rafraîchir"
+doNothing: "Ignorer"
+reloadConfirm: "Voulez-vous recharger le fil ?"
+watch: "Surveiller"
+unwatch: "Ne plus surveiller"
+accept: "Autoriser"
+reject: "Refuser"
+normal: "Normal"
+instanceName: "Nom du serveur"
+instanceDescription: "Description du serveur"
+maintainerName: "L'administrateur·rice"
+maintainerEmail: "Email de l'administrateur·rice"
+tosUrl: "URL des conditions d'utilisation"
+thisYear: "Cette année"
+thisMonth: "Ce mois-ci"
+today: "Aujourd'hui"
+dayX: "{day}"
+monthX: "{month}"
+yearX: "{year}"
+pages: "Pages"
+enableLocalTimeline: "Activer le fil local"
+enableGlobalTimeline: "Activer le fil global"
+disablingTimelinesInfo: "Même si vous désactivez ces fils, les administrateur·rice·s
+  et les modérateur·rice·s pourront toujours y accéder."
+registration: "S'inscrire"
+enableRegistration: "Autoriser les nouvelles inscriptions"
+invite: "Inviter"
+driveCapacityPerLocalAccount: "Volume du Drive par utilisateur local"
+driveCapacityPerRemoteAccount: "Volume du Drive par utilisateur distant"
+inMb: "en mégaoctets"
+iconUrl: "URL de l'icône"
+bannerUrl: "URL de l'image de la bannière"
+backgroundImageUrl: "URL de l'image d'arrière-plan"
+basicInfo: "Informations basiques"
+pinnedUsers: "Utilisateur·rice épinglé·e"
+pinnedUsersDescription: "Listez les utilisateur·rice·s que vous souhaitez voir épinglé·e·s
+  sur la page « Découvrir », un·e par ligne."
+pinnedPages: "Pages épinglées"
+pinnedPagesDescription: "Inscrivez le chemin des Pages que vous souhaitez épingler
+  en haut de la page du serveur. Séparez les d'un retour à la ligne."
+pinnedClipId: "Identifiant du clip épinglé"
+pinnedNotes: "Publications épinglées"
+hcaptcha: "hCaptcha"
+enableHcaptcha: "Activer hCaptcha"
+hcaptchaSiteKey: "Clé du site"
+hcaptchaSecretKey: "Clé secrète"
+recaptcha: "reCAPTCHA"
+enableRecaptcha: "Activer reCAPTCHA"
+recaptchaSiteKey: "Clé du site"
+recaptchaSecretKey: "Clé secrète"
+avoidMultiCaptchaConfirm: "L'utilisation de plusieurs Captchas peut provoquer des
+  interférences. Souhaitez-vous désactiver l'autre Captcha ? Vous pouvez laisser plusieurs
+  Captcha activés en appuyant sur Annuler."
+antennas: "Antennes"
+manageAntennas: "Gérer les antennes"
+name: "Nom"
+antennaSource: "Source de l'antenne"
+antennaKeywords: "Mots clés à recevoir"
+antennaExcludeKeywords: "Mots clés à exclure"
+antennaKeywordsDescription: "Séparer avec des espaces pour la condition AND. Séparer
+  avec un saut de ligne pour une condition OR."
+notifyAntenna: "Je souhaite recevoir les notifications des nouvelles publications"
+withFileAntenna: "Publications ayant des pièces-jointes uniquement"
+enableServiceworker: "Activer les notifications poussées pour votre navigateur"
+antennaUsersDescription: "Saisissez un seul nom d'utilisateur·rice par ligne"
+caseSensitive: "Sensible à la casse"
+withReplies: "Inclure les réponses"
+connectedTo: "Vous êtes connectés aux services suivants"
+notesAndReplies: "Publications et Réponses"
+withFiles: "Avec fichiers joints"
+silence: "Mettre en sourdine"
+silenceConfirm: "Êtes-vous sûr·e de vouloir mettre l'utilisateur·rice en sourdine ?"
+unsilence: "Annuler la sourdine"
+unsilenceConfirm: "Êtes-vous sûr·e de vouloir annuler la mise en sourdine de cet·te
+  utilisateur·rice ?"
+popularUsers: "Utilisateur·rice·s populaires"
+recentlyUpdatedUsers: "Utilisateur·rice·s actif·ve·s récemment"
+recentlyRegisteredUsers: "Utilisateur·rice·s récemment inscrit·e·s"
+recentlyDiscoveredUsers: "Utilisateur·rice·s récemment découvert·e·s"
+exploreUsersCount: "Il y a {count} utilisateur·rice·s"
+exploreFediverse: "Explorer le fédivers"
+popularTags: "Mots-clés populaires"
+userList: "Listes"
+about: "Informations"
+aboutFirefish: "À propos de Firefish"
+administrator: "Administrateur"
+token: "Jeton"
+twoStepAuthentication: "Authentification à deux facteurs"
+moderator: "Modérateur·rice·s"
+nUsersMentioned: "{n} utilisateur·rice·s mentionné·e·s"
+securityKey: "Clé de sécurité"
+securityKeyName: "Nom de la clé"
+registerSecurityKey: "Enregistrer une clé de sécurité"
+lastUsed: "Dernier utilisé"
+unregister: "Se désinscrire"
+passwordLessLogin: "Se connecter sans mot de passe"
+resetPassword: "Réinitialiser le mot de passe"
+newPasswordIs: "Votre nouveau mot de passe est « {password} »"
+reduceUiAnimation: "Réduire les animations dans l'interface"
+share: "Partager"
+notFound: "Non trouvé"
+notFoundDescription: "Aucune page ne correspond à l'URL spécifiée."
+uploadFolder: "Emplacement de téléversement par défaut"
+cacheClear: "Vider le cache"
+markAsReadAllNotifications: "Marquer toutes les notifications comme lues"
+markAsReadAllUnreadNotes: "Marquer toutes les publications comme lues"
+markAsReadAllTalkMessages: "Marquer toutes les discussions comme lues"
+help: "Aide"
+inputMessageHere: "Écrivez votre message ici"
+close: "Fermer"
+group: "Groupe"
+groups: "Groupes"
+createGroup: "Créer un groupe"
+ownedGroups: "Mes groupes"
+joinedGroups: "Groupes rejoints"
+invites: "Invitations"
+groupName: "Nom du groupe"
+members: "Membres"
+transfer: "Transférer"
+messagingWithUser: "Discuter avec un·e autre utilisateur·rice"
+messagingWithGroup: "Discuter avec un groupe"
+title: "Titre"
+text: "Texte"
+enable: "Activer"
+next: "Suivant"
+retype: "Confirmation"
+noteOf: "Publications de {user}"
+inviteToGroup: "Inviter dans un groupe"
+quoteAttached: "Avec citation"
+quoteQuestion: "Souhaitez-vous ajouter une citation ?"
+noMessagesYet: "Pas encore de discussion"
+newMessageExists: "Vous avez un nouveau message"
+onlyOneFileCanBeAttached: "Vous ne pouvez joindre qu'un seul fichier au message"
+signinRequired: "Veuillez vous connecter"
+invitations: "Invitations"
+invitationCode: "Code d'invitation"
+checking: "Vérification en cours..."
+available: "Disponible"
+unavailable: "Non disponible"
+usernameInvalidFormat: "Le nom d'utilisateur peut contenir uniquement des lettres
+  (minuscules et/ou majuscules), des chiffres et des tirets du bas."
+tooShort: "Trop court"
+tooLong: "Trop long"
+weakPassword: "Mot de passe faible"
+normalPassword: "Mot de passe acceptable"
+veryStrongPassword: "Mot de passe fort"
+passwordMatched: "Les mots de passe correspondent"
+passwordNotMatched: "Les mots de passe ne correspondent pas"
+signinWith: "Se connecter avec {x}"
+signinFailed: "Échec d'authentification. Veuillez vérifier que votre nom d'utilisateur
+  et mot de passe sont corrects."
+tapSecurityKey: "Appuyez sur votre clé de sécurité"
+or: "OU"
+language: "Langue"
+uiLanguage: "Langue d'affichage de l'interface"
+groupInvited: "Invité au groupe"
+aboutX: "À propos de {x}"
+useOsNativeEmojis: "Utiliser les émojis natifs du système"
+youHaveNoGroups: "Vous n'avez aucun groupe"
+joinOrCreateGroup: "Vous pouvez être invité·e à rejoindre des groupes existants ou
+  créer votre propre nouveau groupe."
+noHistory: "Pas d'historique"
+signinHistory: "Historique de connexion"
+disableAnimatedMfm: "Désactiver MFM ayant des animations"
+doing: "En cours..."
+category: "Catégorie"
+tags: "Étiquettes"
+docSource: "Source de ce document"
+createAccount: "Créer un compte"
+existingAccount: "Compte existant"
+regenerate: "Générer à nouveau"
+fontSize: "Taille de la police"
+noFollowRequests: "Vous n'avez aucune demande d'abonnement en attente"
+openImageInNewTab: "Ouvrir les images dans un nouvel onglet"
+dashboard: "Tableau de bord"
+local: "Local"
+remote: "Distant"
+total: "Total"
+weekOverWeekChanges: "Hebdomadaire"
+dayOverDayChanges: "Journalier"
+appearance: "Apparence"
+clientSettings: "Paramètres du client"
+accountSettings: "Paramètres du compte"
+promotion: "Promu"
+promote: "Promouvoir"
+numberOfDays: "Nombre de jours"
+hideThisNote: "Masquer cette publication"
+showFeaturedNotesInTimeline: "Afficher les publications des Tendances dans le fil
+  d'actualité"
+objectStorage: "Stockage d'objets"
+useObjectStorage: "Utiliser le stockage d'objets"
+objectStorageBaseUrl: "URL racine"
+objectStorageBaseUrlDesc: "Préfixe d'URL utilisé pour construire l'URL vers le référencement
+  d'objet (média). Spécifiez son URL si vous utilisez un CDN ou un proxy, sinon spécifiez
+  l'adresse accessible au public selon le guide de service que vous allez utiliser.\n
+  Ex : 'https://<bucket>.s3.amazonaws.com' pour AWS S3 et 'https://storage.googleapis.com/<bucket>'
+  pour GCS."
+objectStorageBucket: "Bucket"
+objectStorageBucketDesc: "Veuillez spécifier le nom du compartiment utilisé sur le
+  service configuré."
+objectStoragePrefix: "Prefix"
+objectStoragePrefixDesc: "Les fichiers seront stockés sous le répertoire de ce préfixe."
+objectStorageEndpoint: "Endpoint"
+objectStorageEndpointDesc: "Laissez ce champ vide si vous utilisez AWS S3, sinon spécifiez
+  le point de terminaison comme '<host>' ou '<host>:<port>' selon le guide de service
+  que vous allez utiliser."
+objectStorageRegion: "Région"
+objectStorageRegionDesc: "Spécifiez une région comme 'xx-east-1'. Si votre service
+  ne fait pas de distinction entre les régions, laissez-le vide ou remplissez 'us-east-1'."
+objectStorageUseSSL: "Utiliser SSL"
+objectStorageUseSSLDesc: "Désactivez cette option si vous n'utilisez pas HTTPS pour
+  la connexion API"
+objectStorageUseProxy: "Se connecter via proxy"
+objectStorageUseProxyDesc: "Désactivez cette option si vous n'utilisez pas de proxy
+  pour la connexion API"
+objectStorageSetPublicRead: "Régler sur « public » lors de l'envoi"
+serverLogs: "Journal du serveur"
+deleteAll: "Supprimer tout"
+showFixedPostForm: "Afficher le formulaire de publication en haut du fil d'actualité"
+newNoteRecived: "Voir les nouvelles publications"
+sounds: "Sons"
+listen: "Écouter"
+none: "Rien"
+showInPage: "Afficher dans la page"
+popout: "Fenêtre contextuelle"
+volume: "Volume"
+masterVolume: "Volume principal"
+details: "Détails"
+chooseEmoji: "Choisissez un émoji"
+unableToProcess: "L'opération n'a pas pu être complétée"
+recentUsed: "Utilisé récemment"
+install: "Installation"
+uninstall: "Désinstaller"
+installedApps: "Applications installées"
+nothing: "Il n'y a rien à voir ici"
+installedDate: "Date d'installation"
+lastUsedDate: "Dernière utilisation"
+state: "État"
+sort: "Trier"
+ascendingOrder: "Ascendant"
+descendingOrder: "Descendant"
+scratchpad: "ScratchPad"
+scratchpadDescription: "ScratchPad fournit un environnement expérimental pour AiScript.
+  Vous pouvez vérifier la rédaction de votre code, sa bonne exécution et le résultat
+  de son interaction avec Firefish."
+output: "Sortie"
+script: "Script"
+disablePagesScript: "Désactiver AiScript sur les Pages"
+updateRemoteUser: "Mettre à jour les informations de l'utilisateur·rice distant·e"
+deleteAllFiles: "Supprimer tous les fichiers"
+deleteAllFilesConfirm: "Êtes-vous sûr·e de vouloir supprimer tous les fichiers ?"
+removeAllFollowing: "Retenir tous les abonnements"
+removeAllFollowingDescription: "Se désabonner de tous les comptes de {host}. Veuillez
+  lancer cette action uniquement si le serveur n'existe plus."
+userSuspended: "Cet·te utilisateur·rice a été suspendu·e."
+userSilenced: "Cette utilisateur·trice a été mis·e en sourdine."
+yourAccountSuspendedTitle: "Ce compte est suspendu"
+yourAccountSuspendedDescription: "Ce compte est suspendu car vous avez enfreint les
+  conditions d'utilisation du serveur, ou pour un motif similaire. Si vous souhaitez
+  connaître en détail les raisons de cette suspension, renseignez-vous auprès de l'administrateur·rice
+  de votre instance. Merci de ne pas créer de nouveau compte."
+menu: "Menu"
+divider: "Séparateur"
+addItem: "Ajouter un élément"
+relays: "Relais"
+addRelay: "Ajouter un relais"
+inboxUrl: "URL de boîte de récéption"
+addedRelays: "Relais ajoutés"
+serviceworkerInfo: "Devrait être activé pour les notifications poussées."
+deletedNote: "Publication supprimée"
+invisibleNote: "Publication invisible"
+enableInfiniteScroll: "Activer le défilement infini"
+visibility: "Visibilité"
+poll: "Sondage"
+useCw: "Masquer le contenu"
+enablePlayer: "Ouvrir dans le lecteur vidéo"
+disablePlayer: "Fermer le lecteur vidéo"
+expandTweet: "Étendre le tweet"
+themeEditor: "Éditeur de thèmes"
+description: "Description"
+describeFile: "Ajouter une description"
+enterFileDescription: "Saisissez une description"
+author: "Auteur·rice"
+leaveConfirm: "Vous avez des modifications non-sauvegardées. Voulez-vous les ignorer ?"
+manage: "Gestion"
+plugins: "Extensions"
+deck: "Deck"
+undeck: "Quitter le deck"
+useBlurEffectForModal: "Utiliser un effet de flou pour les modals"
+useFullReactionPicker: "Utiliser l'intégralité du panneau de réactions"
+width: "Largeur"
+height: "Hauteur"
+large: "Grand"
+medium: "Moyen"
+small: "Petit"
+generateAccessToken: "Générer un jeton d'accès"
+permission: "Autorisations"
+enableAll: "Tout activer"
+disableAll: "Tout désactiver"
+tokenRequested: "Autoriser l'accès au compte"
+pluginTokenRequestedDescription: "Cette extension pourra utiliser les autorisations
+  définies ici."
+notificationType: "Type de notifications"
+edit: "Editer"
+emailServer: "Serveur de courriel"
+enableEmail: "Activer la distribution de courriel"
+emailConfigInfo: "Utilisé pour confirmer votre adresse de courriel et la réinitialisation
+  de votre mot de passe en cas d'oubli"
+email: "Courriel"
+emailAddress: "Adresse de courriel"
+smtpConfig: "Paramètres du serveur SMTP"
+smtpHost: "Serveur distant"
+smtpPort: "Port"
+smtpUser: "Nom d'utilisateur·rice"
+smtpPass: "Mot de passe"
+emptyToDisableSmtpAuth: "Laisser le nom d'utilisateur et le mot de passe vides pour
+  désactiver la vérification SMTP"
+smtpSecure: "Utiliser SSL/TLS implicitement dans les connexions SMTP"
+smtpSecureInfo: "Désactiver cette option lorsque STARTTLS est utilisé"
+testEmail: "Tester la distribution de courriel"
+wordMute: "Filtre de mots et de langues"
+regexpError: "Erreur d'expression régulière"
+instanceMute: "Serveurs masqués"
+userSaysSomething: "{name} a dit quelque chose"
+makeActive: "Activer"
+display: "Affichage"
+copy: "Copier"
+metrics: "Métriques"
+overview: "Aperçu"
+logs: "Journaux"
+delayed: "en retard"
+database: "Base de données"
+channel: "Chaînes"
+create: "Créer"
+notificationSetting: "Paramètres des notifications"
+notificationSettingDesc: "Sélectionnez le type de notification à afficher."
+useGlobalSetting: "Utiliser paramètre général"
+useGlobalSettingDesc: "S'il est activé, les paramètres de notification de votre compte
+  seront utilisés. S'il est désactivé, des configurations individuelles peuvent être
+  effectuées."
+other: "Autre"
+regenerateLoginToken: "Régénérer le jeton de connexion"
+regenerateLoginTokenDescription: "Générer un nouveau jeton d'authentification. Cette
+  opération ne devrait pas être nécessaire ; lors de la génération d'un nouveau jeton,
+  tous les appareils seront déconnectés."
+setMultipleBySeparatingWithSpace: "Vous pouvez en définir plusieurs, en les séparant
+  par des espaces."
+fileIdOrUrl: "ID du fichier ou URL"
+behavior: "Comportement"
+sample: "Exemple"
+abuseReports: "Signalements"
+reportAbuse: "Signaler"
+reportAbuseOf: "Signaler {name}"
+fillAbuseReportDescription: "Veuillez expliquer les raisons du signalement. S'il s'agit
+  d'une publication en particulier, veuillez inclure le lien."
+abuseReported: "Le rapport est envoyé. Merci."
+reporter: "Signalé par"
+reporteeOrigin: "Origine du signalé"
+reporterOrigin: "Origine du signalement"
+forwardReport: "Transférer le signalement à l'instance distante"
+send: "Envoyer"
+abuseMarkAsResolved: "Marquer le signalement comme résolu"
+openInNewTab: "Ouvrir dans un nouvel onglet"
+openInSideView: "Ouvrir en vue latérale"
+defaultNavigationBehaviour: "Navigation par défaut"
+editTheseSettingsMayBreakAccount: "La modification de ces paramètres peut endommager
+  votre compte."
+instanceTicker: "Nom du serveur d'origine des publications"
+waitingFor: "En attente de {x}"
+random: "Aléatoire"
+system: "Système"
+switchUi: "Mise en page"
+desktop: "Bureau"
+clip: "Clip"
+createNew: "Créer nouveau"
+optional: "Facultatif"
+createNewClip: "Créer un nouveau clip"
+public: "Public"
+i18nInfo: "Firefish est traduit dans différentes langues par des bénévoles. Vous pouvez
+  contribuer à {link}."
+manageAccessTokens: "Gérer les jetons d'accès"
+accountInfo: "Informations du compte"
+notesCount: "Nombre de publications"
+repliesCount: "Nombre de réponses envoyées"
+renotesCount: "Nombre de boosts que vous avez envoyé"
+repliedCount: "Nombre de réponses reçues"
+renotedCount: "Nombre de vos publications boostées"
+followingCount: "Mes abonnements"
+followersCount: "Nombre d'abonnés"
+sentReactionsCount: "Nombre de réactions envoyées"
+receivedReactionsCount: "Nombre de réactions reçues"
+pollVotesCount: "Nombre de votes envoyés"
+pollVotedCount: "Nombre de votes reçus"
+yes: "Oui"
+no: "Non"
+driveFilesCount: "Nombre de fichiers dans le Drive"
+driveUsage: "Utilisation du Drive"
+noCrawle: "Refuser l'indexation par les robots"
+noCrawleDescription: "Demandez aux moteurs de recherche externes de ne pas indexer
+  votre contenu."
+lockedAccountInfo: "À moins que vous ne définissiez la visibilité de votre publication
+  sur « Abonné-e-s », vos publications sont visibles par tous, même si vous exigez
+  que les demandes d'abonnement soient approuvées manuellement."
+alwaysMarkSensitive: "Marquer les médias comme contenu sensible (NSFW) par défaut"
+loadRawImages: "Affichage complet des images jointes au lieu des vignettes"
+disableShowingAnimatedImages: "Désactiver l'animation des images"
+verificationEmailSent: "Un courriel de vérification a été envoyé. Veuillez accéder
+  au lien pour compléter la vérification."
+notSet: "Non défini"
+emailVerified: "Votre adresse de courriel a été vérifiée"
+noteFavoritesCount: "Nombre de publications dans les favoris"
+pageLikesCount: "Nombre de pages aimées"
+pageLikedCount: "Nombre de vos pages aimées"
+contact: "Contact"
+useSystemFont: "Utiliser la police par défaut du système"
+clips: "Clips"
+experimentalFeatures: "Fonctionnalités expérimentales"
+developer: "Développeur"
+makeExplorable: "Rendre le compte visible sur la page « Découvrir »"
+makeExplorableDescription: "Si vous désactivez cette option, votre compte n'apparaîtra
+  pas sur la page « Découvrir »."
+showGapBetweenNotesInTimeline: "Afficher un écart entre les publications du fil d'actualité"
+duplicate: "Duliquer"
+left: "Gauche"
+center: "Centrer"
+wide: "Large"
+narrow: "Condensé"
+reloadToApplySetting: "Vos paramètres seront appliqués lorsque vous rechargerez la
+  page. Souhaitez-vous recharger ?"
+needReloadToApply: "Ce paramètre s'appliquera après un rechargement."
+showTitlebar: "Afficher la barre de titre"
+clearCache: "Vider le cache"
+onlineUsersCount: "{n} utilisateur(s) en ligne"
+nUsers: "{n} utilisateur·rice·s"
+nNotes: "{n} Publications"
+sendErrorReports: "Envoyer les rapports d'erreur"
+sendErrorReportsDescription: "Si vous activez l'envoi des rapports d'erreur, vous
+  contribuerez à améliorer la qualité de Firefish grâce au partage d'informations
+  détaillées sur les erreurs lorsqu'un problème survient.\nCela inclut des informations
+  telles que la version de votre système d'exploitation, le type de navigateur que
+  vous utilisez, votre historique d'activité, etc."
+myTheme: "Mes thèmes"
+backgroundColor: "Arrière-plan"
+accentColor: "Accentuation"
+textColor: "Texte"
+saveAs: "Enregistrer sous ..."
+advanced: "Avancé"
+value: "Valeur"
+createdAt: "Date de création"
+updatedAt: "Mis à jour le"
+saveConfirm: "Voulez-vous sauvegarder les modifications ?"
+deleteConfirm: "Confirmez-vous la suppression ?"
+invalidValue: "Cette valeur est invalide."
+registry: "Registre"
+closeAccount: "Fermer le compte"
+currentVersion: "Version actuelle"
+latestVersion: "Dernière version "
+youAreRunningUpToDateClient: "Votre client est à jour."
+newVersionOfClientAvailable: "Une nouvelle version de votre client est disponible."
+usageAmount: "Utilisation"
+capacity: "Capacité "
+inUse: "utilisé"
+editCode: "Modifier le code"
+apply: "Appliquer"
+receiveAnnouncementFromInstance: "Recevoir les messages d'information du serveur"
+emailNotification: "Notifications par courriel"
+publish: "Public"
+inChannelSearch: "Chercher dans la chaîne"
+useReactionPickerForContextMenu: "Clic-droit pour ouvrir le panneau de réactions"
+typingUsers: "{users} est en train d'écrire"
+jumpToSpecifiedDate: "Se rendre à la date"
+showingPastTimeline: "Un fil âgé est affiché"
+clear: "Effacer"
+markAllAsRead: "Tout marquer comme lu"
+goBack: "Retour"
+unlikeConfirm: "Êtes-vous sûr·e de ne plus vouloir aimer cette publication ?"
+fullView: "Plein écran"
+quitFullView: "Quitter le plein écran"
+addDescription: "Ajouter une description"
+userPagePinTip: "Vous pouvez afficher des publications ici en sélectionnant l'option
+  « Épingler au profil » dans le menu de chaque publication."
+notSpecifiedMentionWarning: "Vous avez mentionné des utilisateur·rice·s qui ne font
+  pas partie de la liste des destinataires"
+info: "Informations"
+userInfo: "Informations sur l'utilisateur"
+unknown: "Inconnu"
+onlineStatus: "Statut"
+hideOnlineStatus: "Se rendre invisible"
+hideOnlineStatusDescription: "Rendre votre statut invisible peut diminuer les performances
+  de certaines fonctionnalités, telles que la recherche."
+online: "En ligne"
+active: "Actif·ve"
+offline: "Hors ligne"
+notRecommended: "Déconseillé"
+botProtection: "Protection contre les bots"
+instanceBlocking: "Gestion de la Fédération"
+selectAccount: "Sélectionner un compte"
+switchAccount: "Changer de compte"
+enabled: "Activé"
+disabled: "Désactivé"
+quickAction: "Actions rapides"
+user: "Utilisateur·rice·s"
+administration: "Gestion"
+accounts: "Comptes"
+switch: "Remplacer"
+noMaintainerInformationWarning: "Informations administrateur non configurées."
+noBotProtectionWarning: "La protection contre les bots n'est pas configurée."
+configure: "Configurer"
+postToGallery: "Publier dans la galerie"
+gallery: "Galerie"
+recentPosts: "Publications récentes"
+popularPosts: "Publications populaires"
+shareWithNote: "Partager dans une publication"
+ads: "Bannières communautaires"
+expiration: "Échéance"
+memo: "Pense-bête"
+priority: "Priorité"
+high: "Haute"
+middle: "Moyen"
+low: "Basse"
+emailNotConfiguredWarning: "Vous n'avez pas configuré votre adresse de courriel."
+ratio: "Ratio"
+previewNoteText: "Voir l'aperçu"
+customCss: "CSS personnalisé"
+customCssWarn: "Utilisez cette fonctionnalité uniquement si vous savez exactement
+  ce que vous faites. Une configuration inadaptée peut empêcher le client de s'exécuter
+  normalement."
+global: "Global"
+squareAvatars: "Afficher les avatars carrés pour les comptes sans oreilles de chat"
+sent: "Envoyer"
+received: "Reçu"
+searchResult: "Résultats de la recherche"
+hashtags: "Hashtags"
+troubleshooting: "Résolution de problèmes"
+useBlurEffect: "Utiliser des effets de flou dans l'interface"
+learnMore: "Plus d'informations"
+misskeyUpdated: "Firefish a été mis à jour !"
+whatIsNew: "Voir les derniers changements"
+translate: "Traduire"
+translatedFrom: "Traduit depuis {x}"
+accountDeletionInProgress: "La suppression de votre compte est en cours"
+usernameInfo: "C'est un nom qui identifie votre compte sur l'instance de manière unique.
+  Vous pouvez utiliser des lettres de l'alphabet (minuscules et majuscules), des chiffres
+  (de 0 à 9), ou bien le tiret « _ ». Vous ne pourrez pas modifier votre nom d'utilisateur·rice
+  par la suite."
+aiChanMode: "Mode Ai"
+keepCw: "Garder le CW"
+pubSub: "Comptes Pub/Sub"
+lastCommunication: "Dernière communication"
+resolved: "Résolu"
+unresolved: "En attente"
+breakFollow: "Retirer l'abonné"
+itsOn: "Activé"
+itsOff: "Désactivé"
+emailRequiredForSignup: "Une adresse de courriel est nécessaire pour créer un compte"
+unread: "Non lu"
+filter: "Filtre"
+controlPanel: "Panneau de contrôle"
+manageAccounts: "Gérer les comptes"
+makeReactionsPublic: "Rendre les réactions publiques"
+makeReactionsPublicDescription: "Ceci rendra public la liste de toutes vos réactions
+  passées."
+classic: "Centré"
+muteThread: "Masquer cette discussion"
+unmuteThread: "Ne plus masquer le fil"
+ffVisibility: "Visibilité des abonnés/abonnements"
+ffVisibilityDescription: "Permet de configurer qui peut voir vos abonnements et vos
+  abonnés."
+continueThread: "Continuer le fil"
+deleteAccountConfirm: "Ce compte sera définitivement supprimé. Êtes vous certain ?"
+incorrectPassword: "Le mot de passe est incorrect."
+voteConfirm: "Confirmez-vous votre vote pour « {choice} » ?"
+hide: "Masquer"
+leaveGroup: "Quitter le groupe"
+leaveGroupConfirm: "Êtes vous sûr de vouloir quitter « {name} » ?"
+useDrawerReactionPickerForMobile: "Afficher le sélecteur de réactions en tant que
+  panneau sur mobile"
+welcomeBackWithName: "Heureux de vous revoir, {name}"
+clickToFinishEmailVerification: "Veuillez cliquer sur [{ok}] afin de compléter la
+  vérification par courriel."
+overridedDeviceKind: "Type d'appareil"
+smartphone: "Smartphone"
+tablet: "Tablette"
+auto: "Automatique"
+themeColor: "Couleur du bandeau d'information du serveur"
+size: "Taille"
+numberOfColumn: "Nombre de colonnes"
+instanceDefaultLightTheme: "Thème clair par défaut sur tout le serveur"
+instanceDefaultDarkTheme: "Thème sombre par défaut sur tout le serveur"
+instanceDefaultThemeDescription: "Saisissez le code du thème en format objet."
+mutePeriod: "Durée de mise en sourdine"
+indefinitely: "Illimité"
+tenMinutes: "10 minutes"
+oneHour: "1 heure"
+oneDay: "1 jour"
+oneWeek: "1 semaine"
+rateLimitExceeded: "Limite de taux dépassée"
+cropImage: "Recadrer l'image"
+cropImageAsk: "Voulez-vous recadrer cette image ?"
+file: "Fichier"
+reverse: "Inverser"
+colored: "Coloré"
+label: "Étiquette"
+localOnly: "Local seulement"
+account: "Comptes"
+getQrCode: "Afficher le code QR"
+
+_emailUnavailable:
+  used: "Adresse non disponible"
+  format: "Le format de cette adresse de courriel est invalide"
+  disposable: "Les adresses de courriel jetables ne peuvent pas être utilisées"
+  mx: "Ce serveur de courriel est invalide"
+  smtp: "Ce serveur de courriel ne répond pas"
+_ffVisibility:
+  public: "Public"
+  followers: "Visible uniquement pour les abonné·e·s"
+  private: "Privé"
+_signup:
+  almostThere: "Bientôt fini"
+  emailAddressInfo: "Veuillez saisir votre adresse de courriel. Il ne sera pas rendu
+    public."
+  emailSent: "Un courriel de confirmation vient d'être envoyé à l'adresse que vous
+    avez renseignée ({email}). Cliquez sur le lien contenu dans le message pour terminer
+    la création de votre compte."
+_accountDelete:
+  accountDelete: "Supprimer le compte"
+  mayTakeTime: "La suppression de compte nécessitant beaucoup de ressources, l'exécution
+    du processus peut prendre du temps, en fonction de la quantité de contenus que
+    vous avez créés et du nombre de fichiers que vous avez téléversés."
+  sendEmail: "Une fois la suppression de votre compte effectuée, un courriel sera
+    envoyé à l'adresse que vous aviez enregistrée."
+  requestAccountDelete: "Demander la suppression de votre compte"
+  started: "La procédure de suppression a commencé."
+  inProgress: "Suppression en cours"
+_ad:
+  back: "Retour"
+  reduceFrequencyOfThisAd: "Voir cette bannière moins souvent"
+  adsBy: Bannière communautaire par {by}
+_forgotPassword:
+  enterEmail: "Entrez ici l'adresse de courriel que vous avez enregistrée pour votre
+    compte. Un lien vous permettant de réinitialiser votre mot de passe sera envoyé
+    à cette adresse."
+  ifNoEmail: "Si vous n'avez pas enregistré d'adresse de courriel, merci de contacter
+    l'administrateur·rice de votre serveur."
+  contactAdmin: "Ce serveur ne permettant pas l'utilisation d'adresses de courriel,
+    prenez contact avec l'administrateur·rice pour procéder à la réinitialisation
+    de votre mot de passe."
+_gallery:
+  my: "Mes publications"
+  liked: "Publications que j'ai aimé"
+  like: "J'aime"
+  unlike: "Je n'aime pas"
+_email:
+  _follow:
+    title: "Vous avez un nouvel abonné"
+  _receiveFollowRequest:
+    title: "Vous avez reçu une demande d'abonnement"
+_plugin:
+  install: "Installation des extensions"
+  installWarn: "N'installez que des extensions provenant de sources fiables."
+  manage: "Gestion des extensions"
+_registry:
+  scope: "Portée"
+  key: "Clé"
+  keys: "Clés"
+  domain: "Domaine"
+  createKey: "Créer une clé"
+_aboutFirefish:
+  about: "Firefish est une fourche de Misskey, un logiciel libre et ouvert, développé
+    depuis 2022."
+  contributors: "Principaux contributeurs"
+  allContributors: "Tous les contributeurs"
+  source: "Code source"
+  translation: "Traduire Firefish"
+  donate: "Soutenir Firefish"
+  pleaseDonateToFirefish: Merci de considérer de faire un don pour soutenir le développement
+    de Firefish.
+  donateTitle: Firefish vous plaît ?
+  pleaseDonateToHost: Également, veuillez envisager de faire un don à votre serveur
+    d'accueil, {host}, pour contribuer à couvrir ses frais de fonctionnement.
+  donateHost: Faire un don à {host}
+  misskeyContributors: Contributeurs Misskey
+_nsfw:
+  respect: "Cacher les médias marqués comme contenu sensible (NSFW)"
+  ignore: "Afficher les médias sensibles (NSFW)"
+  force: "Cacher tous les médias"
+_mfm:
+  cheatSheet: "Antisèche MFM"
+  intro: "MFM est un langage Markdown spécifique utilisable ici et là dans Firefish.
+    Vous pouvez vérifier ici les structures utilisables avec MFM."
+  dummy: "Le fédivers s'agrandit avec Firefish"
+  mention: "Mentionner"
+  mentionDescription: "Vous pouvez afficher un utilisateur spécifique en indiquant
+    le symbole d'arobase (@) suivie d'un nom d'utilisateur."
+  hashtag: "Hashtags"
+  hashtagDescription: "Vous pouvez afficher les hashtags en utilisant un croisillon
+    et du texte."
+  url: "URL"
+  urlDescription: "L'adresse web peut être affichée."
+  link: "Lien"
+  linkDescription: "Une partie précise d'une phrase peut être liée à l'adresse web."
+  bold: "Gras"
+  boldDescription: "Mise en évidence du texte en le rendant plus épais."
+  small: "Diminuer l'emphase"
+  smallDescription: "Le contenu peut être affiché en petit et fin."
+  center: "Centrer"
+  centerDescription: "Centre le contenu sur la page."
+  inlineCode: "Code (inline)"
+  inlineCodeDescription: "Affiche la coloration syntaxique des lignes de code."
+  blockCode: "Bloc de code"
+  blockCodeDescription: "Afficher la coloration syntaxique de multiples lignes de
+    code dans un bloc."
+  inlineMath: "Formule mathématique (inline)"
+  inlineMathDescription: "Afficher les formules mathématiques (KaTeX)"
+  blockMath: "Formule mathématique (bloc)"
+  blockMathDescription: "Afficher les formules mathématiques (KaTeX) dans un bloc"
+  quote: "Citer"
+  quoteDescription: "Affiche le contenu sous forme de citation."
+  emoji: "Émojis personnalisés"
+  emojiDescription: "Encadrer le nom de l'émoji personnalisé de deux points pour l'afficher."
+  search: "Rechercher"
+  searchDescription: "Affiche une boîte de recherche avec du texte pré-saisi."
+  flip: "Inverser"
+  flipDescription: "Rotation verticale ou horizontale du contenu."
+  jelly: "Animation (Gelée)"
+  jellyDescription: "Donne une animation d'étirement comme de la gelée."
+  tada: "Animation (Tada)"
+  tadaDescription: "Donne une animation qui donne une impression de « Tada ! »."
+  jump: "Animation (Saut)"
+  jumpDescription: "Donne une animation qui saute."
+  bounce: "Animation (Rebond)"
+  bounceDescription: "Donne une animation de rebondissement."
+  shake: "Animation (Secousse)"
+  shakeDescription: "Donne une animation tremblante."
+  twitch: "Animation (Tremblement)"
+  twitchDescription: "Donne une animation de tremblement intense."
+  spin: "Animation (Rotation)"
+  spinDescription: "Donne une animation de rotation."
+  x2: "Grand"
+  x2Description: "Afficher le contenu en grand."
+  x3: "Très grand"
+  x3Description: "Afficher le contenu en très grand."
+  x4: "Plus grand"
+  x4Description: "Afficher le contenu encore plus grand que grand."
+  blur: "Flou"
+  blurDescription: "Floutage du contenu. Il sera visible en le survolant avec le curseur."
+  font: "Police de caractères"
+  fontDescription: "Choisir la police du contenu."
+  rainbow: "Arc-en-ciel"
+  rainbowDescription: "Permet d'afficher le contenu en couleurs arc-en-ciel."
+  sparkle: "Paillettes"
+  sparkleDescription: "Ajoute un effet scintillant au contenu."
+  rotate: "Pivoter"
+  fade: "Apparaître/Disparaître"
+  fadeDescription: "Fait apparaître et disparaître le contenu."
+  plainDescription: Désactiver les effets de tous les MFM contenus dans cet effet
+    MFM.
+  rotateDescription: Pivoter le contenu d'un angle spécifique.
+  position: Position
+  advanced: MFM avancées
+  warn: Les MFM peuvent contenir des animations à mouvement rapide ou clignotantes
+  crop: Rogner
+  positionDescription: Déplacer le contenu selon une valeur spécifiée.
+  play: Animer les MFM
+  stop: Arrêter les MFM
+  alwaysPlay: Toujours lire automatiquement toutes les MFM animées
+  advancedDescription: Si désactivé, n'autorise que la mise en forme de base, sauf
+    si une MFM animée est en cours de lecture
+  cropDescription: Rogner le contenu.
+  scale: Mettre à l'échelle
+  scaleDescription: Mettre le contenu à l'échelle selon une valeur spécifiée.
+  foreground: Couleur de premier plan
+  foregroundDescription: Changer la couleur de premier plan d'un texte.
+  backgroundDescription: Changer la couleur d'arrière-plan d'un texte.
+  background: Couleur d'arrière-plan
+  plain: Simple
+_instanceTicker:
+  none: "Cacher"
+  remote: "Montrer pour les utilisateur·ice·s distant·e·s"
+  always: "Toujours afficher"
+_serverDisconnectedBehavior:
+  reload: "Rechargement automatique"
+  dialog: "Ouvrir une boîte de dialogue pour l'avertissement"
+  quiet: "Afficher un avertissement discret"
+  nothing: Ne rien faire
+_channel:
+  create: "Créer une chaîne"
+  edit: "Éditer la chaîne"
+  setBanner: "Sélectionner la bannière"
+  removeBanner: "Supprimer la bannière"
+  featured: "Tendances"
+  owned: "Mes chaînes"
+  following: "Abonné·e"
+  usersCount: "{n} Participant·e·s"
+  notesCount: "{n} publications"
+  nameAndDescription: Nom et description
+  nameOnly: Nom uniquement
+_menuDisplay:
+  sideFull: "Latéral"
+  sideIcon: "Latéral (icônes)"
+  top: "Haut de page"
+  hide: "Masquer"
+_wordMute:
+  muteWords: "Mots à filtrer"
+  muteWordsDescription: "Séparer avec des espaces pour la condition AND. Séparer avec
+    un saut de ligne pour une condition OR."
+  muteWordsDescription2: "Pour utiliser des expressions régulières (regex), mettez
+    les mots-clés entre barres obliques."
+  softDescription: "Masquez de votre fil d'actualité les publications qui répondent
+    aux conditions définies."
+  hardDescription: "Empêche les publications, qui remplissent les conditions définies,
+    d'être ajoutées au fil d'actualité. Cette action est irréversible : si vous modifiez
+    ces conditions plus tard, les publications précédemment filtrées ne seront pas
+    récupérées."
+  soft: "Doux"
+  hard: "Strict"
+  mutedNotes: "Publications masquées"
+  muteLangsDescription2: Utiliser les codes de langue (i.e en, fr, ja, zh).
+  lang: Langue
+  langDescription: Cachez les publications qui correspondent à la langue définie dans
+    le fil d'actualité.
+  muteLangs: Langues filtrées
+  muteLangsDescription: Séparer avec des espaces ou des retours à la ligne pour une
+    condition OU (OR).
+  mutePatterns: Patrons masqués
+_instanceMute:
+  instanceMuteDescription2: "Séparer avec des sauts de lignes"
+  title: "Masque les publications provenant des serveurs listés."
+  heading: "Serveurs à mettre en sourdine/masquer"
+  instanceMuteDescription: Ceci va masquer toute publication ou boost de serveurs
+    listés, incluant celles des personnes répondant à des personnes des serveurs masqués.
+_theme:
+  explore: "Explorer les thèmes"
+  install: "Installer un thème"
+  manage: "Gestion des thèmes"
+  code: "Code du thème"
+  description: "Description"
+  installed: "{name} a été installé"
+  installedThemes: "Thèmes installés"
+  builtinThemes: "Thèmes intégrés"
+  alreadyInstalled: "Ce thème est déjà installé"
+  invalid: "Le format du thème n'est pas valide"
+  make: "Créer un thème"
+  base: "Base"
+  addConstant: "Ajouter une constante"
+  constant: "Constante"
+  defaultValue: "Valeur par défaut"
+  color: "Couleur"
+  refProp: "Appeler une propriété"
+  refConst: "Appeler une constante"
+  key: "Clé"
+  func: "Fonction"
+  funcKind: "Type de fonction"
+  argument: "Argument"
+  basedProp: "Nom de la propriété référencée"
+  alpha: "Transparence"
+  darken: "Assombrir"
+  lighten: "Clair"
+  inputConstantName: "Insérez un nom de constante"
+  importInfo: "Vous pouvez importer un thème vers l'éditeur de thèmes en saisissant
+    son code ici"
+  deleteConstantConfirm: "Êtes-vous sûr·e de vouloir supprimer la constante {const} ?"
+  keys:
+    accent: "Accentuation"
+    bg: "Arrière-plan"
+    fg: "Texte"
+    focus: "Mise au point"
+    indicator: "Indicateur"
+    panel: "Panneau"
+    shadow: "Ombre"
+    header: "Entête"
+    navBg: "Fond de la barre latérale"
+    navFg: "Texte de la barre latérale"
+    navHoverFg: "Texte de la barre latérale (survolé)"
+    navActive: "Texte de la barre latérale (actif)"
+    navIndicator: "Indicateur de barre latérale"
+    link: "Lien"
+    hashtag: "Hashtags"
+    mention: "Mentionner"
+    mentionMe: "Mentions (Moi)"
+    renote: "Booster"
+    modalBg: "Modal d'arrière-plan"
+    divider: "Séparateur"
+    scrollbarHandle: "Poignée de la barre de navigation"
+    scrollbarHandleHover: "Poignée de la barre de navigation (survolée)"
+    dateLabelFg: "Texte de l'étiquette de la date"
+    infoBg: "Arrière-plan pour les informations"
+    infoFg: "Texte d'information"
+    infoWarnBg: "Arrière-plan des avertissements"
+    infoWarnFg: "Texte d'avertissement"
+    cwBg: "Arrière-plan du CW"
+    cwFg: "Texte du bouton CW"
+    cwHoverBg: "Arrière-plan du bouton CW (survolé)"
+    toastBg: "Arrière-plan de la bulle de notification"
+    toastFg: "Texte de la bulle de notification"
+    buttonBg: "Arrière-plan du bouton"
+    buttonHoverBg: "Arrière-plan du bouton (survolé)"
+    inputBorder: "Cadre de la zone de texte"
+    listItemHoverBg: "Arrière-plan d'item de liste (survolé)"
+    driveFolderBg: "Arrière-plan du dossier de disque"
+    wallpaperOverlay: "Superposition de fond d'écran"
+    badge: "Badge"
+    messageBg: "Arrière plan de la discussion"
+    accentDarken: "Plus sombre"
+    accentLighten: "Plus clair"
+    fgHighlighted: "Texte mis en évidence"
+_sfx:
+  note: "Nouvelle publication"
+  noteMy: "Ma publication"
+  notification: "Notifications"
+  chat: "Discuter"
+  chatBg: "Discussion (arrière-plan)"
+  antenna: "Réception de l'antenne"
+  channel: "Notifications de chaîne"
+_ago:
+  future: "futur"
+  justNow: "à l'instant"
+  secondsAgo: "Il y a {n}s"
+  minutesAgo: "Il y a {n}min"
+  hoursAgo: "Il y a {n}h"
+  daysAgo: "Il y a {n}j"
+  weeksAgo: "Il y a {n} semaines"
+  monthsAgo: "Il y a {n} mois"
+  yearsAgo: "Il y a {n} ans"
+_time:
+  second: "s"
+  minute: "min"
+  hour: "h"
+  day: "j"
+_tutorial:
+  title: "Comment utiliser Firefish"
+  step1_1: "Bienvenue !"
+  step1_2: "On va vous installer. Vous serez opérationnel en un rien de temps !"
+  step2_1: "Tout d'abord, remplissez votre profil."
+  step2_2: "En fournissant quelques informations sur qui vous êtes, il sera plus facile
+    pour les autres de savoir s'ils veulent voir vos publcations ou s'abonner à vous."
+  step3_1: "Maintenant il est temps de vous abonner à des gens !"
+  step3_2: "Vos fils d'actualité Principal et Social sont basés sur les personnes
+    que vous êtes abonné, alors essayez de vous abonner à quelques comptes pour commencer.\n
+    Cliquez sur le cercle « plus » en haut à droite d'un profil pour vous abonner."
+  step4_1: "On y va."
+  step4_2: "Pour votre première publication, certaines personnes aiment faire une
+    {introduction} ou un simple « Bonjour tout le monde ! »"
+  step5_1: "Des fils, des fils d'actualité partout !"
+  step5_2: "Votre serveur a {timelines} fils différents activés."
+  step5_3: "Le fil {icon} Principal est l'endroit où vous pouvez voir les publications
+    de vos abonnements."
+  step5_4: "La fil {icon} Local est l'endroit où vous pouvez voir les publications
+    de tout le monde sur ce serveur."
+  step5_5: "Le fil {icon} Social est une combinaison des fils Principal et Local."
+  step5_6: "Le fil {icon} Recommandé est l'endroit où vous pouvez voir les publications
+    des serveurs recommandés par vos administrateurs."
+  step5_7: "Le fil {icon} Global est l'endroit où vous pouvez voir les publications
+    de tout les autres serveurs connectés."
+  step6_1: "Alors quel est cet endroit ?"
+  step6_2: "Eh bien, vous ne venez pas de rejoindre Firefish. Vous avez rejoint un
+    portail vers le fédivers, un réseau interconnecté de milliers de serveurs, appelés
+    « instances »."
+  step6_3: "Chaque serveur fonctionne différemment, et tous les serveurs n'utilisent
+    pas Firefish. Cependant, celui-ci le fait ! C'est un peu délicat, mais vous aurez
+    le coup de main en un rien de temps."
+  step6_4: "Maintenant, allez-y, explorez et amusez-vous !"
+_2fa:
+  alreadyRegistered: "Configuration déjà achevée."
+  registerTOTP: "Ajouter un nouvel appareil"
+  registerSecurityKey: "Enregistrer une clef"
+  step1: "Tout d'abord, installez une application d'authentification, telle que {a}
+    ou {b}, sur votre appareil."
+  step2: "Ensuite, scannez le code QR affiché sur l'écran."
+  step2Url: "Vous pouvez également saisir cette URL si vous utilisez un programme
+    de bureau :"
+  step3: "Entrez le jeton affiché sur votre application pour compléter la configuration."
+  step4: "À partir de maintenant, ce même jeton vous sera demandé à chacune de vos
+    connexions."
+  securityKeyInfo: "Vous pouvez configurer l'authentification WebAuthN pour sécuriser
+    davantage le processus de connexion grâce à une clé de sécurité matérielle qui
+    prend en charge FIDO2, ou bien en configurant l'authentification par empreinte
+    digitale ou par code PIN sur votre appareil."
+  token: Jeton 2FA
+  step3Title: Entrez un code d'authentification
+  chromePasskeyNotSupported: Les clés de passe Chrome ne sont actuellement pas prises
+    en charge.
+  step2Click: En cliquant sur ce QR code, vous pourrez enregistrer l'authentification
+    à deux facteurs (2FA) sur votre clé de sécurité ou votre application d'authentification
+    sur téléphone.
+  securityKeyName: Entrez un nom de clé
+  removeKeyConfirm: Voulez-vous vraiment supprimer la clé {name} ?
+  securityKeyNotSupported: Votre navigateur ne prend pas en charge les clés de sécurité.
+  removeKey: Supprimer la clé de sécurité
+  tapSecurityKey: Veuillez suivre les instructions de votre navigateur pour enregistrer
+    la clé de sécurité ou le mot de passe
+_permissions:
+  "read:account": "Afficher les informations du compte"
+  "write:account": "Mettre à jour les informations de votre compte"
+  "read:blocks": "Voir les comptes bloqués"
+  "write:blocks": "Gérer les comptes bloqués"
+  "read:drive": "Parcourir le Drive"
+  "write:drive": "Écrire sur le Drive"
+  "read:favorites": "Afficher les favoris"
+  "write:favorites": "Gérer les favoris"
+  "read:following": "Voir les informations de vos abonnements"
+  "write:following": "S'abonner ou se désabonner d'autres comptes"
+  "read:messaging": "Voir vos discussions"
+  "write:messaging": "Gérer les discussions"
+  "read:mutes": "Voir les comptes masqués"
+  "write:mutes": "Gérer les comptes masqués"
+  "write:notes": "Créer / supprimer des publications"
+  "read:notifications": "Afficher les notifications"
+  "write:notifications": "Gérer vos notifications"
+  "read:reactions": "Lire les réactions"
+  "write:reactions": "Gérer vos réactions"
+  "write:votes": "Voter"
+  "read:pages": "Voir vos pages"
+  "write:pages": "Gérer les pages"
+  "read:page-likes": "Voir les mentions « J'aime » des pages"
+  "write:page-likes": "Gérer les mentions « J'aime » sur les pages"
+  "read:user-groups": "Voir les groupes d'utilisateur·rice·s"
+  "write:user-groups": "Éditer les groupes des utilisateur·rice·s"
+  "read:channels": "Lire vos chaînes"
+  "write:channels": "Gérer vos chaînes"
+  "read:gallery": "Voir la galerie"
+  "write:gallery": "Éditer la galerie"
+  "read:gallery-likes": "Voir vos favoris de la galerie"
+  "write:gallery-likes": "Gérer vos favoris de la galerie"
+_auth:
+  shareAccess: "Autoriser « {name} » à accéder à votre compte ?"
+  shareAccessAsk: "Voulez-vous vraiment autoriser cette application à accéder à votre
+    compte ?"
+  permissionAsk: "Cette application nécessite les autorisations suivantes :"
+  pleaseGoBack: "Veuillez retourner à l'application"
+  callback: "Retour vers l'application"
+  denied: "Accès refusé"
+  copyAsk: "Veuillez coller le code d'autorisation suivant dans l'application :"
+  allPermissions: Accès complet au compte
+_antennaSources:
+  all: "Toutes les publications"
+  homeTimeline: "Publications provenant de vos abonnements"
+  users: "Publications venant de la part d'utilisateur·rice·s précis"
+  userList: "Publications venant d'une liste spécifique"
+  userGroup: "Publications venant d'utilisateur·rice·s du groupe spécifié"
+  instances: Publications de tous les utilisateurs d'un serveur
+_weekday:
+  sunday: "Dimanche"
+  monday: "Lundi"
+  tuesday: "Mardi"
+  wednesday: "Mercredi"
+  thursday: "Jeudi"
+  friday: "Vendredi"
+  saturday: "Samedi"
+_widgets:
+  memo: "Post-it"
+  notifications: "Notifications"
+  timeline: "Fil d'actualité"
+  calendar: "Calendrier"
+  trends: "Tendances"
+  clock: "Horloge"
+  rss: "Lecteur de flux RSS"
+  activity: "Activité"
+  photos: "Photos"
+  digitalClock: "Horloge numérique"
+  federation: "Fédération"
+  postForm: "Champ de publication"
+  slideshow: "Diaporama"
+  button: "Bouton"
+  onlineUsers: "Utilisateurs en ligne"
+  jobQueue: "File d'attente"
+  serverMetric: "Statistiques du serveur"
+  aiscript: "Console AiScript"
+  aichan: "Ai"
+  userList: Liste d'utilisateurs
+  _userList:
+    chooseList: Sélectionner une liste
+  unixClock: Horloge UNIX
+  serverInfo: Info serveur
+  instanceCloud: Nuage de serveurs
+  rssTicker: Bandeau RSS
+_cw:
+  hide: "Masquer"
+  show: "Afficher contenu"
+  chars: "{count} caractères"
+  files: "{count} fichiers"
+_poll:
+  noOnlyOneChoice: "Au moins 2 réponses nécéssaires"
+  choiceN: "Choix {n}"
+  noMore: "Vous ne pouvez pas en ajouter davantage"
+  canMultipleVote: "Autoriser le multi-choix"
+  expiration: "Fin du sondage"
+  infinite: "Illimité"
+  at: "Expire le..."
+  after: "Expire après..."
+  deadlineDate: "Date de fin"
+  deadlineTime: "Heure de fin"
+  duration: "Durée"
+  votesCount: "{n} votes"
+  totalVotes: "{n} votes au total"
+  vote: "Voter"
+  showResult: "Voir résultats"
+  voted: "Déjà voté"
+  closed: "Terminé"
+  remainingDays: "{d} jours, {h} heures restantes"
+  remainingHours: "{h} heures et {m} minutes restantes"
+  remainingMinutes: "{m} minutes et {s} secondes restantes"
+  remainingSeconds: "{s} secondes restantes"
+_visibility:
+  public: "Public"
+  publicDescription: "Publier sur tous les fils publics"
+  home: "Non-listé"
+  homeDescription: "Publier uniquement sur le fil principal"
+  followers: "Abonné·e·s"
+  followersDescription: "Publier uniquement à vos abonné·e·s et mentions"
+  specified: "Direct"
+  specifiedDescription: "Publier uniquement aux utilisateur·rice·s mentionné·e·s"
+  localOnly: "Local seulement"
+  localOnlyDescription: "Caché pour les utilisateur·rice·s distant"
+_postForm:
+  replyPlaceholder: "Répondre à cette publication…"
+  quotePlaceholder: "Citez cette publication…"
+  channelPlaceholder: "Publier sur une chaîne…"
+  _placeholders:
+    a: "Quoi de neuf ?"
+    b: "Il s'est passé quelque chose ?"
+    c: "Qu'avez-vous en tête ?"
+    d: "Désirez-vous publier quelques mots ?"
+    e: "Commencez à écrire…"
+    f: "En attente de vos écrits…"
+_profile:
+  name: "Nom"
+  username: "Nom d'utilisateur·rice"
+  description: "À propos de moi"
+  youCanIncludeHashtags: "Vous pouvez également inclure des hashtags."
+  metadata: "Informations supplémentaires"
+  metadataEdit: "Éditer les informations supplémentaires"
+  metadataDescription: "Vous pouvez afficher jusqu'à quatre informations supplémentaires
+    dans votre profil. Vous pouvez ajouter une balise {a} ou une balise {l} avec {rel}
+    pour vérifier le lien sur votre profil !"
+  metadataLabel: "Étiquette"
+  metadataContent: "Contenu"
+  changeAvatar: "Changer l'image de profil"
+  changeBanner: "Changer de bannière"
+  locationDescription: Si vous entrez votre ville en premier, votre heure locale sera
+    affichée aux autres utilisateur·rice·s.
+_exportOrImport:
+  allNotes: "Toutes les publications"
+  followingList: "Abonnements"
+  muteList: "Comptes masqués"
+  blockingList: "Comptes bloqués"
+  userLists: "Listes"
+  excludeMutingUsers: "Exclure les utilisateur·rice·s mis en sourdine"
+  excludeInactiveUsers: "Exclure les utilisateur·rice·s inactifs"
+_charts:
+  federation: "Fédération"
+  apRequest: "Requêtes"
+  usersIncDec: "Variation du nombre d'utilisateur·rice·s"
+  usersTotal: "Nombre des utilisateur·rice·s au total"
+  activeUsers: "Nombre d'utilisateurices actif·ve·s"
+  notesIncDec: "Variation du nombre de publications"
+  localNotesIncDec: "Variation du nombre de publications locales"
+  remoteNotesIncDec: "Variation du nombre de publications distantes"
+  notesTotal: "Nombre total des publications"
+  filesIncDec: "Variation du nombre de fichiers"
+  filesTotal: "Nombre total de fichiers"
+  storageUsageIncDec: "Variation de l'utilisation du stockage"
+  storageUsageTotal: "Utilisation totale du stockage"
+_instanceCharts:
+  requests: "Requêtes"
+  users: "Variation du nombre d'utilisateur·rice·s"
+  usersTotal: "Total cumulé du nombre d'utilisateur·rice·s"
+  notes: "Variation du nombre de publications"
+  notesTotal: "Nombre total cumulé des publications"
+  ff: "Variation des abonnements / abonné·e·s "
+  ffTotal: "Total cumulé du nombre d'abonné·e·s / abonnements"
+  cacheSize: "Variation de la taille du cache"
+  cacheSizeTotal: "Total cumulé de la taille du cache"
+  files: "Variation du nombre de fichiers"
+  filesTotal: "Total cumulé du nombre de fichiers"
+_timelines:
+  home: "Principal"
+  local: "Local"
+  social: "Social"
+  global: "Global"
+  recommended: Recommandé
+_pages:
+  newPage: "Créer une page"
+  editPage: "Modifier une page"
+  readPage: "Affichage de la source en cours"
+  created: "La page a été créée !"
+  updated: "La page a été mise à jour !"
+  deleted: "La page a été supprimée"
+  pageSetting: "Paramètres de la Page"
+  nameAlreadyExists: "L'URL de page spécifiée existe déjà"
+  invalidNameTitle: "L'URL de page spécifiée n'est pas valide"
+  invalidNameText: "Assurez-vous qu'il n'est pas vide"
+  editThisPage: "Éditer cette page"
+  viewSource: "Afficher la source"
+  viewPage: "Afficher la page"
+  like: "Favori"
+  unlike: "Je n'aime pas"
+  my: "Mes pages"
+  liked: "Pages favorites"
+  featured: "Populaire"
+  inspector: "Inspecteur"
+  contents: "Contenu"
+  content: "Bloc de page"
+  variables: "Variables"
+  title: "Titre"
+  url: "URL de la page"
+  summary: "Résumé de page"
+  alignCenter: "Centrée"
+  hideTitleWhenPinned: "Masquer le titre de la page lorsque celle-ci est épinglée
+    au profil"
+  font: "Police de caractères"
+  fontSerif: "Serif"
+  fontSansSerif: "Sans Serif"
+  eyeCatchingImageSet: "Définir une image attractive"
+  eyeCatchingImageRemove: "Supprimer l'image attractive"
+  chooseBlock: "Ajouter un bloc"
+  selectType: "Choisir un type"
+  enterVariableName: "Veuillez entrer un nom pour votre variable"
+  variableNameIsAlreadyUsed: "Ce nom de variable est déjà utilisé"
+  contentBlocks: "Contenu"
+  inputBlocks: "Blocs d'entrée"
+  specialBlocks: "Spécial"
+  blocks:
+    text: "Texte"
+    textarea: "Zone de texte"
+    section: "Section"
+    image: "Images"
+    button: "Bouton"
+    if: "Si"
+    _if:
+      variable: "Variable"
+    post: "Champ de publication"
+    _post:
+      text: "Contenu"
+      attachCanvasImage: "Publier une image sur la Toile"
+      canvasId: "Toile ID"
+    textInput: "Entrée textuelle"
+    _textInput:
+      name: "Nom de la variable"
+      text: "Titre"
+      default: "Valeur par défaut"
+    textareaInput: "Entrée textuelle multi-ligne"
+    _textareaInput:
+      name: "Nom de la variable"
+      text: "Titre"
+      default: "Valeur par défaut"
+    numberInput: "Entrée numérique"
+    _numberInput:
+      name: "Nom de la variable"
+      text: "Titre"
+      default: "Valeur par défaut"
+    canvas: "Toile"
+    _canvas:
+      id: "Toile ID"
+      width: "Largeur"
+      height: "Hauteur"
+    note: "Publication intégrée"
+    _note:
+      id: "Identifiant de la publication"
+      idDescription: "Vous pouvez aussi coller l'URL de la publication ici."
+      detailed: "Afficher les détails"
+    switch: "Interrupteur"
+    _switch:
+      name: "Nom de la variable"
+      text: "Titre"
+      default: "Valeur par défaut"
+    counter: "Compteur"
+    _counter:
+      name: "Nom de la variable"
+      text: "Titre"
+      inc: "Augmenter de"
+    _button:
+      text: "Titre"
+      colored: "Coloré"
+      action: "Opération à effectuer lorsque le bouton est pressé"
+      _action:
+        dialog: "Afficher une fenêtre de dialogue"
+        _dialog:
+          content: "Contenu"
+        resetRandom: "Réinitialiser un nombre aléatoire"
+        pushEvent: "Envoyer un évènement"
+        _pushEvent:
+          event: "Nom de l'évènement"
+          message: "Message à afficher lorsqu'il est activé"
+          variable: "Variable à envoyer"
+          no-variable: "Rien"
+        callAiScript: "Appeler AiScript"
+        _callAiScript:
+          functionName: "Nom de la fonction"
+    radioButton: "Choix"
+    _radioButton:
+      name: "Nom de la variable"
+      title: "Titre"
+      values: "Liste des choix (un par ligne)"
+      default: "Valeur par défaut"
+  script:
+    categories:
+      flow: "Contrôle de flux"
+      logical: "Opération logique"
+      operation: "Calculer"
+      comparison: "Comparer"
+      random: "Aléatoire"
+      value: "Valeur"
+      fn: "Fonction"
+      text: "Manipulation de texte"
+      convert: "Convertir"
+      list: "Listes"
+    blocks:
+      text: "Texte"
+      multiLineText: "Texte (multi-ligne)"
+      textList: "Liste de texte"
+      _textList:
+        info: "Veuillez séparer chaque entrée avec un saut de ligne"
+      strLen: "Longueur du texte"
+      _strLen:
+        arg1: "Texte"
+      strPick: "Extraire un caractère"
+      _strPick:
+        arg1: "Texte"
+        arg2: "Position du joueur"
+      strReplace: "Remplacement de texte"
+      _strReplace:
+        arg1: "Texte"
+        arg2: "Avant le remplacement"
+        arg3: "Après le remplacement"
+      strReverse: "Inverser le texte"
+      _strReverse:
+        arg1: "Texte"
+      join: "Concaténer du texte"
+      _join:
+        arg1: "Listes"
+        arg2: "Séparateur"
+      add: "Ajouter"
+      _add:
+        arg1: "A"
+        arg2: "B"
+      subtract: "Soustraire"
+      _subtract:
+        arg1: "A"
+        arg2: "B"
+      multiply: "Multiplier par"
+      _multiply:
+        arg1: "A"
+        arg2: "B"
+      divide: "Diviser par"
+      _divide:
+        arg1: "A"
+        arg2: "B"
+      mod: "Reste"
+      _mod:
+        arg1: "A"
+        arg2: "B"
+      round: "Arrondir les décimales"
+      _round:
+        arg1: "Numérique"
+      eq: "A et B sont égaux"
+      _eq:
+        arg1: "A"
+        arg2: "B"
+      notEq: "A et B sont différents"
+      _notEq:
+        arg1: "A"
+        arg2: "B"
+      and: "A et B"
+      _and:
+        arg1: "A"
+        arg2: "B"
+      or: "A ou B"
+      _or:
+        arg1: "A"
+        arg2: "B"
+      lt: "A est inférieur à B"
+      _lt:
+        arg1: "A"
+        arg2: "B"
+      gt: "A est supérieur à B"
+      _gt:
+        arg1: "A"
+        arg2: "B"
+      ltEq: "A est inférieur ou égal à B"
+      _ltEq:
+        arg1: "A"
+        arg2: "B"
+      gtEq: "A est supérieur ou égal à B"
+      _gtEq:
+        arg1: "A"
+        arg2: "B"
+      if: "Branche"
+      _if:
+        arg1: "Si"
+        arg2: "Si"
+        arg3: "Sinon"
+      not: "Nier"
+      _not:
+        arg1: "Nier"
+      random: "Aléatoire"
+      _random:
+        arg1: "Probabilité"
+      rannum: "Nombre aléatoire"
+      _rannum:
+        arg1: "Minimum"
+        arg2: "Maximum"
+      randomPick: "Sélectionner au hasard dans la liste"
+      _randomPick:
+        arg1: "Listes"
+      dailyRandom: "Aléatoire (Quotidien pour chaque utilisateur)"
+      _dailyRandom:
+        arg1: "Probabilité"
+      dailyRannum: "Numéros aléatoires (Quotidien pour chaque utilisateur)"
+      _dailyRannum:
+        arg1: "Minimum"
+        arg2: "Maximum"
+      dailyRandomPick: "Sélectionné au hasard dans la liste (Quotidien pour chaque
+        utilisateur)"
+      _dailyRandomPick:
+        arg1: "Listes"
+      seedRandom: "Aléatoire (graine)"
+      _seedRandom:
+        arg1: "Graine"
+        arg2: "Probabilité"
+      seedRannum: "Nombre aléatoire (Graine)"
+      _seedRannum:
+        arg1: "Graine"
+        arg2: "Minimum"
+        arg3: "Maximum"
+      seedRandomPick: "Sélectionné au hasard dans la liste (graine)"
+      _seedRandomPick:
+        arg1: "Graine"
+        arg2: "Listes"
+      DRPWPM: "Sélectionné au hasard dans une liste de probabilités (Quotidien pour
+        chaque utilisateur)"
+      _DRPWPM:
+        arg1: "Liste de texte"
+      pick: "Sélectionner dans la liste"
+      _pick:
+        arg1: "Listes"
+        arg2: "Position"
+      listLen: "Longueur de la liste"
+      _listLen:
+        arg1: "Listes"
+      number: "Numérique"
+      stringToNumber: "Convertir du texte en numérique"
+      _stringToNumber:
+        arg1: "Texte"
+      numberToString: "Convertir du numérique en texte"
+      _numberToString:
+        arg1: "Numérique"
+      splitStrByLine: "Séparer le texte par des sauts de lignes"
+      _splitStrByLine:
+        arg1: "Texte"
+      ref: "Variable"
+      aiScriptVar: "Variable d'AiScript"
+      fn: "Fonction"
+      _fn:
+        slots: "Slots"
+        slots-info: "Veuillez insérer un seul slot par ligne"
+        arg1: "Sortie"
+      for: "Répéter"
+      _for:
+        arg1: "Compter"
+        arg2: "Action"
+    typeError: "Le slot {slot} accepte « {expect} » mais a « {actual} » !"
+    thereIsEmptySlot: "Slot {slot} est vide !"
+    types:
+      string: "Texte"
+      number: "Numérique"
+      boolean: "Marqueur"
+      array: "Listes"
+      stringArray: "Liste de texte"
+    emptySlot: "Slot vide"
+    enviromentVariables: "Variables d'environnement"
+    pageVariables: "Élément de page"
+    argVariables: "Entrée slot"
+_relayStatus:
+  requesting: "En attente"
+  accepted: "Accepté"
+  rejected: "Refusée"
+_notification:
+  fileUploaded: "Le fichier a été téléversé"
+  youGotMention: "{name} vous a mentionné"
+  youGotReply: "Réponse de {name}"
+  youGotQuote: "Cité·e par {name}"
+  youRenoted: "{name} vous a boosté"
+  youGotPoll: "{name} a participé à votre sondage"
+  youGotMessagingMessageFromUser: "{name} vous envoyé un message"
+  youGotMessagingMessageFromGroup: "Un message a été envoyé au groupe {name}"
+  youWereFollowed: "s'est abonné à vous"
+  youReceivedFollowRequest: "Vous avez reçu une demande d'abonnement"
+  yourFollowRequestAccepted: "Votre demande d'abonnement a été accepté"
+  youWereInvitedToGroup: "{userName} vous a invité à un groupe"
+  pollEnded: "Les résultats du sondage sont disponibles"
+  emptyPushNotificationMessage: "Les notifications poussées ont été mises à jour"
+  _types:
+    all: "Toutes"
+    follow: "Nouveaux abonnés"
+    mention: "Mentions"
+    reply: "Réponses"
+    renote: "Boosts"
+    quote: "Citations"
+    reaction: "Réactions"
+    pollVote: "Votes dans des sondages"
+    receiveFollowRequest: "Demande d'abonnement reçue"
+    followRequestAccepted: "Demande d'abonnement acceptée"
+    groupInvited: "Invitation à un groupe"
+    app: "Notifications provenant des apps"
+    pollEnded: Fin du sondage
+  _actions:
+    followBack: "s'est abonné à vous"
+    reply: "Répondre"
+    renote: "Boosts"
+  reacted: a réagit à votre publication
+  renoted: a boosté votre publication
+  voted: a voté pour votre sondage
+  andCountUsers: et {count} utilisateur(s) de plus {acted}
+_deck:
+  alwaysShowMainColumn: "Toujours afficher la colonne principale"
+  columnAlign: "Aligner les colonnes"
+  addColumn: "Ajouter une colonne"
+  swapLeft: "Déplacer à gauche"
+  swapRight: "Déplacer à droite"
+  swapUp: "Déplacer vers le haut"
+  swapDown: "Déplacer vers le bas"
+  stackLeft: "Empiler à gauche"
+  popRight: "Extraire à droite"
+  profile: "Espace de travail"
+  _columns:
+    main: "Principale"
+    widgets: "Widgets"
+    notifications: "Notifications"
+    tl: "Fil d'actualité"
+    antenna: "Antenne"
+    list: "Listes"
+    mentions: "Mentions"
+    direct: "Direct"
+    channel: Chaîne
+  introduction: Créer l'interface parfaite pour vous en arrangeant les colonnes librement
+    !
+  introduction2: Cliquer sur le + sur la droite de l'écran pour ajouter de nouvelles
+    colonnes à tout moment.
+  renameProfile: Renommer l'espace de travail
+  configureColumn: Paramètres de colonne
+  deleteProfile: Supprimer l'espace de travail
+  widgetsIntroduction: Sélectionner « Modifier les widgets » dans le menu de la colonne
+    et ajouter un widget.
+  nameAlreadyExists: Ce nom d'espace de travail existe déjà.
+  newProfile: Nouvel espace de travail
+keepOriginalUploadingDescription: Enregistrer l'image originale telle quelle. Si désactivé,
+  une version à afficher sur le web sera générée au chargement.
+manageGroups: Gérer les groupes
+moderation: Modération
+disableDrawer: Ne pas utiliser de menus déroulants
+preferencesBackups: Sauvegarde des préférences
+confirmToUnclipAlreadyClippedNote: Cette publication fait déjà partie du clip « {name} ».
+  Voudriez-vous plutôt le supprimer du clip ?
+instanceSecurity: Sécurité du serveur
+recommended: Recommandé
+recentNDays: Les derniers {n} jours
+recentNHours: Les dernières {n} heures
+check: Vérifier
+thereIsUnresolvedAbuseReportWarning: Il y a des signalements non résolus.
+numberOfPageCacheDescription: Augmenter ce nombre augmentera le confort des utilisateur⋅rice⋅s
+  mais augmentera la charge de travail du serveur, plus de mémoire sera utilisée.
+logoutConfirm: Confirmer la déconnexion ?
+lastActiveDate: Dernière utilisation le
+cannotUploadBecauseNoFreeSpace: Mise en ligne échouée faute de place sur le Drive.
+remoteOnly: Distant seulement
+showUpdates: Afficher une fenêtre en sur-impression quand Firefish se met à jour
+recommendedInstances: Serveurs recommandées
+caption: Description automatique
+migration: Migration
+showAdminUpdates: Indiquer qu'une nouvelle version de Firefish est disponible (admin
+  seulement)
+replayTutorial: Relancer le tutoriel
+moveTo: Migrer le compte courant vers un nouveau compte
+moveFromDescription: Ceci va configurer un alias pour votre ancien compte afin que
+  vous puissiez migrer de cet ancien compte à l'actuel. Faites ceci AVANT de migrer
+  de votre ancien compte. Merci d'entrer la mention de l'ancien compte sous ce format
+  @personne@server.com
+_sensitiveMediaDetection:
+  sensitivityDescription: Réduire la sensibilité conduira à moins de mauvaises détections
+    (faux positifs) alors que l'augmenter mènera à moins de détection manquées (faux
+    négatifs).
+  analyzeVideosDescription: Analyser les vidéos en plus des images. Cela augmentera
+    légèrement la charge du serveur.
+  setSensitiveFlagAutomatically: Marquer comme sensible (NSFW)
+  sensitivity: Sensibilité de la détection
+  analyzeVideos: Activer l'analyse des vidéos
+  setSensitiveFlagAutomaticallyDescription: Les résultats de la détection interne
+    seront conservés même si cette option est désactivée.
+  description: Réduit potentiellement l'effort de la modération du serveur en reconnaissant
+    automatiquement les médias sensibles (NSFW) via de l'intelligence artificielle.
+    Cela va augmenter légèrement la charge du serveur.
+_messaging:
+  dms: Privé
+  groups: Groupes
+cannotUploadBecauseExceedsFileSizeLimit: Le fichier n'a pas pu être chargé car il
+  dépasse la taille maximum autorisée.
+moveAccountDescription: Ce processus est irréversible. Soyez sûr⋅e que vous avez préparé
+  un alias pour ce compte sur votre nouveau compte avant de migrer. Merci d'entrer
+  la mention du compte formaté comme ceci @personne@server.com
+moveAccount: Déplacer le compte !
+seperateRenoteQuote: Séparer les boutons de boosts et de citation
+failedToFetchAccountInformation: Impossible de récupérer les informations de compte
+noEmailServerWarning: Serveur de courriel non configuré.
+deleteAccount: Supprimer le compte
+document: Documentation
+numberOfPageCache: Nombre de pages mise en cache
+fast: Rapide
+failedToUpload: Mise en ligne échouée
+enableAutoSensitiveDescription: Permet la détection automatique des médias sensibles
+  (NSFW) via une intelligence artificielle, lorsque c'est possible. Même si cette
+  option est désactivée, elle peut être activée au niveau du serveur.
+activeEmailValidationDescription: Permet une vérification plus stricte des adresses
+  de courriel, ce qui inclut de vérifier la présence des adresses jetables et s'il
+  est possible de communiquer avec ces adresses. Si désactivé, seul le format de l'adresse
+  de courriel est vérifié.
+adminCustomCssWarn: Ce paramètre ne devrait être utilisé que si vous savez ce qu'il
+  fait. Entrer des valeurs impropres pourraient empêcher les clients de TOUT LE MONDE
+  de fonctionner. Assurez-vous que votre CSS fonctionne correctement en l'essayant
+  dans vos paramètres utilisateur.
+swipeOnDesktop: Permettre le style de balayage de fenêtre de mobile sur PC
+moveFromLabel: 'Compte depuis lequel vous migrez :'
+migrationConfirm: "Êtes-vous absolument certain⋅e que vous voulez migrer votre compte
+  vers {account} ? Une fois fait, vous ne pourrez pas revenir en arrière, et vous
+  ne pourrez plus utiliser le compte actuel normalement à nouveau.\nAussi, assurez-vous
+  d'avoir configuré le compte actuel comme le compte depuis lequel vous migrez."
+_preferencesBackups:
+  updatedAt: 'Mis à jour le : {date} {time}'
+  cannotLoad: Le chargement a échoué
+  invalidFile: Format de fichier invalide
+  saveConfirm: Enregistrer la sauvegarde sous le nom {name} ?
+  deleteConfirm: Supprimer la sauvegarde {name} ?
+  nameAlreadyExists: Une sauvegarde nommée « {name} » existe déjà. Merci d'entrer
+    un autre nom.
+  applyConfirm: Voulez-vous vraiment appliquer la sauvegarde « {name} » à cet appareil ?
+    Les réglages existants de cet appareil seront écrasés.
+  noBackups: Aucune sauvegarde n'existe. Vous pouvez sauvegarder les paramètres de
+    votre client sur ce serveur en utilisant « Créer une nouvelle sauvegarde ».
+  createdAt: 'Crée le : {date} {time}'
+  renameConfirm: Renommer la sauvegarde « {old} » en « {new} » ?
+  list: Sauvegardes créées
+  saveNew: Faire une nouvelle sauvegarde
+  loadFile: Charger depuis le fichier
+  apply: Appliquer à l'appareil
+  save: Enregistrer les changements
+  inputName: Merci d'entrer un nom pour cette sauvegarde
+  cannotSave: La sauvegarde a échoué
+privateMode: Mode privé
+privateModeInfo: Si activé, seuls les serveurs autorisés peuvent fédérer avec votre
+  serveur. Toutes les publications seront masquées de la visibilité publique.
+allowedInstances: Serveurs Autorisés
+driveCapOverrideLabel: Changer la capacité du drive pour cet utilisateur
+driveCapOverrideCaption: Réinitialiser la capacité à la valeur par défaut en entrant
+  0 ou moins.
+pleaseSelect: Sélectionner une option
+customMOTD: Message du jour personnalisé (Message d'écran de démarrage)
+refreshInterval: 'Intervalle de mise à jour '
+type: Type
+speed: Vitesse
+slow: Lent
+move: Déplacer
+showAds: Afficher les bannières communautaire (publicités)
+enterSendsMessage: Appuyer sur Entrée pendant la rédaction pour envoyer le message
+  (sinon Ctrl+Entrée)
+allowedInstancesDescription: Noms des serveurs autorisés pour la fédération, chacun
+  séparé par une nouvelle ligne (s'applique uniquement en mode privé).
+enableAutoSensitive: Marquage automatique du contenu sensible (NSFW)
+regexpErrorDescription: "Il y a eu une erreur dans l'expression régulière à la ligne
+  {line} de votre {tab} des mots masqués :"
+forwardReportIsAnonymous: À la place de votre compte, un compte système anonyme sera
+  affiché comme rapporteur au serveur distant.
+noThankYou: Non merci
+addInstance: Ajouter un serveur
+renoteMute: Masquer les boosts dans vos fils d'actualité
+flagSpeakAsCat: Parler comme un chat
+flagSpeakAsCatDescription: Vos messages seront « nyanifiés » en mode chat
+hiddenTags: Hashtags cachés
+hiddenTagsDescription: "Lister les hashtags (sans le #) que vous souhaitez cacher
+  de Tendances et Découvrir. Les hashtags cachés sont toujours découvrables par d'autres
+  moyens."
+antennaInstancesDescription: Lister un nom de serveur par ligne
+userSaysSomethingReason: '{name} a dit {reason}'
+breakFollowConfirm: Êtes vous sûr de vouloir retirer l'abonné ?
+recommendedInstancesDescription: Serveurs recommandés séparés par une nouvelle ligne
+  pour apparaître dans le fil recommandé.
+sendPushNotificationReadMessage: Supprimer les notifications poussées une fois que
+  les notifications ou messages concernés ont été lus
+sendPushNotificationReadMessageCaption: Une notification contenant le texte « {emptyPushNotificationMessage} »
+  sera affichée pendant un court instant. Cela peut augmenter la consommation de batterie
+  de votre appareil.
+splash: Écran d'Accueil
+pushNotificationNotSupported: Votre navigateur ou serveur ne supporte pas les notifications
+  poussées
+customMOTDDescription: Messages personnalisé pour le message du jour (sur l'écran
+  d'accueil), séparés par des retours à la ligne, affichés au hasard à chaque (re)chargement
+  de page.
+customSplashIcons: Icônes de l'écran d'accueil personnalisées (urls)
+customSplashIconsDescription: URLs pour les icônes personnalisées de l'écran d'accueil,
+  séparés par des retours à la ligne, qui seront affichées aléatoirement à chaque
+  (re)chargement de page. Assurez-vous que les images sont sur des URL statiques,
+  de préférence toutes de taille 192x192.
+updateAvailable: Une mise à jour peut être disponible !
+accountMoved: "L'utilisateur·rice a migré vers un nouveau compte :"
+enableEmojiReactions: Activer les réactions par émojis
+showEmojisInReactionNotifications: Montrer les émojis dans les notifications de réactions
+renoteUnmute: Ne plus masquer les boosts dans vos fils d'actualité
+selectInstance: Choisir un serveur
+noInstances: Il n'y a aucun serveur
+showLocalPosts: 'Montrer les notes locales dans :'
+homeTimeline: Timeline d'Accueil
+socialTimeline: Timeline Sociale
+requireAdminForView: Vous avez besoin d'un compte d'administration pour voir ceci.
+isSystemAccount: Ce compte est créé et géré automatiquement par le système. Veuillez
+  ne pas modérer, éditer, supprimer ou altérer d'une autre manière ce compte, ou cela
+  risque de perturber votre serveur.
+typeToConfirm: Entrer {x} pour confirmer
+statusbar: Barre d'état
+sensitiveMediaDetection: Détection des médias sensibles (NSFW)
+cannotUploadBecauseInappropriate: Ce fichier n'a pas pu être mis en ligne, car il
+  a été détecté comme potentiellement sensible (NSFW).
+beta: Beta
+navbar: Barre de navigation
+shuffle: Mélanger
+pushNotification: Notifications poussées
+subscribePushNotification: Activer les notifications possées
+unsubscribePushNotification: Désactiver les notifications poussées
+pushNotificationAlreadySubscribed: Notifications poussées déjà activées
+logoImageUrl: URL de l'image du logo
+moveToLabel: 'Compte vers lequel vous migrez :'
+moveFrom: Migrer vers ce compte depuis un ancien compte
+defaultReaction: Émoji de réaction par défaut pour les publications entrantes et sortantes
+license: Licence
+customKaTeXMacro: Macros KaTeX personnalisées
+enableCustomKaTeXMacro: Activer les macros KaTeX personnalisées
+noteId: ID des publications
+customKaTeXMacroDescription: "Définissez des macros pour écrire des expressions mathématiques
+  simplement ! La notation se conforme aux définitions de commandes LaTeX et s'écrit
+  \\newcommand{\\·name}{content} ou \\newcommand{\\name}[number of arguments]{content}.
+  Par exemple, \\newcommand{\\add}[2]{#1 + #2} étendra \\add{3}{foo} en 3 + foo. Les
+  accolades entourant le nom de la macro peuvent être changés pour des parenthèses
+  ou des crochets. Cela affectera les types de parenthèses utilisées pour les arguments.
+  Une (et une seule) macro peut être définie par ligne, et vous ne pouvez pas couper
+  la ligne au milieu d'une définition. Les lignes invalides sont simplement ignorées.
+  Seulement de simples fonctions de substitution de chaines sont supportées ; la syntaxe
+  avancée, telle que la ramification conditionnelle, ne peut pas être utilisée ici."
+enableRecommendedTimeline: Activer le fil recommandé
+silenceThisInstance: Masquer ce serveur
+silencedInstances: Serveurs masqués
+silenced: Masqué
+deleted: Effacé
+editNote: Modifier la publication
+edited: 'Modifié à {date} {time}'
+flagShowTimelineRepliesDescription: Si activé, affiche dans le fil les réponses des
+  utilisatieur·rice·s aux publications des autres.
+_experiments:
+  alpha: Alpha
+  beta: Beta
+  enablePostImports: Autoriser l'importation de publications
+  title: Expérimentations
+  postImportsCaption: Permet aux utilisateurs d'importer leurs publications à partir
+    de leurs anciens comptes Firefish, Misskey, Mastodon, Akkoma et Pleroma. Cela
+    peut entraîner des ralentissements lors du chargement si votre file d'attente
+    est congestionnée.
+userSaysSomethingReasonQuote: '{name} a cité une publication contenant {reason}'
+signupsDisabled: Les inscriptions sur ce serveur sont actuellement désactivés. Si
+  vous avez un code d'invitation pour ce serveur, saisissez-le ci-dessous.
+apps: Applications
+userSaysSomethingReasonReply: '{noms} a répondu à une publication contenant {raison}'
+defaultValueIs: 'défaut : {valeur}'
+searchPlaceholder: Recherchez sur Firefish
+removeReaction: Retirer votre réaction
+selectChannel: Sélectionner une chaîne
+expandOnNoteClick: Ouvrir la publications en cliquant
+preventAiLearning: Empêcher le récupération de données par des IA
+listsDesc: Les listes vous laissent créer des fils personnalisés avec des utilisateur·rice·s
+  spécifié·e·s. Elles sont accessibles depuis la page des fils.
+_feeds:
+  jsonFeed: flux JSON
+  atom: Atom
+  copyFeed: Copier le flux
+  rss: RSS
+alt: ALT
+swipeOnMobile: Permettre le balayage entre les pages
+expandOnNoteClickDesc: Si désactivé, vous pourrez toujours ouvrir les publications
+  dans le menu du clic droit et en cliquant sur l'horodatage.
+older: ancien
+newer: récent
+accessibility: Accessibilité
+silencedInstancesDescription: Listez les noms de domaine de serveurs que vous voulez
+  masquer. Les comptes des serveurs listés seront traités comme « Masqués », ne pourront
+  faire que des demandes d'abonnement, et ne pourront pas mentionner les comptes locaux
+  si non-abonnés. Cela n'affectera en rien les serveurs bloqués.
+antennasDesc: "Les Antennes affichent de nouvelles publications selon les critères
+  que vous indiqués.\nElles peuvent être consultées depuis la page des fils."
+image: Image
+video: Vidéo
+audio: Audio
+jumpToPrevious: Passer au précédent
+cw: Avertissement de contenu
+xl: XL
+reflectMayTakeTime: Il pourra s'écouler un certain temps avant que les changements
+  ne soient reflétés.
+userSaysSomethingReasonRenote: '{name} a boosté une publication contenant {reason}'
+sendModMail: Envoyer un avis à la modération
+clipsDesc: Les clips sont comme des favoris catégorisés pouvant être partagés. Vous
+  pouvez créer des clips à partir du menu de chaque publication.
+unclip: Dé-clipper
+secureMode: Mode sécurisé (Authorized Fetch)
+secureModeInfo: Quand sollicité depuis d'autres serveurs, ne pas répondre sans preuve.
+isModerator: Modérateur
+enableServerMachineStats: Activer les statistiques matérielles du serveur
+enableIdenticonGeneration: Activer la génération d'Identicon
+reactionPickerSkinTone: Couleur de peau des émojis préférée
+verifiedLink: Lien vérifié
+isBot: Ce compte est automatisé
+isLocked: Ce compte nécessite une approbation pour être abonné
+origin: Origine
+showPopup: Notifier les utilisateurs avec un popup
+showWithSparkles: Afficher avec des paillettes
+youHaveUnreadAnnouncements: Vous avez des annonces non-lues
+donationLink: Lien vers la page de donation
+neverShow: Ne plus afficher
+remindMeLater: Peut-être plus tard
+removeQuote: Retirer la citation
+removeRecipient: Retirer le destinataire
+removeMember: Retirer un membre
+preventAiLearningDescription: Demandez aux modèles d'IA de tiers de ne pas étudier
+  le contenu que vous téléchargez, tel que les publications et les images.
+noGraze: Veuillez désactiver l'extension de navigateur « Graze for Mastodon », car
+  elle interfère avec Firefish.
+silencedWarning: Cette page s'affiche car ces utilisateurs proviennent de serveurs
+  que votre administrateur a réduits au silence/masqué, il se peut donc qu'ils soient
+  de potentiels spams.
+isAdmin: Administrateur
+isPatron: Mécène Firefish
+_filters:
+  fromUser: De l'utilisateur
+  withFile: Avec fichier
+  notesBefore: Publications précédentes
+  notesAfter: Publications suivantes
+  followersOnly: Abonnés uniquement
+  followingOnly: Abonnements uniquement
+  fromDomain: Du domaine
+_dialog:
+  charactersBelow: 'Pas assez de caractères ! Actuel : {current}/Minimum : {min}'
+  charactersExceeded: 'Nombre maximal de caractères dépassé ! Actuel : {current}/Limite
+    : {max}'
+channelFederationWarn: Les chaînes ne se fédèrent pas encore vers d'autres serveurs
+_skinTones:
+  yellow: Jaune
+  dark: Peau Foncée
+  light: Claire
+  mediumLight: Moyennement Claire
+  medium: Légèrement Mate
+  mediumDark: Peau Mate
+objectStorageS3ForcePathStyle: Utiliser des URL d'endpoints basées sur le chemin
+objectStorageS3ForcePathStyleDesc: Activez cette option pour construire les URL d'endpoints
+  au format 's3.amazonaws.com/<bucket>/' au lieu de '<bucket>.s3.amazonaws.com'.
+delete2fa: Désativer A2F
+deletePasskeys: Supprimer les clés d'accès
+delete2faConfirm: Cela supprimera de manière irréversible la double authentification
+  sur ce compte. Souhaitez-vous continuer ?
+inputNotMatch: L'entrée ne correspond pas
+deletePasskeysConfirm: Cela supprimera de manière irréversible toutes les clés d'accès
+  et les clés de sécurité sur ce compte. Souhaitez-vous continuer ?
+addRe: Ajouter « re: » au début d'un avertissement de contenu (CW) en réponse à une
+  publication avec un avertissement de contenu
+confirm: Confirmer
+importZip: Importer ZIP
+exportZip: Exporter ZIP
+detectPostLanguage: Détecter automatiquement la langue et afficher un bouton de traduction
+  pour les publications en langues étrangères
+indexableDescription: Permettre à la recherche interne d'afficher vos publications
+  publiques
+openServerInfo: Afficher les informations du serveur en cliquant sur le bandeau de
+  serveur d'une publication
+indexable: Indexable
+languageForTranslation: Langue de traduction
+vibrate: Jouer les vibrations
+clickToShowPatterns: Cliquer pour montrer les patrons de modules
+iconSet: Jeu d'icônes
+_iconSets:
+  fill: Rempli
+  regular: Normal
+  bold: Gras
+  duotone: Deux tons
+  light: Fin
+reactions: Réactions
+replies: Réponses
+quotes: Citations
+renotes: Boosts
+moreUrls: Pages épinglées
+squareCatAvatars: Afficher les avatars carrés pour les comptes avec oreilles de chat
+suggested: Suggéré
+replaceChatButtonWithAccountButton: Remplacer le bouton de discussion par le bouton
+  de changement de compte
+showBigPostButton: Afficher un gros bouton de publication sur le formulaire de publication
+moreUrlsDescription: "Saisir les pages que vous voulez épingler au menu d'aide dans
+  le coin inférieur gauche en utilisant cette notation :\n« Nom d'affichage » : https://exemple.com/"
+attachedToNotes: Publications avec ce fichier
+showAttachedNotes: Afficher les publications avec ce fichier
+noLanguage: Aucune langue
+showPreviewByDefault: Afficher l'aperçu dans le formulaire de publication par défaut
+preventMisclick: Protection contre les clics accidentels
+hideFollowButtons: Masquer les boutons d'abonnement dans une position où nous ne pouvons
+  pas cliquer
+forMobile: Mobile
+replaceWidgetsButtonWithReloadButton: Remplacer le bouton des widgets par le bouton
+  de rechargement
+searchEngine: Moteur de recherche utilisé dans la barre de recherche MFM
+postSearch: Recherche de publication sur ce serveur
+emojiModPerm: Autorisation de gestion des émojis personnalisés
+_emojiModPerm:
+  mod: Ajouter et modifier
+  full: Autoriser tout
+  unauthorized: Aucune
+  add: Ajouter
+emojiModPermDescription: "Ajouter : Autoriser cet utilisateur à ajouter de nouveaux
+  émojis personnalisés et à définir le nom/la catégorie/le mot-dièse/la licence des
+  émojis personanalisés ajoutés.\nAjouter et modifier : « Ajouter » + Autoriser cet
+  utilisateur à modifier le nom/la catégorie/le mot-dièse/la licence des émojis personnalisés
+  existants.\nAutoriser tout : « Ajouter + Modifier » + Autoriser cet utilisateur
+  à suppimer des émojis personalisés existants."
+makePrivate: Rendre privé
+privateDescription: Rendre visible uniquement pour vous
+private: Privé
+makePrivateConfirm: Cette opération enverra une demande de suppression aux serveurs
+  distants et changera la visibilité au privé. Voulez-vous continuer ?
+useCdn: Obtenir des actifs à partir d'un réseau de diffusion de contenu
+useCdnDescription: Obtenir des actifs, tels que Twemoji, à partir du réseau de diffusion
+  de contenu « JSDelivr » au lieu de ce serveur.
+sentFollowRequests: Demandes d'abonnement envoyées
+enablePullToRefresh: Activer « Dérouler pour actualiser »
+reloading: Rechargement en cours
+pullToRefreshThreshold: Distance de traction pour le rechargement
+pullDownToReload: Tirer pour actualiser
+releaseToReload: Relâcher pour actualiser
+searchWords: Mot(s), ID ou URL à rechercher
+searchUsers: Publier par (faculatif)
+replyMute: Masquer les réponses dans vos fils d'actualité
+replyUnmute: Ne plus masquer les réponses dans vos fils d'actualité
+noSentFollowRequests: Vous n'avez envoyé aucune demande d'abonnement
+enableTimelineStreaming: Actualiser les fils d'actualité automatiquement
+searchRange: Publier entre (faculatif)
+searchCwAndAlt: Inclure les avertissements de contenu et les descriptions de fichiers
+searchPostsWithFiles: Publications uniquement avec fichiers
+publishTimelines: Publier les fils d'actualité pour les visiteurs
+publishTimelinesDescription: Si cette option est activée, les fils Local et Global
+  sera affichée sur {url} même en cas de déconnexion.
+searchWordsDescription: "Saisissez le terme de recherche ici pour rechercher des publications.
+  Séparez les mots avec un espace pour une recherche ET, ou « OR » (sans guillemets)
+  entre des mots pour une recherche OU.\nPar exemple, « matin nuit » trouvera des
+  publications contenant à la fois « matin » et « nuit », et « matin ou nuit » trouveront
+  des messages qui contiennent soit « matin » ou « nuit » (ou les deux).\nVous pouvez
+  également combiner des conditions ET/OU comme « (matin OR nuit) ensommeillé ».\n
+  Si vous voulez chercher une séquence de mots (par exemple, une phrase), vous devez
+  le mettre en double citations, pour ne pas en faire une recherche ET : \"Aujourd'hui
+  j'ai appris\"\n\nSi vous souhaitez accéder à une page d'utilisateur ou à une page
+  d'affichage spécifique, saisissez l'ID ou l'URL dans ce champ et cliquez sur le
+  bouton « Rechercher ». Cliquez sur « Rechercher » recherchera des messages qui contiennent
+  littéralement l'ID/URL."
+searchUsersDescription: "Pour rechercher des messages par un utilisateur/serveur spécifique,
+  saisissez l'ID (@utilisateur@exemple.com, ou @utilisateur pour un utilisateur local)
+  ou le nom de domaine (exemple.com).\n\nSi vous saisissez « me » (sans guillemets),
+  tous vos messages (y compris les messages non-listés, abonnés-seulement, directs
+  et secrets) seront recherchés.\n\nSi vous saisissez « local » (sans guillemets),
+  les résultats seront filtrés pour inclure seulement des messages de ce serveur."
+searchRangeDescription: "Si vous voulez filtrer par période de temps, saisissez-la
+  dans ce format : 20220615-20231031\n\nSi vous omettez l'année (comme le 0105-0106
+  ou le 20231105-0110), elle est interprétée comme l'année en cours.\n\nVous pouvez
+  également omettre le début ou la fin de la date. Par exemple, -0102 filtrera les
+  résultats de recherche pour afficher seulement les messages effectués avant le 2
+  janvier de cette année, et 20231026- filtrera les résultats pour afficher seulement
+  les messages effectués après le 26 octobre 2023."
+toReply: Répondre
+toPost: Publier
+toQuote: Citer
+toEdit: Modifier
+messagingUnencryptedInfo: Les conversations sur Firefish ne sont pas cryptées. Ne
+  partagez aucune information sensible sur Firefish.
+moderationNote: Note de modération
+driveCapacityOverride: Limite de stockage personalisée
+ipFirstAcknowledged: La date de la première acquisition de l'adresse IP
+noAltTextWarning: Certains fichiers joints n'ont aucune description. Avez-vous oublié
+  de l'écrire ?
+showNoAltTextWarning: Afficher un avertissement si vous essayez de publier des fichiers
+  sans description
+autocorrectNoteLanguage: Afficher un avertissement si la langue de publication ne
+  correspond pas au résultat autodétecté
+incorrectLanguageWarning: "Il semble que votre publication est en {detected}, mais
+  vous avez sélectionné {current}.\nVoulez-vous sélectionner {detected} à la place ?"
+markLocalFilesNsfwByDefault: Marquer tous les nouveaux fichiers locaux comme sensibles
+  par défaut
+markLocalFilesNsfwByDefaultDescription: Indépendamment de ce réglage, les utilisateurs
+  peuvent supprimer le drapeau « sensible » (NSFW) eux-mêmes. Les fichiers existants
+  ne sont pas affectés.
+noteEditHistory: Historique des publications
+media: Multimédia
+antennaLimit: Le nombre maximal d'antennes que chaque utilisateur peut créer
+showAddFileDescriptionAtFirstPost: Ouvrez automatiquement un formulaire pour écrire
+  une description lorsque vous tentez de publier des fichiers sans description
+foldNotification: Grouper les notifications similaires
+cannotEditVisibility: Vous ne pouvez pas modifier la visibilité
+useThisAccountConfirm: Voulez-vous continuer avec ce compte ?
+inputAccountId: Veuillez saisir votre compte (par exemple, @firefish@info.firefish.dev)
+remoteFollow: Abonnement à distance
+copyRemoteFollowUrl: Copier l'URL d'abonnement à distance
+slashQuote: Citation enchaînée
+i18nServerInfo: Les nouveaux clients seront en {language} par défaut.
+i18nServerChange: Utilisez {language} à la place.
+i18nServerSet: Utilisez {language} pour les nouveaux clients.
+mergeThreadInTimeline: Fusionner plusieurs publications dans le même fil dans les
+  fils d'actualité
+mergeRenotesInTimeline: Regrouper plusieurs boosts du même publication
+_later:
+  future: futur
+  weeksAgo: il y a {n} semaine(s)
+  daysAgo: il y a {n} jour(s)
+  hoursAgo: il y a {n} heure(s)
+  minutesAgo: il y a {n} minute(s)
+  secondsAgo: il y a {n} seconde(s)
+  yearsAgo: il y a {n} an(s)
+  justNow: à l'instant
+  monthsAgo: il y a {n} mois
+scheduledPost: Programmez cette publication
+scheduledDate: Date programmée
+cancelScheduledPost: Annulez la publication programmée
+scheduledPostAt: Cette publication sera envoyée {time}

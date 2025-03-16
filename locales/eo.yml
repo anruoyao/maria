@@ -1,0 +1,40 @@
+_lang_: "Esperanto"
+introFirefish: Bonvenon Firefish estas malfermkoda, ne centra socia platformo kiu
+  estos senpage ĉiam! 🚀
+headlineFirefish: Malfermkoda, ne centra socia platformo kiu estos senpage ĉiam 🚀
+monthAndDay: '{monato}/{tago}'
+search: Serĉi
+searchPlaceholder: Serĉi Firefish
+notifications: Sciigoj
+username: Uzantnomo
+password: Pasvorto
+forgotPassword: Forgesa pasvorto
+fetchingAsApObject: Kaptante de Federujo
+ok: O kej
+noNotes: Ne afiŝoj
+noNotifications: Ne sciigiloj
+openInWindow: Malfermu en fenestro
+profile: Profilo
+gotIt: Jam estas!
+cancel: Mezfini
+noThankYou: Ne dankon
+renotedBy: Potenci de {user}
+noAccountDescription: Tiu ĉi uzanto eĉ ne skribis ilia biografio.
+enterUsername: Tajpu uzantnomon
+instance: Servilo
+settings: Agordoj
+basicSettings: Bazaj Agordoj
+otherSettings: Aliaj Agordoj
+login: Ensaluti
+loggingIn: Ensalutante
+logout: Elsaluti
+timeline: Templinio
+signup: Registru
+favorites: Paĝosignoj
+unfavorite: Forigi el paĝosignoj
+uploading: Alŝutante...
+save: Konservi
+users: Uzantoj
+addUser: Aldoni uzanton
+addInstance: Aldoni servilon
+favorite: Aldoni al paĝosigno

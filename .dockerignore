@@ -1,0 +1,62 @@
+# Visual Studio Code
+.vscode
+
+# Intelij-IDEA
+.idea
+
+# Node.js
+node_modules
+**/node_modules
+report.*.json
+
+# Rust
+/target
+
+# Coverage
+coverage
+
+# config
+/.config
+
+# misskey
+built
+db
+elasticsearch
+redis
+npm-debug.log
+*.pem
+run.bat
+api-docs.json
+*.log
+*.code-workspace
+.DS_Store
+files
+ormconfig.json
+packages/backend/assets/instance.css
+
+# dockerignore custom
+.git
+.gitignore
+.gitattributes
+.weblate
+animated.svg
+compose.yml
+docker-compose.yml
+docker-compose.example.yml
+title.svg
+/.gitlab
+/ci
+/dev
+/docs
+/scripts
+!/scripts/copy-index.mjs
+!/scripts/copy-assets.mjs
+biome.json
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+Dockerfile
+Makefile
+README.md
+SECURITY.md
+patrons.json
+renovate.json

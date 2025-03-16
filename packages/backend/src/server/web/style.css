@@ -1,0 +1,128 @@
+/* atkinson-hyperlegible-regular - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/static-assets/fonts/atkinson-hyperlegible-v11-latin_latin-ext-regular.woff2")
+		format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--bg: rgb(17, 17, 27);
+		--fg: rgb(224, 222, 244);
+	}
+}
+
+#splash {
+	position: fixed;
+	z-index: 10000;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100vi;
+	block-size: 100vb;
+	cursor: wait;
+	background-color: var(--bg);
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+#splashIcon {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	inline-size: 64px;
+	block-size: 64px;
+	pointer-events: none;
+}
+
+#splashSpinner {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	display: inline-block;
+	inline-size: 28px;
+	block-size: 28px;
+	transform: translateY(110px);
+	display: none;
+	color: var(--accent);
+}
+#splashSpinner > .spinner {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 28px;
+	block-size: 28px;
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 1.5;
+}
+#splashSpinner > .spinner.bg {
+	opacity: 0.275;
+}
+#splashSpinner > .spinner.fg {
+	animation: splashSpinner 0.5s linear infinite;
+}
+
+@keyframes splashSpinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes tada {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%,
+	20% {
+		transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%,
+	60%,
+	80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@media (prefers-reduced-motion) {
+	#splashSpinner {
+		display: block;
+	}
+}
+
+#splashText {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	display: inline-block;
+	inline-size: 70%;
+	block-size: 0;
+	text-align: center;
+	padding-block-start: 100px;
+	font-family: "Atkinson Hyperlegible", sans-serif;
+}
