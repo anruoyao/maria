@@ -1,9 +1,9 @@
 {
-	"name": "firefish",
+	"name": "maria",
 	"version": "20241205",
 	"repository": {
 		"type": "git",
-		"url": "https://codeberg.org/firefish/firefish.git"
+		"url": "https://github.com/buka5587/maria.git"
 	},
 	"packageManager": "pnpm@9.9.0",
 	"private": true,
