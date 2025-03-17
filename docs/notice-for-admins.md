@@ -2,6 +2,12 @@
 
 You can skip intermediate versions when upgrading from an old version, but please read the notices and follow the instructions for each intermediate version before [upgrading](./upgrade.md).
 
+## v20250301
+
+### For all users
+
+修正了内容显示，基于`firefishv20241205`版本
+
 ## v20241205
 
 ### For systemd/pm2 users
