@@ -41,14 +41,14 @@
 					<MkInfo v-if="updateAvailable" warn class="info"
 						>{{ i18n.ts.updateAvailable }}
 						<a
-							href="https://codeberg.org/firefish/firefish/src/branch/main/docs/changelog.md"
+							href="https://github.com/buka5587/maria/blob/main/docs/changelog.md"
 							target="_bank"
 							class="_link"
 							>{{ i18n.ts.check }}</a
 						></MkInfo
 					>
 					<MkInfo warn class="info"
-						>Firefish is in maintenance mode.
+						>Maria目前还在处理Firefish烂摊子阶段，请坚决不要在生产环境使用！
 						<a
 							href="https://info.firefish.dev/notes/9xsukr38m3komd63"
 							target="_bank"
