@@ -5,7 +5,7 @@
 1. 检查[`docs/notice-for-admins.md`](./notice-for-admins.md)中的内容
 1. 停止服务运行
     ```sh
-    sudo systemctl stop your-firefish-service.service
+    sudo systemctl stop maria.service
     # 如果使用 pm2 则执行：pm2 stop firefish
     ```
 1. 拉取最新源代码
@@ -22,20 +22,6 @@
     ```
 1. 启动服务
     ```sh
-    sudo systemctl start your-firefish-service.service
+    sudo systemctl start maria.service
     # 如果使用 pm2 则执行：pm2 start firefish
-    ```
-
-## 适用于 Docker/Podman 用户
-
-1. 检查[`docs/notice-for-admins.md`](./notice-for-admins.md)中的内容
-1. 拉取最新容器镜像
-    ```sh
-    docker pull registry.firefish.dev/firefish/firefish:latest
-    # 如果使用 Podman 则执行：podman pull registry.firefish.dev/firefish/firefish:latest
-    ```
-1. 启动容器
-    ```sh
-    docker compose up --detach   # 后台运行容器
-    # 如果使用 Podman 则执行：podman-compose up --detach
     ```
