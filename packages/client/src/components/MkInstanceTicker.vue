@@ -36,7 +36,7 @@ const instance = props.instance ?? {
 	themeColor: (
 		document.querySelector('meta[name="theme-color-orig"]') as HTMLMetaElement
 	)?.content,
-	softwareName: "Firefish",
+	softwareName: "Maria",
 	softwareVersion: version,
 };
 
