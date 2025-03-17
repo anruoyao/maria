@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./title.svg" alt="Firefish logo" style="border-radius:50%" width="400"/>
 
-**🌎 Firefish is an open source, decentralized social media platform that's free forever! 🚀**
+**🌎 Firefish 是一个开源的去中心化社交媒体平台，永远免费！🚀**
 
 </div>
 
@@ -9,25 +9,24 @@
 
 <img src="./animated.svg" align="right" height="320px"/>
 
-Firefish is based off of Misskey, a powerful microblogging server on ActivityPub with features such as emoji reactions, a customizable web UI, rich chatting, and much more!
+Firefish 基于 Misskey 开发，是 ActivityPub 协议上强大的微博客平台，拥有表情反应、可定制网页界面、丰富聊天功能等特性！
 
 </div>
 
 <div style="clear: both;"></div>
 
-# Documents
+# 文档
 
-- [Installation guide](https://codeberg.org/firefish/firefish/src/branch/main/docs/install.md)
-- [Contributing guide](./CONTRIBUTING.md)
-- [Changelog](https://codeberg.org/firefish/firefish/src/branch/main/docs/changelog.md)
+- [安装指南](https://codeberg.org/firefish/firefish/src/branch/main/docs/install.md)
+- [贡献指南](./CONTRIBUTING.md)
+- [更新日志](https://codeberg.org/firefish/firefish/src/branch/main/docs/changelog.md)
 
-# Links
+# 相关链接
 
-- Matrix space: <https://matrix.to/#/#firefish-community:nitro.chat>
-- Weblate: <https://hosted.weblate.org/engage/firefish/>
+- Matrix 社群空间: <https://matrix.to/#/#firefish-community:nitro.chat>
+- 翻译平台 Weblate: <https://hosted.weblate.org/engage/firefish/>
 
-# Want to get involved? Great!
+# 想要参与贡献？太好了！
 
-- If you know how to program in TypeScript, Vue, or Rust, please read the [contributing guide](./CONTRIBUTING.md).
-- If you know a non-English language, translating Firefish on [Weblate](https://hosted.weblate.org/engage/firefish/) help bring Firefish to more people. No technical experience needed!
-
+- 如果您熟悉 TypeScript、Vue 或 Rust 编程，请阅读[贡献指南](./CONTRIBUTING.md)
+- 如果您掌握其他语言，通过[Weblate](https://hosted.weblate.org/engage/firefish/) 翻译 Firefish 可以帮助更多人使用（无需技术背景）

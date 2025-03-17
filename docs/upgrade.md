@@ -1,41 +1,41 @@
-# Upgrade instruction
+# 升级指南
 
-## For systemd/pm2 users
+## 适用于 systemd/pm2 用户
 
-1. Check [`docs/notice-for-admins.md`](./notice-for-admins.md)
-1. Stop the server
+1. 检查[`docs/notice-for-admins.md`](./notice-for-admins.md)中的内容
+1. 停止服务运行
     ```sh
     sudo systemctl stop your-firefish-service.service
-    # or pm2 stop firefish
+    # 如果使用 pm2 则执行：pm2 stop firefish
     ```
-1. Pull the latest source code
+1. 拉取最新源代码
     ```sh
-    git checkout -- packages/backend/assets
-    git pull --ff origin main
+    git checkout -- packages/backend/assets  # 恢复对assets目录的修改
+    git pull --ff origin main                # 快速合并方式更新代码
     ```
-1. Build Firefish and apply changes to the database
+1. 构建项目并应用数据库变更
     ```sh
-    corepack prepare pnpm@latest --activate
-    pnpm install --frozen-lockfile
-    NODE_ENV='production' NODE_OPTIONS='--max_old_space_size=3072' pnpm run rebuild
-    pnpm run migrate
+    corepack prepare pnpm@latest --activate  # 确保使用最新pnpm
+    pnpm install --frozen-lockfile          # 根据lockfile安装依赖
+    NODE_ENV='production' NODE_OPTIONS='--max_old_space_size=3072' pnpm run rebuild  # 生产环境构建
+    pnpm run migrate                        # 执行数据库迁移
     ```
-1. Start the server
+1. 启动服务
     ```sh
     sudo systemctl start your-firefish-service.service
-    # or pm2 start firefish
+    # 如果使用 pm2 则执行：pm2 start firefish
     ```
 
-## For Docker/Podman users
+## 适用于 Docker/Podman 用户
 
-1. Check [`docs/notice-for-admins.md`](./notice-for-admins.md)
-1. Pull the latest container image
+1. 检查[`docs/notice-for-admins.md`](./notice-for-admins.md)中的内容
+1. 拉取最新容器镜像
     ```sh
     docker pull registry.firefish.dev/firefish/firefish:latest
-    # or podman pull registry.firefish.dev/firefish/firefish:latest
+    # 如果使用 Podman 则执行：podman pull registry.firefish.dev/firefish/firefish:latest
     ```
-1. Start the container
+1. 启动容器
     ```sh
-    docker compose up --detach
-    # or podman-compose up --detach
+    docker compose up --detach   # 后台运行容器
+    # 如果使用 Podman 则执行：podman-compose up --detach
     ```

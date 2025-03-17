@@ -1,5 +1,5 @@
-# API Documentation
+# API 文档
 
-You can find interactive API documentation at any Firefish instance /api-doc endpoint. By the way, API console can be found at /api-console endpoint.
+您可以在任意 Firefish 实例的 `/api-doc` 端点查看交互式 API 文档。此外，API 控制台位于 `/api-console` 端点。
 
-You can also find more about firefish-js [here](../packages/firefish-js/README.md).
+关于 firefish-js 的更多信息请[查阅此处](../packages/firefish-js/README.md)。

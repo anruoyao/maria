@@ -1,482 +1,212 @@
-# Install Firefish
-
-:warning: **Firefish is in maintenance mode.** [(announcement)](https://info.firefish.dev/notes/9xsukr38m3komd63)
-
-## Dependencies
-
-Firefish depends on the following software.
-
-### Runtime dependencies
-
-- At least [NodeJS](https://nodejs.org/en/) v18.20.0 (v20/v22 recommended)
-- At least [PostgreSQL](https://www.postgresql.org/) v12 (v16 recommended) with [PGroonga](https://pgroonga.github.io/) extension
-- At least [Redis](https://redis.io/) v7 or [Valkey](https://valkey.io/) v7
-- Web Proxy (one of the following)
-  - Caddy (recommended)
-  - Nginx (recommended)
-  - Apache
-- [FFmpeg](https://ffmpeg.org/) for video transcoding (**optional**)
-- Caching server (**optional**, one of the following)
-  - [DragonflyDB](https://www.dragonflydb.io/)
-  - [KeyDB](https://keydb.dev/)
-  - Another [Redis](https://redis.io/) / [Valkey](https://valkey.io/) server
-
-### Build dependencies
-
-- At least [Rust](https://www.rust-lang.org/) v1.74
-- C/C++ compiler & build tools (like [GNU Make](https://www.gnu.org/software/make/))
-  - `build-essential` on Debian/Ubuntu Linux
-  - `base-devel` on Arch Linux
-  - `"Development Tools"` on Fedora/Red Hat Linux
-- [Python 3](https://www.python.org/)
-- [Perl](https://www.perl.org/)
-
-This document shows an example procedure for installing these dependencies and Firefish on Debian 12. Note that there is much room for customizing the server setup; this document merely demonstrates a simple installation.
-
-### Install on non-Linux systems
-
-We don't test Firefish on non-Linux systems, so please install Firefish on such an environment **only if you can address any problems yourself**. There is absolutely no support. That said, it is possible to install Firefish on some non-Linux systems.
-
-<details>
-
-<summary>Possible setup on FreeBSD (as of version <code>20240725</code>)</summary>
-
-You can install Firefish on FreeBSD by adding these extra steps to the standard instructions:
-
-1. Install `vips` package
-2. Add the following block to [`package.json`](../package.json)
-    ```json
-      "pnpm": {
-        "overrides": {
-          "rollup": "npm:@rollup/wasm-node"
-        }
-      }
-    ```
-3. Create an rc script for Firefish
-    ```sh
-    #!/bin/sh
-
-    # PROVIDE: firefish
-    # REQUIRE: DAEMON redis caddy postgresql
-    # KEYWORD: shutdown
-
-    . /etc/rc.subr
-
-    name=firefish
-    rcvar=firefish_enable
-
-    desc="Firefish daemon"
-
-    load_rc_config ${name}
-
-    : ${firefish_chdir:="/path/to/firefish/local/repository"}
-    : ${firefish_env:="npm_config_cache=/tmp NODE_ENV=production NODE_OPTIONS=--max-old-space-size=3072"}
-
-    pidfile="/var/run/${name}.pid"
-    command=/usr/sbin/daemon
-    command_args="-f -S -u firefish -P ${pidfile} /usr/local/bin/pnpm run start"
-
-    run_rc_command "$1"
-    ```
-
-</details>
-
-Please let us know if you deployed Firefish on a curious environment :smile:
-
-### Use Docker/Podman containers
-
-If you want to use the pre-built container image, please refer to [`install-container.md`](./install-container.md).
-
-## 1. Install dependencies
-
-Make sure that you can use the `sudo` command before proceeding.
-
-### Utilities
+## 一，系统更新
 
 ```sh
-sudo apt update
-sudo apt install build-essential python3 curl wget git lsb-release
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y curl wget git ufw
 ```
 
-### Node.js and pnpm
+## 二，核心依赖安装
 
-Instructions can be found at [this repository](https://github.com/nodesource/distributions).
+1.Node.js 20.x
 
 ```sh
-NODE_MAJOR=20
-curl -fsSL "https://deb.nodesource.com/setup_${NODE_MAJOR}.x" | sudo -E bash -
-sudo apt install nodejs
-
-# check version
-node --version
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo corepack enable && corepack prepare pnpm@latest --activate
 ```
 
-You also need to enable `pnpm`.
-```sh
-sudo corepack enable
-corepack prepare pnpm@latest --activate
+2.PostgreSQL 16 + PGroonga
 
-# check version
-pnpm --version
-```
-
-### PostgreSQL and PGroonga
-
-PostgreSQL install instructions can be found at [this page](https://www.postgresql.org/download/).
+添加 PostgreSQL 官方源
 
 ```sh
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
 sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update
-sudo apt install postgresql-16
-
-sudo systemctl enable --now postgresql
-
-# check version
-psql --version
+sudo apt install -y postgresql-16
 ```
 
-PGroonga install instructions can be found at [this page](https://pgroonga.github.io/install/).
+安装 PGroonga 扩展
 
 ```sh
-wget "https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
-sudo apt install "./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
+sudo apt install -y "./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
 wget "https://packages.groonga.org/debian/groonga-apt-source-latest-$(lsb_release --codename --short).deb"
-sudo apt install "./groonga-apt-source-latest-$(lsb_release --codename --short).deb"
+sudo apt install -y "./groonga-apt-source-latest-$(lsb_release --codename --short).deb"
 sudo apt update
-sudo apt install postgresql-16-pgdg-pgroonga
-
-rm "apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb" "groonga-apt-source-latest-$(lsb_release --codename --short).deb"
+sudo apt install -y postgresql-16-pgdg-pgroonga
 ```
 
-### Redis
+清理安装包
 
-Instructions can be found at [this page](https://redis.io/docs/install/install-redis/).
+```sh
+rm *-apt-source-latest-*.deb
+```
+
+2.1创建数据库用户
+
+```sh
+sudo -u postgres createuser --no-createdb --no-createrole --no-superuser --encrypted --pwprompt maria
+```
+
+按提示设置密码
+
+2.2创建数据库
+
+```sh
+sudo -u postgres createdb --encoding='UTF8' --owner=maria maria_db
+```
+
+2.3启用 PGroonga 扩展
+
+```sh
+sudo -u postgres psql -d maria_db -c "CREATE EXTENSION pgroonga;"
+```
+
+3.Redis 7.x
 
 ```sh
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt update
-sudo apt install redis
-
+sudo apt update && sudo apt install -y redis
 sudo systemctl enable --now redis-server
-
-# check version
-redis-cli --version
 ```
 
-### FFmpeg
+4.安装构建依赖
+
+* At least [Rust](https://www.rust-lang.org/) v1.74
+* C/C++ compiler & build tools (like [GNU Make](https://www.gnu.org/software/make/))
+  
+  * `build-essential` on Debian/Ubuntu Linux
+  * `base-devel` on Arch Linux
+  * `"Development Tools"` on Fedora/Red Hat Linux
+* [Python 3](https://www.python.org/)
+* [Perl](https://www.perl.org/)
+* 演示Debian/Ubuntu：
 
 ```sh
-sudo apt install ffmpeg
+sudo apt-get update
+sudo apt-get install build-essential
 ```
 
-## 2. Set up a database
+## 三，Maria 部署
 
-1. Create a database user
-    ```sh
-    sudo -u postgres createuser --no-createdb --no-createrole --no-superuser --encrypted --pwprompt firefish
-    ```
-    If you forgot the password you typed, you can reset it by executing `sudo -u postgres psql -c "ALTER USER firefish PASSWORD 'password';"`.
-2. Create a database
-    ```sh
-    sudo -u postgres createdb --encoding='UTF8' --owner=firefish firefish_db
-    ```
-3. Enable PGronnga extension
-    ```sh
-    sudo -u postgres psql --command='CREATE EXTENSION pgroonga;' --dbname=firefish_db
-    ```
-
-## 3. Configure Firefish
-
-1. Create an user for Firefish and switch user
-   ```sh
-   sudo useradd --create-home --user-group --shell /bin/bash firefish
-   sudo su --login firefish
-   
-   # check the current working directory
-   # the result should be /home/firefish
-   pwd
-   ```
-1. Install Rust toolchain
-
-    Instructions can be found at [this page](https://www.rust-lang.org/tools/install).
-    
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    . "${HOME}/.cargo/env"
-    
-    # check version
-    cargo --version
-    ```
-3. Clone the Firefish repository
-    ```sh
-    git clone --branch=main https://codeberg.org/firefish/firefish.git
-    ```
-1. Copy and edit the config file
-    ```sh
-    cd firefish
-    cp .config/example.yml .config/default.yml
-    nano .config/default.yml
-    ```
-
-    ```yaml
-    url: https://your-server-domain.example.com  # change here
-    port: 3000
-    
-    db:
-      host: localhost
-      port: 5432
-      db: firefish_db
-      user: firefish
-      pass: your-database-password  # and here
-    ```
-
-## 4. Build Firefish
-
-1. Build
-    ```sh
-    pnpm install --frozen-lockfile
-    NODE_ENV=production NODE_OPTIONS='--max-old-space-size=3072' pnpm run build
-    ```
-1. Execute database migrations
-    ```sh
-    pnpm run migrate
-    ```
-1. Logout from `firefish` user
-    ```sh
-    exit
-    ```
-
-## 5. Preparation for publishing a server
-
-### 1. Set up a firewall
-
-To expose your server securely, you may want to set up a firewall. We use [ufw](https://launchpad.net/ufw) in this instruction.
+1.创建专用用户
 
 ```sh
-sudo apt install ufw
-# if you use SSH
-# SSH_PORT=22
-# sudo ufw limit "${SSH_PORT}/tcp"
-sudo ufw default deny
-sudo ufw allow 80
-sudo ufw allow 443
-sudo ufw --force enable
-
-# check status
-sudo ufw status
+   sudo useradd -m -s /bin/bash maria
+   sudo su - maria
 ```
 
-### 2. Set up a reverse proxy
-
-In this instruction, we use [Caddy](https://caddyserver.com/) to make the Firefish server accesible from internet. However, you can also use [Nginx](https://nginx.org/en/) if you want ([example Nginx config file](./firefish.nginx.conf)).
-
-1. Install Caddy
-    ```sh
-    sudo apt install debian-keyring debian-archive-keyring apt-transport-https
-    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
-    sudo apt update
-    sudo apt install caddy
-
-    # check version
-    caddy version
-    ```
-1. Replace the config file
-    ```sh
-    sudo mv /etc/caddy/Caddyfile /etc/caddy/Caddyfile.bak
-    sudo nano /etc/caddy/Caddyfile
-    ```
-
-    ```Caddyfile
-    your-server-domain.example.com {
-    	reverse_proxy http://127.0.0.1:3000
-    
-    	log {
-    		output file /var/log/caddy/firefish.log
-    	}
-    }
-    ```
-1. Restart Caddy
-    ```sh
-    sudo systemctl restart caddy
-    ```
-
-## 6. Publish your Firefish server
-
-1. Create a service file
-    ```sh
-    sudo nano /etc/systemd/system/firefish.service
-    ```
-
-    ```service
-    [Unit]
-    Description=Firefish daemon
-    Requires=redis.service caddy.service postgresql.service
-    After=redis.service caddy.service postgresql.service network-online.target
-
-    [Service]
-    Type=simple
-    User=firefish
-    Group=firefish
-    UMask=0027
-    ExecStart=/usr/bin/pnpm run start
-    WorkingDirectory=/home/firefish/firefish
-    Environment="NODE_ENV=production"
-    Environment="npm_config_cache=/tmp"
-    Environment="NODE_OPTIONS=--max-old-space-size=3072"
-    # uncomment the following line if you use jemalloc (note that the path varies on different environments)
-    # Environment="LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
-    StandardOutput=journal
-    StandardError=journal
-    SyslogIdentifier=firefish
-    TimeoutSec=60
-    Restart=always
-
-    CapabilityBoundingSet=
-    DevicePolicy=closed
-    NoNewPrivileges=true
-    LockPersonality=true
-    PrivateDevices=true
-    PrivateIPC=true
-    PrivateMounts=true
-    PrivateUsers=true
-    ProtectClock=true
-    ProtectControlGroups=true
-    ProtectHostname=true
-    ProtectKernelTunables=true
-    ProtectKernelModules=true
-    ProtectKernelLogs=true
-    ProtectProc=invisible
-    RestrictNamespaces=true
-    RestrictRealtime=true
-    RestrictSUIDSGID=true
-    SecureBits=noroot-locked
-    SystemCallArchitectures=native
-    SystemCallFilter=~@chown @clock @cpu-emulation @debug @ipc @keyring @memlock @module @mount @obsolete @privileged @raw-io @reboot @resources @setuid @swap
-    SystemCallFilter=capset pipe pipe2 setpriority
-
-    [Install]
-    WantedBy=multi-user.target
-    ```
-1. Start Firefish
-    ```sh
-    sudo systemctl enable --now firefish
-    ```
-
-# Maintain the server
-
-## Upgrade Firefish version
-
-Please refer to the [upgrade instruction](./upgrade.md). Be sure to switch to `firefish` user and go to the Firefish directory before executing the `git` command:
+2.克隆仓库
 
 ```sh
-sudo su --login firefish
-cd ~/firefish
+git clone https://github.com/buka5587/maria.git
+cd maria
 ```
 
-## Rotate logs
-
-As the server runs longer and longer, the size of the log files increases, filling up the disk space. To prevent this, you should set up a log rotation (removing old logs automatically).
-
-You can edit the `SystemMaxUse` value in the `[journal]` section of `/etc/systemd/journald.conf` to do it:
-
-```conf
-[journal]
-... (omitted)
-SystemMaxUse=500M
-...
-```
-
-Make sure to remove the leading `#` to uncomment the line. After editing the config file, you need to restart `systemd-journald` service.
+3.配置文件
 
 ```sh
-sudo systemctl restart systemd-journald
+cp .config/example.yml .config/default.yml
+nano .config/default.yml
 ```
 
-It is also recommended that you change the [PGroonga log level](https://pgroonga.github.io/reference/parameters/log-level.html). The default level is `notice`, but this is too verbose for daily use.
-
-To control the log level, add this line to your `postgresql.conf`:
-
-```conf
-pgroonga.log_level = error
-```
-
-You can check the `postgresql.conf` location by this command:
+4.安装 Rust 工具链
 
 ```sh
-sudo --user=postgres psql --command='SHOW config_file'
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
 ```
 
-The PGroonga log file (`pgroonga.log`) is located under this directory:
+## 四，编译构建
+
+1.构建命令
+
+先安装依赖
 
 ```sh
-sudo --user=postgres psql --command='SHOW data_directory'
+pnpm install
 ```
 
-## Tune database configuration
-
-The default PostgreSQL configuration is not suitable for running a Firefish server. So, it is highly recommended that you use [PGTune](https://pgtune.leopard.in.ua/) to tweak the configuration.
-
-Here is an example set of parameters you can provide to PGTune:
-
-|             Parameter | Value                                                   |
-|----------------------:|---------------------------------------------------------|
-|            DB version | 16 (your PostgreSQL major version)                      |
-|               OS Type | Linux                                                   |
-|               DB Type | Data warehouse                                          |
-|          Total Memory | [total physical memory] minus 700 MB                    |
-|        Number of CPUs | number of CPU threads (or lower value if you have many) |
-| Number of connections | 200                                                     |
-|          Data storage | SSD storage                                             |
-
-Since a Firefish server is not a dedicated database server, be sure to leave some memory space for other software such as Firefish, Redis, and reverse proxy.
-
-Once you have entered the appropriate values for your environment, click the "Generate" button to generate a configuration and replace the values in `postgresql.conf` with the suggested values.
-
-After that, you need to restart the PostgreSQL service.
+构建命令
 
 ```sh
-sudo systemctl stop firefish
-sudo systemctl restart postgresql
-sudo systemctl start firefish
+NODE_OPTIONS='--max-old-space-size=3584' NODE_ENV=production pnpm run build
 ```
 
-## VACUUM your database
-
-If the database runs long, accumulated "garbage" can degrade its performance or cause problems. To prevent this, you should `VACUUM` your database regularly.
+2.数据库初始化
 
 ```sh
-sudo systemctl stop firefish
-sudo --user=postgres psql --dbname=firefish_db --command='VACUUM FULL VERBOSE ANALYZE'
-sudo systemctl start firefish
+pnpm run migrate
 ```
 
-Note that this operation takes some time.
+## 五、服务管理(不要忘记切换你的执行用户)
 
-## Customize
+1.创建 systemd 服务
 
-- To add custom CSS for all users, edit `./custom/assets/instance.css`.
-- To add static assets (such as images for the splash screen), place them in the `./custom/assets/` directory. They'll then be available on `https://yourserver.tld/static-assets/filename.ext`.
-- To add custom locales, place them in the `./custom/locales/` directory. If you name your custom locale the same as an existing locale, it will overwrite it. If you give it a unique name, it will be added to the list. Also make sure that the first part of the filename matches the locale you're basing it on. (Example: `en-FOO.yml`)
-- To add custom error images, place them in the `./custom/assets/badges` directory, replacing the files already there.
-- To add custom sounds, place only mp3 files in the `./custom/assets/sounds` directory.
-- To update custom assets without rebuilding, just run `pnpm run build:assets`.
-- To block ChatGPT, CommonCrawl, or other crawlers from indexing your instance, uncomment the respective rules in `./custom/robots.txt`.
+```sh
+sudo nano /etc/systemd/system/maria.service
+```
 
-## Tips & Tricks
+内容：
 
-- When editing the config file, please don't fill out the settings at the bottom. They're designed *only* for managed hosting, not self hosting. Those settings are much better off being set in Firefish's control panel.
-- Port 3000 (used in the default config) might be already used on your server for something else. To find an open port for Firefish, run `for p in {3000..4000}; do ss -tlnH | tr -s ' ' | cut -d" " -sf4 | grep -q "${p}$" || echo "${p}"; done | head -n 1`. Replace 3000 with the minimum port and 4000 with the maximum port if you need it.
-- We'd recommend you use a S3 Bucket/CDN for Object Storage, especially if you use containers.
-- When using object storage, setting a proper `Access-Control-Allow-Origin` response header is highly recommended.
-- We'd recommend against using CloudFlare, but if you do, make sure to turn code minification off.
-- For push notifications, run `npx web-push generate-vapid-keys`, then put the public and private keys into Control Panel > General > ServiceWorker.
-- For translations, make a [DeepL](https://deepl.com) account and generate an API key, then put it into Control Panel > General > DeepL Translation.
-- To add another admin account:
-  - Go to the user's page > 3 Dots > About > Moderation > turn on "Moderator"
-  - Go back to Overview > click the clipboard icon next to the ID
-  - Run `psql -d firefish` (or whatever the database name is)
-  - Run `UPDATE "user" SET "isAdmin" = true WHERE id='999999';` (replace `999999` with the copied ID)
-  - Restart your Firefish server
+```sh
+[Unit]
+Description=maria daemon
+Requires=redis.service postgresql.service
+After=redis.service postgresql.service network-online.target
+
+[Service]
+Type=simple
+User=maria
+Group=maria
+UMask=0027
+ExecStart=/usr/bin/pnpm run start
+WorkingDirectory=/home/maria/maria
+Environment="NODE_ENV=production"
+Environment="npm_config_cache=/tmp"
+Environment="NODE_OPTIONS=--max-old-space-size=3072"
+
+#uncomment the following line if you use jemalloc (note that the path varies on different environments)
+
+#Environment="LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=maria
+TimeoutSec=60
+Restart=always
+
+CapabilityBoundingSet=
+DevicePolicy=closed
+NoNewPrivileges=true
+LockPersonality=true
+PrivateDevices=true
+PrivateIPC=true
+PrivateMounts=true
+PrivateUsers=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHostname=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectProc=invisible
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SecureBits=noroot-locked
+SystemCallArchitectures=native
+SystemCallFilter=~@chown @clock @cpu-emulation @debug @ipc @keyring @memlock @module @mount @obsolete @privileged @raw-io @reboot @resources @setuid @swap
+SystemCallFilter=capset pipe pipe2 setpriority
+
+[Install]
+WantedBy=multi-user.target
+```
+
+2.启动服务
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl enable --now maria
+```

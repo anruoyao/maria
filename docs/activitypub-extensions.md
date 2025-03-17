@@ -1,10 +1,10 @@
-# Firefish's ActivityPub extensions
+# Firefish 的 ActivityPub 扩展
 
-These are the extensions to ActivityPub that Firefish implements. This page uses [compact IRIs](https://www.w3.org/TR/json-ld/#dfn-compact-iri). The `firefish` prefix is used to refer to `https://firefish.dev/ns#`.
+此处列举 Firefish 实现的 ActivityPub 协议扩展。本页使用[紧凑型IRI](https://www.w3.org/TR/json-ld/#dfn-compact-iri)表示法。其中 `firefish` 前缀指向 `https://firefish.dev/ns#` 命名空间。
 
 ## speakAsCat
 
-- Compact IRI: `firefish:speakAsCat`
-- Canonical IRI: `https://firefish.dev/ns#speakAsCat`
+- 紧凑型IRI: `firefish:speakAsCat`
+- 标准IRI: `https://firefish.dev/ns#speakAsCat`
 
-Used on actors to indicate that they not only identify as a cat, but also want to have their text be transformed to speak like one, expressed as a boolean value. If this property is set to true, displaying the actor’s posts will make them speak with “nya” instead of “na” and other cat-related text mannerisms. Used in combination with [misskey:isCat](https://misskey-hub.net/ns/#iscat).
+用于用户对象 (Actor)，表示该用户不仅自认为是猫，还希望系统自动将其文本转换为"喵言喵语"（如将句末助词"な"转换为"にゃ"等猫系语言风格），以布尔值形式表示。当该属性设为 true 时，展示用户帖子时会启用猫语转换功能。需与 [misskey:isCat](https://misskey-hub.net/ns/#iscat) 属性配合使用。
