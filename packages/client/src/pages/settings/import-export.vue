@@ -22,7 +22,7 @@
 					><i :class="icon('ph-upload-simple')"></i
 				></template>
 				<FormRadios v-model="importType" class="_formBlock">
-					<option value="firefish">Firefish/Misskey</option>
+					<option value="firefish">Firefish(Maria)/Misskey</option>
 					<option value="mastodon">Mastodon/Akkoma/Pleroma</option>
 				</FormRadios>
 				<MkButton

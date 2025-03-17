@@ -70,9 +70,9 @@
 						<small
 							>Powered by
 							<a
-								href="https://codeberg.org/firefish/firefish"
+								href="https://github.com/buka5587/maria"
 								target="_blank"
-								>Firefish</a
+								>Maria</a
 							></small
 						>
 					</div>
