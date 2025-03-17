@@ -1,7 +1,7 @@
 _lang_: "Italiano"
 headlineFirefish: "Una piattaforma social open source, decentralizzata che sarà gratuita
   per sempre! 🚀"
-introFirefish: "Benvenuti! Firefish è una piattaforma social open source, decentralizzata
+introFirefish: "Benvenuti! Maria è una piattaforma social open source, decentralizzata
   che sarà sempre gratuita! 🚀"
 monthAndDay: "{day}/{month}"
 search: "Cerca"
@@ -150,7 +150,7 @@ cacheRemoteFilesDescription: "Disabilitando questa opzione, i file remoti verran
 flagAsBot: "Questo account è automatizzato"
 flagAsBotDescription: "Se l'account esegue principalmente operazioni automatiche,
   attiva quest'opzione. Quando attivata, permette agli sviluppatori di prevenire catene
-  d’interazione senza fine con altri account automatizzati. Inoltre imposta Firefish
+  d’interazione senza fine con altri account automatizzati. Inoltre imposta Maria
   perché tratti questo account come automatizzato."
 flagAsCat: "Sei un gatto? 😺"
 flagAsCatDescription: "Ti compariranno le orecchie e parlerai come un gatto!"
@@ -214,7 +214,7 @@ noUsers: "Nessun utente trovato"
 editProfile: "Modifica profilo"
 noteDeleteConfirm: "Vuoi eliminare questo post?"
 pinLimitExceeded: "Hai già fissato il massimo possibile di post"
-intro: "L'installazione di Firefish è finita! Si prega di creare un account amministratore."
+intro: "L'installazione di Maria è finita! Si prega di creare un account amministratore."
 done: "Fine"
 processing: "Elaborazione in corso"
 preview: "Anteprima"
@@ -394,7 +394,7 @@ exploreFediverse: "Esplora il Fediverso"
 popularTags: "Tag di tendenza"
 userList: "Liste"
 about: "Informazioni"
-aboutFirefish: "Informazioni su Firefish"
+aboutFirefish: "Informazioni su Maria"
 administrator: "Amministratore"
 token: "Token"
 twoStepAuthentication: "Autenticazione a due fattori"
@@ -548,7 +548,7 @@ descendingOrder: "Discendente"
 scratchpad: "Scratchpad"
 scratchpadDescription: "Lo Scratchpad offre un ambiente per esperimenti di AiScript.
   Puoi scrivere, eseguire e verificare i risultati dell'interazione del codice con
-  Firefish."
+  Maria."
 output: "Output"
 script: "Script"
 disablePagesScript: "Disabilita AiScript nelle pagine"
@@ -677,7 +677,7 @@ createNew: "Crea"
 optional: "Opzionale"
 createNewClip: "Nuova clip"
 public: "Pubblica"
-i18nInfo: "Firefish è tradotto in diverse lingue da volontari. Anche tu puoi contribuire
+i18nInfo: "Maria è tradotto in diverse lingue da volontari. Anche tu puoi contribuire
   su {link}."
 manageAccessTokens: "Gestisci token di accesso"
 accountInfo: "Informazioni account"
@@ -733,7 +733,7 @@ nUsers: "{n} utenti"
 nNotes: "{n} post"
 sendErrorReports: "Invia segnalazioni di errori"
 sendErrorReportsDescription: "Quando abilitato, se si verifica un problema, informazioni
-  dettagliate sugli errori verranno condivise con Firefish in modo da aiutare a migliorare
+  dettagliate sugli errori verranno condivise con Maria in modo da aiutare a migliorare
   la qualità del software.\nSaranno inclusi dati come la versione del sistema operativo,
   il tipo di navigatore web che usi, la cronologia delle attività, ecc."
 myTheme: "Il mio tema"
@@ -826,7 +826,7 @@ hashtags: "Hashtag"
 troubleshooting: "Risoluzione problemi"
 useBlurEffect: "Utilizza effetto sfocatura per l'interfaccia utente"
 learnMore: "Maggiori informazioni"
-misskeyUpdated: "Firefish è stato aggiornato!"
+misskeyUpdated: "Maria è stato aggiornato!"
 whatIsNew: "Mostra le informazioni sull'aggiornamento"
 translate: "Traduzione"
 translatedFrom: "Tradotto da {x}"
@@ -927,16 +927,16 @@ _registry:
   createKey: "Crea chiave"
   scope: Ambito
 _aboutFirefish:
-  about: "Firefish è un fork di Misskey creato da ThatOneCalculator, che è in sviluppo
+  about: "Maria è un fork di Misskey creato da ThatOneCalculator, che è in sviluppo
     dal 2022."
   contributors: "Principali collaboratori"
   allContributors: "Tutti i collaboratori"
   source: "Codice sorgente"
-  translation: "Traduzione di Firefish"
-  donate: "Sostieni Firefish"
+  translation: "Traduzione di Maria"
+  donate: "Sostieni Maria"
   misskeyContributors: Contributori di Misskey
-  donateTitle: Ti piace Firefish?
-  pleaseDonateToFirefish: Con una donazione puoi supportare lo sviluppo di Firefish.
+  donateTitle: Ti piace Maria?
+  pleaseDonateToFirefish: Con una donazione puoi supportare lo sviluppo di Maria.
   pleaseDonateToHost: Considera anche una donazione al server che ti ospita, {host},
     per contribuire ai costi che sostiene.
   donateHost: Dona a {host}
@@ -947,8 +947,8 @@ _nsfw:
 _mfm:
   cheatSheet: "Riepilogo comandi MFM"
   intro: "MFM è un linguaggio Markdown particolare che si può usare in diverse parti
-    di Firefish. Qui puoi visualizzare a colpo d'occhio tutta la sintassi MFM utile."
-  dummy: "Firefish espande il mondo del Fediverso"
+    di Maria. Qui puoi visualizzare a colpo d'occhio tutta la sintassi MFM utile."
+  dummy: "Maria espande il mondo del Fediverso"
   mention: "Menzione"
   mentionDescription: "Si può menzionare un utente specifico digitando il suo nome
     utente subito dopo il segno @."
@@ -1179,7 +1179,7 @@ _time:
   hour: "ore"
   day: "giorni"
 _tutorial:
-  titolo: "Come usare Firefish"
+  titolo: "Come usare Maria"
   step1_1: "Ciao!"
   step1_2: "Impostiamo alcune preferenze. Sarà tutto operativo in men che non si dica!"
   step2_1: "Per prima cosa, completa il tuo profilo."
@@ -1204,12 +1204,12 @@ _tutorial:
   step5_7: "La timeline Globale {icon} è quella in cui si possono vedere i post di
     ogni altro server collegato."
   step6_1: "Allora, cos'è questo posto?"
-  step6_2: "Beh, adesso non sei semplicemente parte di Firefish. Sei in un portale
+  step6_2: "Beh, adesso non sei semplicemente parte di Maria. Sei in un portale
     del Fediverso, una rete interconnessa di migliaia di server."
-  step6_3: "Ogni server funziona in modo diverso e non tutti i eseguono Firefish.
+  step6_3: "Ogni server funziona in modo diverso e non tutti i eseguono Maria.
     Questo sì però! Sembra complicato, ma diventerà subito chiaro con un po' di pratica."
   step6_4: "Ora vai, esplora e divertiti!"
-  title: Come usare Firefish
+  title: Come usare Maria
 _2fa:
   registerTOTP: "Aggiungi app di autenticazione"
   securityKeyName: Scegli un nome per la chiave
@@ -1871,13 +1871,13 @@ removeRecipient: Rimuovi destinatario
 removeMember: Rimuovi membro
 reactionPickerSkinTone: Tono della pelle preferito negli emoji
 _experiments:
-  postImportsCaption: Permette agli utenti di importare i post da vecchi account Firefish,
+  postImportsCaption: Permette agli utenti di importare i post da vecchi account Maria,
     Misskey, Mastodon, Akkoma e Pleroma. Potrebbe causare rallentamenti durante il
     caricamento.
   enablePostImports: Abilita l'importazione di post
   title: Esperimenti
 moveTo: Migra l'account corrente verso un nuovo account
-searchPlaceholder: Cerca in Firefish
+searchPlaceholder: Cerca in Maria
 listsDesc: Le liste ti permettono di avere delle timeline con utenti specifici. Le
   trovi sulla pagina timeline.
 flagSpeakAsCat: Parla come un gatto
@@ -1935,7 +1935,7 @@ noInstances: Non ci sono server
 antennaInstancesDescription: Elenca un server per riga
 switchAccount: Cambia account
 swipeOnMobile: Permetti di fare swipe tra le pagine
-showAdminUpdates: Segnala nuove versioni di Firefish (solo admin)
+showAdminUpdates: Segnala nuove versioni di Maria (solo admin)
 selectChannel: Seleziona un canale
 clipsDesc: I clip sono come segnalibri categorizzati e condivisibili. Puoi creare
   clip dal menu di ciascun post.
@@ -2044,14 +2044,14 @@ type: Tipo
 fast: Veloce
 remoteOnly: Solo remoto
 showAds: Mostra i banner della comunità
-showUpdates: Mostra un popup mentre Firefish si aggiorna
+showUpdates: Mostra un popup mentre Maria si aggiorna
 recommendedInstancesDescription: Server suggeriti, uno per riga, nell'ordine in cui
   saranno mostrati nella timeline dei suggeriti.
 beta: Beta
 neverShow: Non mostrare più
 remindMeLater: Non adesso
 noGraze: Per favore disattiva l'estenzione del browser "Graze for Mastodon", perché
-  interferisce con Firefish.
+  interferisce con Maria.
 silencedWarning: Vedi questa pagina perché gli utenti sono su un server che il tuo
   admin ha silenziato, quindi potrebbero essere spam.
 isBot: Questo account è automatizzato
@@ -2063,7 +2063,7 @@ defaultReaction: Emoji predefinita per le reazioni sui post ricevuti e inviati
 license: Licenza
 isModerator: Moderatore
 isAdmin: Amministratore
-isPatron: Firefish Patron
+isPatron: Maria Patron
 customKaTeXMacroDescription: 'Crea delle macro per scrivere facilmente espressioni
   matematiche! La notazione rispetta i comandi definiti in LaTeX ed è scritta come
   \newcommand{\ name}{content} oppure \newcommand{\name}[number of arguments]{content}.
@@ -2202,4 +2202,4 @@ replyMute: Silenzia le risposte nelle timeline
 replyUnmute: Non silenziare le risposte nelle timeline
 useCdn: Carica gli asset da CDN
 useCdnDescription: Carica alcuni asset statici come Twemoji dal CDN JSDelivr invece
-  che da questo server Firefish.
+  che da questo server Maria.

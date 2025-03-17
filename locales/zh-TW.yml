@@ -1,6 +1,6 @@
 _lang_: "繁體中文"
 headlineFirefish: "貼文連繫網路"
-introFirefish: "歡迎！ Firefish是一個開源、去中心化且永遠免費的社群網路平台！🚀"
+introFirefish: "歡迎！ Maria是一個開源、去中心化且永遠免費的社群網路平台！🚀"
 monthAndDay: "{month}月 {day}日"
 search: "搜尋"
 notifications: "通知"
@@ -152,7 +152,7 @@ cacheRemoteFilesDescription: "禁用此設定會停止遠端檔案的緩存，�
 markLocalFilesNsfwByDefault: "將所有新增本地檔案預設標註為敏感內容"
 markLocalFilesNsfwByDefaultDescription: "無論此設置如何，使用者都可以自行刪除檔案的敏感內容標誌。現有檔案也不受影響。"
 flagAsBot: "標記此帳號為自動化帳號"
-flagAsBotDescription: "如果本帳戶是由程式控制，請啟用此選項。此選項將作為一個標示以幫助其他開發者防止自動化帳號之間產生無限互動的行為，並會調整Firefish內部系統將此帳號識別為自動化帳號。"
+flagAsBotDescription: "如果本帳戶是由程式控制，請啟用此選項。此選項將作為一個標示以幫助其他開發者防止自動化帳號之間產生無限互動的行為，並會調整Maria內部系統將此帳號識別為自動化帳號。"
 flagAsCat: "你是喵咪嗎？w😺"
 flagAsCatDescription: "如果想將本帳戶標示為一隻貓，請開啟此標示！"
 flagShowTimelineReplies: "在時間軸上顯示貼文的回覆"
@@ -211,7 +211,7 @@ noUsers: "沒有任何使用者"
 editProfile: "編輯個人檔案"
 noteDeleteConfirm: "確定刪除此貼文嗎？"
 pinLimitExceeded: "不能置頂更多貼文了"
-intro: "Firefish 部署完成！請建立管理員帳戶。"
+intro: "Maria 部署完成！請建立管理員帳戶。"
 done: "完成"
 processing: "處理中"
 preview: "預覽"
@@ -388,7 +388,7 @@ exploreFediverse: "探索聯邦世界"
 popularTags: "熱門標籤"
 userList: "清單"
 about: "資訊"
-aboutFirefish: "關於 Firefish"
+aboutFirefish: "關於 Maria"
 administrator: "管理員"
 token: "權杖"
 twoStepAuthentication: "兩階段驗證"
@@ -535,7 +535,7 @@ sort: "排序"
 ascendingOrder: "昇冪"
 descendingOrder: "降冪"
 scratchpad: "AiScript控制台"
-scratchpadDescription: "AiScript控制台為AiScript提供了實驗環境。您可以在此編寫、執行和確認代碼與Firefish互動的结果。"
+scratchpadDescription: "AiScript控制台為AiScript提供了實驗環境。您可以在此編寫、執行和確認代碼與Maria互動的结果。"
 output: "輸出"
 script: "腳本"
 disablePagesScript: "停用頁面的AiScript腳本"
@@ -661,7 +661,7 @@ createNewClip: "建立新摘錄"
 unclip: "解除摘錄"
 confirmToUnclipAlreadyClippedNote: "此貼文已包含在摘錄「{name}」中。 你想將貼文從這個摘錄中排除嗎？"
 public: "公開"
-i18nInfo: "Firefish已經被志願者們翻譯成各種語言版本，如果想要幫忙的話，可以進入{link}幫助翻譯。"
+i18nInfo: "Maria已經被志願者們翻譯成各種語言版本，如果想要幫忙的話，可以進入{link}幫助翻譯。"
 i18nServerInfo: "新客戶端將默認使用 {language}。"
 i18nServerChange: "改為 {language}。"
 i18nServerSet: "設定新客戶端使用 {language}。"
@@ -715,8 +715,8 @@ onlineUsersCount: "{n}人正在線上"
 nUsers: "{n}使用者"
 nNotes: "{n}貼文"
 sendErrorReports: "傳送錯誤報告"
-sendErrorReportsDescription: "開啟後，錯誤出現時將會與 Firefish 分享詳細紀錄，對於 Firefish 的開發會有非常大的幫助。\n
-  這將包括您的操作系統版本、使用的瀏覽器、您在 Firefish 中的活動等資料。"
+sendErrorReportsDescription: "開啟後，錯誤出現時將會與 Maria 分享詳細紀錄，對於 Maria 的開發會有非常大的幫助。\n
+  這將包括您的操作系統版本、使用的瀏覽器、您在 Maria 中的活動等資料。"
 myTheme: "我的佈景主題"
 backgroundColor: "背景"
 accentColor: "重點色彩"
@@ -807,7 +807,7 @@ hashtags: "#tag"
 troubleshooting: "故障排除"
 useBlurEffect: "在 UI 上使用模糊效果"
 learnMore: "更多資訊"
-misskeyUpdated: "Firefish 更新完成！"
+misskeyUpdated: "Maria 更新完成！"
 whatIsNew: "顯示更新資訊"
 translate: "翻譯"
 translatedFrom: "從 {x} 翻譯"
@@ -989,14 +989,14 @@ _registry:
   domain: "域"
   createKey: "新增機碼"
 _aboutFirefish:
-  about: "Firefish是由ThatOneCalculator自2022年起開發的Misskey分支。"
+  about: "Maria是由ThatOneCalculator自2022年起開發的Misskey分支。"
   contributors: "主要貢獻者"
   allContributors: "全體貢獻人員"
   source: "原始碼"
-  translation: "翻譯Firefish"
-  donate: "贊助Firefish"
-  donateTitle: 覺得 Firefish 棒嗎?
-  pleaseDonateToFirefish: 請考慮向 Firefish 贊助以支持其發展。
+  translation: "翻譯Maria"
+  donate: "贊助Maria"
+  donateTitle: 覺得 Maria 棒嗎?
+  pleaseDonateToFirefish: 請考慮向 Maria 贊助以支持其發展。
   pleaseDonateToHost: 還請考慮捐贈給您在使用的伺服器 {host}，以支援龐大的運營成本。
   donateHost: 贊助給 {host}
   misskeyContributors: Misskey的貢獻者
@@ -1013,8 +1013,8 @@ _writingMode:
   verticalRLUpright: "直排，由右而左，字母逐個排列"
 _mfm:
   cheatSheet: "MFM代碼小抄"
-  intro: "MFM是Misskey、Firefish、Akkoma等專用的標記語言，可以在各個位置使用。 您可以這裏看到MFM可用語法列表。"
-  dummy: "Firefish拓展了Fediverse的世界"
+  intro: "MFM是Misskey、Maria、Akkoma等專用的標記語言，可以在各個位置使用。 您可以這裏看到MFM可用語法列表。"
+  dummy: "Maria拓展了Fediverse的世界"
   mention: "提及"
   mentionDescription: "透過 @+使用者名稱 來標示特定使用者。"
   hashtag: "#tag"
@@ -1239,7 +1239,7 @@ _time:
   hour: "小時"
   day: "日"
 _tutorial:
-  title: "如何使用Firefish"
+  title: "如何使用Maria"
   step1_1: "歡迎！"
   step1_2: "讓我們把你安排好。你很快就會啟動並運行！"
   step2_1: "首先，請完成你的個人資料。"
@@ -1256,8 +1256,8 @@ _tutorial:
   step5_6: "推薦 {icon} 時間軸是顯示你的伺服器管理員推薦的貼文。"
   step5_7: "全球 {icon} 時間軸是顯示來自所有其他連接的伺服器的貼文。"
   step6_1: "那麼，這裡是什麼地方？"
-  step6_2: "你不只是加入Firefish。你已經加入了Fediverse的一個門戶，這是一個由成千上萬台服務器組成的互聯網絡。"
-  step6_3: "每個服務器也有不同，而並不是所有的服務器都運行Firefish。但這個服務器確實是運行Firefish的! 你可能會覺得有點複雜，但你很快就會明白的。"
+  step6_2: "你不只是加入Maria。你已經加入了Fediverse的一個門戶，這是一個由成千上萬台服務器組成的互聯網絡。"
+  step6_3: "每個服務器也有不同，而並不是所有的服務器都運行Maria。但這個服務器確實是運行Maria的! 你可能會覺得有點複雜，但你很快就會明白的。"
   step6_4: "現在開始探索吧！"
 _2fa:
   alreadyRegistered: "你已註冊過一個雙重認證的裝置。"
@@ -1837,7 +1837,7 @@ customMOTDDescription: 自訂MOTD(啟動畫面)訊息，一行一個。使用者
 privateModeInfo: 啟用後，只有列入允許名單的伺服器才能與你的伺服器聯合。所有貼文都將對公眾隱藏。
 adminCustomCssWarn: 除非你知道它的作用，否則請不要使用此設定。 輸入不正確的值可能會導致每個人的用戶端無法正常運行。你可在你的使用者設定中先行測試，以確保你的
   CSS 正常運作。
-showUpdates: Firefish 更新時顯示彈出視窗
+showUpdates: Maria 更新時顯示彈出視窗
 recommendedInstances: 建議的伺服器
 caption: 自動加上替代文字(alt)
 enterSendsMessage: 在 Messaging 中按 Return 發送消息 (如關閉則是 Ctrl + Return)
@@ -1866,7 +1866,7 @@ customMOTD: 自定義MOTD (網頁載入時顯示的訊息)
 customSplashIcons: 啟動畫面圖標 (網址)
 splash: 啟動畫面
 updateAvailable: 可能有可用的更新!
-showAdminUpdates: 表明新的 Firefish 版本可用（只限管理員）
+showAdminUpdates: 表明新的 Maria 版本可用（只限管理員）
 migration: 遷移
 homeTimeline: 主頁時間軸
 swipeOnDesktop: 允許在桌面上進行手機式滑動
@@ -1881,8 +1881,8 @@ _experiments:
   title: 試驗功能
   enablePostImports: 啟用匯入貼文的功能
   postImportsCaption: 
-    允許使用者從舊有的Firefish・Misskey・Mastodon・Akkoma・Pleroma帳號匯入貼文。在伺服器佇列堵塞時匯入貼文可能會導致載入速度變慢。
-noGraze: 瀏覽器擴充元件 "Graze for Mastodon" 會與Firefish發生衝突，請停用該擴充元件。
+    允許使用者從舊有的Maria・Misskey・Mastodon・Akkoma・Pleroma帳號匯入貼文。在伺服器佇列堵塞時匯入貼文可能會導致載入速度變慢。
+noGraze: 瀏覽器擴充元件 "Graze for Mastodon" 會與Maria發生衝突，請停用該擴充元件。
 userSaysSomethingReasonRenote: '{name} 轉發了包含 {reason} 的貼文'
 pushNotificationNotSupported: 你的瀏覽器或伺服器不支援推送通知
 accessibility: 輔助功能
@@ -1901,7 +1901,7 @@ subscribePushNotification: 啟用推送通知
 unsubscribePushNotification: 停用推送通知
 pushNotificationAlreadySubscribed: 推送通知已經啟用
 recommendedInstancesDescription: 推薦的伺服器(將顯示在推薦時間軸中)，一行一個。
-searchPlaceholder: 在 Firefish 上搜尋
+searchPlaceholder: 在 Maria 上搜尋
 cw: 內容警告
 selectChannel: 選擇一個頻道
 newer: 較新
@@ -1937,7 +1937,7 @@ preventAiLearningDescription: 請求第三方 AI 語言模型不要研究您上�
 isLocked: 該帳戶已獲得以下批准
 isModerator: 板主
 isAdmin: 管理員
-isPatron: Firefish 項目贊助者
+isPatron: Maria 項目贊助者
 silencedWarning: 顯示此頁面是因為這些使用者來自您伺服器管理員已靜音的伺服器，因此他們可能是垃圾訊息。
 signupsDisabled: 此伺服器目前停止註冊。如果您有此伺服器的邀請碼，請在下面輸入。
 showPopup: 通過彈出式視窗通知使用者
@@ -2026,7 +2026,7 @@ _emojiModPerm:
   mod: 新增及編輯
 replyMute: 靜音回覆貼文
 useCdn: 從 CDN 獲取資源
-useCdnDescription: 從 JSDelivr CDN（而非此 Firefish 伺服器）載入 Twemoji 等的靜態資源。
+useCdnDescription: 從 JSDelivr CDN（而非此 Maria 伺服器）載入 Twemoji 等的靜態資源。
 replyUnmute: 解除靜音回覆貼文
 suggested: 建議
 noLanguage: 無語言
@@ -2060,6 +2060,6 @@ moderationNote: 管理員備註
 ipFirstAcknowledged: 首次取得此 IP 位址的日期
 driveCapacityOverride: 雲端硬碟容量變更
 showNoAltTextWarning: 在嘗試發佈包含沒有替代文字的貼文時顯示警告
-messagingUnencryptedInfo: Firefish 上的聊天沒有經過點對點加密，請不要發送敏感資訊。
+messagingUnencryptedInfo: Maria 上的聊天沒有經過點對點加密，請不要發送敏感資訊。
 autocorrectNoteLanguage: 在設定的貼文語言不符合自動偵測的結果時顯示警告
 incorrectLanguageWarning: "此貼文的語言似乎為{detected}，但您選擇的語言為{current}。\n要將貼文語言變更為{detected}嗎？"

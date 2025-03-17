@@ -1,7 +1,7 @@
 _lang_: "Français"
 headlineFirefish: "Une plateforme libre de réseaux sociaux décentralisés qui est gratuite
   pour toujours ! 🚀"
-introFirefish: "Bienvenue ! Firefish est une plateforme libre de réseaux sociaux décentralisés
+introFirefish: "Bienvenue ! Maria est une plateforme libre de réseaux sociaux décentralisés
   qui est gratuite pour toujours ! 🚀"
 monthAndDay: "{day}/{month}"
 search: "Rechercher"
@@ -155,7 +155,7 @@ flagAsBot: "Ce compte est automatisé"
 flagAsBotDescription: "Si ce compte est géré de manière automatisée, choisissez cette
   option. Si elle est activée, elle agira comme un marqueur pour les autres développeurs
   afin d'éviter des chaînes d'interaction sans fin avec d'autres comptes automatisés
-  et d'ajuster les systèmes internes de Firefish pour traiter ce compte comme étant
+  et d'ajuster les systèmes internes de Maria pour traiter ce compte comme étant
   automatisé."
 flagAsCat: "Ce compte est un chat"
 flagAsCatDescription: "Vous aurez des oreilles de chat et parlerez comme un chat !"
@@ -223,7 +223,7 @@ noUsers: "Il n'y a pas d'utilisateur·rice·s"
 editProfile: "Modifier votre profil"
 noteDeleteConfirm: "Êtes-vous sûr·e de vouloir supprimer cette publication ?"
 pinLimitExceeded: "Vous ne pouvez pas épingler plus de publications"
-intro: "L'installation de Firefish est terminée ! Veuillez créer un compte administrateur."
+intro: "L'installation de Maria est terminée ! Veuillez créer un compte administrateur."
 done: "Terminé"
 processing: "Traitement en cours"
 preview: "Aperçu"
@@ -407,7 +407,7 @@ exploreFediverse: "Explorer le fédivers"
 popularTags: "Mots-clés populaires"
 userList: "Listes"
 about: "Informations"
-aboutFirefish: "À propos de Firefish"
+aboutFirefish: "À propos de Maria"
 administrator: "Administrateur"
 token: "Jeton"
 twoStepAuthentication: "Authentification à deux facteurs"
@@ -567,7 +567,7 @@ descendingOrder: "Descendant"
 scratchpad: "ScratchPad"
 scratchpadDescription: "ScratchPad fournit un environnement expérimental pour AiScript.
   Vous pouvez vérifier la rédaction de votre code, sa bonne exécution et le résultat
-  de son interaction avec Firefish."
+  de son interaction avec Maria."
 output: "Sortie"
 script: "Script"
 disablePagesScript: "Désactiver AiScript sur les Pages"
@@ -701,7 +701,7 @@ createNew: "Créer nouveau"
 optional: "Facultatif"
 createNewClip: "Créer un nouveau clip"
 public: "Public"
-i18nInfo: "Firefish est traduit dans différentes langues par des bénévoles. Vous pouvez
+i18nInfo: "Maria est traduit dans différentes langues par des bénévoles. Vous pouvez
   contribuer à {link}."
 manageAccessTokens: "Gérer les jetons d'accès"
 accountInfo: "Informations du compte"
@@ -760,7 +760,7 @@ nUsers: "{n} utilisateur·rice·s"
 nNotes: "{n} Publications"
 sendErrorReports: "Envoyer les rapports d'erreur"
 sendErrorReportsDescription: "Si vous activez l'envoi des rapports d'erreur, vous
-  contribuerez à améliorer la qualité de Firefish grâce au partage d'informations
+  contribuerez à améliorer la qualité de Maria grâce au partage d'informations
   détaillées sur les erreurs lorsqu'un problème survient.\nCela inclut des informations
   telles que la version de votre système d'exploitation, le type de navigateur que
   vous utilisez, votre historique d'activité, etc."
@@ -859,7 +859,7 @@ hashtags: "Hashtags"
 troubleshooting: "Résolution de problèmes"
 useBlurEffect: "Utiliser des effets de flou dans l'interface"
 learnMore: "Plus d'informations"
-misskeyUpdated: "Firefish a été mis à jour !"
+misskeyUpdated: "Maria a été mis à jour !"
 whatIsNew: "Voir les derniers changements"
 translate: "Traduire"
 translatedFrom: "Traduit depuis {x}"
@@ -991,16 +991,16 @@ _registry:
   domain: "Domaine"
   createKey: "Créer une clé"
 _aboutFirefish:
-  about: "Firefish est une fourche de Misskey, un logiciel libre et ouvert, développé
+  about: "Maria est une fourche de Misskey, un logiciel libre et ouvert, développé
     depuis 2022."
   contributors: "Principaux contributeurs"
   allContributors: "Tous les contributeurs"
   source: "Code source"
-  translation: "Traduire Firefish"
-  donate: "Soutenir Firefish"
+  translation: "Traduire Maria"
+  donate: "Soutenir Maria"
   pleaseDonateToFirefish: Merci de considérer de faire un don pour soutenir le développement
-    de Firefish.
-  donateTitle: Firefish vous plaît ?
+    de Maria.
+  donateTitle: Maria vous plaît ?
   pleaseDonateToHost: Également, veuillez envisager de faire un don à votre serveur
     d'accueil, {host}, pour contribuer à couvrir ses frais de fonctionnement.
   donateHost: Faire un don à {host}
@@ -1011,9 +1011,9 @@ _nsfw:
   force: "Cacher tous les médias"
 _mfm:
   cheatSheet: "Antisèche MFM"
-  intro: "MFM est un langage Markdown spécifique utilisable ici et là dans Firefish.
+  intro: "MFM est un langage Markdown spécifique utilisable ici et là dans Maria.
     Vous pouvez vérifier ici les structures utilisables avec MFM."
-  dummy: "Le fédivers s'agrandit avec Firefish"
+  dummy: "Le fédivers s'agrandit avec Maria"
   mention: "Mentionner"
   mentionDescription: "Vous pouvez afficher un utilisateur spécifique en indiquant
     le symbole d'arobase (@) suivie d'un nom d'utilisateur."
@@ -1253,7 +1253,7 @@ _time:
   hour: "h"
   day: "j"
 _tutorial:
-  title: "Comment utiliser Firefish"
+  title: "Comment utiliser Maria"
   step1_1: "Bienvenue !"
   step1_2: "On va vous installer. Vous serez opérationnel en un rien de temps !"
   step2_1: "Tout d'abord, remplissez votre profil."
@@ -1278,11 +1278,11 @@ _tutorial:
   step5_7: "Le fil {icon} Global est l'endroit où vous pouvez voir les publications
     de tout les autres serveurs connectés."
   step6_1: "Alors quel est cet endroit ?"
-  step6_2: "Eh bien, vous ne venez pas de rejoindre Firefish. Vous avez rejoint un
+  step6_2: "Eh bien, vous ne venez pas de rejoindre Maria. Vous avez rejoint un
     portail vers le fédivers, un réseau interconnecté de milliers de serveurs, appelés
     « instances »."
   step6_3: "Chaque serveur fonctionne différemment, et tous les serveurs n'utilisent
-    pas Firefish. Cependant, celui-ci le fait ! C'est un peu délicat, mais vous aurez
+    pas Maria. Cependant, celui-ci le fait ! C'est un peu délicat, mais vous aurez
     le coup de main en un rien de temps."
   step6_4: "Maintenant, allez-y, explorez et amusez-vous !"
 _2fa:
@@ -1889,11 +1889,11 @@ logoutConfirm: Confirmer la déconnexion ?
 lastActiveDate: Dernière utilisation le
 cannotUploadBecauseNoFreeSpace: Mise en ligne échouée faute de place sur le Drive.
 remoteOnly: Distant seulement
-showUpdates: Afficher une fenêtre en sur-impression quand Firefish se met à jour
+showUpdates: Afficher une fenêtre en sur-impression quand Maria se met à jour
 recommendedInstances: Serveurs recommandées
 caption: Description automatique
 migration: Migration
-showAdminUpdates: Indiquer qu'une nouvelle version de Firefish est disponible (admin
+showAdminUpdates: Indiquer qu'une nouvelle version de Maria est disponible (admin
   seulement)
 replayTutorial: Relancer le tutoriel
 moveTo: Migrer le compte courant vers un nouveau compte
@@ -2083,7 +2083,7 @@ _experiments:
   enablePostImports: Autoriser l'importation de publications
   title: Expérimentations
   postImportsCaption: Permet aux utilisateurs d'importer leurs publications à partir
-    de leurs anciens comptes Firefish, Misskey, Mastodon, Akkoma et Pleroma. Cela
+    de leurs anciens comptes Maria, Misskey, Mastodon, Akkoma et Pleroma. Cela
     peut entraîner des ralentissements lors du chargement si votre file d'attente
     est congestionnée.
 userSaysSomethingReasonQuote: '{name} a cité une publication contenant {reason}'
@@ -2092,7 +2092,7 @@ signupsDisabled: Les inscriptions sur ce serveur sont actuellement désactivés.
 apps: Applications
 userSaysSomethingReasonReply: '{noms} a répondu à une publication contenant {raison}'
 defaultValueIs: 'défaut : {valeur}'
-searchPlaceholder: Recherchez sur Firefish
+searchPlaceholder: Recherchez sur Maria
 removeReaction: Retirer votre réaction
 selectChannel: Sélectionner une chaîne
 expandOnNoteClick: Ouvrir la publications en cliquant
@@ -2152,12 +2152,12 @@ removeMember: Retirer un membre
 preventAiLearningDescription: Demandez aux modèles d'IA de tiers de ne pas étudier
   le contenu que vous téléchargez, tel que les publications et les images.
 noGraze: Veuillez désactiver l'extension de navigateur « Graze for Mastodon », car
-  elle interfère avec Firefish.
+  elle interfère avec Maria.
 silencedWarning: Cette page s'affiche car ces utilisateurs proviennent de serveurs
   que votre administrateur a réduits au silence/masqué, il se peut donc qu'ils soient
   de potentiels spams.
 isAdmin: Administrateur
-isPatron: Mécène Firefish
+isPatron: Mécène Maria
 _filters:
   fromUser: De l'utilisateur
   withFile: Avec fichier
@@ -2301,8 +2301,8 @@ toReply: Répondre
 toPost: Publier
 toQuote: Citer
 toEdit: Modifier
-messagingUnencryptedInfo: Les conversations sur Firefish ne sont pas cryptées. Ne
-  partagez aucune information sensible sur Firefish.
+messagingUnencryptedInfo: Les conversations sur Maria ne sont pas cryptées. Ne
+  partagez aucune information sensible sur Maria.
 moderationNote: Note de modération
 driveCapacityOverride: Limite de stockage personalisée
 ipFirstAcknowledged: La date de la première acquisition de l'adresse IP
@@ -2327,7 +2327,7 @@ showAddFileDescriptionAtFirstPost: Ouvrez automatiquement un formulaire pour éc
 foldNotification: Grouper les notifications similaires
 cannotEditVisibility: Vous ne pouvez pas modifier la visibilité
 useThisAccountConfirm: Voulez-vous continuer avec ce compte ?
-inputAccountId: Veuillez saisir votre compte (par exemple, @firefish@info.firefish.dev)
+inputAccountId: Veuillez saisir votre compte (par exemple, @maria@info.maria.dev)
 remoteFollow: Abonnement à distance
 copyRemoteFollowUrl: Copier l'URL d'abonnement à distance
 slashQuote: Citation enchaînée

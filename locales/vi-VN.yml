@@ -1,6 +1,6 @@
 _lang_: "Tiếng Việt"
 headlineFirefish: "Mạng xã hội liên hợp"
-introFirefish: "Xin chào! Firefish là một nền tảng tiểu blog phi tập trung mã nguồn
+introFirefish: "Xin chào! Maria là một nền tảng tiểu blog phi tập trung mã nguồn
   mở.\nViết \"tút\" để chia sẻ những suy nghĩ của bạn 📡\nBằng \"biểu cảm\", bạn có
   thể bày tỏ nhanh chóng cảm xúc của bạn với các tút 👍\nHãy khám phá một thế giới
   mới! 🚀"
@@ -149,7 +149,7 @@ cacheRemoteFilesDescription: "Khi tùy chọn này bị tắt, các tập tin t�
 flagAsBot: "Đánh dấu đây là tài khoản bot"
 flagAsBotDescription: "Bật tùy chọn này nếu tài khoản này được kiểm soát bởi một chương
   trình. Nếu được bật, nó sẽ được đánh dấu để các nhà phát triển khác ngăn chặn chuỗi
-  tương tác vô tận với các bot khác và điều chỉnh hệ thống nội bộ của Firefish để
+  tương tác vô tận với các bot khác và điều chỉnh hệ thống nội bộ của Maria để
   coi tài khoản này như một bot."
 flagAsCat: "Tài khoản này là mèo"
 flagAsCatDescription: "Bật tùy chọn này để đánh dấu tài khoản là một con mèo."
@@ -216,7 +216,7 @@ noUsers: "Chưa có ai"
 editProfile: "Sửa hồ sơ"
 noteDeleteConfirm: "Bạn có chắc muốn xóa tút này?"
 pinLimitExceeded: "Bạn đã đạt giới hạn số lượng tút có thể ghim"
-intro: "Đã cài đặt Firefish! Xin hãy tạo tài khoản admin."
+intro: "Đã cài đặt Maria! Xin hãy tạo tài khoản admin."
 done: "Xong"
 processing: "Đang xử lý"
 preview: "Xem trước"
@@ -554,7 +554,7 @@ ascendingOrder: "Tăng dần"
 descendingOrder: "Giảm dần"
 scratchpad: "Scratchpad"
 scratchpadDescription: "Scratchpad cung cấp môi trường cho các thử nghiệm AiScript.
-  Bạn có thể viết, thực thi và kiểm tra kết quả tương tác với Firefish trong đó."
+  Bạn có thể viết, thực thi và kiểm tra kết quả tương tác với Maria trong đó."
 output: "Nguồn ra"
 script: "Kịch bản"
 disablePagesScript: "Tắt AiScript trên Trang"
@@ -691,7 +691,7 @@ unclip: "Bỏ ghim"
 confirmToUnclipAlreadyClippedNote: "Bài đăng này là một phần của \"{name}\" ghim.
   Bạn có muốn bỏ khỏi ghim?"
 public: "Công khai"
-i18nInfo: "Firefish đang được các tình nguyện viên dịch sang nhiều thứ tiếng khác
+i18nInfo: "Maria đang được các tình nguyện viên dịch sang nhiều thứ tiếng khác
   nhau. Bạn có thể hỗ trợ tại {link}."
 manageAccessTokens: "Tạo mã truy cập"
 accountInfo: "Thông tin tài khoản"
@@ -749,9 +749,9 @@ nUsers: "{n} Người"
 nNotes: "{n} Tút"
 sendErrorReports: "Báo lỗi"
 sendErrorReportsDescription: "Khi được bật, thông tin chi tiết về lỗi sẽ được chia
-  sẻ với Firefish khi xảy ra sự cố, giúp nâng cao chất lượng của Firefish.\nBao gồm
+  sẻ với Maria khi xảy ra sự cố, giúp nâng cao chất lượng của Maria.\nBao gồm
   thông tin như phiên bản hệ điều hành của bạn, trình duyệt bạn đang sử dụng, hoạt
-  động của bạn trong Firefish, v.v."
+  động của bạn trong Maria, v.v."
 myTheme: "Theme của tôi"
 backgroundColor: "Màu nền"
 accentColor: "Màu phụ"
@@ -845,7 +845,7 @@ hashtags: "Hashtag"
 troubleshooting: "Khắc phục sự cố"
 useBlurEffect: "Dùng hiệu ứng làm mờ trong giao diện"
 learnMore: "Tìm hiểu thêm"
-misskeyUpdated: "Firefish vừa được cập nhật!"
+misskeyUpdated: "Maria vừa được cập nhật!"
 whatIsNew: "Hiện những thay đổi"
 translate: "Dịch"
 translatedFrom: "Dịch từ {x}"
@@ -1048,10 +1048,10 @@ _aboutFirefish:
   contributors: "Những người đóng góp nổi bật"
   allContributors: "Toàn bộ người đóng góp"
   source: "Mã nguồn"
-  translation: "Dịch Firefish"
-  donate: "Ủng hộ Firefish"
-  donateTitle: Thích Firefish?
-  pleaseDonateToFirefish: Hãy cân nhắc ủng hộ Firefish phát triển.
+  translation: "Dịch Maria"
+  donate: "Ủng hộ Maria"
+  donateTitle: Thích Maria?
+  pleaseDonateToFirefish: Hãy cân nhắc ủng hộ Maria phát triển.
   donateHost: Ủng hộ {host}
   pleaseDonateToHost: Cũng như ủng hộ chi phí vận hành máy chủ {host} của bạn.
   misskeyContributors: Người đóng góp Misskey
@@ -1061,9 +1061,9 @@ _nsfw:
   force: "Ẩn mọi media"
 _mfm:
   cheatSheet: "MFM Cheatsheet"
-  intro: "MFM là ngôn ngữ phát triển độc quyền của Firefish có thể được sử dụng ở
+  intro: "MFM là ngôn ngữ phát triển độc quyền của Maria có thể được sử dụng ở
     nhiều nơi. Tại đây bạn có thể xem danh sách tất cả các cú pháp MFM có sẵn."
-  dummy: "Firefish mở rộng thế giới Fediverse"
+  dummy: "Maria mở rộng thế giới Fediverse"
   mention: "Nhắc đến"
   mentionDescription: "Bạn có thể nhắc đến ai đó bằng cách sử dụng @tên người dùng."
   hashtag: "Hashtag"
@@ -1291,7 +1291,7 @@ _time:
   hour: "giờ"
   day: "ngày"
 _tutorial:
-  title: "How to use Firefish"
+  title: "How to use Maria"
   step1_1: "Welcome!"
   step1_2: "Let's get you set up. You'll be up and running in no time!"
   step2_1: "First, please fill out your profile."
@@ -1316,9 +1316,9 @@ _tutorial:
   step5_7: "The Global {icon} timeline is where you can see posts from every other
     connected instance."
   step6_1: "So, what is this place?"
-  step6_2: "Well, you didn't just join Firefish. You joined a portal to the Fediverse,
+  step6_2: "Well, you didn't just join Maria. You joined a portal to the Fediverse,
     an interconnected network of thousands of servers, called \"instances\"."
-  step6_3: "Each server works in different ways, and not all servers run Firefish.
+  step6_3: "Each server works in different ways, and not all servers run Maria.
     This one does though! It's a bit complicated, but you'll get the hang of it in
     no time."
   step6_4: "Bây giờ bắt đầu khám phá, và vui thôi!"
@@ -1900,7 +1900,7 @@ _deck:
   nameAlreadyExists: Tên workspace này đã tồn tại.
 renoteMute: Ẩn lượt chia sẻ
 renoteUnmute: Bỏ ẩn lượt chia sẻ
-searchPlaceholder: Lướt Firefish
+searchPlaceholder: Lướt Maria
 edited: Đã sửa {date} {time}
 noThankYou: Từ chối
 _filters:
@@ -1923,11 +1923,11 @@ adminCustomCssWarn: Cài đặt này chỉ nên được sử dụng nếu bạn
   kiểm tra nó trong cài đặt người dùng của bạn.
 enableCustomKaTeXMacro: Bật tùy chỉnh macro KaTeX
 noGraze: Vui lòng tắt tiện ích mở rộng trình duyệt "Graze for Mastodon" vì tiện ích
-  này can thiệp vào Firefish.
+  này can thiệp vào Maria.
 addRe: Thêm "re:" vào đầu bình luận để trả lời tút có cảnh báo nội dung
 _experiments:
   postImportsCaption: Cho phép người dùng nhập các bài đăng của họ từ các tài khoản
-    Firefish, Misskey, Mastodon, Akkoma và Pleroma trước đây. Nó có thể gây chậm trong
+    Maria, Misskey, Mastodon, Akkoma và Pleroma trước đây. Nó có thể gây chậm trong
     quá trình tải nếu hàng đợi của bạn bị tắc nghẽn.
   title: Thử nghiệm
   enablePostImports: Bật nhập tút
@@ -1949,7 +1949,7 @@ allowedInstancesDescription: Host của máy chủ được đưa vào danh sác
 sendPushNotificationReadMessageCaption: Sẽ hiện thông báo "{emptyPushNotificationMessage}"
   trong một khoảng thời gian ngắn. Điều này có thể gây tốn pin của thiết bị.
 enterSendsMessage: Nhấn Trở lại trong Tin nhắn để gửi tin nhắn (tắt là Ctlr + Return)
-showAdminUpdates: Thông báo có phiên bản Firefish mới (chỉ dành cho quản trị viên)
+showAdminUpdates: Thông báo có phiên bản Maria mới (chỉ dành cho quản trị viên)
 replayTutorial: Phát lại hướng dẫn
 moveFrom: Chuyển từ tài khoản cũ sang
 moveFromDescription: Thao tác này sẽ đặt bí danh cho tài khoản cũ của bạn để bạn có
@@ -2025,7 +2025,7 @@ flagSpeakAsCat: Tôi là mèo
 silenceThisInstance: Ẩn máy chủ này
 silencedInstances: Những máy chủ đã ẩn
 instanceSecurity: An toàn máy chủ
-showUpdates: Hiện popup khi Firefish có cập nhật
+showUpdates: Hiện popup khi Maria có cập nhật
 selectChannel: Chọn kênh
 isBot: Đây là tài khoản bot
 isLocked: Tài khoản này duyệt theo dõi thủ công
@@ -2104,6 +2104,6 @@ preventAiLearningDescription: Yêu cầu các mô hình ngôn ngữ AI của bê
   nghiên cứu nội dung bạn tải lên, chẳng hạn như tút và hình ảnh.
 isModerator: Kiểm duyệt viên
 isAdmin: Quản trị viên
-isPatron: Người bảo trợ Firefish
+isPatron: Người bảo trợ Maria
 recommendedInstancesDescription: Các máy chủ được đề xuất được phân tách bằng dấu
   ngắt dòng để xuất hiện trong bảng tin đề xuất.

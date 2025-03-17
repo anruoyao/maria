@@ -1,7 +1,7 @@
 _lang_: "Svenska"
 headlineFirefish: "En öppen källkod och decentraliserad social media plattform som
   är gratis för all framtid! 🚀"
-introFirefish: "Välkommen! Firefish är en öppen och decentraliserad mikrobloggningstjänst.\n
+introFirefish: "Välkommen! Maria är en öppen och decentraliserad mikrobloggningstjänst.\n
   Skapa en \"not\" och dela dina tankar med alla runtomkring dig. 📡\nMed \"reaktioner\"\
   \ kan du snabbt uttrycka dina känslor kring andras noter.👍\nLåt oss utforska en
   nya värld!🚀"
@@ -152,7 +152,7 @@ cacheRemoteFilesDescription: "När denna inställning är avstängd kommer exter
 flagAsBot: "Markera konto som bot"
 flagAsBotDescription: "Aktivera det här alternativet om kontot är kontrollerat av
   ett program. Om aktiverat kommer den fungera som en flagga för andra utvecklare
-  för att hindra ändlösa kedjor med andra bottar. Det kommer också få Firefish interna
+  för att hindra ändlösa kedjor med andra bottar. Det kommer också få Maria interna
   system att hantera kontot som en bot."
 flagAsCat: "Markera konto som katt"
 flagAsCatDescription: "Aktivera denna inställning för att markera kontot som en katt."
@@ -219,7 +219,7 @@ noUsers: "Det finns inga användare"
 editProfile: "Redigera profil"
 noteDeleteConfirm: "Är du säker på att du vill ta bort denna not?"
 pinLimitExceeded: "Du kan inte fästa fler noter"
-intro: "Firefish har installerats! Vänligen skapa en adminanvändare."
+intro: "Maria har installerats! Vänligen skapa en adminanvändare."
 done: "Klar"
 processing: "Bearbetar"
 preview: "Förhandsvisning"
@@ -455,7 +455,7 @@ delayed: Fördröjning
 useGlobalSetting: Använd globala inställningar
 selectInstance: Välj en server
 instanceName: Servernamn
-searchPlaceholder: Sök Firefish
+searchPlaceholder: Sök Maria
 noThankYou: Nej tack
 jumpToPrevious: Hoppa till föregående
 listsDesc: Listor låter dig skapa en tidlinje med specificerade användare. Dessa kan
@@ -484,7 +484,7 @@ objectStorageRegionDesc: Ange en region som 'xx-east-1'. Om du anger din tjänst
   inte skiljer mellan regioner, lämna detta blankt eller ange som 'us-east-1'.
 objectStorageSetPublicRead: Ställ in "public-read" vid uppladdningar
 scratchpadDescription: Scratchpaden tillgängliggör en miljö för AiScript experiment.
-  Du kan skriva, köra och checka ut resultaten från den när du interagerar med Firefish.
+  Du kan skriva, köra och checka ut resultaten från den när du interagerar med Maria.
 yourAccountSuspendedDescription: Detta kontot har blivit avstängt eftersom det bröt
   mot serverns användaravtal eller liknande. Vänligen kontakta administratörer om
   du vill veta mer detaljerade anledningar. Vänligen skapa inte ett nytt konto.
@@ -548,7 +548,7 @@ unableToProcess: Operationen kunde inte slutföras
 output: Output
 expandOnNoteClickDesc: Om inaktiverad, kan du öppna posten vid högerklicksmenyn eller
   genom att klicka på tidsstämpeln.
-aboutFirefish: Om Firefish
+aboutFirefish: Om Maria
 older: Äldre
 hiddenTagsDescription: 'Lista hashtaggar (utan # symbolen) för de hashtaggar du vill
   dölja från trendande och utforska. Dolda hashtaggar kan fortfarande hittas via andra

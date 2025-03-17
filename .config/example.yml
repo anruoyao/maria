@@ -1,5 +1,5 @@
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Firefish configuration
+# maria configuration
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # After starting your server, please don't change the URL! Doing so will break federation.
@@ -14,11 +14,11 @@ url: https://example.com/
 #───┘ Port and TLS settings └───────────────────────────────────
 
 #
-# Firefish requires a reverse proxy to support HTTPS connections.
+# maria requires a reverse proxy to support HTTPS connections.
 #
 #                 +----- https://example.com/ ------------+
 #   +------+      |+-------------+      +----------------+|
-#   | User | ---> || Proxy (443) | ---> | Firefish (3000) ||
+#   | User | ---> || Proxy (443) | ---> | maria (3000) ||
 #   +------+      |+-------------+      +----------------+|
 #                 +---------------------------------------+
 #
@@ -26,10 +26,10 @@ url: https://example.com/
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
 
-# The port that your Firefish server should listen on.
+# The port that your maria server should listen on.
 port: 3000
 
-# The bind host your Firefish server should listen on.
+# The bind host your maria server should listen on.
 # If unspecified, the wildcard address will be used.
 #bind: 127.0.0.1
 
@@ -41,10 +41,10 @@ db:
   port: 5432
   #ssl: false
   # Database name
-  db: firefish_db
+  db: maria_db
 
   # Auth
-  user: firefish
+  user: maria
   pass: password
 
   # Whether disable Caching queries
@@ -181,7 +181,7 @@ maxLogLevel: info
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Congrats, you've reached the end of the config file needed for most deployments!
-# Enjoy your Firefish server!
+# Enjoy your maria server!
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 

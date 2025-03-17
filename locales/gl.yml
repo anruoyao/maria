@@ -1,5 +1,5 @@
 _lang_: Galego
-introFirefish: Benvida! Firefish é unha plataforma de medios sociais de código aberto,
+introFirefish: Benvida! Maria é unha plataforma de medios sociais de código aberto,
   descentralizada e gratuíta para sempre!🚀
 monthAndDay: '{day}/{month}'
 notifications: Notificacións
@@ -11,7 +11,7 @@ noThankYou: Non, grazas
 headlineFirefish: Plataforma de medios sociais de código aberto e descentralizada,
   gratuíta para sempre!🚀
 search: Buscar
-searchPlaceholder: Buscar en Firefish
+searchPlaceholder: Buscar en Maria
 username: Identificador
 fetchingAsApObject: Descargando desde o Fediverso
 ok: OK
@@ -127,7 +127,7 @@ cacheRemoteFilesDescription: Se desactivas este axuste, os ficheiros remotos cá
   pero incrementarás o tráfico, xa que non se crearán miniaturas.
 flagAsBotDescription: Activa esta opción se esta conta está controlada por un programa.
   Se está activada, será unha marca para que outras desenvolvedoras eviten interaccións
-  en bucle con outros bots e axustará os sistemas internos de Firefish para tratar
+  en bucle con outros bots e axustará os sistemas internos de Maria para tratar
   esta conta como un bot.
 flagAsCat: Es un gato? 😺
 flagAsCatDescription: Vas ter orellas de gato e falar como un gato!

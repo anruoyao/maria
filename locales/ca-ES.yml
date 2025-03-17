@@ -1,7 +1,7 @@
 _lang_: "Català"
 headlineFirefish: "Una xarxa social de codi obert, descentralitzada i gratuïta per
   a sempre! 🚀"
-introFirefish: "Benvinguts! Firefish és una plataforma social de codi obert, descentralitzada
+introFirefish: "Benvinguts! Maria és una plataforma social de codi obert, descentralitzada
   i gratuïta per a sempre! 🚀"
 monthAndDay: "{day}/{month}"
 search: "Cerca"
@@ -145,9 +145,9 @@ _mfm:
   mention: "Menció"
   quote: "Citar"
   search: "Cerca"
-  dummy: Firefish amplia el món del Fediverse
+  dummy: Maria amplia el món del Fediverse
   hashtag: Etiqueta
-  intro: MFM és un llenguatge de marques utilitzat a Misskey, Firefish, Akkoma i més
+  intro: MFM és un llenguatge de marques utilitzat a Misskey, Maria, Akkoma i més
     que es pot utilitzar en molts llocs. Aquí podeu veure una llista de tota la sintaxi
     MFM disponible.
   hashtagDescription: Podeu especificar una etiqueta mitjançant un coixinet i un text.
@@ -787,7 +787,7 @@ flagAsBot: Marca aquest compte com automatitzat
 flagAsBotDescription: Activa aquesta opció si aquest compte és controlat per un programa.
   Si s'activa, això actuarà com una bandera per a altres desenvolupadors i ajuda a
   prevenir cadenes de interaccions infinites amb altres comptes automatitzats a més
-  d'ajustar els sistemes interns de Firefish per tractar aquest compte com automatitzat.
+  d'ajustar els sistemes interns de Maria per tractar aquest compte com automatitzat.
 flagAsCat: Ets un gat? 🐱
 flagShowTimelineReplies: Mostra respostes a la línia de temps
 flagAsCatDescription: Guanyaràs unes orelles de gat i parlares com un gat!
@@ -838,7 +838,7 @@ mutedUsers: Usuaris silenciats
 done: Fet
 preview: Vista prèvia
 default: Per defecte
-intro: La instal·lació de Firefish ha acabat! Crea un compte d'usuari d'administració.
+intro: La instal·lació de Maria ha acabat! Crea un compte d'usuari d'administració.
 processing: S'està processant
 noCustomEmojis: No hi ha cap emoji
 noJobs: No hi ha res a la cua de feines
@@ -1215,7 +1215,7 @@ connectedTo: Aquest(s) compte(s) estan conectats
 silenceConfirm: Segur que vols posar en silenci aquest usuari?
 unsilence: Desfés posar en silenci
 unsilenceConfirm: Segur que vols treure el silenci a aquest usuari?
-aboutFirefish: Sobre Firefish
+aboutFirefish: Sobre Maria
 twoStepAuthentication: Autentificació de doble factor
 moderator: Moderador
 moderation: Moderació
@@ -1367,7 +1367,7 @@ adminCustomCssWarn: Aquesta configuració només s'ha d'utilitzar si sabeu què 
   introducció de valors inadequats pot fer que els clients de TOTS deixin de funcionar
   amb normalitat. Assegureu-vos que el vostre CSS funcioni correctament provant-lo
   a la configuració de l'usuari.
-showUpdates: Mostra una finestra emergent quan Firefish s'actualitzi
+showUpdates: Mostra una finestra emergent quan Maria s'actualitzi
 recommendedInstances: Servidors recomanats
 recommendedInstancesDescription: Servidors recomanats separats per salts de línia
   que apareixen a la línia de temps recomanada.
@@ -1376,7 +1376,7 @@ splash: Pantalla de Benvinguda
 swipeOnDesktop: Permet lliscar a l'estil del mòbil a l'escriptori
 updateAvailable: Pot ser que hi hagi una actualització disponible!
 logoImageUrl: URL de la imatge del logotip
-showAdminUpdates: Indica que hi ha disponible una versió nova de Firefish (només per
+showAdminUpdates: Indica que hi ha disponible una versió nova de Maria (només per
   a administradors)
 replayTutorial: Repetició del tutorial
 migration: Migració
@@ -1478,7 +1478,7 @@ _registry:
 silenced: Silenciat
 objectStorageUseSSL: Fes servir SSL
 yourAccountSuspendedTitle: Aquest compte està suspès
-i18nInfo: Firefish està sent traduït a diversos idiomes per voluntaris. Pots ajudar
+i18nInfo: Maria està sent traduït a diversos idiomes per voluntaris. Pots ajudar
   {link}.
 manageAccessTokens: Administrar claus d'accés
 accountInfo: Informació del compte
@@ -1539,7 +1539,7 @@ searchResult: Resultats de la cerca
 hashtags: Etiquetes
 troubleshooting: Resolució de problemes
 learnMore: Més informació
-misskeyUpdated: Firefish s'ha actualitzat!
+misskeyUpdated: Maria s'ha actualitzat!
 translate: Tradueix
 translatedFrom: Traduït del {x}
 aiChanMode: Ai-chan a la interfície d'usuari clàssica
@@ -1582,13 +1582,13 @@ customKaTeXMacro: Macros KaTeX personalitzats
 _aboutFirefish:
   contributors: Col·laboradors principals
   allContributors: Tots els col·laboradors
-  donate: Fes una donació a Firefish
+  donate: Fes una donació a Maria
   source: Codi font
-  translation: Tradueix Firefish
-  about: Firefish és una bifurcació de Misskey feta per ThatOneCalculator, que està
+  translation: Tradueix Maria
+  about: Maria és una bifurcació de Misskey feta per ThatOneCalculator, que està
     en desenvolupament des del 2022.
-  donateTitle: T'agrada Firefish?
-  pleaseDonateToFirefish: Penseu en fer una donació a Firefish per donar suport al
+  donateTitle: T'agrada Maria?
+  pleaseDonateToFirefish: Penseu en fer una donació a Maria per donar suport al
     seu desenvolupament.
   pleaseDonateToHost: Penseu també en fer una donació a la vostre instància, {host},
     per ajudar-lo a suportar els costos de funcionament.
@@ -1691,7 +1691,7 @@ ascendingOrder: Ascendent
 descendingOrder: Descendent
 scratchpad: Bloc de notes
 scratchpadDescription: El bloc de notes proporciona un entorn per experiments amb
-  AiScript. Pots escriure, executar i comprovar els resultats interactuant amb Firefish.
+  AiScript. Pots escriure, executar i comprovar els resultats interactuant amb Maria.
 output: Sortida
 script: Script
 disablePagesScript: Desactivar AiScript a les pàgines
@@ -1703,9 +1703,9 @@ accentColor: Color principal
 textColor: Color del text
 value: Valor
 sendErrorReportsDescription: "Quan està activat, quan es produeixi un problema la
-  informació detallada d'errors es compartirà amb Firefish, ajudant a millorar la
-  qualitat de Firefish.\nAixò inclourà informació com la versió del vostre sistema
-  operatiu, quin navegador utilitzeu, la vostra activitat a Firefish, etc."
+  informació detallada d'errors es compartirà amb Maria, ajudant a millorar la
+  qualitat de Maria.\nAixò inclourà informació com la versió del vostre sistema
+  operatiu, quin navegador utilitzeu, la vostra activitat a Maria, etc."
 myTheme: El meu tema
 backgroundColor: Color de fons
 saveAs: Desa com...
@@ -1881,14 +1881,14 @@ _tutorial:
   step6_1: Aleshores, què és aquest lloc?
   step6_4: Ara ves, explora i diverteix-te!
   step1_2: Anem a fer la configuració. Estaràs en funcionament en un tres i no res!
-  title: Com utilitzar Firefish
+  title: Com utilitzar Maria
   step1_1: Benvingut!
   step2_1: En primer lloc, empleneu el vostre perfil.
   step4_1: Anem a treure't allà fora.
   step5_5: La línia de temps Social {icon} és una combinació de les línies de temps
     d'Inici i Local.
   step6_3: Cada servidor funciona de diferents maneres, i no tots els servidors executen
-    Firefish. Aquest sí que sí! És una mica complicat, però ho aconseguiràs en poc
+    Maria. Aquest sí que sí! És una mica complicat, però ho aconseguiràs en poc
     temps.
   step2_2: Proporcionar informació sobre qui sou facilitarà que altres puguin saber
     si volen veure les vostres publicacions o seguir-vos.
@@ -1899,7 +1899,7 @@ _tutorial:
   step4_2: A algunes persones els agrada fer una publicació de {introduction} o un
     senzill "Hola món!"
   step5_1: Línies de temps, línies de temps a tot arreu!
-  step6_2: Bé, no només t'has unit a Firefish. T'has unit a un portal al Fediverse,
+  step6_2: Bé, no només t'has unit a Maria. T'has unit a un portal al Fediverse,
     una xarxa interconnectada de milers de servidors.
 _permissions:
   "read:account": Consulta la informació del teu compte
@@ -2085,11 +2085,11 @@ _experiments:
   release: Publicà
   title: Experiments
   enablePostImports: Activar l'importació de publicacions
-  postImportsCaption: Permet als usuaris importar publicacions des de comptes de Firefish,
+  postImportsCaption: Permet als usuaris importar publicacions des de comptes de Maria,
     Misskey, Mastodon, Akkoma i Pleroma. Pot fer que el servidor vagi més lent durant
     la importació si la teva cua de feina és saturada.
 noGraze: Si us plau, desactiva l'extensió del navegador "Graze for Mastodon", ja que
-  interfereix amb Firefish.
+  interfereix amb Maria.
 accessibility: Accessibilitat
 jumpToReply: Vés a la resposta
 newer: Més nou
@@ -2104,14 +2104,14 @@ expandOnNoteClick: Obre la publicació amb un clic
 expandOnNoteClickDesc: Si està desactivat, encara pots obrir les publicacions al menú
   del botó dret o fent clic a la marca de temps.
 channelFederationWarn: Els canals encara no es federen amb altres servidors
-searchPlaceholder: Cercar a Firefish
+searchPlaceholder: Cercar a Maria
 listsDesc: Les llistes et permeten crear línies de temps amb usuaris específics. Es
   pot accedir des de la pàgina de línies de temps.
 clipsDesc: Els clips són com marcadors categoritzats que es poden compartir. Podeu
   crear clips des del menú de publicacions individuals.
 selectChannel: Selecciona un canal
 isLocked: Aquest compte té les següents aprovacions
-isPatron: Mecenes de Firefish
+isPatron: Mecenes de Maria
 isBot: Aquest es un compte automatitzat
 isModerator: Moderador
 isAdmin: Administrador
@@ -2230,7 +2230,7 @@ makePrivateConfirm: Aquesta operació enviarà una sol·licitud d'eliminació al
 privateDescription: Visible només per a tu
 useCdn: Aconsegueix els recursos des de el CDN
 useCdnDescription: Carrega alguns dels recursos estàtics com ara Twemoji des de el
-  CDN de JSDeliver en comptes de carregar-los des d'aquest servidor Firefish.
+  CDN de JSDeliver en comptes de carregar-los des d'aquest servidor Maria.
 releaseToReload: Deixa anar per actualitzar
 reloading: Actualitzant
 enableTimelineStreaming: Actualitza les línies de temps automàticament
@@ -2274,8 +2274,8 @@ searchUsersDescription: "Per buscar publicacions concretes d'un usuari/servidor,
   sense llistar, només per a seguidors i secretes) es buscaran.\n\nSi escrius 'local'
   (sense cometes), el resultat serà filtrat per mostrar només publicacions d'aquest
   servidor."
-messagingUnencryptedInfo: Els xats a Firefish no són encriptats d'extrem a extrem.
-  No comparteixis dades sensibles fent servir Firefish.
+messagingUnencryptedInfo: Els xats a Maria no són encriptats d'extrem a extrem.
+  No comparteixis dades sensibles fent servir Maria.
 searchRangeDescription: "Si vols filtrar per un període de temps, has de fer servir
   aquest format: 20220615-20231031\n\nSi no escrius l'any (per exemple 0105-0106 o
   20231105-0110), serà interpretat com l'any en curs.\n\nInclús pots ometre la data
@@ -2303,7 +2303,7 @@ showAddFileDescriptionAtFirstPost: Obra de forma automàtica un formulari per es
 remoteFollow: Seguiment remot
 cannotEditVisibility: No pots canviar la visibilitat
 useThisAccountConfirm: Vols continuar amb aquest compte?
-inputAccountId: Sisplau introdueix el teu compte (per exemple @firefish@info.firefish.dev)
+inputAccountId: Sisplau introdueix el teu compte (per exemple @maria@info.maria.dev)
 getQrCode: Mostrar el codi QR
 copyRemoteFollowUrl: Còpia la adreça URL del seguidor remot
 foldNotification: Agrupar les notificacions similars

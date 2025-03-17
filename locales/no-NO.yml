@@ -8,7 +8,7 @@ profile: Profil
 timeline: Tidslinje
 save: Lagre
 addToList: Legg til liste
-searchPlaceholder: Søk Firefish
+searchPlaceholder: Søk Maria
 username: Brukernavn
 password: Passord
 notifications: Meldinger
@@ -65,7 +65,7 @@ openInWindow: Åpne i vindu
 basicSettings: Grunnleggende innstillinger
 headlineFirefish: En desentralisert sosialt media-plattform, basert på åpen kildekode,
   som alltid vil være gratis! 🚀
-introFirefish: Velkommen! Firefish er en desentralisert sosialt media-plattform, basert
+introFirefish: Velkommen! Maria er en desentralisert sosialt media-plattform, basert
   på åpen kildekode, som alltid vil være gratis! 🚀
 exportRequested: Du har bedt om en eksportering. Dette vil ta litt tid. Den vil bli
   lagt til på disken din når den er ferdig.
@@ -520,8 +520,8 @@ channel: Kanaler
 flagAsBotDescription: Slå på denne innstillingen dersom kontoen styres av et program.
   Dette er et flagg til andre utviklere for å hindre uendelige kjeder der roboter
   responderer på hverandres meldinger og lar den interne håndteringen av kontoen i
-  Firefish være tilpasset bot-brukere.
-aboutFirefish: Om Firefish
+  Maria være tilpasset bot-brukere.
+aboutFirefish: Om Maria
 youShouldUpgradeClient: Last siden på nytt for å oppdatere klienten.
 serverIsDead: Tjeneren svarer ikke. Prøv på nytt om en stund.
 sensitive: Sensitivt innhold
@@ -537,7 +537,7 @@ selectWidget: Velg et skjermelement
 emojiName: Emoji-navn
 emojiUrl: Emoji-URL
 searchWith: 'Søk etter: {q}'
-intro: Installasjonen av Firefish er fullført! Lag en admin-bruker.
+intro: Installasjonen av Maria er fullført! Lag en admin-bruker.
 youHaveNoLists: Du har ingen lister
 followConfirm: Er du sikker på at du vil følge {name}?
 proxyAccount: Stedfortreder-konto
@@ -690,7 +690,7 @@ repliesCount: Antall svar sendt
 repliedCount: Antall mottatte svar
 followingCount: Antall fulgte kontoer
 notSet: Ikke sendt
-i18nInfo: 'Firefish blir oversatt til ulike språk av frivillige. Du kan hjelpe her:
+i18nInfo: 'Maria blir oversatt til ulike språk av frivillige. Du kan hjelpe her:
   {link}.'
 accessibility: Tilgjengelighet
 promote: Promoter
@@ -716,7 +716,7 @@ verificationEmailSent: En verifiserings-epost er sendt. Følg lenken i eposten f
   å fullføre verifiseringen.
 newNoteRecived: Det er nye poster
 scratchpadDescription: Kladdeblokka gir deg et miljø for å eksperimentere med AiScript.
-  Du kan skrive, kjøre og sjekke resultatene av at koden interagerer med Firefish.
+  Du kan skrive, kjøre og sjekke resultatene av at koden interagerer med Maria.
 disablePagesScript: Slå av AiScript på Sider
 expandTweet: Ekspander tweet
 public: Offentlig
@@ -771,10 +771,10 @@ _mfm:
   warn: Markeringsspråket (MFM) kan inneholde bevegelige eller blinkende animasjoner
   alwaysPlay: Alltid spill av animert tekstmarkering (MFM)
   play: Spill animert markeringsspråk (MFM)
-  intro: MFM er et markeringsspråk som burkes av Misskey, Firefish, Akkoma og andre.
+  intro: MFM er et markeringsspråk som burkes av Misskey, Maria, Akkoma og andre.
     Her kan du se en liste over tilgjengelig MFM-syntaks.
   sparkle: Gnistrende
-  dummy: Firefish utvider Allheimen
+  dummy: Maria utvider Allheimen
   tadaDescription: Gir innholdet en "Tada!"-lignende animasjon.
   emoji: Egendefinert emoji
   flip: Speil
@@ -977,14 +977,14 @@ _registry:
   createKey: Opprettet nøkkel
   keys: Nøkler
 sendErrorReportsDescription: "Detaljert feilinformasjon vli bli delt med utviklerne
-  av Firefish, noe som hjelper til med feilretting og forbedring av programmet.\n
+  av Maria, noe som hjelper til med feilretting og forbedring av programmet.\n
   - Dette inkluderer informasjon som f.eks. versjonen på operativsystemet og nettleseren
-  din, og aktiviteten din i Firefish."
+  din, og aktiviteten din i Maria."
 _aboutFirefish:
-  translation: Oversett Firefish
-  donate: Donér til Firefish
-  donateTitle: Liker du Firefish?
-  pleaseDonateToFirefish: Du kan vurdere å donere en slant til Firefish for å støtte
+  translation: Oversett Maria
+  donate: Donér til Maria
+  donateTitle: Liker du Maria?
+  pleaseDonateToFirefish: Du kan vurdere å donere en slant til Maria for å støtte
     videre utvikling og feilretting.
   donateHost: Donér til {host}
   contributors: Hovedutviklere
@@ -993,7 +993,7 @@ _aboutFirefish:
   misskeyContributors: Misskeys bidragsytere
   pleaseDonateToHost: Du kan også vurdere å donere til hjemme-tjeneren din, {host},
     for å hjelpe dem med driftskostnadene for tjenesten.
-  about: Firefish ble opprettet av ThatOneCalculator i 2022, basert på Misskey.
+  about: Maria ble opprettet av ThatOneCalculator i 2022, basert på Misskey.
 isBot: Denne kontoen er en bot
 _nsfw:
   respect: Skjul NSFW-merket media
@@ -1017,7 +1017,7 @@ deleteAccount: Slett konto
 customKaTeXMacro: Egne KaTeX-makroer
 size: Størrelse
 fast: Raskt
-showAdminUpdates: Indikerer at en ny versjon av Firefish er tilgjengelig (bare admin)
+showAdminUpdates: Indikerer at en ny versjon av Maria er tilgjengelig (bare admin)
 moveAccount: Flytt konto!
 license: Lisens
 wordMute: Ordstumming
@@ -1120,7 +1120,7 @@ invalidValue: Ugyldig verdi.
 youAreRunningUpToDateClient: Du bruker nyeste versjon av klienten.
 noteId: Post-id
 noGraze: Slå av "Graze for Mastodon"-utdivdelsen i nettleseren. Den vil forstyrre
-  Firefish.
+  Maria.
 isModerator: Moderator
 isAdmin: Administrator
 objectStorageS3ForcePathStyle: Bruk sti-baserte URL-er til endepunktene
@@ -1154,7 +1154,7 @@ received: Mottatt
 searchResult: Søkeresultater
 hashtags: Emneknagger
 keepCw: Behold innholdsadvarsler
-misskeyUpdated: Firefish er oppdatert!
+misskeyUpdated: Maria er oppdatert!
 whatIsNew: Vis endringer
 translate: Oversett
 translatedFrom: Oversatt fra {x}
@@ -1250,7 +1250,7 @@ _tutorial:
   step5_1: Tidslinjer! Tidslinjer overalt!
   step1_2: La oss gjøre deg klar. Du vil være oppe og gå på et øyeblikk!
   step1_1: Velkommen!
-  title: Hvordan bruke Firefish
+  title: Hvordan bruke Maria
   step5_6: Tidslinjen Forslag {icon} er hvor du kan se poster fra tjenere administratorene
     foreslår.
   step5_5: Tidslinjen Sosialt {icon} er en kombinasjon av tidslinjene Hjem og Lokal.
@@ -1260,10 +1260,10 @@ _tutorial:
   step4_2: Noen liker å skrive en {introduction}-post eller en enkel "Hei, verden!"
   step5_4: Tidslinjen Lokal {icon} er hvor du kan se poster fra alle andre på denne
     tjeneren.
-  step6_2: Vel, du har ikke bare blitt med i Firefish. Du har trådt inn porten til
+  step6_2: Vel, du har ikke bare blitt med i Maria. Du har trådt inn porten til
     Allheimen, et sammenkoblet nettverk av tusenvis av tjenere.
   step6_3: Hver tjener er satt opp og fungerer litt ulikt, denne og noen andre kjører
-    Firefish, men ikke alle. Komplisert? Bittelitt, men du skjønner det fort når du
+    Maria, men ikke alle. Komplisert? Bittelitt, men du skjønner det fort når du
     tar det i bruk.
   step2_2: Å gi litt informasjon om hvem du er vil gjøre det lettere for andre å vite
     om de er interessert i å lese postene dine eller følge deg.
@@ -1817,7 +1817,7 @@ addRe: Legg til "re:" i begynnelsen av en kommentar til en post med innholdsadva
 donationLink: Lenke til donasjons-side
 createNewClip: Nytt utklipp
 removeQuote: Fjern sitat
-showUpdates: Vis et sprettoppvindu når Firefish oppdateres
+showUpdates: Vis et sprettoppvindu når Maria oppdateres
 renotesCount: Antall sendte delinger
 type: Type
 remoteOnly: Bare eksternt
@@ -1850,7 +1850,7 @@ activeEmailValidationDescription: Slår på strengere sjekk av epost-adresser, i
 clips: Utklipp
 verifiedLink: Verifisert lenke
 secureModeInfo: Ved forespørsler fra andre tjenere, ikke send tilbake uten bevis.
-isPatron: Firefish-patron
+isPatron: Maria-patron
 cannotUploadBecauseInappropriate: Filen ble ikke lastet opp fordi den er detektert
   som mulig NSFW.
 showAds: Vis samfunns-banner
@@ -1898,7 +1898,7 @@ deck: Kolonner
 _experiments:
   title: Eksperimenter
   enablePostImports: Slå på post-importer
-  postImportsCaption: Lar brukere importere poster fra kontoer på Firefish, Misskey,
+  postImportsCaption: Lar brukere importere poster fra kontoer på Maria, Misskey,
     Mastodon, Akkoma eller Pleroma. Den ekstra lasten kan forårsake tregere tjeneste.
 _dialog:
   charactersBelow: 'Ikke nok tagn! Skrevet: {current}/Grense: {min}'

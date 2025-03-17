@@ -207,7 +207,7 @@ noUsers: "ليس هناك مستخدمون"
 editProfile: "تعديل الملف التعريفي"
 noteDeleteConfirm: "هل تريد حذف هذه الملاحظة؟"
 pinLimitExceeded: "لا يمكنك تدبيس الملاحظات بعد الآن."
-intro: "لقد انتهت عملية تنصيب Firefish. الرجاء إنشاء حساب إداري."
+intro: "لقد انتهت عملية تنصيب Maria. الرجاء إنشاء حساب إداري."
 done: "تمّ"
 processing: "المعالجة جارية"
 preview: "معاينة"
@@ -386,7 +386,7 @@ exploreFediverse: "استكشف الفديفرس"
 popularTags: "الوسوم الرائجة"
 userList: "القوائم"
 about: "عن"
-aboutFirefish: "عن Firefish"
+aboutFirefish: "عن Maria"
 administrator: "المدير"
 token: "الرمز المميز"
 twoStepAuthentication: "الإستيثاق بعاملَيْن"
@@ -1061,7 +1061,7 @@ _time:
   hour: "سا"
   day: "ي"
 _tutorial:
-  title: "How to use Firefish"
+  title: "How to use Maria"
   step1_1: "Welcome!"
   step1_2: "Let's get you set up. You'll be up and running in no time!"
   step2_1: "First, please fill out your profile."
@@ -1086,9 +1086,9 @@ _tutorial:
   step5_7: "The Global {icon} timeline is where you can see posts from every other
     connected instance."
   step6_1: "So, what is this place?"
-  step6_2: "Well, you didn't just join Firefish. You joined a portal to the Fediverse,
+  step6_2: "Well, you didn't just join Maria. You joined a portal to the Fediverse,
     an interconnected network of thousands of servers, called \"instances\"."
-  step6_3: "Each server works in different ways, and not all servers run Firefish.
+  step6_3: "Each server works in different ways, and not all servers run Maria.
     This one does though! It's a bit complicated, but you'll get the hang of it in
     no time."
   step6_4: "Now go, explore, and have fun!"

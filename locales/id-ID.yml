@@ -1,7 +1,7 @@
 _lang_: "Bahasa Indonesia"
 headlineFirefish: "Platform media sosial sumber terbuka dan terdesentralisasi yang
   merdeka sepenuhnya! 🚀"
-introFirefish: "Selamat datang! Firefish adalah media sosial sumber terbuka dan terdesentralisasi
+introFirefish: "Selamat datang! Maria adalah media sosial sumber terbuka dan terdesentralisasi
   yang selamanya bebas! 🚀"
 monthAndDay: "{day} {month}"
 search: "Penelusuran"
@@ -151,7 +151,7 @@ cacheRemoteFilesDescription: "Ketika pengaturan ini dinonaktifkan, berkas luar a
 flagAsBot: "Tandai akun ini sebagai akun otomatis"
 flagAsBotDescription: "Jika akun ini dikendalikan oleh program, aktifkan opsi ini.
   Jika diaktifkan, ini akan berfungsi sebagai tanda bagi pengembang lain untuk mencegah
-  interaksi berantai dengan akun otomatis lain dan menyesuaikan sistem internal Firefish
+  interaksi berantai dengan akun otomatis lain dan menyesuaikan sistem internal Maria
   untuk memperlakukan akun ini sebagai akun otomatis."
 flagAsCat: "Atur akun ini sebagai kucing"
 flagAsCatDescription: "Kamu akan mendapatkan telinga kucing dan berbicara seperti
@@ -221,7 +221,7 @@ noUsers: "Tidak ada pengguna"
 editProfile: "Sunting profil"
 noteDeleteConfirm: "Kamu yakin ingin menghapus postingan ini?"
 pinLimitExceeded: "Kamu tidak dapat menyematkan postingan lagi"
-intro: "Instalasi Firefish telah selesai! Mohon untuk membuat pengguna admin."
+intro: "Instalasi Maria telah selesai! Mohon untuk membuat pengguna admin."
 done: "Selesai"
 processing: "Memproses"
 preview: "Pratinjau"
@@ -404,7 +404,7 @@ exploreFediverse: "Jelajahi Fediverse"
 popularTags: "Tag populer"
 userList: "Daftar"
 about: "Informasi"
-aboutFirefish: "Tentang Firefish"
+aboutFirefish: "Tentang Maria"
 administrator: "Admin"
 token: "Token"
 twoStepAuthentication: "Otentikasi dua faktor"
@@ -559,7 +559,7 @@ ascendingOrder: "Urutkan naik"
 descendingOrder: "Urutkan menurun"
 scratchpad: "Scratchpad"
 scratchpadDescription: "Scratchpad menyediakan lingkungan eksperimen untuk AiScript.
-  Kamu bisa menulis, mengeksekusi, serta mengecek hasil yang berinteraksi dengan Firefish."
+  Kamu bisa menulis, mengeksekusi, serta mengecek hasil yang berinteraksi dengan Maria."
 output: "Keluaran"
 script: "Script"
 disablePagesScript: "Nonaktifkan script pada halaman"
@@ -697,7 +697,7 @@ unclip: "Batalkan klip"
 confirmToUnclipAlreadyClippedNote: "Postingan ini sudah disertakan di klip \"{name}\"\
   . Yakin ingin menghapus postingan dari klip ini?"
 public: "Publik"
-i18nInfo: "Firefish diterjemahkan ke dalam banyak bahasa oleh sukarelawan. Kamu dapat
+i18nInfo: "Maria diterjemahkan ke dalam banyak bahasa oleh sukarelawan. Kamu dapat
   ikut membantu di {link}."
 manageAccessTokens: "Kelola access token"
 accountInfo: "Informasi akun"
@@ -755,9 +755,9 @@ nUsers: "{n} Pengguna"
 nNotes: "{n} Postingan"
 sendErrorReports: "Kirim laporan kesalahan"
 sendErrorReportsDescription: "Ketika diaktifkan, informasi kesalahan rinci akan dibagikan
-  dengan Firefish ketika masalah terjadi, hal ini untuk membantu kualitas Firefish.\n
+  dengan Maria ketika masalah terjadi, hal ini untuk membantu kualitas Maria.\n
   Ini akan memuat informasi antara lain versi sistem operasi yang kamu gunakan, peramban
-  yang dipakai, riwayat aktivitas kamu di Firefish, dll."
+  yang dipakai, riwayat aktivitas kamu di Maria, dll."
 myTheme: "Tema saya"
 backgroundColor: "Latar Belakang"
 accentColor: "Aksen"
@@ -852,7 +852,7 @@ hashtags: "Tagar"
 troubleshooting: "Penyelesaian Masalah"
 useBlurEffect: "Gunakan efek blur pada antarmuka"
 learnMore: "Pelajari lebih lanjut"
-misskeyUpdated: "Firefish telah dimutakhirkan!"
+misskeyUpdated: "Maria telah dimutakhirkan!"
 whatIsNew: "Lihat perubahan pemutakhiran"
 translate: "Terjemahkan"
 translatedFrom: "Terjemahkan dari {x}"
@@ -978,15 +978,15 @@ _registry:
   domain: "Domain"
   createKey: "Buat kunci"
 _aboutFirefish:
-  about: "Firefish adalah perangkat lunak sumber terbuka yang sedang dikembangkan
+  about: "Maria adalah perangkat lunak sumber terbuka yang sedang dikembangkan
     oleh syuilo sejak 2014."
   contributors: "Kontributor utama"
   allContributors: "Seluruh kontributor"
   source: "Sumber kode"
-  translation: "Terjemahkan Firefish"
-  donate: "Donasi ke Firefish"
-  donateTitle: Suka Firefish?
-  pleaseDonateToFirefish: Silakan pertimbangkan berdonasi ke Firefish untuk mendukung
+  translation: "Terjemahkan Maria"
+  donate: "Donasi ke Maria"
+  donateTitle: Suka Maria?
+  pleaseDonateToFirefish: Silakan pertimbangkan berdonasi ke Maria untuk mendukung
     pengembangannya.
   pleaseDonateToHost: Silakan pertimbangkan juga berdonasi ke server rumah kamu, {host},
     untuk membantu dengan biaya operasi.
@@ -998,9 +998,9 @@ _nsfw:
   force: "Sembunyikan semua media"
 _mfm:
   cheatSheet: "Contekan MFM"
-  intro: "MFM adalah Firefish-exclusive Markup Language yang dapat digunakan di banyak
+  intro: "MFM adalah Maria-exclusive Markup Language yang dapat digunakan di banyak
     tempat. Berikut kamu bisa melihat daftar dari syntax MFM yang ada."
-  dummy: "Firefish membentangkan dunia Fediverse"
+  dummy: "Maria membentangkan dunia Fediverse"
   mention: "Sebut"
   mentionDescription: "Kamu dapat menentukan pengguna tertentu dengan menggunakan
     simbol-At dan nama engguna mereka."
@@ -1238,7 +1238,7 @@ _time:
   hour: "jam"
   day: "hari"
 _tutorial:
-  title: "Cara menggunakan Firefish"
+  title: "Cara menggunakan Maria"
   step1_1: "Selamat datang!"
   step1_2: "Ayo siapkan. Lekas mulai tanpa basa-basi!"
   step1_3: "Linimasa kamu kosong, karena kamu belum mencatat catatan apapun atau mengikuti
@@ -1264,13 +1264,13 @@ _tutorial:
   step5_4: "Linimasa Lokal {icon} adalah tempat kamu dapat melihat postingan dari
     siapa pun di server ini."
   step6_1: "Jadi, tempat apa ini?"
-  step6_2: "Ya, kamu tidak saja bergabung ke Firefish. Kamu telah bergabung ke sebuah
+  step6_2: "Ya, kamu tidak saja bergabung ke Maria. Kamu telah bergabung ke sebuah
     portal ke Fediverse, sebuah jaringan ribuan server yang saling berhubungan."
   step6_3: "Setiap server bekerja dalam berbagai cara, dan tidak semua server menjalankan
-    Firefish. Ini salah satunya! Mungkin sedikit sulit, tetapi lama-lama kamu akan
+    Maria. Ini salah satunya! Mungkin sedikit sulit, tetapi lama-lama kamu akan
     mengerti."
-  step7_1: "Yay, Selamat! Kamu sudah menyelesaikan tutorial dasar Firefish."
-  step7_2: "Jika kamu ingin mempelajari lebih lanjut tentang Firefish, cobalah berkunjung
+  step7_1: "Yay, Selamat! Kamu sudah menyelesaikan tutorial dasar Maria."
+  step7_2: "Jika kamu ingin mempelajari lebih lanjut tentang Maria, cobalah berkunjung
     ke bagian {help}."
   step7_3: "Semoga berhasil dan bersenang-senanglah! 🚀"
   step5_6: Linimasa Rekomendasi {icon} adalah tempat kamu dapat melihat postingan
@@ -1869,7 +1869,7 @@ noInstances: Tidak ada server
 expandOnNoteClick: Buka postingan dengan klik
 defaultValueIs: 'Bawaan: {value}'
 enableRecommendedTimeline: Aktifkan linimasa rekomendasi
-searchPlaceholder: Telusuri Firefish
+searchPlaceholder: Telusuri Maria
 addInstance: Tambah server
 older: lebih lama
 listsDesc: Daftar mengizinkanmu membuat linimasa berisi pengguna spesifik. Itu dapat
@@ -1998,7 +1998,7 @@ apps: Aplikasi
 showAds: Tampilkan spanduk komunitas
 enterSendsMessage: Tekan Enter pada Pesan untuk mengirim pesan (matikan dengan Ctrl
   + Enter)
-showAdminUpdates: Indikasi versi Firefish baru tersedia (hanya admin)
+showAdminUpdates: Indikasi versi Maria baru tersedia (hanya admin)
 noteId: ID Postingan
 caption: Deskripsi itomatis
 splash: Layar Percik
@@ -2024,7 +2024,7 @@ customSplashIcons: Ikon layar percik khusus (url)
 customSplashIconsDescription: URL untuk ikon layar percik khusus dipisahkan dengan
   garis baru untuk ditampilkan secara acak saat pengguna memuat/muat ulang halaman.
   Harap pastikan gambar adalah URL statis, lebih utama berukuran 192x192.
-showUpdates: Tampilkan sembulan saat pemutakhiran Firefish
+showUpdates: Tampilkan sembulan saat pemutakhiran Maria
 recommendedInstances: Server yang direkomendasikan
 updateAvailable: Ada pemutakhiran tersedia!
 swipeOnMobile: Izinkan usap antar halaman
@@ -2039,7 +2039,7 @@ migrationConfirm: "Kamu sangat yakin ingin memindahkan akunmu ke {account}? Seka
   sebagai akun yang dipindahkan."
 license: Lisensi
 noGraze: Harap nonaktifkan ekstensi peramban "Graze for Mastodon", karena akan menganggu
-  Firefish.
+  Maria.
 silencedWarning: Halaman ini tampil karena pengguna ini datang dari server yang dibisukan
   adminmu, jadi mereka berpotensi spam.
 isLocked: Akun ini perlu persetujuan ikuti
@@ -2091,7 +2091,7 @@ _messaging:
   dms: Privat
   groups: Grup
 verifiedLink: Tautan terverifikasi
-isPatron: Pendukung Firefish
+isPatron: Pendukung Maria
 customKaTeXMacroDescription: 'Siapkan makro untuk menulis ekspresi matematika dengan
   mudah! Notasi ini sesuai dengan definisi perintah LaTeX dan ditulis sebagai \newcommand{\
   nama}{konten} atau \newcommand{\nama}[jumlah argumen]{konten}. Sebagai contoh, \newcommand{\add}[2]{#1
@@ -2115,7 +2115,7 @@ isAdmin: Administrator
 _experiments:
   title: Eksperimen
   enablePostImports: Aktifkan impor postingan
-  postImportsCaption: Izinkan pengguna mengimpor postingan mereka dari akun Firefish
+  postImportsCaption: Izinkan pengguna mengimpor postingan mereka dari akun Maria
     sebelumnya, Misskey, Mastodon, Akkoma, dan Pleroma. Ini mungkin menyebabkan perlambatan
     saat memuat jika antreanmu bottleneck.
 _dialog:
@@ -2204,7 +2204,7 @@ showBigPostButton: Tampilkan tombol kirim besar di formulir postingan
 showPreviewByDefault: Tampilkan pratinjau dalam formulir postingan secara bawaan
 useCdn: Dapatkan aset dari CDN
 useCdnDescription: Muat aset statis seperti Twemoji dari CDN JSDelivr daripada server
-  Firefish ini.
+  Maria ini.
 sentFollowRequests: Permintaan mengikuti terkirim
 replyUnmute: Suarakan balasan dalam lini masa
 noSentFollowRequests: Kamu belum mengirim permintaan mengikuti
@@ -2254,8 +2254,8 @@ toEdit: Sunting
 showNoAltTextWarning: Tampilkan peringatan jika kamu mencoba mengirim berkas tanpa
   deskripsi
 toReply: Balas
-messagingUnencryptedInfo: Percakapan di Firefish tidak terenkripsi secara ujung ke
-  ujung. Jangan bagikan informasi sensitif apa pun melalui Firefish.
+messagingUnencryptedInfo: Percakapan di Maria tidak terenkripsi secara ujung ke
+  ujung. Jangan bagikan informasi sensitif apa pun melalui Maria.
 moderationNote: Catatan Moderasi
 driveCapacityOverride: Penimpaan Kapasitas Drive
 ipFirstAcknowledged: Tanggal akuisisi pertama dari alamat IP
@@ -2276,7 +2276,7 @@ foldNotification: Kelompokkan notifikasi yang sama
 getQrCode: Tampilkan kode QR
 cannotEditVisibility: Kamu tidak bisa menyunting keterlihatan
 useThisAccountConfirm: Apakah kamu ingin melanjutkan dengan akun ini?
-inputAccountId: Silakan memasukkan akunmu (misalnya, @firefish@info.firefish.dev)
+inputAccountId: Silakan memasukkan akunmu (misalnya, @maria@info.maria.dev)
 copyRemoteFollowUrl: Salin URL ikuti jarak jauh
 slashQuote: Kutipan rantai
 scheduledPostAt: Kiriman akan dikirim {time}
