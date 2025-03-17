@@ -19,7 +19,7 @@ Firefish 基于 Misskey 开发，是 ActivityPub 协议上强大的微博客平�
 
 - [安装指南](https://github.com/buka5587/maria/blob/main/docs/install.md)
 - [贡献指南](./CONTRIBUTING.md)
-- [更新日志](https://codeberg.org/firefish/firefish/src/branch/main/docs/changelog.md)
+- [更新日志](https://github.com/buka5587/maria/blob/main/docs/changelog.md)
 
 # 相关链接
 
