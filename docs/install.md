@@ -88,6 +88,18 @@ sudo apt-get update
 sudo apt-get install build-essential
 ```
 
+5.推荐安装依赖
+
+* FFmpeg for video transcoding (optional)
+
+* Caching server (optional, one of the following)
+
+  *  DragonflyDB
+
+  *  KeyDB
+
+  *  Another Redis / Valkey server
+
 ## 三，Maria 部署
 
 1.创建专用用户
