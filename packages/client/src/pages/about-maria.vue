@@ -21,7 +21,7 @@
 							@load="iconLoaded"
 							@click="gravity"
 						/>
-						<div class="misskey">Firefish</div>
+						<div class="misskey">Maria</div>
 						<div class="version">v{{ version }}</div>
 						<span
 							v-for="emoji in easterEggEmojis"
@@ -43,13 +43,13 @@
 					</div>
 					<div class="_formBlock" style="text-align: center">
 						<MkButton primary rounded inline @click="iLoveMisskey"
-							>I <Mfm text="$[jelly ❤]" /> #Firefish</MkButton
+							>I <Mfm text="$[jelly ❤]" /> #Maria</MkButton
 						>
 					</div>
 					<FormSection>
 						<div class="_formLinks">
 							<FormLink
-								to="https://codeberg.org/firefish/firefish"
+								to="https://github.com/buka5587/maria"
 								external
 							>
 								<template #icon
@@ -124,7 +124,7 @@ function gravity() {
 
 function iLoveMisskey() {
 	os.post({
-		initialText: "I $[jelly ❤] #Firefish",
+		initialText: "I $[jelly ❤] #Maria",
 		instant: true,
 	});
 }

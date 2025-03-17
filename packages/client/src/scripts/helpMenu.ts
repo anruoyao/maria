@@ -50,7 +50,7 @@ export function openHelpMenu_(ev: MouseEvent) {
 				type: "link",
 				text: i18n.ts.aboutFirefish,
 				icon: `${icon("ph-lightbulb")}`,
-				to: "/about-firefish",
+				to: "/about-maria",
 			},
 			...(instanceSpecificItems.length >= 2 ? [null] : []),
 			...instanceSpecificItems,

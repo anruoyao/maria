@@ -8,7 +8,7 @@
 				<span>Switch is now {{ flag ? "on" : "off" }}</span>
 			</MkSwitch>
 			<div style="margin: 32px 0">
-				<MkRadio v-model="radio" value="misskey">Firefish</MkRadio>
+				<MkRadio v-model="radio" value="misskey">Maria</MkRadio>
 				<MkRadio v-model="radio" value="mastodon">Mastodon</MkRadio>
 				<MkRadio v-model="radio" value="pleroma">Pleroma</MkRadio>
 			</div>
@@ -50,12 +50,12 @@ export default defineComponent({
 		return {
 			text: "",
 			flag: true,
-			radio: "firefish",
+			radio: "maria",
 			mfm: `Hello world! This is an @example mention. BTW, you are @${
 				this.me ? this.me.username : "guest"
 			}.\nAlso, here is ${config.url} and [example link](${
 				config.url
-			}). for more details, see <https://codeberg.org/firefish/firefish>.\nAs you know #Firefish is open-source software.`,
+			}). for more details, see <https://github.com/buka5587/maria>.\nAs you know #Maria is open-source software.`,
 		};
 	},
 
@@ -82,7 +82,7 @@ export default defineComponent({
 				},
 				baz: {
 					type: "string",
-					default: "Firefish makes you happy.",
+					default: "Maria makes you happy.",
 					label: "This is a string property",
 				},
 			});

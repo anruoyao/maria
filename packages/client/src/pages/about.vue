@@ -58,7 +58,7 @@
 								<template #key>Firefish</template>
 								<template #value>{{ version }}</template>
 							</MkKeyValue>
-							<FormLink to="/about-firefish">{{
+							<FormLink to="/about-maria">{{
 								i18n.ts.aboutFirefish
 							}}</FormLink>
 						</FormSection>

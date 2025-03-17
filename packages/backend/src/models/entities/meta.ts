@@ -155,7 +155,7 @@ export class Meta {
 	@Column("varchar", {
 		length: 512,
 		array: true,
-		default: "{/featured,/channels,/explore,/pages,/about-firefish}",
+		default: "{/featured,/channels,/explore,/pages,/about-maria}",
 	})
 	public pinnedPages: string[];
 

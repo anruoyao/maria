@@ -186,7 +186,7 @@ export default defineComponent({
 						text: i18n.ts.aboutFirefish,
 						icon: `${icon("ph-info")}`,
 						action: () => {
-							os.pageWindow("/about-firefish");
+							os.pageWindow("/about-maria");
 						},
 					},
 				],

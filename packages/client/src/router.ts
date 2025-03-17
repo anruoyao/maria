@@ -295,8 +295,8 @@ export const routes: RouteDef[] = [
 		hash: "initialTab",
 	},
 	{
-		path: "/about-firefish",
-		component: page(() => import("./pages/about-firefish.vue")),
+		path: "/about-maria",
+		component: page(() => import("./pages/about-maria.vue")),
 	},
 	{
 		path: "/theme-editor",
