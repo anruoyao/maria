@@ -587,7 +587,7 @@ export declare function getRelayActorId(): Promise<string>
 
 export declare function getTimestamp(id: string): number
 
-/** Prints the greeting message and the Firefish version to stdout. */
+/** Prints the greeting message and the Maria version to stdout. */
 export declare function greet(): void
 
 /** Hashes the given password using [argon2] algorithm. */
@@ -757,7 +757,7 @@ export declare function isSilencedServer(host: string): Promise<boolean>
 
 export declare function isUnicodeEmoji(s: string): boolean
 
-/** Returns the latest Firefish version. */
+/** Returns the latest Maria version. */
 export declare function latestVersion(): Promise<string>
 
 export interface LibreTranslateConfig {
@@ -1087,7 +1087,7 @@ export type NotificationType =  'app'|
  *
  * refs:
  * * <https://misskey-hub.net/ns#isCat>
- * * <https://codeberg.org/firefish/firefish/src/branch/main/docs/activitypub-extensions.md#speakascat>
+ * * <https://github.com/buka5587/maria/src/branch/main/docs/activitypub-extensions.md#speakascat>
  *
  * # Arguments
  *

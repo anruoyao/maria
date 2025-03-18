@@ -8,13 +8,13 @@ html
 
 	head
 		meta(charset='utf-8')
-		meta(name='application-name' content='Firefish')
+		meta(name='application-name' content='Maria')
 		meta(name='referrer' content='origin')
 		meta(name='darkreader-lock' content='')
 		meta(name='theme-color' content= themeColor || '#31748f')
 		meta(name='theme-color-orig' content= themeColor || '#31748f')
 		meta(property='twitter:card' content='summary')
-		meta(property='og:site_name' content= instanceName || 'Firefish')
+		meta(property='og:site_name' content= instanceName || 'Maria')
 		meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no')
 		link(rel='icon' href= icon || `/favicon.ico?${ timestamp }`)
 		link(rel='apple-touch-icon' href= icon || `/apple-touch-icon.png?${ timestamp }`)
@@ -31,7 +31,7 @@ html
 
 		title
 			block title
-				= title || 'Firefish'
+				= title || 'Maria'
 
 		block desc
 			meta(name='description' content=desc || 'An open source, decentralized social media platform that\'s free forever! 🚀')
@@ -41,7 +41,7 @@ html
 				meta(name='robots' content='noindex,nofollow,noarchive,nocache,noimageindex')
 
 		block og
-			meta(property='og:title'       content=title || 'Firefish')
+			meta(property='og:title'       content=title || 'Maria')
 			meta(property='og:description' content=desc || 'An open source, decentralized social media platform that\'s free forever! 🚀')
 			meta(property='og:image'       content=img)
 			meta(property='og:image:alt'   content=alt || 'Pfp')
