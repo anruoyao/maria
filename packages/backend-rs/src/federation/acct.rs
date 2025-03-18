@@ -70,7 +70,7 @@ mod unit_test {
     #[test]
     fn acct_to_string() {
         let remote_acct = Acct {
-            username: "firefish".to_owned(),
+            username: "Maria".to_owned(),
             host: Some("example.com".to_owned()),
         };
         let local_acct = Acct {
@@ -78,7 +78,7 @@ mod unit_test {
             host: None,
         };
 
-        assert_eq!(remote_acct.to_string(), "firefish@example.com");
+        assert_eq!(remote_acct.to_string(), "Maria@example.com");
         assert_ne!(remote_acct.to_string(), "mastodon@example.com");
         assert_eq!(local_acct.to_string(), "MisakaMikoto");
         assert_ne!(local_acct.to_string(), "ShiraiKuroko");
@@ -87,7 +87,7 @@ mod unit_test {
     #[test]
     fn string_to_acct() {
         let remote_acct = Acct {
-            username: "firefish".to_owned(),
+            username: "Maria".to_owned(),
             host: Some("example.com".to_owned()),
         };
         let local_acct = Acct {
@@ -96,10 +96,10 @@ mod unit_test {
         };
 
         assert_eq!(
-            Acct::from_str("@firefish@example.com").unwrap(),
+            Acct::from_str("@Maria@example.com").unwrap(),
             remote_acct
         );
-        assert_eq!(Acct::from_str("firefish@example.com").unwrap(), remote_acct);
+        assert_eq!(Acct::from_str("Maria@example.com").unwrap(), remote_acct);
         assert_eq!(Acct::from_str("@MisakaMikoto").unwrap(), local_acct);
         assert_eq!(Acct::from_str("MisakaMikoto").unwrap(), local_acct);
     }

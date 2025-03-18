@@ -275,7 +275,7 @@ pub async fn send_push_notification(
         "".to_owned()
     } else {
         // Format the `content` passed from the TypeScript backend
-        // for Firefish push notifications
+        // for Maria push notifications
         let label = match kind {
             PushNotificationKind::Generic => "notification",
             PushNotificationKind::Chat => "unreadMessagingMessage",

@@ -1,4 +1,4 @@
-//! Fetch latest Firefish version from the Firefish repository
+//! Fetch latest Maria version from the Maria repository
 
 use crate::{cache::Cache, misc::is_safe_url::is_safe_url, util::http_client};
 use chrono::Duration;
@@ -54,7 +54,7 @@ async fn get_package_json() -> Result<PackageJson, Error> {
     Ok(package_json)
 }
 
-/// Returns the latest Firefish version.
+/// Returns the latest Maria version.
 #[macros::export]
 pub async fn latest_version() -> Result<String, Error> {
     if let Some(package_json) = PACKAGE_JSON_CACHE.get() {

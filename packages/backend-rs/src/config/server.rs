@@ -337,7 +337,7 @@ pub fn load_config() -> Config {
         api_url: format!("{}://{}/api", scheme, host),
         auth_url: format!("{}://{}/auth", scheme, host),
         drive_url: format!("{}://{}/files", scheme, host),
-        user_agent: format!("Firefish/{} ({})", version, url),
+        user_agent: format!("Maria/{} ({})", version, url),
         version,
         host,
         hostname,

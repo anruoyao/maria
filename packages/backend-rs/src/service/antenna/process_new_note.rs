@@ -25,7 +25,7 @@ pub enum Error {
     Redis(#[from] RedisError),
     #[error("bad Redis connection")]
     RedisConn(#[from] RedisConnError),
-    #[doc = "Provided string is not a valid Firefish ID"]
+    #[doc = "Provided string is not a valid Maria ID"]
     #[error(transparent)]
     InvalidId(#[from] InvalidIdError),
     #[error("Redis stream operation has failed")]

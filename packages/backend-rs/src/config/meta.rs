@@ -76,7 +76,7 @@ pub fn meta_to_pug_args(meta: Meta) -> PugArgs {
         .map(|s| s.to_owned())
         .unwrap_or_else(|| "Loading...".to_owned());
 
-    let name = meta.name.unwrap_or_else(|| "Firefish".to_owned());
+    let name = meta.name.unwrap_or_else(|| "Maria".to_owned());
     PugArgs {
         img: meta.banner_url,
         title: name.clone(),

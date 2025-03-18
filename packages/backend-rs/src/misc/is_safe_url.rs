@@ -39,11 +39,11 @@ pub fn is_safe_url(url: &str) -> bool {
 mod unit_test {
     #[test]
     fn is_safe_url() {
-        assert!(super::is_safe_url("https://firefish.dev/firefish/firefish"));
+        assert!(super::is_safe_url("https://github.com/buka5587/maria"));
         assert!(super::is_safe_url("http://[::ffff:8.8.8.8]:3000"));
         assert!(super::is_safe_url("http://[2000::]"));
         assert!(!super::is_safe_url("http://172.17.0.1:8080/?foo=bar"));
-        assert!(!super::is_safe_url("ftp://firefish.dev/firefish/firefish"));
+        assert!(!super::is_safe_url("ftp://github.com/buka5587/maria"));
         assert!(!super::is_safe_url("http://localhost:3000"));
         assert!(!super::is_safe_url("http://127.0.0.1:3000"));
         assert!(!super::is_safe_url("http://[::1]:3000"));

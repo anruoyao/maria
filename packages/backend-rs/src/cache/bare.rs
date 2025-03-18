@@ -142,7 +142,7 @@ mod unit_test {
 
         let data = Data {
             id: 16,
-            name: "Firefish".to_owned(),
+            name: "Maria".to_owned(),
         };
 
         assert!(CACHE.get().is_none());
@@ -161,7 +161,7 @@ mod unit_test {
 
         let data = Data {
             id: 16,
-            name: "Firefish".to_owned(),
+            name: "Maria".to_owned(),
         };
 
         CACHE.set(data);
