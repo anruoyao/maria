@@ -47,7 +47,7 @@ type StreamEvents = {
 } & BroadcastEvents;
 
 /**
- * Firefish stream connection
+ * Maria stream connection
  */
 export default class Stream extends EventEmitter<StreamEvents> {
 	public stream: ReconnectingWebsocket;

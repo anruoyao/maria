@@ -24,7 +24,7 @@ export const packedUserLiteSchema = {
 			type: "string",
 			nullable: true,
 			optional: false,
-			example: "firefish.example.com",
+			example: "maria.example.com",
 			description: "The local host is represented with `null`.",
 		},
 		avatarUrl: {

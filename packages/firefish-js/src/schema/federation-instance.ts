@@ -17,7 +17,7 @@ export const packedFederationInstanceSchema = {
 			type: "string",
 			optional: false,
 			nullable: false,
-			example: "firefish.example.com",
+			example: "maria.example.com",
 		},
 		usersCount: {
 			type: "number",
@@ -75,7 +75,7 @@ export const packedFederationInstanceSchema = {
 			type: "string",
 			optional: false,
 			nullable: true,
-			example: "firefish",
+			example: "maria",
 		},
 		softwareVersion: {
 			type: "string",

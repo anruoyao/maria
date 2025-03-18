@@ -73,7 +73,7 @@ function checkForSplash() {
 	await initializeInstanceCache();
 	const instance = getInstanceInfo();
 
-	console.info(`Firefish v${version}`);
+	console.info(`Maria v${version}`);
 
 	if (_DEV_) {
 		console.warn("Development mode!!!");
