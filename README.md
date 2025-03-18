@@ -10,7 +10,7 @@
 
 <img src="./animated.svg" align="right" height="320px"/>
 
-Maria(Firefish) 基于 Misskey 开发，是 ActivityPub 协议上强大的微博客平台，拥有表情反应、可定制网页界面、丰富聊天功能等特性！
+Maria(Firefish) 基于 Misskey 开发，是 ActivityPub 协议上强大的微博客平台，拥有表情反应、可定制网页界面、丰富聊天功能等特性！Maria暂时只支持手动编译部署！
 
 </div>
 
