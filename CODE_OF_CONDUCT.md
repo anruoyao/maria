@@ -59,11 +59,9 @@ representative at an online or offline event.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-@thatonecalculator on Codeberg,
-`@kainoa@firefish.social` on the Fediverse,
-or kainoa@t1c.dev via email.
+Abusive, harassing, or other unacceptable behavior
+Report to the community leader responsible for implementation
+2195299055@qq.com Email.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the

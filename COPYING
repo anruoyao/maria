@@ -2,6 +2,7 @@ Unless specified otherwise, the entirety of this repository is subject to the fo
 Copyright (c) 2014-2023 syuilo and contributors
 Copyright (c) 2022-2023 Kainoa Kanter and contributors
 Copyright (c) 2024 Firefish contributors
+Copyright (c) 2025 Maria and contributors
 
 And is distributed under The GNU Affero General Public License Version 3, you should have received a copy of the license file as LICENSE.
 
@@ -9,6 +10,7 @@ And is distributed under The GNU Affero General Public License Version 3, you sh
 
 The packages/macro-rs directory and their contents are
 Copyright (c) 2024 Firefish contributors
+Copyright (c) 2025 Maria and contributors
 
 And are distributed under either of The Apache Licence, Version 2.0
 or The MIT License at your option. See these files for details:
@@ -22,6 +24,7 @@ The packages/firefish-js directory and their contents are
 Copyright (c) 2021-2022 syuilo and contributors
 Copyright (c) 2022-2023 Kainoa Kanter and contributors
 Copyright (c) 2024 Firefish contributors
+Copyright (c) 2025 Maria and contributors
 
 And are distributed under The MIT License.
 See packages/firefish-js/LICENSE for details.
@@ -36,12 +39,13 @@ These specific configuration directories:
 and their contents are
 Copyright (c) 2022-2023 Kainoa Kanter and contributors
 Copyright (c) 2024 Firefish contributors
+Copyright (c) 2025 Maria and contributors
 
 And are distributed under The Apache License, Version 2.0, you should have received a copy of the license file as LICENSE in each specified directory.
 
 ---
 
-Firefish includes several third-party open-source softwares and software libraries.
+Firefish/Mria includes several third-party open-source softwares and software libraries.
 
 RsaSignature2017 implementation by Transmute Industries Inc
 License: MIT

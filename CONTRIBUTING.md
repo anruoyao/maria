@@ -1,5 +1,7 @@
 # Contribution guide
-We're glad you're interested in contributing Firefish! In this document you will find the information you need to contribute to the project.
+We're glad you're interested in contributing Maria! In this document you will find the information you need to contribute to the project.
+
+Maria基于firefish分叉开发，因此贡献指南与firefish项目一致。
 
 ## Translation (i18n)
 Firefish uses [Weblate](https://hosted.weblate.org/engage/firefish/) for translation and internationalization management.
