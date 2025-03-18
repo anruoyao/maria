@@ -1,5 +1,5 @@
 /**
- * Firefish Entry Point
+ * Maria Entry Point
  */
 
 import { EventEmitter } from "node:events";

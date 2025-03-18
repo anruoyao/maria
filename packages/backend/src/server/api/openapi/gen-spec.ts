@@ -9,13 +9,13 @@ export function genOpenapiSpec() {
 
 		info: {
 			version: "v1",
-			title: "Firefish API",
+			title: "Maria API",
 			"x-logo": { url: "/static-assets/api-doc.png" },
 		},
 
 		externalDocs: {
 			description: "Repository",
-			url: "https://codeberg.org/firefish/firefish",
+			url: "https://github.com/buka5587/maria",
 		},
 
 		servers: [
@@ -106,7 +106,7 @@ export function genOpenapiSpec() {
 			description: desc,
 			externalDocs: {
 				description: "Source code",
-				url: `https://codeberg.org/firefish/firefish/src/branch/develop/packages/backend/src/server/api/endpoints/${endpoint.name}.ts`,
+				url: `https://github.com/buka5587/maria/src/branch/develop/packages/backend/src/server/api/endpoints/${endpoint.name}.ts`,
 			},
 			tags: endpoint.meta.tags || undefined,
 			security,

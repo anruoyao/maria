@@ -52,7 +52,7 @@ export async function proxyMedia(ctx: Koa.Context) {
 	if (ctx.headers["user-agent"]) {
 		const userAgent = ctx.headers["user-agent"].toLowerCase();
 		if (
-			["misskey/", "firefish/", "iceshrimp/", "cherrypick/"].some((s) =>
+			["misskey/", "firefish/", "iceshrimp/", "cherrypick/","maria/"].some((s) =>
 				userAgent.includes(s),
 			)
 		) {

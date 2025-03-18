@@ -1,6 +1,6 @@
 # Packages
 
-This directory contains all of the packages Firefish uses.
+This directory contains all of the packages Maria/Firefish uses.
 
 - `backend`: Main backend code written in TypeScript for NodeJS
 - `backend-rs`: Backend code written in Rust, bound to NodeJS by [NAPI-RS](https://napi.rs/)

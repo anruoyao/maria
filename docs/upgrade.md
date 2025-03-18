@@ -6,7 +6,7 @@
 1. 停止服务运行
     ```sh
     sudo systemctl stop maria.service
-    # 如果使用 pm2 则执行：pm2 stop firefish
+    # 如果使用 pm2 则执行：pm2 stop maria
     ```
 1. 拉取最新源代码
     ```sh
@@ -23,5 +23,5 @@
 1. 启动服务
     ```sh
     sudo systemctl start maria.service
-    # 如果使用 pm2 则执行：pm2 start firefish
+    # 如果使用 pm2 则执行：pm2 start maria
     ```

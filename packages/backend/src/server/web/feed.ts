@@ -53,7 +53,7 @@ export default async function (
 		id: author.link,
 		title: `${author.name} (@${user.username}@${config.host})`,
 		updated: notes[0].createdAt,
-		generator: "Firefish",
+		generator: "Maria",
 		description: escapeCDATA(
 			`${user.notesCount} Notes, ${
 				profile.ffVisibility === "public" ? user.followingCount : "?"

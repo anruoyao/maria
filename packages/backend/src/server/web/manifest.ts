@@ -2,8 +2,8 @@ import type Koa from "koa";
 import { fetchMeta } from "backend-rs";
 
 const manifest = {
-	short_name: "Firefish",
-	name: "Firefish",
+	short_name: "Maria",
+	name: "Maria",
 	description:
 		"An open source, decentralized social media platform that's free forever!",
 	start_url: "/",
@@ -79,8 +79,8 @@ const manifest = {
 export const manifestHandler = async (ctx: Koa.Context) => {
 	const instanceMeta = await fetchMeta();
 
-	manifest.short_name = instanceMeta.name || "Firefish";
-	manifest.name = instanceMeta.name || "Firefish";
+	manifest.short_name = instanceMeta.name || "Maria";
+	manifest.name = instanceMeta.name || "Maria";
 	if (instanceMeta.themeColor) manifest.theme_color = instanceMeta.themeColor;
 
 	ctx.set("Cache-Control", "max-age=300");

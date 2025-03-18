@@ -41,7 +41,7 @@ export const meta = {
 				optional: false,
 				nullable: false,
 				format: "url",
-				example: "https://firefish.example.com",
+				example: "https://maria.example.com",
 			},
 			description: {
 				type: "string",
@@ -72,13 +72,13 @@ export const meta = {
 				type: "string",
 				optional: false,
 				nullable: false,
-				default: "https://firefish.dev/firefish/firefish",
+				default: "https://github.com/buka5587/maria",
 			},
 			feedbackUrl: {
 				type: "string",
 				optional: false,
 				nullable: false,
-				default: "https://firefish.dev/firefish/firefish/issues",
+				default: "https://github.com/buka5587/maria/issues",
 			},
 			defaultDarkTheme: {
 				type: "string",

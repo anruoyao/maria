@@ -36,7 +36,7 @@ export async function masterMain() {
 		process.exit(1);
 	}
 
-	bootLogger.info("Firefish initialized");
+	bootLogger.info("Maria initialized");
 
 	await spawnWorkers(config.clusterLimits);
 

@@ -1,6 +1,6 @@
 # Set up a development environment by installing all dependencies locally
 
-This document demonstrates an example procedure to set up a Firefish development environment on Debian 12. You can refer to this document if you prefer to install all dependencies (Node.js, PostgreSQL, Redis, etc.) locally.
+This document demonstrates an example procedure to set up a Maria development environment on Debian 12. You can refer to this document if you prefer to install all dependencies (Node.js, PostgreSQL, Redis, etc.) locally.
 
 Make sure that you can use the `sudo` command before proceeding.
 
@@ -15,7 +15,7 @@ sudo apt install build-essential python3 curl wget git lsb-release
 
 ### Node.js
 
-Firefish requires Node.js v18.20.0 or later. While you can choose any versions between v18.20.0 and the latest version (v22.2.0 as of writing), we recommend that you install v18.x so as not to use new features inadvertently and introduce incompatibility issues.
+Maria requires Node.js v18.20.0 or later. While you can choose any versions between v18.20.0 and the latest version (v22.2.0 as of writing), we recommend that you install v18.x so as not to use new features inadvertently and introduce incompatibility issues.
 
 Instructions can be found at [this repository](https://github.com/nodesource/distributions).
 
@@ -50,7 +50,7 @@ curl -LsSf https://get.nexte.st/latest/linux | tar zxf - -C ${CARGO_HOME:-~/.car
 
 ### PostgreSQL and PGroonga
 
-Firefish requires PostgreSQL v12 or later. We recommend that you install v12.x for the same reason as Node.js.
+Maria requires PostgreSQL v12 or later. We recommend that you install v12.x for the same reason as Node.js.
 
 PostgreSQL install instructions can be found at [this page](https://www.postgresql.org/download/).
 
@@ -105,32 +105,32 @@ sudo apt install ffmpeg
 
 1. Create a database user
     ```sh
-    sudo -u postgres createuser --no-createdb --no-createrole --no-superuser --encrypted --pwprompt firefish
+    sudo -u postgres createuser --no-createdb --no-createrole --no-superuser --encrypted --pwprompt maria
     ```
-    If you forgot the password you typed, you can reset it by executing `sudo -u postgres psql -c "ALTER USER firefish PASSWORD 'password';"`.
+    If you forgot the password you typed, you can reset it by executing `sudo -u postgres psql -c "ALTER USER maria PASSWORD 'password';"`.
 2. Create a database
     ```sh
-    sudo -u postgres createdb --encoding='UTF8' --owner=firefish firefish_db
+    sudo -u postgres createdb --encoding='UTF8' --owner=maria maria_db
     ```
 3. Enable PGronnga extension
     ```sh
-    sudo -u postgres psql --command='CREATE EXTENSION pgroonga;' --dbname=firefish_db
+    sudo -u postgres psql --command='CREATE EXTENSION pgroonga;' --dbname=maria_db
     ```
 
-## 3. Configure Firefish
+## 3. Configure Maria
 
-1. Fork the Firefish repository on GitLab
-1. Clone your Firefish repository
+1. Fork the Maria repository on GitLab
+1. Clone your Maria repository
     ```sh
-    git clone https://codeberg.org/your-user-name/firefish.git
+    git clone https://github.com/buka5587/maria.git
     ```
 1. Copy the example database config file
     ```sh
     cp dev/config.example.env dev/config.env
     ```
-1. Create a config file for Firefish
+1. Create a config file for Maria
     ```sh
-    cd firefish
+    cd maria
     vim .config/default.yml
     ```
     
@@ -141,8 +141,8 @@ sudo apt install ffmpeg
     db:
       host: localhost
       port: 5432
-      db: firefish_db
-      user: firefish
+      db: maria_db
+      user: maria
       pass: password
     
     redis:
@@ -152,7 +152,7 @@ sudo apt install ffmpeg
     maxLogLevel: 'debug'  # or 'trace'
     ```
 
-## 4. Build and start Firefish
+## 4. Build and start Maria
 
 1. Install pnpm
     ```sh
@@ -171,11 +171,11 @@ sudo apt install ffmpeg
     ```sh
     pnpm run migrate
     ```
-1. Start Firefish
+1. Start Maria
     ```sh
     pnpm run start
     ```
-    You can access to the local Firefish server on http://localhost:3000 after this message shows up!
+    You can access to the local Maria server on http://localhost:3000 after this message shows up!
     ```
     DONE *  [core boot]     All workers started
     DONE *  [core boot]     Now listening on port 3000 on http://localhost:3000

@@ -6,10 +6,10 @@ export class FixFirefish1658981842728 implements MigrationInterface {
 			`UPDATE "meta" SET "useStarForReactionFallback" = TRUE;`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "repositoryUrl" = 'https://codeberg/firefish/firefish'`,
+			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/buka5587/maria'`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "feedbackUrl" = 'https://codeberg/firefish/firefish/issues'`,
+			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/buka5587/maria/issues'`,
 		);
 	}
 
@@ -18,10 +18,10 @@ export class FixFirefish1658981842728 implements MigrationInterface {
 			`UPDATE "meta" SET "useStarForReactionFallback" = FALSE;`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "repositoryUrl" = 'https://codeberg/firefish/firefish'`,
+			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/buka5587/maria'`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "feedbackUrl" = 'https://codeberg/firefish/firefish/issues'`,
+			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/buka5587/maria/issues'`,
 		);
 	}
 }

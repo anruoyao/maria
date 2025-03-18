@@ -15,7 +15,7 @@
 ## Start up the environment
 
 1. Download the [`dev/container` directory](./dev/container) and execute `chmod +x docker-entrypoint.sh`
-    - Alternatively, you can use `git clone https://codeberg.org/firefish/firefish.git && cd firefish/dev/container`, although this will clone the entire repository.
+    - Alternatively, you can use `git clone https://github.com/buka5587/maria.git && cd maria/dev/container`, although this will clone the entire repository.
 1. Copy the example config file
     ```sh
     cp config.example.env config.env
@@ -27,8 +27,8 @@
 1. Wait until the following message shows up
     ```log
     DONE *  [core boot]     All workers started
-    DONE *  [core boot]     Now listening on port 3030 on https://your_firefish_url.example.com
+    DONE *  [core boot]     Now listening on port 3030 on https://your_maria_url.example.com
     ```
-1. A fresh Firefish environment is created on the URL you have set!
+1. A fresh maria environment is created on the URL you have set!
 
 When you want to restart the dev server, you just need to terminate the process (a.k.a. press `Ctrl+C`) and run `docker compose up` again.

@@ -381,14 +381,14 @@ export class Meta {
 
 	@Column("varchar", {
 		length: 512,
-		default: "https://firefish.dev/firefish/firefish",
+		default: "https://github.com/buka5587/maria",
 		nullable: false,
 	})
 	public repositoryUrl: string;
 
 	@Column("varchar", {
 		length: 512,
-		default: "https://firefish.dev/firefish/firefish/issues/new",
+		default: "https://github.com/buka5587/maria/issues/new",
 		nullable: true,
 	})
 	public feedbackUrl: string | null;

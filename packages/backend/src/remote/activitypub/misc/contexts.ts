@@ -549,7 +549,7 @@ export const WellKnownContext = {
 			PropertyValue: "schema:PropertyValue",
 			value: "schema:value",
 			// Firefish
-			firefish: "https://firefish.dev/ns#",
+			firefish: "https://github.com/buka5587/maria#",
 			speakAsCat: "firefish:speakAsCat",
 			// Misskey
 			misskey: "https://misskey-hub.net/ns#",

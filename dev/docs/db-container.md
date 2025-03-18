@@ -1,4 +1,4 @@
-# Set up database containers and run Firefish locally
+# Set up database containers and run Maria locally
 
 ## Prerequisites
 
@@ -24,11 +24,11 @@ You can refer to [local-installation.md](./local-installation.md) to install the
 
 ## Configure the environment
 
-1. Fork the Firefish repository on GitLab
-1. Clone your Firefish repository
+1. Fork the Maria repository on GitLab
+1. Clone your Maria repository
     ```sh
-    git clone https://codeberg.org/your-user-name/firefish.git
-    cd firefish
+    git clone https://github.com/buka5587/maria.git
+    cd maria
     ```
 1. Copy example config file
     ```sh
@@ -45,8 +45,8 @@ You can refer to [local-installation.md](./local-installation.md) to install the
     db:
       host: localhost
       port: 25432
-      db: firefish_db
-      user: firefish
+      db: maria_db
+      user: maria
       pass: password
 
     redis:
@@ -60,9 +60,9 @@ You can refer to [local-installation.md](./local-installation.md) to install the
     make db.up
     ```
 
-## Build and start Firefish
+## Build and start Maria
 
-1. Build Firefish
+1. Build Maria
     ```sh
     pnpm install
     pnpm run build:debug
@@ -71,11 +71,11 @@ You can refer to [local-installation.md](./local-installation.md) to install the
     ```sh
     pnpm run migrate
     ```
-1. Start Firefish
+1. Start Maria
     ```sh
     pnpm run start
     ```
-    You can access to the local Firefish server on http://localhost:3000 after this message shows up!
+    You can access to the local Maria server on http://localhost:3000 after this message shows up!
     ```
     DONE *  [core boot]     All workers started
     DONE *  [core boot]     Now listening on port 3000 on http://localhost:3000
@@ -96,7 +96,7 @@ make napi
 
 ## Reset the environment
 
-You can recreate a fresh local Firefish environment by recreating the database containers:
+You can recreate a fresh local Maria environment by recreating the database containers:
 
 ```sh
 make db.init

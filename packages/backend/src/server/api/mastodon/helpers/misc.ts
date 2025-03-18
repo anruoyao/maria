@@ -47,15 +47,15 @@ export class MiscHelpers {
 
 		const res = {
 			uri: config.host,
-			title: instanceMeta.name || "Firefish",
+			title: instanceMeta.name || "Maria",
 			short_description:
 				instanceMeta.description?.substring(0, 50) ||
-				"This is a Firefish instance. It doesn’t seem to have a description.",
+				"This is a Maria instance. It doesn’t seem to have a description.",
 			description:
 				instanceMeta.description ||
-				"This is a Firefish instance. It doesn’t seem to have a description.",
+				"This is a Maria instance. It doesn’t seem to have a description.",
 			email: instanceMeta.maintainerEmail || "",
-			version: `4.2.8 (compatible; Firefish ${config.version})`,
+			version: `4.2.8 (compatible; Maria ${config.version})`,
 			urls: {
 				streaming_api: `${config.url.replace(/^http(?=s?:\/\/)/, "ws")}`,
 			},
@@ -123,12 +123,12 @@ export class MiscHelpers {
 
 		const res = {
 			domain: config.host,
-			title: instanceMeta.name || "Firefish",
-			version: `4.2.8 (compatible; Firefish ${config.version})`,
+			title: instanceMeta.name || "Maria",
+			version: `4.2.8 (compatible; Maria ${config.version})`,
 			source_url: instanceMeta.repositoryUrl,
 			description:
 				instanceMeta.description ||
-				"This is a Firefish instance. It doesn’t seem to have a description.",
+				"This is a Maria instance. It doesn’t seem to have a description.",
 			usage: {
 				users: {
 					active_month: userCount,

@@ -28,7 +28,7 @@ export default async function () {
 			? `(${process.env.mode})`
 			: "";
 	const type = cluster.isPrimary ? "(master)" : "(worker)";
-	process.title = `Firefish ${mode} ${type}`;
+	process.title = `Maria ${mode} ${type}`;
 
 	if (cluster.isPrimary) {
 		await masterMain();
@@ -51,7 +51,7 @@ export default async function () {
 		os.setPriority(10);
 	}
 
-	// For when Firefish is started in a child process during unit testing.
+	// For when Maria is started in a child process during unit testing.
 	// Otherwise, process.send cannot be used, so start it.
 	if (process.send) {
 		process.send("ok");

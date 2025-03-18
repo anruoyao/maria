@@ -188,7 +188,7 @@ function validateActor(x: IObject, uri: string): IActor {
 /**
  * Fetch a Person.
  *
- * If the target Person is registered in Firefish, it will be returned.
+ * If the target Person is registered in Maria, it will be returned.
  */
 export async function fetchPerson(
 	uri: string,
@@ -502,7 +502,7 @@ export async function createPerson(
 
 /**
  * Update Person data from remote.
- * If the target Person is not registered in Firefish, it is ignored.
+ * If the target Person is not registered in Maria, it is ignored.
  * @param uri URI of Person
  * @param resolver Resolver
  * @param hint Hint of Person object (If this value is a valid Person, it is used for updating without Remote resolve)
@@ -732,8 +732,8 @@ export async function updatePerson(
 /**
  * Resolve Person.
  *
- * If the target person is registered in Firefish, it returns it;
- * otherwise, it fetches it from the remote server, registers it in Firefish, and returns it.
+ * If the target person is registered in Maria, it returns it;
+ * otherwise, it fetches it from the remote server, registers it in Maria, and returns it.
  */
 export async function resolvePerson(
 	uri: string,
