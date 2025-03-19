@@ -29,6 +29,7 @@ sudo apt install -y postgresql-16
 安装 PGroonga 扩展
 
 ```sh
+wget "https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
 sudo apt install -y "./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
 wget "https://packages.groonga.org/debian/groonga-apt-source-latest-$(lsb_release --codename --short).deb"
 sudo apt install -y "./groonga-apt-source-latest-$(lsb_release --codename --short).deb"
