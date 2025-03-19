@@ -91,7 +91,7 @@ sudo apt-get install build-essential
 
 5.推荐安装依赖
 
-* FFmpeg for video transcoding (optional)
+* FFmpeg for video transcoding (optional)【下载静态编译版 FFmpeg（兼容性更强）！】
 
 * Caching server (optional, one of the following)
 
