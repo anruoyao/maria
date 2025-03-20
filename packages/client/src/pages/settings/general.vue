@@ -10,7 +10,7 @@
 					<template #link>
 						<MkLink
 							url="https://hosted.weblate.org/engage/firefish/"
-							>Weblate</MkLink
+							>Weblate（Maria暂不开放翻译）</MkLink
 						>
 					</template>
 				</I18n>

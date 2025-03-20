@@ -2047,7 +2047,7 @@ attachedToNotes: 带有此附件的帖子
 showAttachedNotes: 显示有此附件的帖子
 iconSet: 图标样式
 moreUrlsDescription: "请您使用以下形式输入要固定到左下角帮助菜单的页面，每行一个：\n\"显示名称\": https://example.com/"
-useCdn: 从 CDN 获取资源
+useCdn: 从 CDN 获取资源(中国大陆用户不要开启，否则将导致表情加载缓慢)
 useCdnDescription: 从 JSDelivr CDN（而不是 Maria 服务器）加载一些静态资源，例如 Twemoji。
 showBigPostButton: 在发帖表单上显示一个巨大的发帖按钮
 suggested: 建议

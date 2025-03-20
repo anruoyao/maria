@@ -266,7 +266,7 @@ export const defaultStore = markRaw(
 		},
 		showGapBetweenNotesInTimeline: {
 			where: "device",
-			default: false,
+			default: true,
 		},
 		darkMode: {
 			where: "device",
@@ -274,7 +274,7 @@ export const defaultStore = markRaw(
 		},
 		instanceTicker: {
 			where: "device",
-			default: "always" as "none" | "remote" | "always",
+			default: "remote" as "none" | "remote" | "always",
 		},
 		reactionPickerSkinTone: {
 			where: "account",
@@ -407,7 +407,7 @@ export const defaultStore = markRaw(
 		},
 		useEmojiCdn: {
 			where: "device",
-			default: true,
+			default: false,
 		},
 		showPreviewByDefault: {
 			where: "deviceAccount",
