@@ -74,6 +74,10 @@ function checkForSplash() {
 	const instance = getInstanceInfo();
 
 	console.info(`Maria v${version}`);
+	console.log(`警告！！！`, "color: #f00; background-color: #ff0; font-size: 36px; padding: 4px;");
+	console.log(`「在此处粘贴什么东西」是欺诈行为!`, 'color: #f00; font-weight: 900; font-family: "Hiragino Sans W9", "Hiragino Kaku Gothic ProN", sans-serif; font-size: 24px;');
+	console.log(`请确保你悉知你在干什么！！粘贴未知代码Maria无法确保你的账户安全`, "font-size: 16px; font-weight: 700;");
+	console.log(`请立即停止操作并关闭这个窗口！`, "font-size: 16px;", "font-size: 20px; font-weight: 700; color: #f00;");
 
 	if (_DEV_) {
 		console.warn("Development mode!!!");
