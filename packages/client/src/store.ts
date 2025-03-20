@@ -30,9 +30,13 @@ const menuOptions = [
 	"notifications",
 	"followRequests",
 	"messaging",
+	"channels",
+	"-",
 	"explore",
 	"favorites",
-	"channels",
+	"drive",
+	"-",
+	"announcements",
 	"search",
 ];
 
