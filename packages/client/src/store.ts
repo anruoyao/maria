@@ -427,7 +427,7 @@ export const defaultStore = markRaw(
 		},
 		searchURL: {
 			where: "device",
-			default: "https://duckduckgo.com/?q=",
+			default: "https://cn.bing.com/search?q=",
 		},
 		showBigPostButton: {
 			where: "device",

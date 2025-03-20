@@ -159,8 +159,8 @@
 
 			<FormSelect v-model="searchURL" class="_formBlock">
 				<template #label>{{ i18n.ts.searchEngine }}</template>
-				<option value="https://duckduckgo.com/?q=">
-					DuckDuckGo (duckduckgo.com)
+				<option value="https://cn.bing.com/search?q=">
+					Bing (bing.com)
 				</option>
 				<option value="https://searxng.site/?q=">
 					SearXNG (searxng.site)
