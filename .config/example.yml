@@ -27,7 +27,7 @@ url: https://example.com/
 #   because tokens may be transferred in GET requests.
 
 # The port that your maria server should listen on.
-port: 3000
+port: 3001
 
 # The bind host your maria server should listen on.
 # If unspecified, the wildcard address will be used.
