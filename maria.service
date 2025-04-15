@@ -1,0 +1,51 @@
+[Unit]
+Description=maria daemon
+Requires=redis.service postgresql.service
+After=redis.service postgresql.service network-online.target
+
+[Service]
+Type=simple
+User=maria
+Group=maria
+UMask=0027
+ExecStart=/usr/bin/pnpm run start
+WorkingDirectory=/home/maria/maria
+Environment="NODE_ENV=production"
+Environment="npm_config_cache=/tmp"
+Environment="NODE_OPTIONS=--max-old-space-size=3072"
+
+#uncomment the following line if you use jemalloc (note that the path varies on different environments)
+
+#Environment="LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=maria
+TimeoutSec=60
+Restart=always
+
+CapabilityBoundingSet=
+DevicePolicy=closed
+NoNewPrivileges=true
+LockPersonality=true
+PrivateDevices=true
+PrivateIPC=true
+PrivateMounts=true
+PrivateUsers=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHostname=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectProc=invisible
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SecureBits=noroot-locked
+SystemCallArchitectures=native
+SystemCallFilter=~@chown @clock @cpu-emulation @debug @ipc @keyring @memlock @module @mount @obsolete @privileged @raw-io @reboot @resources @setuid @swap
+SystemCallFilter=capset pipe pipe2 setpriority
+
+[Install]
+WantedBy=multi-user.target
