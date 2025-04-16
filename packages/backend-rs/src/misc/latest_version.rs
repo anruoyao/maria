@@ -29,7 +29,7 @@ struct PackageJson {
 }
 
 const UPSTREAM_PACKAGE_JSON_URL: &str =
-    "https://codeberg.org/firefish/firefish/raw/branch/main/package.json";
+    "https://raw.githubusercontent.com/buka5587/maria/refs/heads/main/package.json";
 
 static PACKAGE_JSON_CACHE: Cache<PackageJson> = Cache::new_with_ttl(Duration::hours(3));
 

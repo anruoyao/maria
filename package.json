@@ -1,6 +1,6 @@
 {
 	"name": "maria",
-	"version": "20250301",
+	"version": "20250401-alpha.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/buka5587/maria.git"
