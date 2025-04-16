@@ -99,10 +99,10 @@ async fn generate_nodeinfo_2_1() -> Result<Nodeinfo21, DbErr> {
 
     Ok(Nodeinfo21 {
         software: Software21 {
-            name: "maria".to_owned(),
+            name: "firefish".to_owned(),
             version: CONFIG.version.clone(),
             repository: Some(meta.repository_url),
-            homepage: Some("https://github.com/buka5587/maria".to_owned()),
+            homepage: Some("https://codeberg.org/firefish/firefish".to_owned()),
         },
         protocols: vec![Protocol::Activitypub],
         services: Services {
