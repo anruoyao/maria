@@ -1,174 +1,163 @@
-//! Schema definitions of NodeInfo version 2.0 and 2.1
-//!
-//! ref: <https://nodeinfo.diaspora.software/schema.html>
+//! NodeInfo generator
 
-use serde::{Deserialize, Serialize};
+use crate::{
+    cache::Cache,
+    config::{local_server_info, CONFIG},
+    database::db_conn,
+    federation::nodeinfo::schema::*,
+    misc,
+    model::entity::{note, user},
+};
+use chrono::Duration;
+use sea_orm::prelude::*;
+use serde_json::json;
 use std::collections::HashMap;
 
-/// NodeInfo schema version 2.1
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-#[serde(tag = "version", rename = "2.1")]
-pub struct Nodeinfo21 {
-    pub software: Software21,
-    pub protocols: Vec<Protocol>,
-    pub services: Services,
-    pub open_registrations: bool,
-    pub usage: Usage,
-    pub metadata: HashMap<String, serde_json::Value>,
+static NODEINFO_CACHE: Cache<Nodeinfo21> = Cache::new_with_ttl(Duration::hours(1));
+
+/// Fetches the number of total/active local users and local posts.
+///
+/// # Return value
+/// A tuple containing the following information in this order:
+/// * the total number of local users
+/// * the total number of local users active in the last 6 months
+/// * the total number of local users active in the last month (MAU)
+/// * the total number of posts from local users
+async fn statistics() -> Result<(u64, u64, u64, u64), DbErr> {
+    let db = db_conn().await?;
+
+    let now = chrono::Utc::now();
+    const MONTH: chrono::TimeDelta = chrono::Duration::days(30);
+    const HALF_YEAR: chrono::TimeDelta = chrono::Duration::days(183);
+
+    let local_users = misc::user::count::local_total(db);
+
+    // We don't need to care about the number of system actors here,
+    // because their last active date is null
+    let local_active_halfyear = user::Entity::find()
+        .filter(user::Column::Host.is_null())
+        .filter(user::Column::LastActiveDate.gt(now - HALF_YEAR))
+        .count(db);
+    let local_active_month = user::Entity::find()
+        .filter(user::Column::Host.is_null())
+        .filter(user::Column::LastActiveDate.gt(now - MONTH))
+        .count(db);
+    let local_posts = note::Entity::find()
+        .filter(note::Column::UserHost.is_null())
+        .count(db);
+
+    tokio::try_join!(
+        local_users,
+        local_active_halfyear,
+        local_active_month,
+        local_posts
+    )
 }
 
-/// NodeInfo schema version 2.0
-#[derive(Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-#[serde(tag = "version", rename = "2.0")]
-pub struct Nodeinfo20 {
-    pub software: Software20,
-    pub protocols: Vec<Protocol>,
-    pub services: Services,
-    pub open_registrations: bool,
-    pub usage: Usage,
-    pub metadata: HashMap<String, serde_json::Value>,
+/// Generates NodeInfo (version 2.1) of the local server.
+/// This function doesn't use caches and returns the latest information.
+async fn generate_nodeinfo_2_1() -> Result<Nodeinfo21, DbErr> {
+    tracing::info!("generating NodeInfo");
+
+    let (local_users, local_active_halfyear, local_active_month, local_posts) =
+        statistics().await?;
+    let meta = local_server_info().await?;
+    let mut metadata = HashMap::from([
+        (
+            "nodeName".to_owned(),
+            json!(meta.name.unwrap_or_else(|| CONFIG.host.clone())),
+        ),
+        ("nodeDescription".to_owned(), json!(meta.description)),
+        ("repositoryUrl".to_owned(), json!(meta.repository_url)),
+        (
+            "enableLocalTimeline".to_owned(),
+            json!(!meta.disable_local_timeline),
+        ),
+        (
+            "enableRecommendedTimeline".to_owned(),
+            json!(!meta.disable_recommended_timeline),
+        ),
+        (
+            "enableGlobalTimeline".to_owned(),
+            json!(!meta.disable_global_timeline),
+        ),
+        (
+            "enableGuestTimeline".to_owned(),
+            json!(meta.enable_guest_timeline),
+        ),
+        (
+            "maintainer".to_owned(),
+            json!({"name":meta.maintainer_name,"email":meta.maintainer_email}),
+        ),
+        ("proxyAccountName".to_owned(), json!(meta.proxy_account_id)),
+        (
+            "themeColor".to_owned(),
+            json!(meta.theme_color.unwrap_or_else(|| "#31748f".to_owned())),
+        ),
+    ]);
+    metadata.shrink_to_fit();
+
+    Ok(Nodeinfo21 {
+        software: Software21 {
+            name: "maria".to_owned(),
+            version: CONFIG.version.clone(),
+            repository: Some(meta.repository_url),
+            homepage: Some("https://github.com/buka5587/maria".to_owned()),
+        },
+        protocols: vec![Protocol::Activitypub],
+        services: Services {
+            inbound: vec![],
+            outbound: vec![Outbound::Atom1, Outbound::Rss2],
+        },
+        open_registrations: !meta.disable_registration,
+        usage: Usage {
+            users: Users {
+                total: Some(local_users as u32),
+                active_halfyear: Some(local_active_halfyear as u32),
+                active_month: Some(local_active_month as u32),
+            },
+            local_posts: Some(local_posts as u32),
+            local_comments: None,
+        },
+        metadata,
+    })
 }
 
-/// Software metadata for version 2.1
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-pub struct Software21 {
-    pub name: String,
-    pub version: String,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub repository: Option<String>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub homepage: Option<String>,
-}
-
-/// Software metadata for version 2.0
-#[derive(Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-pub struct Software20 {
-    pub name: String,
-    pub version: String,
-}
-
-/// Supported protocols
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "lowercase")]
-pub enum Protocol {
-    Activitypub,
-    Buddycloud,
-    Dfrn,
-    Diaspora,
-    Libertree,
-    Ostatus,
-    Pumpio,
-    Tent,
-    Xmpp,
-    Zot,
-}
-
-/// Supported services
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-pub struct Services {
-    pub inbound: Vec<Inbound>,
-    pub outbound: Vec<Outbound>,
-}
-
-/// Inbound services
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "lowercase")]
-pub enum Inbound {
-    #[serde(rename = "atom1.0")]
-    Atom1,
-    Gnusocial,
-    Imap,
-    Pnut,
-    #[serde(rename = "pop3")]
-    Pop3,
-    Pumpio,
-    #[serde(rename = "rss2.0")]
-    Rss2,
-    Twitter,
-}
-
-/// Outbound services
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "lowercase")]
-pub enum Outbound {
-    #[serde(rename = "atom1.0")]
-    Atom1,
-    Blogger,
-    Buddycloud,
-    Diaspora,
-    Dreamwidth,
-    Drupal,
-    Facebook,
-    Friendica,
-    Gnusocial,
-    Google,
-    Insanejournal,
-    Libertree,
-    Linkedin,
-    Livejournal,
-    Mediagoblin,
-    Myspace,
-    Pinterest,
-    Pnut,
-    Posterous,
-    Pumpio,
-    Redmatrix,
-    #[serde(rename = "rss2.0")]
-    Rss2,
-    Smtp,
-    Tent,
-    Tumblr,
-    Twitter,
-    Wordpress,
-    Xmpp,
-}
-
-/// Usage statistics
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-pub struct Usage {
-    pub users: Users,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub local_posts: Option<u32>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub local_comments: Option<u32>,
-}
-
-/// User statistics
-#[derive(Clone, Serialize, Deserialize, Debug, PartialEq)]
-#[serde(rename_all = "camelCase")]
-pub struct Users {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub total: Option<u32>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub active_halfyear: Option<u32>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub active_month: Option<u32>,
-}
-
-impl From<Software21> for Software20 {
-    fn from(software: Software21) -> Self {
-        Self {
-            name: software.name,
-            version: software.version,
-        }
+/// Returns NodeInfo (version 2.1) of the local server.
+pub async fn nodeinfo_2_1() -> Result<Nodeinfo21, DbErr> {
+    if let Some(nodeinfo) = NODEINFO_CACHE.get() {
+        return Ok(nodeinfo);
     }
+
+    let nodeinfo = generate_nodeinfo_2_1().await?;
+
+    tracing::info!("updating cache");
+    NODEINFO_CACHE.set(nodeinfo.clone());
+
+    Ok(nodeinfo)
 }
 
-impl From<Nodeinfo21> for Nodeinfo20 {
-    fn from(nodeinfo: Nodeinfo21) -> Self {
-        Self {
-            software: nodeinfo.software.into(),
-            protocols: nodeinfo.protocols,
-            services: nodeinfo.services,
-            open_registrations: nodeinfo.open_registrations,
-            usage: nodeinfo.usage,
-            metadata: nodeinfo.metadata,
-        }
-    }
+/// Returns NodeInfo (version 2.0) of the local server.
+pub async fn nodeinfo_2_0() -> Result<Nodeinfo20, DbErr> {
+    Ok(nodeinfo_2_1().await?.into())
+}
+
+#[macros::for_ts]
+#[error_doc::errors]
+pub enum Error {
+    #[doc = "Database error"]
+    #[error(transparent)]
+    Db(#[from] DbErr),
+    #[error("failed to serialize nodeinfo into JSON")]
+    Json(#[from] serde_json::Error),
+}
+
+#[macros::ts_export(js_name = "nodeinfo_2_1")]
+pub async fn nodeinfo_2_1_as_json() -> Result<serde_json::Value, Error> {
+    Ok(serde_json::to_value(nodeinfo_2_1().await?)?)
+}
+
+#[macros::ts_export(js_name = "nodeinfo_2_0")]
+pub async fn nodeinfo_2_0_as_json() -> Result<serde_json::Value, Error> {
+    Ok(serde_json::to_value(nodeinfo_2_0().await?)?)
 }
