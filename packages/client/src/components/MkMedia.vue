@@ -282,6 +282,7 @@ watch(
 	&.max-width_350px {
 		:deep(.plyr:not(:fullscreen)) {
 			min-inline-size: unset !important;
+			display: block !important;  // 添加这行覆盖flex布局
 			.plyr__control--overlaid,
 			.plyr__progress__container,
 			.plyr__volume,
@@ -294,6 +295,13 @@ watch(
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+	}
+
+	// 添加这个新规则覆盖全局Plyr样式
+	:deep(.plyr) {
+		display: block !important;
+		flex-direction: unset !important;
+		align-items: unset !important;
 	}
 }
 </style>
