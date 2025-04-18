@@ -42,8 +42,7 @@
 						'mute',
 						'volume',
 						'pip',
-						'download',
-						'fullscreen',
+						'fullscreen'
 					],
 					disableContextMenu: false,
 				}"
@@ -279,10 +278,41 @@ watch(
 			}
 		}
 	}
+	// 新增媒体查询，针对窄屏幕调整音量控件样式
+	@media (max-width: 480px) { 
+	:deep(.plyr__volume) {
+	// 重新设置音量控件宽度
+	inline-size: 80px; 
+	// 可以根据实际情况调整其他样式，如位置等
+	position: relative; 
+	z-index: 100; 
+	}
+	:deep([data-plyr="volume"]) {
+	// 确保音量调节条正常显示
+	inline-size: auto; 
+	opacity: 1; 
+	margin-inline: 5px; 
+	}
+	}
+	// 原有媒体查询
+	@media (max-width: 767px) {
+	:deep(.plyr:not(:fullscreen)) {
+	.plyr__control--overlaid,
+	.plyr__progress__container,
+	.plyr__volume,
+	[data-plyr="download"] {
+		display: flex;
+	}
+	}
+	}
 	&.max-width_350px {
 		:deep(.plyr:not(:fullscreen)) {
 			min-inline-size: unset !important;
+<<<<<<< HEAD
 			display: block !important;  // 添加这行覆盖flex布局
+=======
+			display: block !important;
+>>>>>>> develop
 			.plyr__control--overlaid,
 			.plyr__progress__container,
 			.plyr__volume,
@@ -297,7 +327,11 @@ watch(
 		}
 	}
 
+<<<<<<< HEAD
 	// 添加这个新规则覆盖全局Plyr样式
+=======
+	// 覆盖全局Plyr样式
+>>>>>>> develop
 	:deep(.plyr) {
 		display: block !important;
 		flex-direction: unset !important;
