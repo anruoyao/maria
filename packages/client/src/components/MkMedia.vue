@@ -305,14 +305,20 @@ watch(
 	}
 	}
 	}
+// 新增媒体查询，确保宽度小于 407px 时进度条和音量按钮正常显示
+	@media (max-width: 406px) {
+		:deep(.plyr:not(:fullscreen)) {
+			.plyr__progress__container,
+			.plyr__volume {
+				display: flex !important;
+			}
+		}
+	}
+
 	&.max-width_350px {
 		:deep(.plyr:not(:fullscreen)) {
 			min-inline-size: unset !important;
-<<<<<<< HEAD
 			display: block !important;  // 添加这行覆盖flex布局
-=======
-			display: block !important;
->>>>>>> develop
 			.plyr__control--overlaid,
 			.plyr__progress__container,
 			.plyr__volume,
@@ -327,11 +333,7 @@ watch(
 		}
 	}
 
-<<<<<<< HEAD
 	// 添加这个新规则覆盖全局Plyr样式
-=======
-	// 覆盖全局Plyr样式
->>>>>>> develop
 	:deep(.plyr) {
 		display: block !important;
 		flex-direction: unset !important;
