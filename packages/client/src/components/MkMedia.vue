@@ -8,13 +8,11 @@
 			/>
 			<div class="text">
 				<div class="wrapper">
-					<b style="display: block"
-						><i :class="icon('ph-warning')"></i>
-						{{ i18n.ts.sensitive }}</b
-					>
-					<span style="display: block">{{
-						i18n.ts.clickToShow
-					}}</span>
+					<b style="display: block">
+						<i :class="icon('ph-warning')"></i>
+						{{ i18n.ts.sensitive }}
+					</b>
+					<span style="display: block">{{ i18n.ts.clickToShow }}</span>
 				</div>
 			</div>
 		</button>
@@ -62,13 +60,7 @@
 		<div class="buttons">
 			<button
 				v-if="media.comment"
-				v-tooltip.noLabel="
-					`${
-						media.comment.length > 200
-							? media.comment.trim().slice(0, 200) + '...'
-							: media.comment.trim()
-					}`
-				"
+				v-tooltip.noLabel="tooltipText"
 				:aria-label="i18n.ts.alt"
 				class="_button"
 				@click.stop="captionPopup"
@@ -105,56 +97,61 @@ const props = defineProps<{
 }>();
 
 const hide = ref(true);
+const plyr = ref<InstanceType<typeof VuePlyr> | null>(null);
 
-const plyr = ref();
-
-const url =
-	props.raw || defaultStore.state.loadRawImages
-		? props.media.url
-		: defaultStore.state.disableShowingAnimatedImages &&
-				props.media.type.startsWith("image")
-			? getStaticImageUrl(props.media.thumbnailUrl)
-			: props.media.thumbnailUrl;
-
-const mediaType = computed(() => {
-	return props.media.type === "video/quicktime"
-		? "video/mp4"
-		: props.media.type;
+const url = computed(() => {
+	if (props.raw || defaultStore.state.loadRawImages) {
+		return props.media.url;
+	}
+	if (defaultStore.state.disableShowingAnimatedImages && props.media.type.startsWith("image")) {
+		return getStaticImageUrl(props.media.thumbnailUrl);
+	}
+	return props.media.thumbnailUrl;
 });
 
-let largestDimension: "width" | "height";
+const mediaType = computed(() => {
+	return props.media.type === "video/quicktime" ? "video/mp4" : props.media.type;
+});
 
-if (
-	props.media.type.startsWith("image") &&
-	props.media.properties?.width &&
-	props.media.properties?.height
-) {
-	largestDimension =
-		props.media.properties.width > props.media.properties.height
-			? "width"
-			: "height";
-}
-function captionPopup() {
+const largestDimension = computed(() => {
+	if (
+		props.media.type.startsWith("image") &&
+		props.media.properties?.width &&
+		props.media.properties?.height
+	) {
+		return props.media.properties.width > props.media.properties.height ? "width" : "height";
+	}
+	return undefined;
+});
+
+const tooltipText = computed(() => {
+	const comment = props.media.comment?.trim() || "";
+	return comment.length > 200 ? comment.slice(0, 200) + "..." : comment;
+});
+
+const captionPopup = () => {
 	os.alert({
 		type: "info",
 		text: props.media.comment,
 		isPlaintext: true,
 	});
-}
+};
 
-// Plugin:register_note_view_interruptor を使って書き換えられる可能性があるためwatchする
+const updateHideValue = () => {
+	hide.value =
+		defaultStore.state.nsfw === "force" ||
+		(props.media.isSensitive && defaultStore.state.nsfw !== "ignore");
+};
+
 watch(
 	() => props.media,
 	() => {
-		hide.value =
-			defaultStore.state.nsfw === "force"
-				? true
-				: props.media.isSensitive && defaultStore.state.nsfw !== "ignore";
+		updateHideValue();
 	},
 	{
 		deep: true,
 		immediate: true,
-	},
+	}
 );
 </script>
 
@@ -249,11 +246,13 @@ watch(
 			pointer-events: none;
 		}
 	}
+
 	:deep(.plyr__controls) {
 		contain: strict;
 		block-size: 24px;
 		box-sizing: content-box;
 	}
+
 	:deep(.plyr__volume) {
 		display: flex;
 		min-inline-size: max-content;
@@ -262,9 +261,7 @@ watch(
 		[data-plyr="volume"] {
 			inline-size: 0;
 			flex-grow: 1;
-			transition:
-				margin 0.3s,
-				opacity 0.2s 0.2s;
+			transition: margin 0.3s, opacity 0.2s 0.2s;
 		}
 		&:not(:hover):not(:focus-within) {
 			inline-size: 0px;
@@ -272,47 +269,48 @@ watch(
 			[data-plyr="volume"] {
 				margin-inline: 0px;
 				opacity: 0;
-				transition:
-					margin 0.3s,
-					opacity 0.1s;
+				transition: margin 0.3s, opacity 0.1s;
 			}
 		}
 	}
-	// 新增媒体查询，针对窄屏幕调整音量控件样式
-	@media (max-width: 480px) { 
-	:deep(.plyr__volume) {
-	// 重新设置音量控件宽度
-	inline-size: 80px; 
-	// 可以根据实际情况调整其他样式，如位置等
-	position: relative; 
-	z-index: 100; 
+
+	@media (max-width: 480px) {
+		:deep(.plyr__volume) {
+			inline-size: 80px;
+			position: relative;
+			z-index: 100;
+		}
+		:deep([data-plyr="volume"]) {
+			inline-size: auto;
+			opacity: 1;
+			margin-inline: 5px;
+		}
 	}
-	:deep([data-plyr="volume"]) {
-	// 确保音量调节条正常显示
-	inline-size: auto; 
-	opacity: 1; 
-	margin-inline: 5px; 
-	}
-	}
-	// 原有媒体查询
+
 	@media (max-width: 767px) {
-	:deep(.plyr:not(:fullscreen)) {
-	.plyr__control--overlaid,
-	.plyr__progress__container,
-	.plyr__volume,
-	[data-plyr="download"] {
-		display: flex;
+		:deep(.plyr:not(:fullscreen)) {
+			.plyr__control--overlaid,
+			.plyr__progress__container,
+			.plyr__volume,
+			[data-plyr="download"] {
+				display: flex;
+			}
+		}
 	}
+
+	@media (max-width: 406px) {
+		:deep(.plyr:not(:fullscreen)) {
+			.plyr__progress__container,
+			.plyr__volume {
+				display: flex !important;
+			}
+		}
 	}
-	}
+
 	&.max-width_350px {
 		:deep(.plyr:not(:fullscreen)) {
 			min-inline-size: unset !important;
-<<<<<<< HEAD
-			display: block !important;  // 添加这行覆盖flex布局
-=======
 			display: block !important;
->>>>>>> develop
 			.plyr__control--overlaid,
 			.plyr__progress__container,
 			.plyr__volume,
@@ -327,11 +325,6 @@ watch(
 		}
 	}
 
-<<<<<<< HEAD
-	// 添加这个新规则覆盖全局Plyr样式
-=======
-	// 覆盖全局Plyr样式
->>>>>>> develop
 	:deep(.plyr) {
 		display: block !important;
 		flex-direction: unset !important;
