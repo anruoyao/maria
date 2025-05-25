@@ -2,6 +2,9 @@
 
 You can skip intermediate versions when upgrading from an old version, but please read the notices and follow the instructions for each intermediate version before [upgrading](./upgrade.md).
 
+## v20250403
+优化阶段，修复播放器大屏显示问题
+
 ## v20250301
 
 ### For all users

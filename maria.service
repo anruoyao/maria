@@ -8,21 +8,25 @@ Type=simple
 User=maria
 Group=maria
 UMask=0027
-ExecStart=/usr/bin/pnpm run start
-WorkingDirectory=/home/maria/maria
+
+# 设置Node.js和pnpm的路径
+# 注意！！！此处根据你的实际情况来填写，如果你是完整的按照安装文档的步骤来，则无需任何修改
+Environment="PATH=/home/maria/.nvm/versions/node/v20.19.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 Environment="NODE_ENV=production"
 Environment="npm_config_cache=/tmp"
 Environment="NODE_OPTIONS=--max-old-space-size=3072"
 
-#uncomment the following line if you use jemalloc (note that the path varies on different environments)
+# 使用绝对路径调用pnpm
+# 注意！！！此处根据你的实际情况来填写，如果你是完整的按照安装文档的步骤来，则无需任何修改
+ExecStart=/home/maria/.nvm/versions/node/v20.19.2/bin/pnpm run start
 
-#Environment="LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
-
+WorkingDirectory=/home/maria/maria
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=maria
 TimeoutSec=60
 Restart=always
+
 
 CapabilityBoundingSet=
 DevicePolicy=closed
