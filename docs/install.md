@@ -224,3 +224,9 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 sudo systemctl enable --now maria
 ```
+
+你可以确认服务状态是否正常：
+
+```sh
+sudo systemctl status maria
+```
