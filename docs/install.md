@@ -12,6 +12,7 @@ sudo apt install -y curl wget git ufw
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
+sudo install -g pnpm
 sudo corepack enable && corepack prepare pnpm@latest --activate
 ```
 
