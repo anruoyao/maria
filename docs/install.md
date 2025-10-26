@@ -12,7 +12,7 @@ sudo apt install -y curl wget git ufw
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
-sudo install -g pnpm
+sudo npm install -g pnpm
 sudo corepack enable && corepack prepare pnpm@latest --activate
 ```
 
@@ -36,6 +36,24 @@ wget "https://packages.groonga.org/debian/groonga-apt-source-latest-$(lsb_releas
 sudo apt install -y "./groonga-apt-source-latest-$(lsb_release --codename --short).deb"
 sudo apt update
 sudo apt install -y postgresql-16-pgdg-pgroonga
+```
+
+Ubuntu推荐执行如下命令安装拓展
+
+```sh
+# 1. 安装依赖
+sudo apt update
+sudo apt install -y wget gnupg
+
+# 2. 导入 GPG 密钥
+wget -O - https://packages.groonga.org/debian/groonga-archive-keyring.asc | sudo tee /etc/apt/trusted.gpg.d/groonga-archive-keyring.asc
+
+# 3. 添加源（noble 用 jammy 的兼容包，官方暂未提供 noble 专用）
+echo "deb https://packages.groonga.org/debian/ jammy main" | sudo tee /etc/apt/sources.list.d/groonga.list
+
+# 4. 更新并安装
+sudo apt update
+sudo apt install -y groonga
 ```
 
 清理安装包
