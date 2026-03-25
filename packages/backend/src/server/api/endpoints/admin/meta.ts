@@ -513,7 +513,10 @@ export default define(meta, paramDef, async () => {
 		enableServiceWorker: instanceMeta.enableServiceWorker,
 		translatorAvailable:
 			instanceMeta.deeplAuthKey != null ||
-			instanceMeta.libreTranslateApiUrl != null,
+			instanceMeta.libreTranslateApiUrl != null ||
+			(instanceMeta.aiTranslateApiUrl != null &&
+				instanceMeta.aiTranslateApiKey != null &&
+				instanceMeta.aiTranslatePrompt != null),
 		pinnedPages: instanceMeta.pinnedPages,
 		pinnedClipId: instanceMeta.pinnedClipId,
 		cacheRemoteFiles: instanceMeta.cacheRemoteFiles,
@@ -557,6 +560,10 @@ export default define(meta, paramDef, async () => {
 		deeplIsPro: instanceMeta.deeplIsPro,
 		libreTranslateApiUrl: instanceMeta.libreTranslateApiUrl,
 		libreTranslateApiKey: instanceMeta.libreTranslateApiKey,
+		aiTranslateApiUrl: instanceMeta.aiTranslateApiUrl,
+		aiTranslateApiKey: instanceMeta.aiTranslateApiKey,
+		aiTranslatePrompt: instanceMeta.aiTranslatePrompt,
+		aiTranslateModel: instanceMeta.aiTranslateModel,
 		enableIpLogging: instanceMeta.enableIpLogging,
 		enableActiveEmailValidation: instanceMeta.enableActiveEmailValidation,
 		experimentalFeatures: instanceMeta.experimentalFeatures,

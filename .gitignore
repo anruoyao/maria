@@ -77,3 +77,13 @@ yarn*
 # Cargo cache for Docker
 /.cargo-cache
 /.cargo-target
+
+# trae
+/.trae
+
+# skill
+/skills/*
+/.skillhub
+
+# zip
+*.zip

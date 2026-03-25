@@ -20,12 +20,20 @@ pub enum Error {
     MissingApiUrl,
     #[error("DeepL API key is not set")]
     MissingApiKey,
+    #[error("AI Translate API url is not set")]
+    MissingAiApiUrl,
+    #[error("AI Translate API key is not set")]
+    MissingAiApiKey,
+    #[error("AI Translate prompt is not set")]
+    MissingAiPrompt,
     #[error("no response")]
     NoResponse,
     #[error("translator is not set")]
     NoTranslator,
     #[error("access to this URL is not allowed")]
     UnsafeUrl,
+    #[error("AI translation failed: {0}")]
+    AiTranslationFailed(String),
 }
 
 #[macros::export(object)]
@@ -47,7 +55,22 @@ pub async fn translate(
 ) -> Result<Translation, Error> {
     let config = local_server_info().await?;
 
-    let translation = if let Some(api_key) = config.deepl_auth_key {
+    let translation = if let (Some(api_url), Some(api_key), Some(prompt)) = (
+        config.ai_translate_api_url.as_ref(),
+        config.ai_translate_api_key.as_ref(),
+        config.ai_translate_prompt.as_ref(),
+    ) {
+        ai_translate::translate(
+            text,
+            source_lang.as_deref(),
+            target_lang,
+            api_url,
+            api_key,
+            prompt,
+            config.ai_translate_model.as_deref(),
+        )
+        .await?
+    } else if let Some(api_key) = config.deepl_auth_key {
         deepl_translate::translate(
             text,
             source_lang.as_deref(),
@@ -287,6 +310,178 @@ mod libre_translate {
                 })
                 .unwrap_or_else(|| "unknown".to_owned()),
             text: result.translated_text,
+        })
+    }
+}
+
+mod ai_translate {
+    use crate::{misc::is_safe_url::is_safe_url, util::http_client};
+    use futures_util::AsyncReadExt;
+    use isahc::{AsyncReadResponseExt, Request};
+    use serde::Deserialize;
+    use serde_json::json;
+
+    #[derive(Deserialize, Clone)]
+    struct ChatCompletionResponse {
+        choices: Vec<Choice>,
+    }
+
+    #[derive(Deserialize, Clone)]
+    struct Choice {
+        message: Message,
+    }
+
+    #[derive(Deserialize, Clone)]
+    struct Message {
+        content: String,
+    }
+
+    fn get_language_name(lang_code: &str) -> &str {
+        match lang_code.to_lowercase().as_str() {
+            "zh" | "zh-cn" | "zh-hans" => "Simplified Chinese",
+            "zh-tw" | "zh-hant" => "Traditional Chinese",
+            "en" => "English",
+            "ja" => "Japanese",
+            "ko" => "Korean",
+            "es" => "Spanish",
+            "fr" => "French",
+            "de" => "German",
+            "it" => "Italian",
+            "pt" => "Portuguese",
+            "ru" => "Russian",
+            "ar" => "Arabic",
+            "hi" => "Hindi",
+            "th" => "Thai",
+            "vi" => "Vietnamese",
+            "id" => "Indonesian",
+            "ms" => "Malay",
+            "nl" => "Dutch",
+            "pl" => "Polish",
+            "tr" => "Turkish",
+            "uk" => "Ukrainian",
+            "cs" => "Czech",
+            "sv" => "Swedish",
+            "da" => "Danish",
+            "fi" => "Finnish",
+            "no" => "Norwegian",
+            "el" => "Greek",
+            "he" => "Hebrew",
+            "hu" => "Hungarian",
+            "ro" => "Romanian",
+            "sk" => "Slovak",
+            "bg" => "Bulgarian",
+            "hr" => "Croatian",
+            "sl" => "Slovenian",
+            "lt" => "Lithuanian",
+            "lv" => "Latvian",
+            "et" => "Estonian",
+            _ => lang_code,
+        }
+    }
+
+    pub(super) async fn translate(
+        text: &str,
+        source_lang: Option<&str>,
+        target_lang: &str,
+        api_url: &str,
+        api_key: &str,
+        prompt_template: &str,
+        model: Option<&str>,
+    ) -> Result<super::Translation, super::Error> {
+        if !is_safe_url(api_url) {
+            return Err(super::Error::UnsafeUrl);
+        }
+
+        let client = http_client::client()?;
+
+        let target_lang_name = get_language_name(target_lang);
+        let source_lang_name = source_lang
+            .map(|l| get_language_name(l))
+            .unwrap_or("auto-detect");
+
+        let prompt = prompt_template
+            .replace("{text}", text)
+            .replace("{target_lang}", target_lang_name)
+            .replace("{target_lang_code}", target_lang)
+            .replace("{source_lang}", source_lang_name);
+
+        // Ensure the API URL has the correct endpoint path
+        let api_url = if api_url.ends_with("/chat/completions") {
+            api_url.to_string()
+        } else {
+            format!("{}/chat/completions", api_url.trim_end_matches('/'))
+        };
+
+        // Use provided model or default to gpt-3.5-turbo
+        let model = model.unwrap_or("gpt-3.5-turbo");
+
+        tracing::info!("AI Translation request - URL: {}, Model: {}, Target: {}, Source: {:?}", api_url, model, target_lang, source_lang);
+        tracing::debug!("AI Translation prompt: {}", prompt);
+
+        let body = json!({
+            "model": model,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            "temperature": 0.3,
+            "max_tokens": 4096
+        });
+
+        let request = Request::post(&api_url)
+            .header("Content-Type", "application/json")
+            .header("Authorization", format!("Bearer {}", api_key))
+            .body(serde_json::to_string(&body)?)?;
+
+        let mut response = match client
+            .send_async(request)
+            .await {
+                Ok(resp) => resp,
+                Err(e) => {
+                    tracing::error!("AI Translation HTTP request failed: {:?}", e);
+                    return Err(super::Error::HttpRequest(e));
+                }
+            };
+
+        // Check HTTP status code
+        let status = response.status();
+        if !status.is_success() {
+            let error_text = response.text().await.unwrap_or_default();
+            tracing::error!("AI Translation API returned error status: {}, body: {}", status, error_text);
+            return Err(super::Error::AiTranslationFailed(
+                format!("API returned error status: {} - {}", status, error_text)
+            ));
+        }
+
+        let response = match response
+            .map(|body| body.take(1024 * 1024))
+            .json::<ChatCompletionResponse>()
+            .await {
+                Ok(resp) => resp,
+                Err(e) => {
+                    tracing::error!("AI Translation response parsing failed: {:?}", e);
+                    return Err(super::Error::AiTranslationFailed(
+                        format!("Failed to parse API response: {}", e)
+                    ));
+                }
+            };
+
+        let result = response
+            .choices
+            .first()
+            .ok_or_else(|| super::Error::AiTranslationFailed("No response from AI".to_string()))?;
+
+        let translated_text = result.message.content.trim().to_string();
+
+        tracing::info!("AI Translation successful - Source: {:?}, Result length: {}", source_lang, translated_text.len());
+
+        Ok(super::Translation {
+            source_lang: source_lang
+                .map(|s| s.to_lowercase())
+                .unwrap_or_else(|| "auto".to_string()),
+            text: translated_text,
         })
     }
 }

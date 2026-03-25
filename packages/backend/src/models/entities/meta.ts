@@ -371,6 +371,30 @@ export class Meta {
 		length: 512,
 		nullable: true,
 	})
+	public aiTranslateApiUrl: string | null;
+
+	@Column("varchar", {
+		length: 512,
+		nullable: true,
+	})
+	public aiTranslateApiKey: string | null;
+
+	@Column("varchar", {
+		length: 4096,
+		nullable: true,
+	})
+	public aiTranslatePrompt: string | null;
+
+	@Column("varchar", {
+		length: 128,
+		nullable: true,
+	})
+	public aiTranslateModel: string | null;
+
+	@Column("varchar", {
+		length: 512,
+		nullable: true,
+	})
 	public tosUrl: string | null;
 
 	@Column("jsonb", {

@@ -466,6 +466,62 @@
 								>
 							</FormInput>
 						</FormSection>
+
+						<FormSection>
+							<template #label>AI Translation</template>
+
+							<FormInput
+								v-model="aiTranslateApiUrl"
+								class="_formBlock"
+							>
+								<template #prefix
+									><i :class="icon('ph-link')"></i
+								></template>
+								<template #label>AI Translate API URL</template>
+								<template #caption
+									>OpenAI compatible API endpoint (e.g.
+									https://api.openai.com/v1/chat/completions)</template
+								>
+							</FormInput>
+
+							<FormInput
+								v-model="aiTranslateApiKey"
+								class="_formBlock"
+							>
+								<template #prefix
+									><i :class="icon('ph-key')"></i
+								></template>
+								<template #label>AI Translate API Key</template>
+							</FormInput>
+
+							<FormInput
+								v-model="aiTranslateModel"
+								class="_formBlock"
+							>
+								<template #prefix
+									><i :class="icon('ph-robot')"></i
+								></template>
+								<template #label>AI Model Name</template>
+								<template #caption
+									>Model name for translation (e.g. gpt-3.5-turbo, gpt-4, default: gpt-3.5-turbo)</template
+								>
+							</FormInput>
+
+							<FormTextarea
+								v-model="aiTranslatePrompt"
+								class="_formBlock"
+							>
+								<template #label
+									>AI Translation Prompt</template
+								>
+								<template #caption>
+									Available variables: {text} - text to
+									translate, {target_lang} - target language
+									name, {target_lang_code} - target language
+									code, {source_lang} - source language name
+								</template>
+							</FormTextarea>
+						</FormSection>
 					</div>
 				</FormSuspense>
 			</MkSpacer>
@@ -525,6 +581,10 @@ const deeplAuthKey = ref("");
 const deeplIsPro = ref(false);
 const libreTranslateApiUrl = ref("");
 const libreTranslateApiKey = ref("");
+const aiTranslateApiUrl = ref("");
+const aiTranslateApiKey = ref("");
+const aiTranslatePrompt = ref("");
+const aiTranslateModel = ref("");
 const defaultReaction = ref("");
 const defaultReactionCustom = ref("");
 const enableServerMachineStats = ref(false);
@@ -603,6 +663,10 @@ async function init() {
 	deeplIsPro.value = meta.deeplIsPro;
 	libreTranslateApiUrl.value = meta.libreTranslateApiUrl;
 	libreTranslateApiKey.value = meta.libreTranslateApiKey;
+	aiTranslateApiUrl.value = meta.aiTranslateApiUrl;
+	aiTranslateApiKey.value = meta.aiTranslateApiKey;
+	aiTranslatePrompt.value = meta.aiTranslatePrompt || "Translate the following text to {target_lang}. Only output the translated text, no explanations:\n\n{text}";
+	aiTranslateModel.value = meta.aiTranslateModel || "";
 	defaultReaction.value = ["⭐", "👍", "❤️"].includes(meta.defaultReaction)
 		? meta.defaultReaction
 		: "custom";
@@ -656,6 +720,10 @@ function save() {
 		deeplIsPro: deeplIsPro.value,
 		libreTranslateApiUrl: libreTranslateApiUrl.value,
 		libreTranslateApiKey: libreTranslateApiKey.value,
+		aiTranslateApiUrl: aiTranslateApiUrl.value,
+		aiTranslateApiKey: aiTranslateApiKey.value,
+		aiTranslatePrompt: aiTranslatePrompt.value,
+		aiTranslateModel: aiTranslateModel.value,
 		defaultReaction: defaultReaction.value,
 		enableServerMachineStats: enableServerMachineStats.value,
 		enableIdenticonGeneration: enableIdenticonGeneration.value,

@@ -126,6 +126,10 @@ export const paramDef = {
 		deeplIsPro: { type: "boolean" },
 		libreTranslateApiUrl: { type: "string", nullable: true },
 		libreTranslateApiKey: { type: "string", nullable: true },
+		aiTranslateApiUrl: { type: "string", nullable: true },
+		aiTranslateApiKey: { type: "string", nullable: true },
+		aiTranslatePrompt: { type: "string", nullable: true },
+		aiTranslateModel: { type: "string", nullable: true },
 		enableEmail: { type: "boolean" },
 		email: { type: "string", nullable: true },
 		smtpSecure: { type: "boolean" },
@@ -538,6 +542,38 @@ export default define(meta, paramDef, async (ps, me) => {
 			set.libreTranslateApiKey = null;
 		} else {
 			set.libreTranslateApiKey = ps.libreTranslateApiKey;
+		}
+	}
+
+	if (ps.aiTranslateApiUrl !== undefined) {
+		if (ps.aiTranslateApiUrl === "") {
+			set.aiTranslateApiUrl = null;
+		} else {
+			set.aiTranslateApiUrl = ps.aiTranslateApiUrl;
+		}
+	}
+
+	if (ps.aiTranslateApiKey !== undefined) {
+		if (ps.aiTranslateApiKey === "") {
+			set.aiTranslateApiKey = null;
+		} else {
+			set.aiTranslateApiKey = ps.aiTranslateApiKey;
+		}
+	}
+
+	if (ps.aiTranslatePrompt !== undefined) {
+		if (ps.aiTranslatePrompt === "") {
+			set.aiTranslatePrompt = null;
+		} else {
+			set.aiTranslatePrompt = ps.aiTranslatePrompt;
+		}
+	}
+
+	if (ps.aiTranslateModel !== undefined) {
+		if (ps.aiTranslateModel === "") {
+			set.aiTranslateModel = null;
+		} else {
+			set.aiTranslateModel = ps.aiTranslateModel;
 		}
 	}
 

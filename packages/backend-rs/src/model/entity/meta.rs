@@ -158,6 +158,14 @@ pub struct Model {
     pub libre_translate_api_url: Option<String>,
     #[sea_orm(column_name = "libreTranslateApiKey")]
     pub libre_translate_api_key: Option<String>,
+    #[sea_orm(column_name = "aiTranslateApiUrl")]
+    pub ai_translate_api_url: Option<String>,
+    #[sea_orm(column_name = "aiTranslateApiKey")]
+    pub ai_translate_api_key: Option<String>,
+    #[sea_orm(column_name = "aiTranslatePrompt")]
+    pub ai_translate_prompt: Option<String>,
+    #[sea_orm(column_name = "aiTranslateModel")]
+    pub ai_translate_model: Option<String>,
     #[sea_orm(column_name = "silencedHosts")]
     pub silenced_hosts: Vec<String>,
     #[sea_orm(column_name = "experimentalFeatures", column_type = "JsonBinary")]

@@ -490,7 +490,10 @@ export default define(meta, paramDef, async (ps, me) => {
 
 		translatorAvailable:
 			instanceMeta.deeplAuthKey != null ||
-			instanceMeta.libreTranslateApiUrl != null,
+			instanceMeta.libreTranslateApiUrl != null ||
+			(instanceMeta.aiTranslateApiUrl != null &&
+				instanceMeta.aiTranslateApiKey != null &&
+				instanceMeta.aiTranslatePrompt != null),
 		defaultReaction: instanceMeta.defaultReaction,
 		donationLink: instanceMeta.donationLink,
 		enableServerMachineStats: instanceMeta.enableServerMachineStats,

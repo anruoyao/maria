@@ -1,7 +1,15 @@
 <template>
 	<div v-if="translating || translation != null || hasError" class="translation-container">
 		<MkLoading v-if="translating" mini/>
-		<MkError v-else-if="hasError" @retry="translate"/>
+		<div v-else-if="hasError" class="error-container">
+			<p class="error-message">
+				<i :class="icon('ph-warning')"></i>
+				{{ errorMessage || i18n.ts.somethingHappened }}
+			</p>
+			<MkButton class="retry-button" @click.stop="translate">
+				{{ i18n.ts.retry }}
+			</MkButton>
+		</div>
 		<div v-else-if="translation != null" class="translated">
 			<b
 				>{{
@@ -28,6 +36,7 @@ import type { NoteTranslation, NoteType } from "@/types/note";
 import { computed, ref, watch } from "vue";
 import * as os from "@/os";
 import { getInstanceInfo } from "@/instance";
+import MkButton from "@/components/MkButton.vue";
 
 const props = defineProps<{
 	note: NoteType;
@@ -37,6 +46,7 @@ const props = defineProps<{
 const translation = ref<NoteTranslation | null>(null);
 const translating = ref<boolean>();
 const hasError = ref<boolean>();
+const errorMessage = ref<string>();
 const canTranslate = computed(
 	() =>
 		getInstanceInfo().translatorAvailable &&
@@ -69,6 +79,7 @@ async function translate() {
 	try {
 		if (translation.value != null) return;
 		translating.value = true;
+		errorMessage.value = undefined;
 		translation.value = await getTranslation(
 			props.note.id,
 			translateLang || lang || navigator.language,
@@ -85,9 +96,11 @@ async function translate() {
 		)
 			translation.value = await getTranslation(props.note.id, lang);
 		hasError.value = false;
-	} catch (err) {
+	} catch (err: any) {
 		hasError.value = true;
 		translation.value = null;
+		errorMessage.value = err.message || err.error?.message || i18n.ts.somethingHappened;
+		console.error("Translation error:", err);
 	} finally {
 		translating.value = false;
 	}
@@ -106,5 +119,23 @@ defineExpose({
 	border-radius: var(--radius);
 	padding: 12px;
 	margin-block-start: 8px;
+}
+
+.error-container {
+	padding: 16px;
+	text-align: center;
+}
+
+.error-message {
+	margin-block-start: 0;
+	margin-inline-end: 0;
+	margin-block-end: 8px;
+	margin-inline-start: 0;
+	color: var(--error);
+}
+
+.retry-button {
+	margin-block: 0;
+	margin-inline: auto;
 }
 </style>
